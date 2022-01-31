@@ -1,0 +1,46 @@
+---
+permalink: linux-installation-cmode/reference_snapdrive_licensing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, license, requirements, unix 
+summary: UNIX용 SnapDrive를 설치하기 전에 필요한 소프트웨어 및 프로토콜에 적합한 라이센스가 있는지 확인해야 합니다. 
+---
+= UNIX용 SnapDrive 라이센스 요구 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 설치하기 전에 필요한 소프트웨어 및 프로토콜에 적합한 라이센스가 있는지 확인해야 합니다.
+
+UNIX용 SnapDrive 라이센스 요구 사항은 다음과 같습니다.
+
+|===
+| 라이센스 | 설명 | 설치된 경우 
+
+
+ a| 
+SnapRestore
+ a| 
+SnapDrive for UNIX에서 스냅샷 복사본을 복원할 수 있도록 하는 필수 라이센스입니다.
+ a| 
+정보를 제공합니다
+
+
+
+ a| 
+플랙스클론
+ a| 
+스냅샷 복사본을 클론 복제하기 위한 선택적 라이센스.
+ a| 
+정보를 제공합니다
+
+
+
+ a| 
+프로토콜
+ a| 
+LUN, iSCSI 또는 FC 라이센스에 필요합니다.
+ a| 
+정보를 제공합니다
+
+|===

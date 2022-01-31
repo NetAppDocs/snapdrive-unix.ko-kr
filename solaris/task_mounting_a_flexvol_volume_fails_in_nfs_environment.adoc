@@ -1,0 +1,34 @@
+---
+permalink: solaris/task_mounting_a_flexvol_volume_fails_in_nfs_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mount, flexvol, fail, nfs, volume 
+summary: FlexVol 볼륨을 마운트하면 /etc/exports 파일에 항목이 추가됩니다. NFS 환경에서는 UNIX용 SnapDrive에 장애가 발생하고 오류 메시지가 생성됩니다. 
+---
+= NFS 환경에서는 FlexVol 볼륨을 마운트하지 못합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FlexVol 볼륨을 마운트하면 '/'/etc/exports file'에 항목이 추가됩니다. NFS 환경에서는 UNIX용 SnapDrive에 장애가 발생하고 오류 메시지가 생성됩니다.
+
+오류 메시지는 입니다
+
+[listing]
+----
+0001-034 Command error: mount failed: nfs mount:
+dub12137:/vol/vn_dub12137_testprisredo_0: Permission denied.
+----
+SnapDrive for UNIX에서 옵션 "nfs.export.auto-update` "off"로 설정되어 오류 메시지가 나타날 수 있습니다. nfs.export.auto-update` 옵션은 '/etc/exports' 파일에서 자동 업데이트가 수행되는지 여부를 제어합니다.
+
+
+NOTE: FlexVol는 NFS 환경에서 AutoSupport 볼륨에 장애가 발생해도 스토리지 시스템에 메시지를 보내지 않습니다.
+
+.단계
+. /etc/exports 파일이 자동으로 업데이트되도록 nfs.export.auto-update` 옵션을 설정합니다.
++
+이제 UNIX용 SnapDrive에서 FlexVol 볼륨을 마운트할 수 있습니다.
+
+
+
+HA 쌍 액티브/액티브 구성에서는 두 스토리지 시스템 모두에 대해 NFS 엑스포트 옵션을 설정해야 합니다.

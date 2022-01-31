@@ -1,0 +1,36 @@
+---
+permalink: linux-administration/task_enabling_thin_provisioning_for_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, lun, thin, provisioning, reservation, space 
+summary: UNIX용 SnapDrive를 사용하여 스토리지 시스템에서 씬 프로비저닝을 수행할 수 있습니다. 씬 프로비저닝을 공간 예약이라고도 합니다. 
+---
+= LUN에 대한 씬 프로비저닝 설정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하여 스토리지 시스템에서 씬 프로비저닝을 수행할 수 있습니다. 씬 프로비저닝을 공간 예약이라고도 합니다.
+
+.단계
+. 'pace-enervations-enabled' 설정변수 값을 'on'으로 설정한다.
++
+'-reserve' 및 '-noreserve' 매개 변수를 사용하여 씬 프로비저닝을 설정할 수도 있습니다.
+
++
+매개 변수는 '-space-enervations-enabled' 변수에 언급된 값을 재정의합니다.
+
++
+다음 명령을 사용하여 '-reserve' 및 '-noreserve'를 사용하여 LUN 예약을 활성화 또는 비활성화할 수 있습니다.
+
++
+** 'SnapDrive 스토리지 생성'
+** 'SnapDrive 스토리지 크기 조정'
+** 'SnapDrive SNAP CONNECT
+** SnapDrive 스냅 복구
+
+
++
+기본적으로 SnapDrive for UNIX에서는 새 스토리지 생성 작업 또는 새 스토리지 생성 작업에 대한 공간 예약이 활성화됩니다. 스냅 복구 및 스냅 연결 작업의 경우 명령줄에 '-reserve' 또는 '-noreserve' 매개 변수를 지정하지 않았거나 구성 파일의 값에 주석이 없는 경우 스냅샷 복사본에 있는 공간 예약을 사용합니다.
+
+

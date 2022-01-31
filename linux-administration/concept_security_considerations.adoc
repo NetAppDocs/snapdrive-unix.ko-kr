@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_security_considerations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security, access, storage, host, configure, password, login 
+summary: SnapDrive for UNIX에서 호스트에 접속된 스토리지 시스템을 액세스하도록 설정할 수 있으며 스토리지 시스템에 할당된 로그인 이름과 암호를 사용하도록 호스트를 구성해야 합니다. 이 정보를 제공하지 않으면 SnapDrive for UNIX가 스토리지 시스템과 통신할 수 없습니다. 
+---
+= 보안 고려 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX에서 호스트에 접속된 스토리지 시스템을 액세스하도록 설정할 수 있으며 스토리지 시스템에 할당된 로그인 이름과 암호를 사용하도록 호스트를 구성해야 합니다. 이 정보를 제공하지 않으면 SnapDrive for UNIX가 스토리지 시스템과 통신할 수 없습니다.
+
+루트 사용자는 할당된 역할에 따라 다른 사용자가 특정 명령을 실행하도록 허용할 수 있습니다. 스토리지 및 스냅 관리 작업을 수행하기 위한 루트 사용자가 아니어야 합니다.
+
+SnapDrive for UNIX는 호스트에 대한 사용자 인증 정보를 암호화된 파일에 저장합니다. Linux 호스트에서 기본적으로 SnapDrive는 암호 정보를 암호화하고 네트워크를 통해 전송합니다. UNIX용 SnapDrive는 표준 IP 연결을 통해 HTTPS를 사용하여 통신합니다.

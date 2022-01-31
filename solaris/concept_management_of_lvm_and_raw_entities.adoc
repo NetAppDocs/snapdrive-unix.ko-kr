@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_management_of_lvm_and_raw_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vxvm, raw, entity, manage 
+summary: 'UNIX용 SnapDrive를 사용하면 VxVM\(Veritas Volume Manager\) 및 원시 엔터티를 관리할 수 있습니다. SnapDrive for UNIX에서는 스토리지 엔터티를 생성할 때 스토리지를 프로비저닝하고 관리하는 데 도움이 되는 명령도 제공합니다.' 
+---
+= VxVM 및 원시 엔터티의 관리
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하면 VxVM(Veritas Volume Manager) 및 원시 엔터티를 관리할 수 있습니다. SnapDrive for UNIX에서는 스토리지 엔터티를 생성할 때 스토리지를 프로비저닝하고 관리하는 데 도움이 되는 명령도 제공합니다.

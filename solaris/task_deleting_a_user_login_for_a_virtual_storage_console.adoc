@@ -1,0 +1,32 @@
+---
+permalink: solaris/task_deleting_a_user_login_for_a_virtual_storage_console.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, user, login, virtual, storage, console 
+summary: SnapDrive config delete 명령을 실행하여 가상 인터페이스의 사용자 로그인을 삭제할 수 있습니다. 
+---
+= 가상 스토리지 콘솔의 사용자 로그인 삭제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive config delete 명령을 실행하여 가상 인터페이스의 사용자 로그인을 삭제할 수 있습니다.
+
+vCenter에서 가상 스토리지 콘솔을 구성했는지 확인합니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+(* SnapDrive config delete_appliance_name_*)
+
++
+'_appliance_name_'은(는) 가상 인터페이스 시스템의 이름 또는 IP 주소입니다.
+
++
+UNIX용 SnapDrive는 사용자가 지정한 가상 인터페이스에 대한 사용자 이름 또는 암호 로그인 정보를 제거합니다.
+
++
+
+NOTE: UNIX용 SnapDrive가 가상 인터페이스에 액세스하도록 설정하려면 새 사용자 로그인을 지정해야 합니다.
+
+

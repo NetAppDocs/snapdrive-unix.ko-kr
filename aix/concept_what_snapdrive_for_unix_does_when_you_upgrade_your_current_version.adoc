@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_what_snapdrive_for_unix_does_when_you_upgrade_your_current_version.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, upgrade, version 
+summary: UNIX용 SnapDrive를 최신 버전으로 쉽게 업그레이드할 수 있습니다. 업그레이드 프로세스 중에 SnapDrive.conf 파일에서 변경된 변수는 거의 없습니다. SnapDrive for UNIX가 올바르게 작동하는지 확인하려면 SnapDrive.conf 파일에서 다양한 기본값을 확인하십시오. 
+---
+= UNIX용 SnapDrive를 최신 버전으로 업그레이드합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 최신 버전으로 쉽게 업그레이드할 수 있습니다. 업그레이드 프로세스의 일환으로, 'napdrive.conf' 파일에서 변수 변경이 거의 없습니다. UNIX용 SnapDrive가 올바르게 작동하는지 확인하려면 'napdrive.conf' 파일에서 다양한 기본값을 확인하십시오.
+
+현재 버전의 UNIX용 SnapDrive를 업그레이드하려면 제거하지 않아도 됩니다. 대신 최신 버전의 소프트웨어를 현재 버전 위에 설치해야 합니다.
+
+새 버전을 설치할 때 SnapDrive for UNIX는 버전이 이미 설치되어 있는지 확인합니다. 이렇게 하면 현재 'napdrive.conf' 파일이 보존되고 설치 중인 파일의 이름이 'napdrive.conf.x'로 변경됩니다. 이렇게 하면 'napdrive.conf' 파일을 덮어쓰지 않으므로 파일에 사용자 지정된 설정이 손실되지 않습니다.
+
+기본적으로 UNIX용 SnapDrive는 'napdrive.conf' 파일에 변수를 주석으로 표시합니다. 즉, 사용자 정의한 변수를 제외한 모든 변수의 기본값이 자동으로 사용됩니다. 이러한 값을 변경하려면 현재 'napdrive.conf' 파일에 변수를 추가하고 원하는 값을 지정해야 합니다.
+
+
+NOTE: 패치 업그레이드를 수행할 때 'napdrive.conf' 파일의 SnapDrive 버전은 변경되지 않습니다. 그러나 SnapDrive version 명령은 적절한 버전을 제공한다.

@@ -1,0 +1,19 @@
+---
+permalink: aix/reference_snapdrive_for_unix_does_not_accept_environment_variables_set_using_command_shells.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, fail, shell, variable, environment 
+summary: 명령 셸을 통해 설정된 환경 변수가 UNIX용 SnapDrive에서 허용되지 않고 $LD_LIBRARY_PATH 및 snapcreate-check-unpersistent-nfs 매개 변수가 off로 설정된 경우 모두 UNIX용 SnapDrive 명령을 실행할 수 없습니다. 
+---
+= 명령 셸을 사용하여 환경 변수를 설정하면 UNIX용 SnapDrive 명령이 실패합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령은 명령 셸을 통해 설정된 환경 변수가 UNIX용 SnapDrive에서 허용되지 않고, '*$LD_LIBRARY_PATH *' 및 '* snapcreate-check-Nonpersistent-nfs *' 매개 변수가 'off'로 설정된 경우 모두 실행할 수 없습니다.
+
+
+
+== 해결 방법
+
+UNIX용 SnapDrive 바이너리에 대한 래퍼 스크립트를 사용하고 환경 변수를 바이너리에 대해 볼 수 있도록 설정합니다.

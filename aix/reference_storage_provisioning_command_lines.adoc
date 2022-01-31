@@ -1,0 +1,162 @@
+---
+permalink: aix/reference_storage_provisioning_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, provisioning, command, line 
+summary: 일부 UNIX용 SnapDrive 명령은 스토리지 용량 할당에 사용됩니다. 
+---
+= 스토리지 프로비저닝 명령줄
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 UNIX용 SnapDrive 명령은 스토리지 용량 할당에 사용됩니다.
+
+다음 명령줄 옵션은 스토리지 프로비저닝 작업에 사용됩니다.
+
+|===
+| 작동 | 명령줄 옵션입니다 
+
+
+ a| 
+생성
+ a| 
+''SnapDrive storage create-lun_long_lun_name_[_lun_name..._] - lunsize_size_[{-dg|-vg}_dg_name_][-igroup_IG_name_[_IG_name..._][{-reserve|-noreserve}][-fstype_type_][-vmtype_type]
+
+
+
+ a| 
+'SnapDrive storage create{-lvol|-hostvol}_file_spec_[{-dg|-vg}_dg_name_] {-dgsize|-size_-filervol_long_filer_path_[{-nores|-reserve}][-fstype_type_][-vmtype_type_]
+
+
+
+ a| 
+``SnapDrive storage create -fs_file_spec_-nolvm [-fspts options] [-mntptopts options] [-npersist] {-lun_long_lun_name _ | -filervol_long_filer_path _} -lunsize_[-igroup_IG_name_[_IG_name..._] 유형 [{vmeserve_type
+
+
+
+ a| 
+'SnapDrive storage create_host_lvm_fspec_-filervol_long_filer_path_-dgsize_size_[-igroup_IG_name_[_IG_name..._][{-reserve|-noreserve}]'
+
+
+
+ a| 
+'SnapDrive storage create_host_lvm_fspec_-lun_long_lun_name_[_lun_name..._] - lunsize_size_[-igroup_IG_name_[_IG_name..._] [{-reserve|-noreserve}]'
+
+[NOTE]
+====
+생성하려는 스토리지 유형에 따라 '-file_spec' 인수의 형식 중 하나를 사용할 수 있습니다. (DG는 -vg의 동의어이고 -hostvol은 -lvol의 동의어라는 점을 기억하십시오.)
+
+LUN에 직접 파일 시스템을 생성하려면 '-fs_file_spec_[-nolvm-fs_type_] [-fsops_options_] [-mntpts_options_] [-vmtype_type_]' 형식을 사용합니다
+
+디스크 그룹 또는 호스트 볼륨을 사용하는 파일 시스템을 생성하려면 '-fs_file_spec_[-fstype_type_] [-fsopts_options_] [-mntops_options_] [-hostvol_file_spec_] [-dG_DG_NAME_] [-vmtype_type_]' 형식을 사용합니다
+
+논리적 또는 호스트 볼륨을 생성하려면 '[-hostvol_file_spec_] [-dg_dg_name_] [-fstype_type_] [-vmtype_type_]' 형식을 사용합니다
+
+디스크 그룹을 생성하려면 '-DG_DG_NAME_[-fstype_type_][-vmtype_type_]' 형식을 사용합니다
+
+====
+
+
+ a| 
+연결
+ a| 
+'SnapDrive storage connect-fs_file_spec-nolvm_-lun_long_lun_name_[-igroup_IG_name_[_IG_name..._][-noppersist][-mntopts options][-fstype_type_][-vmtype_type_]'
+
+
+
+ a| 
+"SnapDrive storage connect-fs_file_spec_-hostvol_file_spec_-lun_long_lun_name_[_lun_name..._] [-igroup_IG_name_[_IG_name..._] [-noppersist] [-fstype_type_] [-vmtype_type_]
+
+
+
+ a| 
+'SnapDrive storage connect-lun_long_lun_name_[_lun_name..._][-igroup_IG_name_[_IG_name..._][-vmtype_type_]'
+
+
+
+ a| 
+'SnapDrive storage connect-lun_long_lun_name_[_lun_name..._][-vmtype_type_]'
+
+
+
+ a| 
+'SnapDrive storage connect-fs_file_spec_{-hostvol}_file_spec_-lun_long_lun_name_[_lun_name..._][-noppersist][-mntopts options][-fstype_type_][-vmtype_type_]'
+
+
+
+ a| 
+연결을 끊습니다
+ a| 
+'SnapDrive storage disconnect - lun_long_lun_name_[_lun_name..._][-vmtype_type_]'
+
+
+
+ a| 
+"SnapDrive 스토리지 연결 끊기{-vg|-dG|-fs|-lvol|-hostvol}_file_spec_[_file_spec..._][{-vg|-dg|-fs|-lvol|-hostvol}_file_spec_...] ...] [-FULL] [-fstype_type_] [-vmtype_type_]'
+
+
+
+ a| 
+크기 조정
+ a| 
+'SnapDrive storage resize {-dG|-vg}_file_spec_[_file_spec_...] {-growby|-growto}_size_[_-addlun_[-igroup_IG_name_[_IG_name..._]][{-reseserve|-noreserve}]] [-fvmype_type_]
+
+
+
+ a| 
+표시/목록
+ a| 
+'SnapDrive storage{show|list} - filer_filername_[_filername..._][-verbose][-quiet][-capabilities]'
+
+
+
+ a| 
+'SnapDrive storage{show|list} - filervol_long_filer_path_[_filer_path..._][-verbose][-quiet][-capabilities]'
+
+
+
+ a| 
+'SnapDrive storage{show|list}{-all|device}[-capabilities]'
+
+
+
+ a| 
+'SnapDrive storage show[-verbose] {-filer_filername_[_filername..._]|-filervol_volname_[_volname..._]}[-capabilities]'
+
+
+
+ a| 
+'SnapDrive storage{show|list} - lun_long_lun_name_[_lun_name..._][-verbose][-quiet][-status][-capabilities]'
+
+
+
+ a| 
+'{SnapDrive storage{show|list}{-vg|-dg|-fs|-lvol|-hostvol}_file_spec_[_file_spec..._][{-vg|-dg|-fs|-lvol|-hostvol}_file_spec_[_file_spec...][-verbose] [-quiet] [-type
+
+
+
+ a| 
+"SnapDrive 스토리지{show|list} {-filer_filer_name_[_filer_name_...] |- filervol_long_filer_path _ [_filer_path..._]} [-verbose] [-capabilities] [-quiet]
+
+
+
+ a| 
+'SnapDrive storage{show|list} - lun_long_lun_name_[_lun_name..._] [-verbose] [-status] [-fstype_type_] [-vmtype_type_] [-capabilities] [-quiet]'
+
+
+
+ a| 
+삭제
+ a| 
+'SnapDrive 스토리지 삭제[-lun]_long_lun_name_[lun_name...] [-fstype type] [-vmtype]'을 선택합니다
+
+
+
+ a| 
+"SnapDrive storage delete[-vg|-dG|-fs|-lvol|-hostvol]_file_spec_[_file_spec..._][{-vg|-dg|-fs|-lvol|-hostvol}_file_spec_[_file_spec...]...] [-FULL] [-fstype type] [-vmtype]'
+
+|===
+* 관련 정보 *
+
+xref:reference_command_line_arguments.adoc[명령줄 인수입니다]

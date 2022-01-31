@@ -1,0 +1,68 @@
+---
+permalink: solaris/task_connecting_to_asnapshot_copy_thatcontains_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy, lun 
+summary: SnapDrive snap connect 명령을 사용하여 LUN이 포함된 스냅샷 복사본에 연결할 수 있습니다. 
+---
+= LUN이 포함된 스냅샷 복사본에 연결하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap connect" 명령을 사용하여 LUN이 포함된 스냅샷 복사본에 연결할 수 있습니다.
+
+.단계
+. LUN이 포함된 스냅샷 복사본에 연결하려면 다음 명령 구문을 입력합니다.
++
+'* SnapDrive snap connect-lun_s_lun_name d_lun_name_[[-lun]_s_lun_name d_lun_name..._-snapname_long_snap_name_[-igroup_IG_name_[_IG_name..._][-split] * '
+
++
+
+NOTE: '_s_lun_name_' 및 '_d_lun_name_' 형식은 lun_name 또는 qtree_name/lun_name 형식이어야 합니다.
+
+
+
+SnapDrive for UNIX는 지정한 LUN을 복제하여 새 위치에 연결합니다.
+
+다음 예에서는 hornet/vol/vol1/tuesdaysnapshot의 LUN mylun1을 mylun1copy에 연결합니다.
+
+[listing]
+----
+# ./snapdrive snap connect -lun mylun1 mylun1copy -snapname
+hornet:/vol/vol1:tuesdaysnapshot
+connecting hornet:/vol/vol1/mylun1:
+LUN copy mylun1copy ... created
+(original: hornet:/vol/vol1/mylun1) mapping new lun(s) ... done
+discovering new lun(s) ... done
+----
+다음 예에서는 mylun1 및 mylun2라는 2개의 LUN을 각각 mylun1copy 및 mylun2copy에 연결합니다.
+
+[listing]
+----
+# ./snapdrive snap connect -lun mylun1 mylun1copy -lun mylun2
+mylun2copy -snapname hornet:/vol/vol1:tuesdaysnapshot
+connecting hornet:/vol/vol1/mylun1:
+LUN copy mylun1copy ... created
+(original: hornet:/vol/vol1/mylun1)
+mapping new lun(s) ... done
+connecting hornet:/vol/vol1/mylun2:
+LUN copy mylun2copy ... created
+(original: hornet:/vol/vol1/mylun2)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+----
+다음 예에서는 LUN lun1_0을 스냅샷 Lech:/vol/vol1:RRT에 연결합니다.
+
+[listing]
+----
+
+snapdrive snap connect -fs /mnt/fs /mnt/fs1  -snapname lech:/vol/vol1:rrt
+connecting /mnt/fs:
+   LUN copy lun1_0 ... created
+     (original: lech:/vol/vol1/lun1)
+   exporting new lun(s) to Guest OS ... done
+   discovering new lun(s) ... done
+Successfully connected to snapshot lech:/vol/vol1:rrt
+        file system: /mnt/fs1
+----

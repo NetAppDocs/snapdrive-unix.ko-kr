@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_benefits_of_flexclone_volumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, benefits, flexcone, volumes 
+summary: FlexClone 볼륨은 데이터 관리 및 성능 이점을 제공합니다. 
+---
+= FlexClone 볼륨의 이점
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FlexClone 볼륨은 데이터 관리 및 성능 이점을 제공합니다.
+
+* 데이터 관리 간소화 및 위험 감소
+* 유연성 및 활용도 향상
++
+FlexClone 볼륨을 사용하면 원래 데이터에 액세스하지 않고도 추가 사용자를 위해 여러 데이터 복사본을 만들 수 있습니다.
+
+* LUN 복제보다 빠릅니다.
+

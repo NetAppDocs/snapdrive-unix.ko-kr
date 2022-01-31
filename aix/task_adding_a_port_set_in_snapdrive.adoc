@@ -1,0 +1,40 @@
+---
+permalink: aix/task_adding_a_port_set_in_snapdrive.html 
+sidebar: sidebar 
+keywords: port, set, snap, snapdrive, add 
+summary: 스토리지 시스템에 포트 세트를 추가하여 SVM과 통신할 수 있습니다. 이는 일회성 작업으로, 스토리지 시스템을 사용하기 전에 수행해야 합니다. 
+---
+= SnapDrive에서 포트 세트 추가
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템에 포트 세트를 추가하여 SVM과 통신할 수 있습니다. 이는 일회성 작업으로, 스토리지 시스템을 사용하기 전에 수행해야 합니다.
+
+
+NOTE: UNIX용 SnapDrive 5.2로 업그레이드하려면 이전 버전의 UNIX용 SnapDrive igroup이 스토리지 관리자가 설정한 포트에 수동으로 연결되어 있는지 확인하십시오.
+
+다음 예에서는 스토리지 관리자가 IP 주소 대신 SVM 이름을 사용하여 SVM 이름이 DNS 서버에 등록되어 있는지 확인합니다.
+
+.단계
+. 호스트에서 다음 명령을 입력합니다.
++
+(* SnapDrive add_포트셋_이름 filername [filername...]_ *
+
++
+'__name_'은(는) 포트 세트의 이름입니다.
+
++
+'_filername_'은 SVM의 이름입니다.
+
++
+[listing]
+----
+snapdrive portset add ps2 vs91
+Added portset configuration for appliance: vs91
+----
++
+SnapDrive에서 포트 세트 PS2가 추가되었습니다.
+
+

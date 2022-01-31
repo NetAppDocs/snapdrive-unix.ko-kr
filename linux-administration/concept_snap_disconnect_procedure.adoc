@@ -1,0 +1,34 @@
+---
+permalink: linux-administration/concept_snap_disconnect_procedure.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, procedure, steps 
+summary: 이 섹션에서는 스냅 분리 절차에 대해 설명합니다. 
+---
+= 스냅 분리 절차
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+이 섹션에서는 스냅 분리 절차에 대해 설명합니다.
+
+다음 단계에서는 '스냅 분리 절차'를 설명합니다.
+
+. SnapDrive for UNIX는 'Snap Disconnect' CLI에서 호스트 파일 사양을 얻어 스토리지 시스템 볼륨을 찾습니다.
+. SnapDrive for UNIX는 호스트 파일 사양을 삭제하고 LUN 매핑을 해제한 후 현재 볼륨이 SnapDrive에서 생성한 클론인지 확인합니다.
+. SnapDrive에서 FlexClone을 생성한 경우 SnapDrive for UNIX는 다음 사항을 확인합니다.
++
+.. 클론 볼륨에 매핑된 LUN이 있습니다
+.. 클론 복제된 볼륨에 새 LUN이 있습니다
+.. 새로운 스냅샷 복사본이 있습니다
+
+
+
+
+모든 조건이 충족되면 SnapDrive for UNIX에서 복제된 볼륨을 삭제합니다. 제한되지 않은 FlexClone의 경우 RBAC가 구성된 경우 SnapDrive for UNIX는 하위 단계 1 및 하위 단계 2 검사를 수행하지 않습니다.
+
+Data ONTAP 7.2 이전 버전을 사용하는 스토리지 시스템에서는 UNIX용 SnapDrive에서 제한된 FlexClone 볼륨을 삭제하지 않습니다. 스토리지 시스템 명령을 사용하여 삭제해야 합니다. 그러나 적절한 RBAC 기능이 사용자에게 제공되는 경우 무제한 FlexClone 볼륨이 삭제됩니다.
+
+* 관련 정보 *
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[UNIX용 SnapDrive에서 역할 기반 액세스 제어]

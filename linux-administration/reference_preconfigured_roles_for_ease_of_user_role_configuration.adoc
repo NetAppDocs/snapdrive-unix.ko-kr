@@ -1,0 +1,48 @@
+---
+permalink: linux-administration/reference_preconfigured_roles_for_ease_of_user_role_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, roles, user, configuration, config, assign 
+summary: 사전 구성된 역할은 사용자에게 역할을 할당하는 작업을 간소화합니다. 
+---
+= 사용자 역할 구성을 용이하게 하기 위해 역할이 사전 구성되어 있습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사전 구성된 역할은 사용자에게 역할을 할당하는 작업을 간소화합니다.
+
+다음 표에는 사전 정의된 역할이 나와 있습니다.
+
+|===
+| 역할 이름 | 설명 
+
+
+ a| 
+GlobalSDStorage 를 참조하십시오
+ a| 
+UNIX용 SnapDrive를 사용하여 스토리지를 관리합니다
+
+
+
+ a| 
+GlobalSDConfig
+ a| 
+UNIX용 SnapDrive를 사용하여 구성을 관리합니다
+
+
+
+ a| 
+GlobalSDSnapshot을 참조하십시오
+ a| 
+UNIX용 SnapDrive로 스냅샷 복사본을 관리합니다
+
+
+
+ a| 
+GlobalSDFullControl 을 참조하십시오
+ a| 
+UNIX용 SnapDrive의 완전한 사용
+
+|===
+위 표에서 글로벌은 Operations Manager 콘솔에서 관리하는 모든 스토리지 시스템을 나타냅니다.

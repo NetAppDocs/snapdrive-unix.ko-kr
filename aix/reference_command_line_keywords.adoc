@@ -1,0 +1,143 @@
+---
+permalink: aix/reference_command_line_keywords.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, line, keyword 
+summary: UNIX용 SnapDrive에서는 키워드를 사용하여 호스트 디스크 그룹, 대상 그룹, 볼륨 또는 FlexClone, NFS 파일, 스토리지 시스템 등이 있습니다. 
+---
+= 명령줄 키워드입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에서는 키워드를 사용하여 호스트 디스크 그룹, 대상 그룹, 볼륨 또는 FlexClone, NFS 파일, 스토리지 시스템 등이 있습니다.
+
+다음은 UNIX용 SnapDrive 명령과 함께 사용할 수 있는 키워드입니다. 이 옵션을 사용하여 UNIX용 SnapDrive 작업의 타겟을 지정합니다. 이러한 키워드는 하나 이상의 인수를 사용할 수 있습니다.
+
+
+NOTE: 일부 LVM은 디스크 그룹을 참조하고 일부는 볼륨 그룹을 참조합니다. SnapDrive for UNIX에서는 이러한 용어가 동의어로 취급됩니다. 또한 일부 LVM은 논리적 볼륨을 참조하고 일부는 볼륨을 참조합니다. UNIX용 SnapDrive는 호스트 볼륨(호스트 논리 볼륨과 스토리지 시스템 볼륨이 혼동되지 않도록 생성됨)과 논리 볼륨이라는 용어를 동의어로 취급합니다.
+
+|===
+| 키워드 | 이 키워드와 함께 사용되는 인수입니다 
+
+
+ a| 
+'-DG'('-vg'와 동일)
+ a| 
+호스트 디스크 그룹의 이름입니다. 이 옵션을 사용하여 디스크 그룹 또는 볼륨 그룹의 이름을 입력할 수 있습니다.
+
+
+
+ a| 
+'-destdg'입니다
+
+``데스’’
+
+'-destlv'
+
+'-destvg'
+ a| 
+대상 그룹 또는 볼륨입니다.
+
+
+
+ a| 
+'-destfv'입니다
+ a| 
+NFS 스냅샷 연결 작업 중에 SnapDrive for UNIX에서 생성한 볼륨 클론에 대해 명령줄에 지정된 FlexClone 볼륨의 이름입니다.
+
+
+NOTE: 이 인수는 NFS 볼륨만 지원하며 NFS 디렉토리는 지원하지 않습니다.
+
+
+
+ a| 
+'-파일'
+ a| 
+NFS 파일의 이름입니다.
+
+
+
+ a| 
+'-파일러'
+ a| 
+스토리지 시스템의 이름입니다.
+
+
+
+ a| 
+``불르폴’’
+ a| 
+스토리지 시스템의 이름 및 스토리지 시스템의 볼륨
+
+
+
+ a| 
+'-fs'
+ a| 
+호스트의 파일 시스템 이름입니다. 사용된 이름은 파일 시스템이 현재 마운트되었거나 마운트될 디렉토리(마운트 지점)입니다.
+
+
+
+ a| 
+'-hostvol' 또는 '-lvol'
+ a| 
+호스트 볼륨 이름(포함된 디스크 그룹 포함) 예를 들어, 'large_vg/accounting_lvol'을 입력할 수 있습니다.
+
+
+
+ a| 
+'-igroup'
+ a| 
+이니시에이터 그룹(igroup)의 이름입니다.
+
+SnapDrive for UNIX에서 생성한 기본 igroup을 타겟 스토리지 시스템에 igroup을 지정하는 대신 사용하는 것이 좋습니다. 기본 igroup은 hostname_protocol_SdIg입니다.
+
+* '_hostname_'은(는) 현재 호스트의 로컬(도메인에 한정되지 않은) 이름입니다.
+* '_protocol_'은 호스트가 사용하는 프로토콜에 따라 FCP 또는 iSCSI입니다.
+
+
+igroup hostname_protocol_SdIg가 없으면 SnapDrive for UNIX에서 이를 생성하고 호스트에 대한 모든 이니시에이터를 배치합니다.
+
+이니시에이터가 있고 올바른 이니시에이터가 있는 경우 SnapDrive for UNIX는 기존 igroup을 사용합니다.
+
+igroup이 존재하지만 이 호스트의 이니시에이터를 포함하지 않는 경우 SnapDrive for UNIX는 다른 이름의 새로운 igroup을 생성하고 현재 작업에서 해당 igroup을 사용합니다. 같은 이름을 사용하지 않도록 하기 위해 SnapDrive for UNIX는 새 이름을 만들 때 고유 번호를 포함합니다. 이 경우 이름 형식은 hostname-number_protocol_SdIg입니다.
+
+고유한 igroup 이름을 제공하는 경우 SnapDrive for UNIX는 igroup의 내용을 확인하지 않습니다. 이는 호스트에 해당하는 igroup이 스토리지 시스템에 있는지 항상 확인할 수 없기 때문입니다.
+
+이니시에이터 그룹을 지정할 때 이 옵션을 사용하는 모든 명령은 공유 디스크 그룹 및 파일 시스템에서 이 옵션을 적용할 수 없습니다. 이 옵션은 로컬 리소스에만 허용됩니다.
+
+명령줄에 외부 igroup이 포함된 경우 SnapDrive for UNIX 명령이 실패합니다. 명령줄에 지정된 모든 igroup에 로컬 호스트의 이니시에이터가 포함되어 있는지 확인합니다.
+
+
+
+ a| 
+'-LUN'
+ a| 
+스토리지 시스템의 LUN 이름입니다. 이 키워드로 제공하는 첫 번째 LUN 이름의 경우 전체 경로 이름(스토리지 시스템 이름, 볼륨 이름 및 LUN 이름)을 제공해야 합니다. 추가 LUN 이름의 경우 해당 볼륨 내의 이름(볼륨이 변경되지 않은 경우)만 지정하거나 새 스토리지 시스템 이름을 나타내는 경로 또는 새 볼륨 이름(볼륨을 전환하려는 경우)을 지정할 수 있습니다.
+
+
+NOTE: SnapDrive snap connect 명령에서 '_lun_name _'은(는) lun_name 또는 tree_name/lun_name 형식으로 표시되어야 합니다.
+
+
+
+ a| 
+'-lvol' 또는 '-hostvol'
+ a| 
+논리적 볼륨 이름(포함하는 볼륨 그룹 포함) 예를 들어 논리적 볼륨 이름으로 "large_vg/accounting_lvol"을 입력할 수 있습니다.
+
+
+
+ a| 
+'-snapname'
+ a| 
+스냅샷 복사본의 이름입니다.
+
+
+
+ a| 
+'-vg' 또는 '-DG'
+ a| 
+볼륨 그룹의 이름입니다. 이 옵션을 사용하여 디스크 그룹 또는 볼륨 그룹의 이름을 입력할 수 있습니다.
+
+|===

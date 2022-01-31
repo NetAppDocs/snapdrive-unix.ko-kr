@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_what_volume_based_snaprestore_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume 
+summary: 'VBSR(볼륨 기반 SnapRestore\)은 모든 스토리지 오브젝트를 사용하여 볼륨을 복원합니다. 볼륨 기반 복원은 개별적으로 복원되는 각 스토리지 개체보다 빠릅니다. VBSR은 FlexClone 볼륨 및 vFiler 구성에서도 작동합니다. vFiler용 VBSR은 Data ONTAP 7.3 이상에서 사용할 수 있습니다.' 
+---
+= 볼륨 기반 SnapRestore란 무엇입니까
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+VBSR(볼륨 기반 SnapRestore)은 모든 스토리지 객체를 사용하여 볼륨을 복원합니다. 볼륨 기반 복원은 개별적으로 복원되는 각 스토리지 개체보다 빠릅니다. VBSR은 FlexClone 볼륨 및 vFiler 구성에서도 작동합니다. vFiler용 VBSR은 Data ONTAP 7.3 이상에서 사용할 수 있습니다.
+
+UNIX 및 그 이전 버전용 SnapDrive 3.0은 파일 시스템, 디스크 그룹 및 호스트 볼륨과 같은 호스트 측 엔터티나 애플리케이션 정합성 보장 스냅샷으로부터 NFS를 통해 생성된 일반 파일의 LUN을 복구할 수 있습니다. UNIX용 SnapDrive에서는 Data ONTAP에 구현된 단일 파일 스냅 복구 SFSR을 사용합니다. SFSR은 다음과 같이 작동합니다.
+
+* SFSR이 진행되는 동안 일반 파일의 경우 파일을 변경하려고 하는 모든 작업은 SFSR이 완료될 때까지 일시 중단됩니다.
+* LUN의 경우 SFSR이 진행 중일 때 LUN을 사용할 수 있으며 입출력(읽기 및 쓰기 모두)이 허용됩니다. 일반 파일 및 LUN의 경우 LUN의 크기 또는 복구 중인 파일에 따라 SFSR이 오래 걸릴 수 있습니다.
+
+
+따라서 일부 환경에서는 SFSR이 방해물로 보입니다.
+
+UNIX용 SnapDrive 4.0 이상에서는 볼륨 기반 스냅샷 복사본을 만들 수 있습니다. VBSR은 더 빠르고 더 적은 CPU 및 스토리지 리소스를 필요로 합니다. 활성 파일 시스템의 모든 데이터가 복구됩니다. 이 기능은 사용자가 동일한 스냅샷 복사본에서 모든 LUN 또는 볼륨의 일반 파일을 복원하려는 경우에 사용할 수 있습니다.
+
+볼륨 기반 스냅샷 복사본은 복원 작업에 사용되는 볼륨 스냅샷 복사본 이후에 생성된 모든 스냅샷 복사본이 삭제되므로 주의하여 사용해야 합니다. 이 볼륨에 생성된 모든 새 파일과 새 LUN을 삭제해야 합니다.

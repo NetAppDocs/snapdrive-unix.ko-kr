@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_snap_restore_command_fails_to_mount_the_file_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, command, fail, mount, file 
+summary: Solaris의 SFRAC 5.0에서는 스냅 복구 및 스냅 연결 명령이 파일 시스템을 마운트하지 못합니다. 
+---
+= 스냅 복구 명령이 파일 시스템을 마운트하지 못합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris의 SFRAC 5.0에서는 '스냅 복구' 및 '스냅 접속' 명령이 파일 시스템을 마운트하지 못합니다.
+
+스냅샷 복사본을 생성하기 전에 사용자가 'SnapDrive snap create' 명령을 실행할 클러스터 노드에서 다음 명령을 실행해야 합니다.
+
+'/opt/VRTS/bin/fsclusteradm setprimary mount_point'

@@ -1,0 +1,32 @@
+---
+permalink: aix/task_deleting_a_userlogin_for_a_storagesystem.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, user, login, storage 
+summary: SnapDrive 구성 삭제 명령을 실행하여 하나 이상의 스토리지 시스템에 대한 사용자 로그인을 삭제할 수 있습니다. 
+---
+= 스토리지 시스템에 대한 사용자 로그인을 삭제하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive config delete" 명령을 실행하여 하나 이상의 스토리지 시스템에 대한 사용자 로그인을 삭제할 수 있습니다.
+
+루트 사용자로 로그인했는지 확인합니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+(* SnapDrive config delete_appliance_name [appliance_name]_ *
+
++
+'_appliance_name_'은(는) 사용자 로그인 정보를 삭제할 스토리지 시스템의 이름입니다.
+
++
+UNIX용 SnapDrive는 지정한 스토리지 시스템의 사용자 이름 또는 암호 로그인 정보를 제거합니다.
+
++
+
+NOTE: UNIX용 SnapDrive가 스토리지 시스템을 액세스하도록 설정하려면 새 사용자 로그인을 지정해야 합니다.
+
+

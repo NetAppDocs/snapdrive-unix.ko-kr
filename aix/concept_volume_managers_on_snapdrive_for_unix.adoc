@@ -1,0 +1,45 @@
+---
+permalink: aix/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager 
+summary: 'AIX에서 볼륨 관리자는 기본 LVM 및 Veritas Volume Manager\(VxVM\)라고 합니다.' 
+---
+= UNIX용 SnapDrive의 볼륨 관리자
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+AIX에서 볼륨 관리자는 기본 LVM 및 VxVM(Veritas Volume Manager)이라고 합니다.
+
+다음 표에서는 호스트 플랫폼의 볼륨 관리자에 대해 설명합니다.
+
+|===
+| 호스트 | 볼륨 관리자 | 볼륨 또는 디스크 그룹 | 논리적 볼륨의 위치입니다 | 다중 경로 장치의 위치 
+
+
+ a| 
+AIX
+ a| 
+네이티브 LVM
+ a| 
+볼륨 그룹 'vg'
+ a| 
+dEV/lvol
+
+모든 논리적 볼륨은 동일한 네임스페이스를 공유합니다
+ a| 
+'/dev/hdisk'(FC만 해당) 다중화는 iSCSI에서 지원되지 않습니다
+
+
+
+ a| 
+VxVM(Veritas Volume Manager)
+ a| 
+볼륨 그룹 'vg'
+ a| 
+'/dev/vx/dsk/dg/lvol'
+ a| 
+'/dev/vx/dmp/Disk_1'
+
+|===

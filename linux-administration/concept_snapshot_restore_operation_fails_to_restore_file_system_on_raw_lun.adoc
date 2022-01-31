@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/concept_snapshot_restore_operation_fails_to_restore_file_system_on_raw_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, fail, lun, snapshot, host 
+summary: 원래 호스트가 아닌 호스트에서 스냅샷 연결 작업을 수행한 후 원시 LUN에서 파일 시스템의 스냅샷 복구 작업이 실패합니다. 
+---
+= 스냅샷 복구 작업이 원시 LUN에서 파일 시스템을 복원하지 못합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+원래 호스트가 아닌 호스트에서 스냅샷 연결 작업을 수행한 후 원시 LUN에서 파일 시스템의 스냅샷 복구 작업이 실패합니다.
+
+클론 복제된 LUN이 스냅샷 복사본의 동일한 filespec에 연결된 다음 SnapDrive snap restore 명령을 실행하려고 하면 다음과 같은 오류 메시지가 나타납니다.
+
+[listing]
+----
+"0001-034 Command error: mount failed: mount: <device name> is not
+a valid block device"
+----
+클론 복제된 LUN을 삭제할 때 iSCSI 데몬이 복원된 LUN에 대한 디바이스 항목을 다시 매핑하므로 명령이 실패합니다.
+
+
+
+== 해결 방법
+
+다음 중 하나를 수행할 수 있습니다.
+
+* SnapDrive snap restore 명령을 다시 수행한다.
+* 원래 LUN의 스냅샷 복사본을 복구하려고 시도하기 전에 연결된 LUN(스냅샷 복사본의 동일한 파일 사양에 마운트된 경우)을 삭제합니다.
+

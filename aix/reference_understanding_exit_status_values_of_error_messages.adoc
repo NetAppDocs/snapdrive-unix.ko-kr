@@ -1,0 +1,26 @@
+---
+permalink: aix/reference_understanding_exit_status_values_of_error_messages.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, exit, status, value, error, message 
+summary: 'UNIX용 각 SnapDrive 오류 메시지는 종료 상태 값과 연결됩니다. 종료 상태 값에는 오류의 원인과 해당 유형(경고, 명령, 관리 또는 치명적)이 포함됩니다.' 
+---
+= 오류 메시지의 종료 상태 값 이해
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 각 SnapDrive 오류 메시지는 종료 상태 값과 연결됩니다. 종료 상태 값에는 오류의 원인과 해당 유형(경고, 명령, 관리 또는 치명적)이 포함됩니다.
+
+각 SnapDrive 오류 메시지 ID는 종료 상태 값에 연결됩니다. 종료 상태 값에는 다음 정보가 포함됩니다.
+
+* 종료 상태 값 -- 오류 조건의 기본 원인을 나타냅니다.
+* Type -- 오류 유형을 나타냅니다. 심각성의 수준은 값이 아니라 메시지에 따라 다릅니다. 가능한 값은 다음과 같습니다.
++
+** 경고 -- UNIX용 SnapDrive가 명령을 실행했지만 주의가 필요할 수 있는 조건에 대한 경고가 실행되었습니다.
+** 명령 -- UNIX용 SnapDrive가 명령줄에 오류가 있어 명령을 실행하지 못했습니다. 명령줄 형식이 올바른지 확인합니다.
+** 관리자 -- UNIX용 SnapDrive가 시스템 구성의 비호환성 때문에 명령을 실행하지 못했습니다. 구성 매개 변수를 검토하려면 시스템 관리자에게 문의하십시오.
+** Fatal -- UNIX용 SnapDrive가 예기치 않은 조건으로 인해 명령을 실행하지 못했습니다. 치명적인 오류는 거의 발생하지 않습니다. 치명적인 오류가 발생하여 이를 해결하는 데 문제가 있는 경우, NetApp 기술 지원 팀에 문의하여 올바르게 복구하고 오류 상태를 해결하는 데 필요한 단계를 알아보십시오.
+
+
+

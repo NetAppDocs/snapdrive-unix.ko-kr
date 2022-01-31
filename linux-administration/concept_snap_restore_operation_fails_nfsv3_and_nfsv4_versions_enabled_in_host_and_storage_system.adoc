@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_snap_restore_operation_fails_nfsv3_and_nfsv4_versions_enabled_in_host_and_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, fail, nfsv3, nfsv4, host, storage, operation 
+summary: 호스트 및 스토리지 시스템에서 NFSv3 및 NFSv4 버전이 설정되어 있으면 스냅 복구 작업이 실패합니다. 
+---
+= 호스트 및 스토리지 시스템에서 NFSv3 및 NFSv4 버전이 설정되어 있으면 스냅 복구 작업이 실패합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 및 스토리지 시스템에서 NFSv3 및 NFSv4 버전이 설정되어 있으면 스냅 복구 작업이 실패합니다.
+
+호스트 및 스토리지 시스템에서 NFSv3 및 NFSv4 버전을 사용하고 '-o vers' 옵션 없이 호스트에 볼륨을 마운트하는 경우 파일 및 디렉토리에 대해 'nobody:nobody' 소유권이 설정됩니다.
+
+
+
+== 해결 방법
+
+NFS 볼륨을 마운트하는 동안 '-o vers' 옵션을 사용하거나 호스트에서 NFS 기본 옵션을 적절한 값으로 확인하는 것이 좋습니다.

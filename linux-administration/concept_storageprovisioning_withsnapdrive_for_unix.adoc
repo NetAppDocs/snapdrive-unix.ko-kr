@@ -1,0 +1,37 @@
+---
+permalink: linux-administration/concept_storageprovisioning_withsnapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, provision, lvm, logical, manager 
+summary: 'UNIX용 SnapDrive는 완벽한 스토리지 관리 기능을 제공합니다. 호스트에서 스토리지 시스템으로 스토리지를 프로비저닝하고 LVM\(Logical Volume Manager) 호스트를 사용하거나 사용하지 않고 해당 스토리지를 관리할 수 있습니다.' 
+---
+= UNIX용 SnapDrive에서의 스토리지 작업
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 완벽한 스토리지 관리 기능을 제공합니다. 호스트에서 스토리지 시스템으로 스토리지를 프로비저닝하고 LVM(Logical Volume Manager) 호스트를 사용하거나 사용하지 않고 해당 스토리지를 관리할 수 있습니다.
+
+UNIX용 SnapDrive를 사용하면 다음과 같은 스토리지 작업을 수행할 수 있습니다.
+
+* LUN, 파일 시스템, 논리 볼륨 및 디스크 그룹을 생성하여 스토리지를 생성합니다.
+* 스토리지에 대한 정보를 표시합니다.
+* 스토리지에 연결합니다.
+* 스토리지 크기를 조정합니다.
+* 보관에서 연결을 끊습니다.
+* 저장소를 삭제합니다.
+
+
+"SnapDrive storage create" 명령을 사용하여 스토리지를 생성하면 SnapDrive for UNIX는 호스트 준비, 검색 매핑 수행, 생성하는 각 LUN에 접속 등 LUN 설정에 필요한 모든 작업을 자동으로 수행합니다. "SnapDrive storage show" 명령을 사용하면 NetApp LUN, 디스크 그룹, 호스트 볼륨, 파일 시스템 또는 NFS 디렉토리 트리에 대한 정보를 생성할 수 있습니다.
+
+'SnapDrive storage connect' 명령을 사용하여 저장소를 새 위치에 매핑할 수 있습니다. 이 명령을 사용하면 기존 스토리지를 생성하는 데 사용된 호스트가 아닌 다른 호스트에서 기존 스토리지를 액세스할 수 있습니다. 'SnapDrive storage connect' 명령을 사용하면 기존 LUN, 파일 시스템, 디스크 그룹 및 논리적 볼륨을 새 호스트에서 액세스할 수 있도록 할 수 있습니다. 이 기능은 새 호스트에서 다른 호스트로 스토리지 엔터티를 백업하려는 경우에 유용할 수 있습니다.
+
+"SnapDrive storage resize" 명령을 사용하면 다음과 같은 방법으로 스토리지 크기를 늘릴 수 있습니다.
+
+* 호스트 엔터티가 도달할 대상 크기를 지정합니다
+* 저장소를 늘릴 바이트 수를 입력합니다
+
+
+현재 위치에 스토리지를 더 이상 매핑하지 않으려면 'SnapDrive storage disconnect' 명령을 사용합니다. 이 명령은 하나 이상의 호스트 위치에서 LUN으로의 매핑을 제거하여 해당 위치에 대한 스토리지를 생성합니다.
+
+스토리지를 삭제하려면 SnapDrive storage delete 명령을 사용할 수 있습니다. SnapDrive for UNIX는 지정하는 모든 호스트 측 엔터티와 해당 기본 엔터티 및 이와 연관된 LUN을 삭제합니다.

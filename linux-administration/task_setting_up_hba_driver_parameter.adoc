@@ -1,0 +1,30 @@
+---
+permalink: linux-administration/task_setting_up_hba_driver_parameter.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, hba, driver, parameter, mpio 
+summary: Linux MPIO용 HBA 드라이버를 설정하려면 사용되는 운영 체제에 따라 필요한 단계의 정확한 순서가 달라집니다. 또한 사용되는 HBA 카드에 따라 설정이 달라집니다. 
+---
+= HBA 드라이버 매개 변수 설정 중
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux MPIO용 HBA 드라이버를 설정하려면 사용되는 운영 체제에 따라 필요한 단계의 정확한 순서가 달라집니다. 또한 사용되는 HBA 카드에 따라 설정이 달라집니다.
+
+Linux MPIO용 HBA 드라이버 매개 변수를 설정하려면 다음 단계를 수행해야 합니다.
+
+.단계
+. 내장 드라이버를 제거합니다.
+. 공급업체의 웹 사이트에서 최신 드라이버를 설치합니다.
+. 공급업체의 CLI 구성 도구를 사용하여 드라이버 매개 변수를 설정합니다.
+. HBA 드라이버에 대한 기본 매개 변수를 설정하려면 '/etc/modprobe.conf' 파일을 편집합니다.
+. HBA 드라이버 매개 변수를 사용하여 initrd(RAM 디스크 이미지)를 다시 생성합니다.
+. 새 HBA 드라이버 설정을 적용하려면 호스트를 재부팅합니다.
+
+
+* 관련 정보 *
+
+http://mysupport.netapp.com["NetApp 지원"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Linux Unified Host Utilities 7.1 설치 가이드"]

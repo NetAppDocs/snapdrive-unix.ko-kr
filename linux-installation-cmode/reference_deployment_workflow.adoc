@@ -1,0 +1,15 @@
+---
+permalink: linux-installation-cmode/reference_deployment_workflow.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, deployment, workflow, install, provision 
+summary: 'SnapDrive에서 스냅샷 복사본을 생성하려면 먼저 Linux 호스트 유틸리티\(FC 또는 iSCSI 프로토콜\ 사용 시)를 설치하고, SnapDrive for UNIX를 설치하고, SnapDrive에서 지원되는 구성을 확인하고, 스토리지를 프로비저닝한 다음, Linux 호스트에서 NetApp 스토리지 시스템까지 연결을 설정해야 합니다.' 
+---
+= 구축 워크플로우
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive에서 스냅샷 복사본을 생성하려면 먼저 Linux 호스트 유틸리티(FC 또는 iSCSI 프로토콜을 사용하는 경우)를 설치하고, SnapDrive for UNIX를 설치하고, SnapDrive에서 지원되는 구성을 확인하고, 스토리지를 프로비저닝한 다음, Linux 호스트에서 NetApp 스토리지 시스템까지 연결을 설정해야 합니다.
+
+image::../media/sdu_deployment_workflow_cmode.gif[SDU 배포 워크플로 cmode]

@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_storagecreation_with_snapdrive_forunix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create 
+summary: UNIX용 SnapDrive를 사용하여 LUN, 디스크 그룹, 호스트 볼륨 및 LUN에 생성된 파일 시스템에 직접 LUN, 파일 시스템을 생성할 수 있습니다. 
+---
+= UNIX용 SnapDrive를 사용하여 스토리지 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하여 LUN, 디스크 그룹, 호스트 볼륨 및 LUN에 생성된 파일 시스템에 직접 LUN, 파일 시스템을 생성할 수 있습니다.
+
+SnapDrive for UNIX는 호스트 준비, 검색 매핑 수행, 엔터티 생성 및 생성하는 엔티티에 연결을 비롯하여 이러한 엔터티와 연관된 LUN을 설정하는 데 필요한 모든 작업을 자동으로 처리합니다. 또한 SnapDrive for UNIX에서 요청하는 엔터티에 스토리지를 제공하는 데 사용할 LUN을 지정할 수도 있습니다.
+
+LUN과 스토리지 엔티티를 동시에 생성할 필요는 없습니다. LUN을 별도로 생성하는 경우 나중에 기존 LUN을 사용하여 스토리지 엔티티를 생성할 수 있습니다.

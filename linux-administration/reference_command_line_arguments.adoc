@@ -1,0 +1,207 @@
+---
+permalink: linux-administration/reference_command_line_arguments.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, argument, format, copy, snapshot 
+summary: UNIX용 SnapDrive는 특정 형식의 인수를 사용합니다. 
+---
+= 명령줄 인수입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 특정 형식의 인수를 사용합니다.
+
+다음 표에서는 키워드로 지정할 수 있는 인수에 대해 설명합니다.
+
+"SnapDrive type_name operation_name[<keyword/option><arguments>]" 형식을 사용합니다. 예를 들어 호스트 파일 시스템 "/mnt/dir"에서 'snap_hr'라는 스냅샷 복사본을 생성하려면 다음 명령줄을 입력합니다.
+
+"* SnapDrive snap create -fs/mnt/dir-snapname_snap_hr*".
+
+|===
+| 인수 | 설명 
+
+
+ a| 
+dest_fspec
+ a| 
+대상 엔티티가 디스크 그룹 또는 LUN을 연결한 후 액세스할 수 있는 이름입니다.
+
+
+
+ a| 
+DgName(DgName)
+ a| 
+디스크 그룹 또는 볼륨 그룹의 이름입니다.
+
+
+
+ a| 
+D_LUN_이름입니다
+ a| 
+SnapDrive for UNIX가 스냅샷 복사본의 새로 연결된 복사본에서 LUN을 사용할 수 있도록 하는 데 사용하는 대상 이름을 지정할 수 있습니다.
+
+
+
+ a| 
+FILERNAME입니다
+ a| 
+스토리지 시스템의 이름입니다.
+
+
+
+ a| 
+filer_path를 입력합니다
+ a| 
+스토리지 시스템 객체에 대한 경로 이름입니다. 이 이름은 스토리지 시스템 이름과 볼륨을 포함할 수 있지만, SnapDrive for UNIX가 이전 인수에 제공된 값을 기반으로 누락된 구성 요소에 기본값을 사용할 수 있는 경우에는 필요하지 않습니다. 다음은 경로 이름의 예입니다.
+
+* 'TEST_BURFER:/vol/vol3/qtree_2'
+* '/vol/vol3/qtree_2'
+* "qtree_2"
+
+
+
+
+ a| 
+파일_사양
+ a| 
+호스트 볼륨, LUN, 디스크 또는 볼륨 그룹, 파일 시스템 또는 NFS 디렉토리 트리와 같은 스토리지 엔터티의 이름입니다.
+
+일반적으로 file_spec 인수를 다음 중 하나로 사용합니다.
+
+* UNIX용 SnapDrive에서 스냅샷 복사본을 만들거나 스냅샷 복사본에서 복원할 개체입니다
+* 스토리지를 프로비저닝할 때 생성하거나 사용할 객체입니다
+
+
+객체가 모두 동일한 유형일 필요는 없습니다. 여러 호스트 볼륨을 제공할 경우 모두 동일한 볼륨 관리자에 속해야 합니다.
+
+중복 디스크 그룹 또는 호스트 볼륨으로 확인하는 이 인수의 값을 제공하면 명령이 실패합니다.
+
+잘못된 사용의 예: 이 예에서는 파일 시스템 fs1과 fs2가 있는 DG1에 호스트 볼륨 hv1 및 hv2가 있다고 가정합니다. 따라서 다음 인수는 중복 디스크 그룹 또는 호스트 볼륨과 관련되어 있으므로 실패합니다.
+
+'-DG_DG1_-hostvoldg1/hv1'
+
+'-DG_DG1_'
+
+'-fs/fs1'
+
+'-hostvol DG1/hv1-fs/fs1'
+
+올바른 사용 예: 이 예제에서는 이 인수에 대한 올바른 사용법을 보여 줍니다.
+
+'-hostvoldg1/hv1dg1/hv2'
+
+'-fs/fs1/fs2'
+
+'-hostvoldg1/hv1-fs/fs2'
+
+
+
+ a| 
+fspec_set
+ a| 
+snap connect 명령과 함께 다음을 식별하는 데 사용됩니다.
+
+* 호스트 LVM 엔티티입니다
+* LUN에 포함된 파일 시스템입니다
+
+
+또한 인수를 사용하면 SnapDrive for UNIX에서 새로 연결된 스냅샷 복사본 내에서 엔터티를 사용할 수 있도록 할 때 사용하는 대상 이름 집합을 지정할 수 있습니다.
+
+fspec_set의 형식은 "{-vg|-dg|-fs|-lvol|-hostvol}_src_fspec_[_destdg|-destvg}_dg_name_][{-destlv|-desthv}_LV_name_]입니다
+
+
+
+ a| 
+host_lvm_fspec
+ a| 
+스토리지 생성 명령을 실행할 때 파일 시스템, 논리 볼륨 또는 디스크 그룹을 생성할지 여부를 지정할 수 있습니다. 이 인수에는 다음 설명에 따라 세 가지 형식이 있을 수 있습니다. 사용할 형식은 만들려는 요소에 따라 다릅니다.
+
+
+NOTE: '-DG' 및 '-vg' 옵션은 일부 운영 체제에서 디스크 그룹을 참조하고 다른 운영 체제에서 볼륨 그룹을 참조한다는 사실을 반영하는 동의어입니다. 또한 -lvol, -hostvol도 동의어입니다. 이 가이드에서는 -dg를 사용하여 디스크 그룹 및 볼륨 그룹과 '-hostvol'을 모두 참조하여 논리적 볼륨과 호스트 볼륨을 모두 참조합니다.
+
+
+
+ a| 
+파일 시스템을 생성하려면 다음 형식을 사용합니다. -fs file_spec "[-fstype_type_] [-fsopts_options_] [-hostvol_file_spec_] [-dg_dg_name_] 논리 또는 호스트 볼륨을 생성하려면 [-hostvol_file_spec_] [-dG_name]dG_name, 이 형식을 사용하십시오
+
+작성하는 최상위 엔티티의 이름을 지정해야 합니다. 기본 요소에 이름을 지정할 필요는 없습니다. 원본으로 사용하는 엔터티의 이름을 지정하지 않으면 SnapDrive for UNIX에서 내부적으로 생성된 이름을 사용하여 해당 엔터티를 만듭니다.
+
+UNIX용 SnapDrive에서 파일 시스템을 생성하도록 지정하는 경우 SnapDrive for UNIX가 호스트 LVM에서 지원하는 유형을 지정해야 합니다. 이 유형으로는 ext4, ext3 등이 있습니다
+
+옵션 '-fspts'는 새 파일 시스템을 생성하는 호스트 작업에 전달할 옵션(예: mkfs)을 지정하는 데 사용됩니다.
+
+
+
+ a| 
+IG_이름
+ a| 
+이니시에이터 그룹의 이름입니다.
+
+
+
+ a| 
+long_filer_path
+ a| 
+스토리지 시스템 이름, 볼륨 이름 및 해당 볼륨 내의 다른 디렉토리 및 파일 요소를 포함하는 경로 이름입니다. 다음은 긴 경로 이름의 예입니다.
+
+'TEST_BURFER:/vol/vol3/qtree_2'
+
+'10.10.10.1:/vol/vol4/LUN_21'
+
+
+
+ a| 
+long_lun_name입니다
+ a| 
+스토리지 시스템 이름, 볼륨 및 LUN 이름을 포함하는 이름입니다. 다음은 긴 LUN 이름의 예입니다.
+
+"TEST_BURFER:/vol/vol1/Luna"
+
+
+
+ a| 
+long_snap_name
+ a| 
+스토리지 시스템 이름, 볼륨 및 스냅샷 복사본 이름이 포함된 이름입니다. 다음은 긴 Snapshot 복사본 이름 "test_filer:/vol/account_vol:snap_20040202"의 예입니다
+
+'SnapDrive snap show' 및 'SnapDrive snap delete' 명령을 사용하면 별표(*) 문자를 와일드카드로 사용하여 스냅샷 복사본 이름의 모든 부분과 일치시킬 수 있습니다. 와일드카드 문자를 사용할 경우 스냅샷 복사본 이름 끝에 추가해야 합니다. UNIX용 SnapDrive에서는 이름의 다른 지점에 와일드카드를 사용하는 경우 오류 메시지가 표시됩니다.
+
+예: 이 예제에서는 'snap show' 명령과 'snap delete' 명령, 'snap show myfiler:/vol/vol2:mysnap *'와 함께 와일드카드를 사용합니다
+
+myfiler:/vol/vol2:/yoursnap * snap show myfiler:/vol/vol1/qtree1:qtree_snap * snap delete 10.10.10:/vol/vol2:mysnap * 10.10.10.11:/vol/vol3: ysnap * hersnap
+
+와일드카드 제한: 스냅샷 복사본 이름 중간에 와일드카드를 입력할 수 없습니다. 예를 들어 다음 명령줄은 와일드카드가 스냅샷 복사본 이름 중 "바나나:/vol/vol1: my * snap"이기 때문에 오류 메시지를 생성합니다
+
+
+
+ a| 
+lun_name입니다
+ a| 
+LUN의 이름입니다. 이 이름에는 LUN이 있는 스토리지 시스템 및 볼륨이 포함되지 않습니다. 다음은 LUN 이름 Luna의 예입니다
+
+
+
+ a| 
+경로
+ a| 
+임의의 경로 이름입니다.
+
+
+
+ a| 
+prefix_string
+ a| 
+볼륨 클론의 이름 생성에 사용되는 접두사입니다
+
+
+
+ a| 
+s_lun_name입니다
+ a| 
+'_long_snap_name_'에 의해 지정된 스냅샷 복사본에 캡처되는 LUN 엔터티를 나타냅니다.
+
+|===
+* 관련 정보 *
+
+xref:reference_storage_provisioning_command_lines.adoc[스토리지 프로비저닝 명령줄]

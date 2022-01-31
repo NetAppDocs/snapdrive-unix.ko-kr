@@ -1,0 +1,58 @@
+---
+permalink: linux-administration/concept_volume_managers_on_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, manager, native, lvm2 
+summary: Linux에서는 볼륨 관리자가 Native LVM2입니다. 
+---
+= UNIX용 SnapDrive의 볼륨 관리자
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux에서는 볼륨 관리자가 Native LVM2입니다.
+
+다음 표에서는 호스트 플랫폼의 볼륨 관리자에 대해 설명합니다.
+
+|===
+| 호스트 | 볼륨 관리자 | 볼륨 또는 디스크 그룹 | 논리적 볼륨의 위치입니다 | 다중 경로 장치의 위치 
+
+
+ a| 
+RHEL 4 및 RHEL 5
+ a| 
+기본 LVM2
+ a| 
+볼륨 그룹 '_vg_'
+ a| 
+'/dev/mapper/DgName-lvolname'
+ a| 
+'/dev/mpath/dev/mapper/dev/dm'
+
+
+
+ a| 
+RHEL 6
+ a| 
+기본 LVM2
+ a| 
+볼륨 그룹 'vg'
+ a| 
+'/dev/mapper/DgName-lvolname'
+ a| 
+'/dev/mapper/dev/dm'
+
+
+
+ a| 
+SLES 10 및 SLES 11
+ a| 
+기본 LVM2
+ a| 
+볼륨 그룹 'vg'
+ a| 
+'/dev/mapper/DgName-volname'
+ a| 
+'/dev/mapper/dev/dm'
+
+|===

@@ -1,0 +1,30 @@
+---
+permalink: solaris/task_considerations_for_provisioning_rdm_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rdm, lun, provisioning 
+summary: UNIX용 SnapDrive에는 RDM LUN을 프로비저닝할 때 고려해야 할 몇 가지 사항이 있습니다. 
+---
+= RDM LUN 용량 할당 시 고려 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에는 RDM LUN을 프로비저닝할 때 고려해야 할 몇 가지 사항이 있습니다.
+
+* 게스트 운영체제의 'napdrive.conf' 파일에서 구성 변수 '_default-transport_'가 '_fcp_'로 설정되어 있는지 확인합니다.
+* SnapDrive for UNIX가 VMware vSphere용 NetApp 가상 스토리지 콘솔에 액세스하도록 구성합니다.
+* RDM LUN 지원을 위한 구성 변수가 'napdrive.conf' 파일에 사용되는지 확인합니다. RDM LUN 지원에는 '_contact-viadmin-port_', '_use-https-to-viadmin_', '_VIF-password-file, virtualization-operation-timoutsecs=600_' 등의 변수가 사용됩니다.
+
+
+* 관련 정보 *
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[SnapDrive에서 관리하는 RDM LUN의 제한 사항]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[SnapDrive for UNIX에서 VMware VMotion 지원]
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[UNIX용 SnapDrive용 가상 스토리지 콘솔 구성]
+
+xref:concept_configuration_options_and_their_default_values.adoc[구성 옵션 및 해당 기본값]
+
+xref:concept_guest_os_preparation_for_installing_sdu.adoc[UNIX용 SnapDrive 설치를 위한 게스트 OS 준비]

@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_storage_creation_for_lvm_vxvm_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, lvm, entity 
+summary: UNIX용 SnapDrive를 사용하여 LVM을 사용하여 논리적 볼륨 또는 파일 시스템을 생성하는 경우 UNIX용 SnapDrive는 필요한 디스크 그룹을 자동으로 생성합니다. SnapDrive for UNIX는 호스트 볼륨 관리자가 지원하는 유형에 따라 파일 시스템을 생성합니다. AIX의 경우 JFS2, JFS 및 VxFS가 포함됩니다. 
+---
+= LVM 엔티티에 대한 스토리지 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하여 LVM을 사용하여 논리적 볼륨 또는 파일 시스템을 생성하는 경우 UNIX용 SnapDrive는 필요한 디스크 그룹을 자동으로 생성합니다. SnapDrive for UNIX는 호스트 볼륨 관리자가 지원하는 유형에 따라 파일 시스템을 생성합니다. AIX의 경우 JFS2, JFS 및 VxFS가 포함됩니다.

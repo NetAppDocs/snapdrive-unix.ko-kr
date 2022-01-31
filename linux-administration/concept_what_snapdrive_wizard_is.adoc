@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_what_snapdrive_wizard_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, wizards, operation 
+summary: SnapDrive에는 특정 SnapDrive 작업을 대화형 방식으로 수행하는 데 도움이 되는 다양한 마법사가 있습니다. 
+---
+= SnapDrive 마법사란 무엇입니까
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive에는 특정 SnapDrive 작업을 대화형 방식으로 수행하는 데 도움이 되는 다양한 마법사가 있습니다.

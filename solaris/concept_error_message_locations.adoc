@@ -1,0 +1,42 @@
+---
+permalink: solaris/concept_error_message_locations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, message, location 
+summary: UNIX용 SnapDrive 명령 출력 및 다양한 로그 파일로 표시되는 오류 메시지에 대한 정보를 제공합니다. 
+---
+= 오류 메시지 위치
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령 출력 및 다양한 로그 파일로 표시되는 오류 메시지에 대한 정보를 제공합니다.
+
+UNIX용 SnapDrive에서는 다음 위치에 오류 메시지에 대한 정보를 제공합니다.
+
+* 명령 출력
++
+UNIX용 SnapDrive 명령의 표준 오류 출력에 대한 모든 메시지가 표시됩니다.
+
+* 시스템 로그입니다
++
+UNIX용 SnapDrive는 syslog(3) 메커니즘을 사용하여 심각성 수준의 치명적 및 관리 오류가 있는 모든 오류를 시스템 로그에 기록합니다.
+
+* 감사 로그 파일
++
+감사 로그에는 UNIX용 각 SnapDrive 명령에 대한 다음 정보가 기록됩니다.
+
++
+** 누가 발행했습니다
+** 발행일
+** 종료 상태는 어떻습니까?
++
+이는 시스템에서 실제로 발생한 상황을 파악하는 데 매우 유용합니다.
+
+
+
+* 추적 로그 파일입니다
++
+트레이스 로그에는 발생한 오류에 대한 자세한 정보가 기록됩니다. NetApp 기술 지원 부서에서는 문제를 진단할 때 이 로그를 사용합니다.
+
+

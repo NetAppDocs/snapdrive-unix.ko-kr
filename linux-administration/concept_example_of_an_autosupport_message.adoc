@@ -1,0 +1,84 @@
+---
+permalink: linux-administration/concept_example_of_an_autosupport_message.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autosupport, message, example 
+summary: UNIX용 SnapDrive에서는 다양한 시나리오에 대한 예를 제공합니다. 모든 예제의 AutoSupport 메시지 내용은 운영 체제와 상관없이 기본적으로 동일합니다. 
+---
+= AutoSupport 메시지의 예
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에서는 다양한 시나리오에 대한 예를 제공합니다. 모든 예제의 AutoSupport 메시지 내용은 운영 체제와 상관없이 기본적으로 동일합니다.
+
+예: 새 스토리지 시스템 추가
+
+다음 예는 이름이 '_x336-207-58_'인 호스트에서 보낸 메시지입니다.
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="3"
+        category="sduvs2 configured"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=fcp
+----
+예: 데몬을 재시작합니다
+
+SnapDrive for UNIX는 데몬을 재시작할 때 다음 AutoSupport 메시지를 스토리지 시스템에 보냅니다.
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=fcp
+----
+SnapDrive for UNIX는 dFM이 구성되어 있고 RBAC-method가 dfm로 설정되어 있는 경우 다음 AutoSupport 메시지를 스토리지 시스템으로 전송합니다.
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=dfm, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=Yes, Protocol=fcp"
+----
+SnapDrive for UNIX는 dFM이 구성되어 있고 RBAC-method가 native로 설정되어 있으면 다음 AutoSupport 메시지를 스토리지 시스템으로 보냅니다.
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="2"
+        category="daemon restarted"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=Yes, Protocol=fcp"
+----
+SnapDrive for UNIX는 '스냅 생성' 작업이 성공하면 다음과 같은 AutoSupport 메시지를 스토리지 시스템으로 보냅니다.
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="5"
+        category="snap create successful"
+        subject="host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=3, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=iscsi, snapshot_name=dg_snap"
+----
+SnapDrive for UNIX는 스토리지에서 모든 작업이 성공적으로 표시되면 다음과 같은 AutoSupport 메시지를 스토리지 시스템으로 보냅니다.
+
+[listing]
+----
+computerName="x336-207-58"
+        eventSource="snapdrive"
+        appVersion="5.2 for UNIX"
+        eventID="3"
+        category="general"
+        subject="protos=fcp, Connect Luns=8, dgs=4, hvs=3, fs=3, host_name=x336-207-58, host_os=Linux, host_os_release=2.6.32-279.el6.x86_64, host_os_version=#1 SMP Wed Jun 13 18:24:36 EDT 2012, No of controller=2, PM/RBAC=native, Host Virtualization=No, Multipath-type=nativempio, Protection Enabled=No, Protocol=fcp"
+----

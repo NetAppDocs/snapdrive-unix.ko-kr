@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_role_based_access_control_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, rbac, access, control, role 
+summary: '역할 기반 액세스 제어\(RBAC\)는 사용자 로그인 및 역할 권한에 사용됩니다. RBAC에서는 관리자가 역할을 정의하여 사용자 그룹을 관리할 수 있습니다. 데이터베이스에 대한 액세스를 특정 관리자로 제한해야 하는 경우 해당 관리자의 계정을 설정해야 합니다. 또한 정보를 제한하려는 경우 이러한 관리자가 볼 수 있는 작업과 수행할 수 있는 작업을 수행하려면 사용자가 만든 관리자 계정에 역할을 적용해야 합니다.' 
+---
+= UNIX용 SnapDrive에서 역할 기반 액세스 제어
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+역할 기반 액세스 제어(RBAC)는 사용자 로그인 및 역할 권한에 사용됩니다. RBAC에서는 관리자가 역할을 정의하여 사용자 그룹을 관리할 수 있습니다. 데이터베이스에 대한 액세스를 특정 관리자로 제한해야 하는 경우 해당 관리자의 계정을 설정해야 합니다. 또한 정보를 제한하려는 경우 이러한 관리자가 볼 수 있는 작업과 수행할 수 있는 작업을 수행하려면 사용자가 만든 관리자 계정에 역할을 적용해야 합니다.
+
+RBAC는 운영 관리자 콘솔의 도움을 받아 UNIX용 SnapDrive에서 사용됩니다. Operations Manager 콘솔은 LUN, qtree, 볼륨, 애그리게이트 및 vFiler 유닛과 같은 스토리지 개체에 대한 세분화된 액세스를 제공합니다.
+
+* 관련 정보 *
+
+xref:concept_mandatory_checks_for_volume_based_snaprestore.adoc[볼륨 기반 SnapRestore에 대한 필수 검사]
+
+xref:concept_restoring_snapshotcopies_ona_destination_storagesystem.adoc[타겟 스토리지 시스템의 스냅샷 복사본 복원]
+
+xref:concept_snap_disconnect_procedure.adoc[스냅 분리 절차]

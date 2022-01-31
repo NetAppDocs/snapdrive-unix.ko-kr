@@ -1,0 +1,24 @@
+---
+permalink: aix/task_resetting_the_snap_reserve_option_on_the_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reset, reserve, storage, system 
+summary: 'Fibre Channel 또는 iSCSI(Internet Small Computer System Interface) 환경에서 Data ONTAP를 사용하는 경우 볼륨 최적화를 위해 스토리지 시스템에서 스냅 예약 옵션을 0%로 재설정해야 합니다.' 
+---
+= 스토리지 시스템에서 스냅 예약 옵션을 재설정하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Fibre Channel 또는 iSCSI(Internet Small Computer System Interface) 환경에서 Data ONTAP를 사용하는 경우 볼륨 최적화를 위해 스토리지 시스템에서 '스냅 예약' 옵션을 0%로 재설정해야 합니다.
+
+.단계
+. 호스트 또는 스토리지 시스템 콘솔에서 'telnet' 명령을 실행하여 스토리지 시스템에 액세스합니다.
+. 다음 명령을 입력합니다.
++
+' * snap reserve_vol_name 0_ * '
+
++
+'_vol_name_'은 스냅 예약 옵션을 설정할 볼륨의 이름입니다.
+
+

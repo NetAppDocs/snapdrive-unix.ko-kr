@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_operating_system_limits_on_open_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, operating, limits, open, files, system 
+summary: SnapDrive for UNIX는 동시에 열려 있는 파일 수를 확인합니다. 이 제한이 초과되면 SnapDrive for UNIX에서 오류가 발생합니다. 
+---
+= 열린 파일에 대한 운영 체제 제한
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 동시에 열려 있는 파일 수를 확인합니다. 이 제한이 초과되면 SnapDrive for UNIX에서 오류가 발생합니다.
+
+SnapDrive for UNIX는 프로세스에서 연 파일 수에 대한 운영 체제 제한을 검사합니다.
+
+
+NOTE: 한 프로세스에서 동시에 열리는 파일 핸들 수의 기본 제한은 운영 체제에 따라 다릅니다. 운영 체제 설명서를 참조하여 한계를 확인하십시오.
+
+한 프로세스에 대해 열려 있는 LUN 수가 운영 체제 제한을 초과하여 한 프로세스에서 동시에 열리는 파일 핸들 수를 초과하면 SnapDrive for UNIX가 다음 오류 메시지와 함께 종료됩니다.
+
+'0001-001 관리자 오류: 장치 간 경로를 열 수 없습니다.

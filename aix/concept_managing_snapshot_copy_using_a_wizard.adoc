@@ -1,0 +1,73 @@
+---
+permalink: aix/concept_managing_snapshot_copy_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, wizard, manage 
+summary: 마법사를 사용하여 스냅샷 복사본을 관리할 수 있습니다. 이 마법사는 일련의 질문을 통해 사용자를 실행하며 스냅 연결, 스냅 복구 및 스냅 분리 작업을 수행하는 데 도움을 줍니다. 
+---
+= 마법사를 사용하여 스냅샷 복사본 관리
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+마법사를 사용하여 스냅샷 복사본을 관리할 수 있습니다. 이 마법사는 일련의 질문을 통해 사용자를 실행하며 스냅 연결, 스냅 복구 및 스냅 분리 작업을 수행하는 데 도움을 줍니다.
+
+SnapDrive snap wizard 명령을 사용하여 마법사를 실행할 수 있습니다.
+
+다음 표에는 마법사를 실행할 수 있는 다양한 작업과 해당 명령이 나와 있습니다. 마법사를 시작한 후 응용 프로그램 창의 단계를 따릅니다.
+
+|===
+| 작동 | 명령 
+
+
+ a| 
+스냅샷 복원
+ a| 
+'SnapDrive 스냅 마법사 복원'
+
+
+
+ a| 
+스냅샷 연결
+ a| 
+'SnapDrive 스냅 마법사 연결'
+
+
+
+ a| 
+스토리지 시스템 볼륨이 있는 파일 시스템에 대한 스냅샷 접속 작업입니다
+
+
+
+ a| 
+디스크 그룹에 대한 스냅샷 연결
+
+
+
+ a| 
+LUN의 스냅샷 연결 끊기
+ a| 
+'SnapDrive 스냅 마법사 연결 해제
+
+
+
+ a| 
+디스크 그룹에 대한 스냅샷 연결을 끊습니다
+
+
+
+ a| 
+호스트 볼륨에 대한 스냅샷 연결 끊기
+
+
+
+ a| 
+파일 시스템에 대한 스냅샷 연결을 끊습니다
+
+|===
+* 제한 사항: * SnapDrive for UNIX 4.1 이상에서는 'SnapDrive snap wizard' 명령에 다음과 같은 제한이 있습니다.
+
+* '스냅 마법사 복원' 명령을 사용하면 볼륨 기반 SnapRestore가 지원되지 않습니다.
+* 'Snap wizard connect' 명령은 FlexClone ® 볼륨을 지원하지 않습니다.
+* 응답하지 않는 파일 사양에 대한 작업은 '스냅 마법사' 명령으로 지원되지 않습니다.
+

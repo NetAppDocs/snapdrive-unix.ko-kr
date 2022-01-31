@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_snapdrived_stop_or_snapdrived_start_command_hangs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, start, command, hang 
+summary: 경우에 따라 스냅드라이브 중지 또는 스냅드라이브 시작 명령이 중단될 수 있습니다. 
+---
+= 스냅드라이브 중지 또는 스냅드라이브 시작 명령이 중단됩니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+경우에 따라 스냅브드 스탑 또는 스냅브드 스타트 명령이 중단될 수 있다.
+
+이 문제를 해결하려면 '드라이브 상태'를 실행하여 실행 중인 명령의 수와 시작 시간을 확인합니다. '주행 중지' 명령은 실행 중인 모든 명령이 완료될 때까지 대기합니다. 명령어가 정지된다고 생각되면 스냅브드포스 스탑(drapsed-force stop) 또는 스냅브드포스 리재시작(drapsed-force restart) 명령을 실행한다.
+
+
+IMPORTANT: '-force' 옵션은 실행 중인 모든 명령을 중지하고 데몬을 중지합니다. 이 경우 오래된 디바이스 항목과 향후 데몬 시작과 같은 시스템 상태에 부작용이 발생할 수 있습니다.

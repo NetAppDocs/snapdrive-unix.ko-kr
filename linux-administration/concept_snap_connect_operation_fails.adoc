@@ -1,0 +1,61 @@
+---
+permalink: linux-administration/concept_snap_connect_operation_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, fail, error, operation, reboot, reload 
+summary: 호스트를 재부팅한 후 스냅 연결 작업이 실패하고 원래 볼륨 그룹이 로드되지 않습니다. 
+---
+= 스냅 연결 작업이 실패했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트를 재부팅한 후 스냅 연결 작업이 실패하고 원래 볼륨 그룹이 로드되지 않습니다.
+
+Linux 호스트에서 UNIX용 SnapDrive가 중단된 경우 호스트를 재부팅하거나 Ctrl-C를 사용하여 스냅샷 연결 작업이 실패한 경우, 원래 호스트에서 스냅샷 연결 작업이 실패합니다. 중단은 '/etc/lvm/lvm.conf' 파일에 추가된 '#SDUTEMP' 태그를 발생시켜 UNIX 작업에 대한 후속 SnapDrive가 실패하고 다음 오류 메시지가 표시됩니다.
+
+[listing]
+----
+0001-945 Admin error: Volume Manager's configuration file contains
+tags from previous SDU operation. Please cleanup the cloned lun(s),
+if any, existing from a previous unsuccessful operation and cleanup
+the configuration file before proceeding.
+----
+
+
+== 해결 방법
+
+. 이전에 스냅샷 연결 작업이 실패했거나 중단되었던 스토리지 시스템에서 클론 복제된 LUN을 제거합니다.
++
+
+NOTE: SnapDrive storage show 명령을 -allption과 함께 사용하여 확인할 수 있습니다.
+
+. 다음 명령을 입력하여 호스트에서 LUN이 제거되었는지 확인합니다.
++
+** iSCSI의 경우 '/etc/init.d/iscsi' reload 명령을 입력합니다
++
+
+NOTE: '/etc/init.d/iscsi reload' 옵션은 RHEL 4 업데이트 6 이전 버전에 적용할 수 있습니다.
+
+** RHEL 5 이상의 경우 iSCSI를 사용하는 경우 LUN을 수동으로 제거해야 합니다. 또한 호스트 재검색을 수동으로 수행해야 합니다.
++
+다중 경로 솔루션을 사용하는 경우 다중 경로에 대한 재검색을 수동으로 수행합니다. '멀티패스' 명령을 실행하여 이 작업을 수행할 수 있습니다
+
++
+
+NOTE: FC를 사용하는 경우 위의 프로세스는 RHEL 4 업데이트 6 및 RHEL 5 이전 버전의 모든 버전에 적용됩니다.
+
+
+
+. '/etc/lvm/lvm.conf' 파일에서 볼륨 그룹을 제거합니다.
++
+"/etc/lvm/lvm.conf" 파일에서 복제된 LUN을 제거한 후 파일은 다음과 같이 표시될 수 있습니다.
+
++
+"#SDUEXISTING VOLUME_LIST=["vgx","vgY"] volume_list=["vgx"]#SDUTEMP"
+
+. 끝에 있는 # SDUTEMP 태그가 포함된 전체 행을 삭제합니다 '#SDUEXISTING' 태그로 시작하는 줄이 있으면 태그만 제거하고 줄을 유지합니다.
+. 구성 파일의 변경 내용을 유지하려면 'vgscan' 명령을 실행합니다.
+. 원래 볼륨 그룹을 유지하려면 'vgchange -a y' 명령을 입력합니다.
+. 호스트에서 '/etc/fstab' 파일을 검토하여 파일 시스템을 다시 마운트하는 적절한 mount 명령을 실행하여 논리적 볼륨 그룹을 마운트합니다.
+

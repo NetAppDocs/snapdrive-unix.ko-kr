@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_multiple_subnet_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multiple, subnet, configuration, data, traffic, network, ha 
+summary: 여러 서브넷은 관리 트래픽과 데이터 트래픽을 분리하려는 환경에서 유용합니다. 이러한 분리 방식은 네트워크 트래픽을 관리하기 위한 보다 안전한 환경을 만듭니다. UNIX 이상 버전의 UNIX용 SnapDrive 4.1.1은 독립 실행형 환경과 호스트 및 HA 쌍 환경에서 사용할 수 있는 모든 SnapDrive 작업을 지원합니다. 
+---
+= 다중 서브넷 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여러 서브넷은 관리 트래픽과 데이터 트래픽을 분리하려는 환경에서 유용합니다. 이러한 분리 방식은 네트워크 트래픽을 관리하기 위한 보다 안전한 환경을 만듭니다. UNIX 이상 버전의 UNIX용 SnapDrive 4.1.1은 독립 실행형 환경과 호스트 및 HA 쌍 환경에서 사용할 수 있는 모든 SnapDrive 작업을 지원합니다.
+
+스토리지 시스템 관리와 관련된 데이터는 관리 인터페이스를 통해 전송됩니다. DataFabric Manager, Protection Manager 및 SnapDrive for UNIX는 관리 인터페이스의 일부가 될 수 있습니다. 데이터 인터페이스는 스토리지 시스템 간의 데이터 트래픽에 사용됩니다.
+
+사용자 환경에서 여러 서브넷을 구성하려면 'SnapDrive config set' 명령과 함께 'mgmtpath' 옵션을 사용해야 합니다.
+
+SnapDrive for UNIX는 스토리지 시스템의 호스트 이름이 공용 이름과 다르지만 두 이름이 동일한 IP 주소로 확인되는 SAN 환경에서는 작업을 지원하지 않습니다. 이 상황을 해결하려면 다음 중 하나를 수행합니다.
+
+* 시스템 이름에 다른 IP 주소를 할당합니다.
+* 시스템을 연결할 때 응답하지 않도록 시스템을 구성합니다.
+

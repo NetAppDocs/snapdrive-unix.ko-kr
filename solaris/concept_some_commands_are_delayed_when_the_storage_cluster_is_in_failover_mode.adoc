@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_some_commands_are_delayed_when_the_storage_cluster_is_in_failover_mode.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, delay, failover, storage, cluster 
+summary: 클러스터 스토리지 시스템 중 하나가 중단된 경우 Solaris 호스트에서 LUN을 생성, 연결, 삭제 또는 분리하는 UNIX용 SnapDrive 명령은 완료하는 데 몇 분 정도 걸립니다. 
+---
+= 일부 명령은 스토리지 클러스터가 페일오버 모드일 때 지연됩니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+클러스터 스토리지 시스템 중 하나가 중단된 경우 Solaris 호스트에서 LUN을 생성, 연결, 삭제 또는 분리하는 UNIX용 SnapDrive 명령은 완료하는 데 몇 분 정도 걸립니다.
+
+SnapDrive storage create, SnapDrive storage connect, SnapDrive storage delete, SnapDrive storage disconnect, SnapDrive snap connect 등의 명령들이 있다. SnapDrive 스냅 분리, 때로는 SnapDrive 스냅 복구.
+
+이 문제는 SnapDrive용 SnapDrive가 삭제되거나 연결이 끊긴 LUN을 복구해야 하는 경우에만 스냅 복원에 영향을 미칩니다.

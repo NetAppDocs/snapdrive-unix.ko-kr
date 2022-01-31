@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_error_loading_the_usr_lib_libqlsdm_so_in_hba_loadlibrary.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, update, unloading, library 
+summary: iSCSI 설정이 있는 Red Hat Enterprise Linux 4 및 Oracle Enterprise Linux 4 호스트의 모든 업데이트에 대해 모든 UNIX용 SnapDrive 명령 오류 아웃이 발생합니다. 
+---
+= HBA_LoadLibrary에서 /usr/lib/libqlsdm.so를 로드하는 중 오류가 발생했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+iSCSI 설정이 있는 Red Hat Enterprise Linux 4 및 Oracle Enterprise Linux 4 호스트의 모든 업데이트에 대해 모든 UNIX용 SnapDrive 명령 오류 아웃이 발생합니다.
+
+QLogic 드라이버를 언로드하거나 제거하는 동안 libHBAAPI 라이브러리는 /usr/lib 파일에 남아 있으며 QLogic./install 스크립트에 의해 제거되지 않습니다. 다음과 같은 오류 메시지가 로 나타납니다
+
+[listing]
+----
+HBA_LoadLibrary: Encountered and error loading: /usr/lib/libqlsdm.so
+----
+
+
+== 해결 방법
+
+'_libqlsdm.so_' 라이브러리 이름을 바꾸거나 이동합니다(MV). 예를 들어 mv /usr/lib/libqlsdm.so /usr/lib/libqlsdm.so.old를 입력합니다.

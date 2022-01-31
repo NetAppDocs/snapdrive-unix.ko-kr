@@ -1,0 +1,19 @@
+---
+permalink: aix/reference_snapdrive_for_unix_does_not_automatically_delete_stale_devices_in_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, stale, device 
+summary: '구성 문제로 인해 SnapDrive for UNIX 작업이 실패할 경우 FCoE(Fibre Channel over Ethernet) 환경에서 오래된 디바이스를 그대로 둘 수 있습니다. 이러한 오래된 디바이스는 자동으로 삭제되지 않으므로 해결 방법을 알아야 합니다.' 
+---
+= UNIX용 SnapDrive는 UNIX에서 오래된 디바이스를 자동으로 삭제하지 않습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+구성 문제로 인해 SnapDrive for UNIX 작업이 실패할 경우 FCoE(Fibre Channel over Ethernet) 환경에서 오래된 디바이스를 그대로 둘 수 있습니다. 이러한 오래된 디바이스는 자동으로 삭제되지 않으므로 해결 방법을 알아야 합니다.
+
+
+
+== 해결 방법
+
+공급업체에서 제공한 기본 재검색 스크립트를 실행하여 모든 이전 항목을 제거하거나, 'G3' 패키지에 포함된 'rescan-scsibus.sh--r' 명령을 사용하여 재검색 스크립트를 실행합니다.

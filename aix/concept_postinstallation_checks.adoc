@@ -1,0 +1,43 @@
+---
+permalink: aix/concept_postinstallation_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, check, post, installation 
+summary: 설치가 완료되면 몇 가지 작업을 수행하여 UNIX용 SnapDrive가 성공적으로 설치되었는지 확인해야 합니다. 
+---
+= 설치 후 검사 수행
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+설치가 완료되면 몇 가지 작업을 수행하여 UNIX용 SnapDrive가 성공적으로 설치되었는지 확인해야 합니다.
+
+.단계
+. 설치 프로그램이 호스트에 필요한 모든 파일을 설치했는지 확인합니다.
+. 'napdrive.conf' 파일의 구성 변수에 올바른 설정이 있는지 확인합니다.
++
+이러한 변수의 대부분은 기본값을 적용해야 합니다.
+
+. UNIX용 SnapDrive에 현재 스토리지 시스템 로그인 정보를 제공합니다.
++
+스토리지 시스템을 설정할 때 스토리지 시스템에 대한 사용자 로그인을 제공했습니다. UNIX용 SnapDrive에서 스토리지 시스템을 작동하려면 이 로그인 정보가 필요합니다.
+
+. 역할 기반 액세스 제어(RBAC)를 사용하려면 'sapdrive.conf' 파일에서 '_RBAC-method=DFM_' 변수를 설정하십시오.
++
+기본적으로 UNIX용 SnapDrive 4.0 이상에서는 루트 자격 증명을 사용하여 스토리지 시스템에 액세스합니다. RBAC 기능이 설정되어 있지 않습니다.
+
+. 스토리지 시스템 및 데몬 서비스와의 보안 접속을 위해 HTTPS를 사용하려면 'sapdrive.conf' 파일에서 '_use-https-to-SDU-daemon=on_'을 설정합니다.
++
+
+NOTE: SnapDrive 5.0 for UNIX 이상 버전은 데몬 통신을 위해 HTTPS를 지원합니다. 기본적으로 이 옵션은 '꺼짐'으로 설정됩니다.
+
+. SnapDrive for UNIX에서 사용하는 서버 인증서를 에서 설치합니다
++
+SnapDrive.conf 파일에 지정된 'du-daemon-certificate-path=/opt/NetApp/SnapDrive/SnapDrive.pem path
+
+. 다음 명령을 실행하여 SnapDrive for UNIX 데몬 서비스의 기본 암호를 변경합니다.
++
+``스냅드라이브 암호 *’
+
+. '/var/log/sdconfcheck.out'에서 설치된 구성 요소의 세부 정보를 확인합니다.
+

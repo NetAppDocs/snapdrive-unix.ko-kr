@@ -1,0 +1,41 @@
+---
+permalink: linux-administration/task_configuring_virtual_storage_console_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, storage, virtual, console 
+summary: 스토리지 시스템을 액세스하고 스토리지 시스템에 할당된 로그인 이름과 암호를 사용하도록 Virtual Storage Console을 구성해야 합니다. 
+---
+= UNIX용 SnapDrive용 가상 스토리지 콘솔 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템을 액세스하고 스토리지 시스템에 할당된 로그인 이름과 암호를 사용하도록 Virtual Storage Console을 구성해야 합니다.
+
+VMware vCenter가 상주하는 Windows 시스템에 Virtual Storage Console이 설치되어 있는지 확인합니다.
+
+. vCenter 홈 * 보기의 * 솔루션 및 애플리케이션 * 아래에서 * NetApp Virtual Console * 화면에서 * NetApp * 을 클릭합니다.
+. 백업 및 복구 * 를 클릭한 다음 * 설정 * 을 클릭하여 스토리지 시스템 항목을 확인합니다.
+. 스토리지 시스템 항목이 없는 경우 * 추가 * 를 클릭하여 가상 스토리지 콘솔에서 필요한 스토리지 시스템을 추가합니다.
++
+스토리지 시스템 추가 * 대화 상자가 나타납니다.
+
+. Add Storage System * 창에서 스토리지 시스템의 IP 주소, 사용자 이름 및 암호를 입력합니다. 그런 다음 * 확인 * 을 클릭합니다.
++
+이제 스토리지 시스템이 가상 스토리지 콘솔과 통신할 준비가 되었습니다.
+
+
+
+* 관련 정보 *
+
+xref:task_verifying_virtual_storage_console.adoc[Virtual Storage Console에 대한 로그인 정보를 확인하는 중입니다]
+
+xref:task_deleting_a_user_login_for_a_virtual_storage_console.adoc[가상 스토리지 콘솔의 사용자 로그인 삭제]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[SnapDrive for UNIX에서 VMware VMotion 지원]
+
+xref:concept_configuration_options_and_their_default_values.adoc[구성 옵션 및 해당 기본값]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[RDM LUN 용량 할당 시 고려 사항]
+
+xref:concept_limitations_of_rdm_luns_managed_by_snapdrive.adoc[SnapDrive에서 관리하는 RDM LUN의 제한 사항]

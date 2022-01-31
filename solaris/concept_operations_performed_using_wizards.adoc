@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_operations_performed_using_wizards.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, wizards, operations 
+summary: 여러 마법사를 사용하여 스토리지 엔터티를 생성하고 SnapDrive for UNIX를 효율적으로 조작할 수 있습니다. 
+---
+= 마법사를 사용하여 수행한 작업입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여러 마법사를 사용하여 스토리지 엔터티를 생성하고 SnapDrive for UNIX를 효율적으로 조작할 수 있습니다.
+
+다음 UNIX용 SnapDrive 명령에는 작업을 수행하는 것과 동일한 마법사가 있습니다.
+
+* '스토리지 생성'
+* '스토리지 삭제'
+* 낮잠 복원
+* '낮잠' 연결
+* '낮잠 끊기다
+

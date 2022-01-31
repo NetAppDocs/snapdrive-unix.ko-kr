@@ -1,0 +1,42 @@
+---
+permalink: solaris/task_creating_an_lvm_a_vxvmentity_andspecifying_the_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, vxvm, lun 
+summary: 파일 시스템, 논리 볼륨 또는 디스크 그룹과 같은 호스트 엔터티를 생성하고 이 엔터티의 일부로 생성되는 LUN을 지정할 수 있습니다. 
+---
+= VxVM 엔티티 생성 및 LUN 지정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+파일 시스템, 논리 볼륨 또는 디스크 그룹과 같은 호스트 엔터티를 생성하고 이 엔터티의 일부로 생성되는 LUN을 지정할 수 있습니다.
+
+.단계
+. 명령줄에 다음 명령을 입력합니다.
++
+'* SnapDrive 스토리지 create_-host_lvm_fspec_-lun_long_lun_name_[_lun_name..._] - lunsize_size_[-igroup_IG_name_[_IG_name..._] [{-reserve|-noreserve}] *
+
++
+이 Solaris 호스트의 예에서는 세 개의 LUN에 파일 시스템 액세스 파일을 생성하고 볼륨 그룹 및 그 아래에 있는 호스트 볼륨의 이름을 명시적으로 지정합니다. 각 LUN은 10GB:
+
++
+'#SnapDrive storage create -fs /mnt/acctfs-hostvol acctfsdg/acctfshv-lun acctfiler:/vol/vol1/luna lunb lunc-lunsize 10g
+
++
+[listing]
+----
+LUN acctfiler:/vol/vol1/lunA ... created
+LUN acctfiler:/vol/vol1/lunB ... created
+LUN acctfiler:/vol/vol1/lunC ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- acctfiler:/vol/vol1/lunA => /dev/vx/rdmp/c4t0d3s2
+- acctfiler:/vol/vol1/lunB => /dev/vx/rdmp/c4t0d7s2
+- acctfiler:/vol/vol1/lunC => /dev/vx/rdmp/c4t0d8s2
+disk group acctfsvg created
+host volume acctfshv created
+file system /mnt/acctfs created
+----
+

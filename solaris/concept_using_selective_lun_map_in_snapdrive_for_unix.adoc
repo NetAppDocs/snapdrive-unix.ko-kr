@@ -1,0 +1,89 @@
+---
+permalink: solaris/concept_using_selective_lun_map_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, selective, lun, map 
+summary: 'Clustered Data ONTAP 8.3부터는 모든 새 LUN 맵에서 선택적 LUN 맵\(SLM\)이 기본적으로 활성화됩니다. 새 LUN 맵을 생성할 때 LUN은 해당 LUN과 해당 HA 파트너가 속한 노드에 있는 경로를 통해서만 액세스할 수 있습니다.' 
+---
+= UNIX용 SnapDrive에서 선택적 LUN 맵 사용
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Clustered Data ONTAP 8.3부터 모든 새 LUN 맵에서 선택적 LUN 맵(SLM: Selective LUN Map)이 기본적으로 활성화됩니다. 새 LUN 맵을 생성할 때 LUN은 해당 LUN과 해당 HA 파트너가 속한 노드에 있는 경로를 통해서만 액세스할 수 있습니다.
+
+기본적으로 SVM(Storage Virtual Machine)의 모든 LIF에서 LUN에 액세스할 수 있습니다. 네트워크에 있는 각 클러스터 노드의 SVM에 LIF를 할당해야 합니다. 클러스터의 노드 수가 증가하면 잠재적 경로 수도 곱해집니다. 이로 인해 LUN에 대한 경로 수가 지나치게 많거나, 호스트당 여러 igroup이 발생하거나, 운영 중단이 발생할 수 있습니다. SLM은 LUN 및 HA 파트너 노드를 소유한 노드로 LUN 액세스를 제한하여 이러한 문제를 해결합니다. 또한 호스트당 단일 igroup을 생성하고 포트셋 조작 또는 LUN 재매핑이 필요하지 않은 무중단 LUN 이동성 작업을 지원합니다.
+
+
+NOTE: SLM은 clustered Data ONTAP 8.3 이전에 생성된 LUN 맵에는 자동으로 적용되지 않습니다.
+
+LUN을 소유한 노드를 통해 LUN에 액세스하는 경로를 "최적화된 액티브"라고 합니다. 하지만 HA 파트너 노드를 통해 LUN에 액세스하는 경로를 "최적화되지 않은 활성 상태"라고 합니다.
+
+|===
+| SnapDrive 명령 | 설명 
+
+
+ a| 
+'SnapDrive LUN showpaths_long_lun_name_'
+ a| 
+SnapDrive LUN showpaths 명령은 LUN에 대한 모든 경로를 나열합니다. 또한 활성 최적화 경로와 최적화되지 않은 활성 경로를 표시합니다.
+
+'_long_lun_name_'은 LUN의 이름입니다. LUN을 지정하지 않으면 모든 LUN에서 작업이 수행됩니다.
+
+[listing]
+----
+snapdrive lun showpaths
+lun path            device filename                   asymmetric access state
+------------------------------------------------------------------------------
+vs1:/vol/vol2/lun10  /dev/mapper/3600a09807746505a4e24455450473655   Non-optimized
+vs1:/vol/vol2/lun2  /dev/mapper/3600a09807746505a4d3f455432474b30    Optimized
+vs1:/vol/vol2/lun1  /dev/mapper/3600a09807746505a4e24455450473656    Optimized
+----
+
+
+ a| 
+'SnapDrive LUN fixpath_long_lun_name_'
+ a| 
+'SnapDrive lun fixpath' 명령은 하나 이상의 활성 최적화 경로가 없는 LUN에 대한 LUN 경로를 수정하려고 시도합니다. '_long_lun_name_'은 LUN의 이름입니다. LUN을 지정하지 않으면 하나 이상의 최적화된 활성 경로가 없는 모든 LUN에서 작업이 수행됩니다.
+
+[listing]
+----
+snapdrive lun fixpaths
+The following LUNs are using Non-optimized paths
+-------------------------------------------------
+vs1:/vol/vol2/lun10
+
+Path correction successful for the following LUNs
+--------------------------------------------------
+vs1:/vol/vol2/lun10
+----
+
+NOTE: SnapDrive LUN fixpaths 명령은 게스트 운영 체제에서 작동하지 않습니다.
+
+|===
+'lunpath-monitor-frequency' 매개 변수를 사용하면 SnapDrive for UNIX에서 LUN의 경로를 자동으로 수정하는 빈도를 지정할 수 있습니다. 기본값은 24시간입니다.
+
+'SnapDrive LUN fixpath' 작업이 실패하면 모든 LUN에 대해 AutoSupport(ASUP) 메시지가 생성됩니다. ASUP 메시지에는 다음과 같은 세부 정보가 포함됩니다.
+
+* 컴퓨터 이름
+* 이벤트 소스
+* AppVersion(애플리케이션 버전)
+* 이벤트 ID입니다
+* 범주
+* 제목
+
+
+다음은 ASUP 메시지의 예입니다.
+
+[listing]
+----
+computerName="owhyee"
+       eventSource="snapdrive"
+       appVersion="5.2.2 for UNIX"
+       eventID="6"
+       category="lun path"
+       subject="Paths are misconfigured for the Luns /vol/June12v1/LUN2 in storage system sdu_100_101_60_62_vs1 on owhyee host."
+----
+* 관련 정보 *
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-sanag/home.html["ONTAP 9 SAN 관리 가이드 를 참조하십시오"]

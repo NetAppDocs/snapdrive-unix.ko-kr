@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, files, installed, unix 
+summary: SnapDrive for UNIX는 실행 파일, 구성 파일, 제거 파일, 진단 파일 및 man 페이지 등의 여러 파일을 설치합니다. 호스트. 이러한 파일을 통해 문제를 감지하고 현재 제품 버전에 대한 구성 정보를 저장하는 등의 작업을 SnapDrive for UNIX에서 수행할 수 있습니다. 
+---
+= UNIX용 SnapDrive에서 설치한 파일
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 실행 파일, 구성 파일, 제거 파일, 진단 파일 및 man 페이지 등의 여러 파일을 설치합니다. 호스트. 이러한 파일을 통해 문제를 감지하고 현재 제품 버전에 대한 구성 정보를 저장하는 등의 작업을 SnapDrive for UNIX에서 수행할 수 있습니다.
+
+* 관련 정보 *
+
+xref:concept_types_of_logs.adoc[로그 유형]

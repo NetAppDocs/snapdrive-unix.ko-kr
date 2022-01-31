@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_manual_pages_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, man, page, install 
+summary: UNIX용 SnapDrive에서는 다양한 형식의 man 페이지를 제공합니다. 
+---
+= SnapDrive for UNIX에서 설치한 man 페이지
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에서는 다양한 형식의 man 페이지를 제공합니다.
+
+man 페이지는 다음 위치에서 사용할 수 있습니다.
+
+* '/opt/NTAPsnapdrive/docs/SnapDrive.1'
+* '/opt/NTAPsnapdrive/docs/snapdrived.1'
+* '/opt/NTAPsnapdrive/docs/SnapDrive.1.html'
+* '/opt/NTAPsnapdrive/docs/snapdrived.1.html'
+* '/opt/NTAPsnapdrive/docs/solaris_info.1'
+* '/opt/NTAPsnapdrive/docs/Brocade_info.1'
+* '/opt/NTAPsnapdrive/docs/McData_info.1'
+* '/opt/NTAPsnapdrive/docs/cisco_info.1'
+* '/opt/NTAPsnapdrive/docs/filer_info.1'
+* '/opt/NTAPsnapdrive/docs/SnapDrive.dc.1'
+
+
+스파스 루트 영역에 UNIX용 SnapDrive를 설치하는 경우, "/usr/share/man/"가 읽기 전용 파일 시스템으로 마운트되기 때문에 "/usr/share/man/"에 man 페이지를 추가하지 않습니다. 스파스 루트 영역에서 man 페이지를 추출하려면 "pkgtrans NTAPsnapdrive.pkg /tmp" 명령을 실행합니다. 명령을 실행하면 man 페이지가 '/tmp/NTAPsnapdrive/root/opt/NTAPsnapdrive/docs'에 추출됩니다.

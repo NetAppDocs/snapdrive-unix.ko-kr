@@ -1,0 +1,74 @@
+---
+permalink: solaris/task_connecting_tosnapshot_copies_ofshared_storageentities_other_thanluns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy, shared, storage, lun 
+summary: SnapDrive snap connect 명령을 사용하여 LUN 이외의 공유 스토리지 엔터티의 스냅샷 복사본에 연결할 수 있습니다. 
+---
+= LUN 이외의 공유 스토리지 엔터티의 스냅샷 복사본에 연결
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'SnapDrive snap connect' 명령을 사용하여 LUN이 아닌 공유 스토리지 엔터티의 스냅샷 복사본에 접속할 수 있습니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+'* SnapDrive snap connect_fspec_set_[_fspec_set..._] -snapname_long_snap_name_[-DeviceType shared][-split] * '
+
++
+이 구문에서 '_fspec_set_'은({-dg|-fs}_src_file_spec_[_dest_file_spec_][-destdg_DgName_])입니다
+
+
+
+다음 예에서는 원래 호스트 클러스터의 공유 스토리지 엔터티가 포함된 스냅샷 복사본에 연결됩니다. 이 작업은 비클러스터 마스터 노드에서 실행되지만 명령은 마스터 노드로 전달되고 실행됩니다.
+
+[listing]
+----
+# snapdrive snap connect -fs /mnt/sfortesting /mnt/sfortesting2 -
+snapname f270-
+197-109:/vol/vol2:testsfarcsnap -devicetype shared -autorename
+Execution started on cluster master: sfrac-57
+connecting sfortesting_SdDg:
+LUN copy sfortesting_SdLun_0 ... created
+(original: f270-197-109:/vol/vol2/sfortesting_SdLun)
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Connecting cluster node: sfrac-58 mapping lun\(s\) ... done
+discovering lun(s) ... done
+LUN f270-197-109:/vol/vol2/sfortesting_SdLun_0 connected
+- device filename(s): /dev/vx/dmp/c3t0d22s2
+Importing sfortesting_SdDg_0
+Activating hostvol sfracvxfstestfs_SdHv_0
+Successfully connected to snapshot f270-197-
+109:/vol/vol2:testsfarcsnap
+disk group sfortesting_SdDg_0 containing host volumes
+sfortesting_SdHv_0 (filesystem: /mnt/sfortesting2)
+----
+다음 예에서는 비발신 호스트 클러스터의 공유 스토리지 엔터티가 포함된 스냅샷 복사본에 연결됩니다. 이 작업은 비클러스터 마스터 노드에서 실행되지만 명령은 마스터 노드로 전달되고 실행됩니다.
+
+[listing]
+----
+# snapdrive snap connect -fs /mnt/sfortesting -snapname f270-197-
+109:/vol/vol2:testsfarcsnap -devicetype shared
+Execution started on cluster master: sfrac-57
+connecting sfortesting_SdDg:
+LUN copy sfortesting_SdLun_0 ... created
+(original: f270-197-109:/vol/vol2/sfortesting_SdLun)
+Step Action
+184 Connecting to a Snapshot copy
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+Connecting cluster node: sfrac-58
+mapping lun(s) ... done
+discovering lun(s) ... done
+LUN f270-197-109:/vol/vol2/sfortesting_SdLun_0 connected
+- device filename(s): /dev/vx/dmp/c3t0d1s2
+Importing sfortesting_SdDg
+Activating hostvol sfortesting_SdHv
+Successfully connected to snapshot f270-197-
+109:/vol/vol2:testsfarcsnap
+disk group sfortesting_SdDg containing host volumes
+sfortesting_SdHv (filesystem: /mnt/sfortesting)
+----

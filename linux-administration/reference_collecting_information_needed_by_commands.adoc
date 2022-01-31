@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/reference_collecting_information_needed_by_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, information, keywords, arguments, values, options, format 
+summary: UNIX용 SnapDrive 명령은 형식을 따르고 해당 명령과 연결된 키워드가 있습니다. 명령에는 옵션과 인수가 있으며 사용자가 값을 입력해야 합니다. 
+---
+= 명령에 필요한 정보 수집
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령은 형식을 따르고 해당 명령과 연결된 키워드가 있습니다. 명령에는 옵션과 인수가 있으며 사용자가 값을 입력해야 합니다.
+
+체크리스트는 사용자가 SnapDrive for UNIX를 빠르게 실행하는 데 도움이 됩니다. 각 명령에 대해 다음을 제공합니다.
+
+* 권장 형식
+* 명령과 함께 사용할 수 있는 키워드, 옵션 및 인수 및 제공해야 하는 값에 대한 정보입니다
+* 명령의 예
+

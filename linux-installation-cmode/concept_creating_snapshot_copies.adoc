@@ -1,0 +1,19 @@
+---
+permalink: linux-installation-cmode/concept_creating_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, snapshot, copy 
+summary: UNIX용 SnapDrive 독립 실행형 제품으로 구축할 경우 NetApp 스냅샷 기술을 사용하여 호스트 데이터의 스냅샷 복사본을 생성하고 관리할 수 있습니다. 스냅샷 복사본을 사용하여 데이터를 복원할 수 있습니다. 
+---
+= 스냅샷 복사본 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 독립 실행형 제품으로 구축할 경우 NetApp 스냅샷 기술을 사용하여 호스트 데이터의 스냅샷 복사본을 생성하고 관리할 수 있습니다. 스냅샷 복사본을 사용하여 데이터를 복원할 수 있습니다.
+
+* 관련 정보 *
+
+xref:task_creating_a_snapshot_copy.adoc[스냅샷 복사본 생성]
+
+xref:task_verifying_the_snapshot_copy.adoc[스냅샷 복사본을 확인하는 중입니다]

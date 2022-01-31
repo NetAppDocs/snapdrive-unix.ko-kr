@@ -1,0 +1,155 @@
+---
+permalink: solaris/task_steps_to_cleanup_the_mapped_rdm_luns_in_the_guest_os_or_esx_server.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mapped, rdm, lun, guest, esx, server, system 
+summary: ESX Server뿐만 아니라 게스트 운영 체제에서 RDM LUN을 정리해야 합니다. 
+---
+= 게스트 운영 체제 및 ESX Server에서 매핑된 RDM LUN을 정리하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ESX Server뿐만 아니라 게스트 운영 체제에서 RDM LUN을 정리해야 합니다.
+
+
+
+== 게스트 운영 체제에서 매핑된 RDM LUN을 정리하는 중입니다
+
+[role="lead"]
+게스트 운영 체제에서 다음 단계를 수행해야 합니다.
+
+.단계
+. vCenter * 탐색 창에서 RDM 매핑이 수행되는 가상 머신을 선택합니다.
+. 가상 머신을 마우스 오른쪽 버튼으로 클릭하고 게스트 운영 체제를 끕니다.
+. 가상 머신을 마우스 오른쪽 버튼으로 클릭하고 * Edit settings * 를 선택합니다.
++
+가상 머신 속성 * 대화 상자가 나타납니다.
+
+. 가상 머신 속성 * 대화 상자에서 * 하드웨어 * 탭을 선택합니다.
++
+모든 RDM 항목에 대해 전체 RDM 매핑된 항목을 '_Mapped raw LUN_'로 찾을 수 있습니다.
+
+. RDM Mapped 항목을 선택하고 * Remove * 를 클릭합니다.
++
+오른쪽 창에 * 제거 옵션 * 이 나타납니다.
+
+. 제거 옵션 * 에서 * 가상 시스템에서 제거 를 선택하고 디스크에서 파일 삭제 * 를 선택합니다.
+. 확인 * 을 클릭합니다.
++
+매핑된 모든 RDM 항목이 게스트 운영 체제에서 제거됩니다.
+
++
+게스트 운영 체제에서 RDM LUN 항목을 제거한 후에는 ESX 서버에서 제거해야 합니다.
+
+
+
+
+
+== ESX Server에서 매핑된 RDM LUN을 정리하는 중입니다
+
+[role="lead"]
+ESX Server에서 모든 RDM LUN 항목을 완전히 정리하려면 ESX Server 관리자만 다음 단계를 수행해야 합니다.
+
+가상 머신 디렉토리에서 작업하기 전에 가상 머신을 끕니다.
+
+.단계
+. 가상 머신 디렉토리로 이동합니다.
+. 'cd/vmfs/volumes/Data' 저장 경로로 변경합니다.
++
+[listing]
+----
+# ls -l
+total 1024
+drwxr-xr-t 1 root root 1540 Apr 19 23:54 4bc702de-fa7ec190-992b-001a6496f353
+lrwxr-xr-x 1 root root   35 May 11 07:56 local_storage (1) -> 4bc702de-fa7ec190-992b-001a6496f353
+----
++
+모든 파일과 디렉토리가 여기에 나열됩니다.
+
+. 가상 머신이 상주하는 적절한 데이터 저장소를 선택합니다.
+. 디렉토리를 데이터 저장소로 변경합니다.
++
+여기에 가상 머신 디렉토리가 표시됩니다.
+
+. RDM LUN 매핑을 정리하려는 가상 시스템으로 디렉토리를 변경합니다.
++
+모든 파일이 가상 머신 디렉토리에 나열됩니다.
+
+. SMVI 문자열이 포함된 모든 'vmdk' 파일을 삭제합니다. 또는 LUN 이름을 사용하여 vmdk 파일을 식별할 수도 있습니다.
++
+또는 LUN 이름을 사용하여 'vmdk' 파일을 식별할 수도 있습니다.
+
++
+LUN 이름의 'vmdk' 파일이 '_rdm1_'인 경우 '_rhel4u8-141-232_SMVI_vol_esx3u5_rdm1-Rdmp.vmdk_' 및 '_rhel4u8-141-232_SMVI_vol_esx3u5_rdm1_vmdk_file만 삭제합니다.
+
++
+'_vmlnx5U4-197-23_SMVI_10.72.197.93_C4kV4XzK2HT_22-Rdmp.vmdk_' 및 '_vmlnx5U4-197-23_SMVI_10.72.197.93_C4kV4XzK2HT_22.vmlkx57.2R2vmd_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_4km_2
+
+. 가상 시스템 구성 파일("vmx")에서도 'vmdk' 파일 항목을 제거합니다.
++
+다음은 vmx 파일에서 vmdk 파일 항목을 제거하는 예입니다.
+
++
+|===
+| * 이름 * | * 설명 * 
+
+
+ a| 
+'_rhel4u8-141-232_'
+ a| 
+가상 머신의 이름입니다
+
+
+
+ a| 
+'_SMVI _'
+ a| 
+이 vmdk 파일이 SnapManager for Virtual Infrastructure 서버에 의해 생성되었음을 나타냅니다
+
+
+
+ a| 
+'_vol_esx3u5_'
+ a| 
+LUN이 생성되는 볼륨의 이름입니다
+
+
+
+ a| 
+`_ rdm1_'
+ a| 
+LUN의 이름입니다
+
+
+
+ a| 
+``Rdmp _’
+ a| 
+이는 물리적으로 호환되는 RDM LUN입니다
+
+
+
+ a| 
+'_vmdk_'
+ a| 
+가상 시스템 디스크 파일
+
+|===
++
+[listing]
+----
+[root@ rhel4u8-141-232]# vi rhel4u8-141-232.vmx
+		:
+		:
+scsi3:1.fileName = "rhel4u8-141-232_SMVI__vol_esx3u5_rdm1.vmdk"
+scsi3:1.mode = "independent-persistent"
+scsi3:1.ctkEnabled = "FALSE"
+scsi3:1.deviceType = "scsi-hardDisk"
+scsi3:1.present = "TRUE"
+scsi3:1.redo = ""
+----
+. 앞의 예제에서 지정한 대로 '_scsi3:1.present_' 항목을 제외한 따옴표 및 쉼표를 포함하여 항목을 삭제합니다. 이 항목은 '_true_'에서 '_false_'로 변경해야 합니다.
+. 파일을 저장하고 종료합니다.
+. 가상 컴퓨터를 켭니다.
+

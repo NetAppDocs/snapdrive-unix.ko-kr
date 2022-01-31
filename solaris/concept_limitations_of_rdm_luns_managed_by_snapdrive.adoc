@@ -1,0 +1,52 @@
+---
+permalink: solaris/concept_limitations_of_rdm_luns_managed_by_snapdrive.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, rdm, lun 
+summary: SnapDrive에는 RDM LUN 용량 할당에 대한 몇 가지 제한 사항이 있습니다. 환경에 영향을 줄 수 있는 제한 사항을 숙지해야 합니다. 
+---
+= SnapDrive에서 관리하는 RDM LUN의 제한 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive에는 RDM LUN 용량 할당에 대한 몇 가지 제한 사항이 있습니다. 환경에 영향을 줄 수 있는 제한 사항을 숙지해야 합니다.
+
+* RDM LUN은 부팅 디스크 또는 시스템 디스크로 사용할 수 없습니다.
+* VMware ESX Server는 MPIO를 지원하지만 SnapDrive는 게스트 운영 체제에서 MPIO를 지원하지 않습니다.
+* 전송 프로토콜이 '_FC_'이면 CLI 명령에 지정된 igroup이 SnapDrive에서 무시되고 igroup은 가상 인터페이스에서 자동으로 생성됩니다.
+* RDM LUN 수를 8개로 제한하는 것을 피하기 위해 'G3_utils'의 일부로 번들로 제공되는 "/usr/bin/rescan-scsi-bus.sh" 스크립트의 이름을 바꾸거나 이동 또는 삭제할 수 있습니다.
++
+
+NOTE: sg3_utils의 /usr/bin/rescan-scsi-bus.sh를 유지하고 RDM LUN 수를 8개로 제한하지 않으려면 래퍼 스크립트 /root/dynamic-lun-rescan.sh를 만들고 이 스크립트에서 /usr/bin/rescan-scsi-bus.sh를 실행하여 -w, -r-permissions 및 -c-permissions를 지정해야 합니다.
+
+
+
+다음은 '/root/dynamic-lun-rescan.sh'의 수정된 콘텐츠의 예입니다.
+
+[listing]
+----
+#cat /root/dynamic-lun-rescan.sh
+#Wrapper script used to call the actual rescan script.
+/usr/bin/rescan-scsi-bus.sh -w -c -r
+----
+* VMware ESX Server * 와 관련된 제한 사항
+
+* 각 게스트 운영 체제는 4개의 SCSI 컨트롤러로 구성될 수 있으며, 각 SCSI 컨트롤러를 16개의 장치에 매핑할 수 있습니다.
++
+그러나 디바이스당 하나의 디바이스가 예약되므로 총 60개의 RDM LUN(16 * 4--4)을 게스트 운영 체제에 매핑할 수 있습니다.
+
+* 각 ESX Server는 최대 256개의 RDM LUN에 매핑할 수 있습니다.
+
+
+* 관련 정보 *
+
+xref:concept_guest_os_preparation_for_installing_sdu.adoc[UNIX용 SnapDrive 설치를 위한 게스트 OS 준비]
+
+xref:concept_storage_provisioning_for_rdm_luns.adoc[SnapDrive for UNIX에서 VMware VMotion 지원]
+
+xref:task_configuring_virtual_storage_console_in_snapdrive_for_unix.adoc[UNIX용 SnapDrive용 가상 스토리지 콘솔 구성]
+
+xref:task_considerations_for_provisioning_rdm_luns.adoc[RDM LUN 용량 할당 시 고려 사항]
+
+http://www.vmware.com/pdf/vsphere4/r40/vsp_40_config_max.pdf["www.vmware.com/pdf/vsphere4/r40/vsp_40_config_max.pdf"]

@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_configuration_information_for_vserver_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, vserver 
+summary: SnapDrive for UNIX에서 SnapDrive 작업을 수행하려면 SVM을 구성해야 합니다. 
+---
+= SVM에 대한 구성 정보
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX에서 SnapDrive 작업을 수행하려면 SVM을 구성해야 합니다.
+
+SnapDrive for UNIX에서 SVM을 구성하려면 clustered Data ONTAP에서 SVM(관리 논리 인터페이스)의 IP 주소가 DNS(Domain Name Service) 또는 '/etc/hosts' 파일에서 SVM 이름과 매핑되어 있는지 확인합니다. 또한 다음 명령을 사용하여 SnapDrive for UNIX에서 SVM 이름이 구성되었는지 확인해야 합니다.
+
+(* SnapDrive config set <vsadmin><Vserver 이름> * '
+
+* 관련 정보 *
+
+link:concept_support_for_vserver.adoc["SVM 지원"]

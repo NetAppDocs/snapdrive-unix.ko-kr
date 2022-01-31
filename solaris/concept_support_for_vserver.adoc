@@ -1,0 +1,35 @@
+---
+permalink: solaris/concept_support_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vserver, support 
+summary: UNIX용 SnapDrive는 SVM을 지원합니다. SVM은 여러 프로토콜 및 유니파이드 스토리지를 지원하는 보안 가상 스토리지 서버입니다. SVM은 데이터 볼륨과 클라이언트에 데이터를 제공하는 데 사용되는 하나 이상의 LIF를 포함합니다. 
+---
+= SVM 지원
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 SVM을 지원합니다. SVM은 여러 프로토콜 및 유니파이드 스토리지를 지원하는 보안 가상 스토리지 서버입니다. SVM은 데이터 볼륨과 클라이언트에 데이터를 제공하는 데 사용되는 하나 이상의 LIF를 포함합니다.
+
+SVM은 공유 가상화 데이터 스토리지와 네트워크를 안전하게 격리하고 클라이언트에 단일 전용 서버로 표시됩니다. 각 SVM에는 별도의 관리자 인증 도메인이 있으며 SVM 관리자를 통해 독립적으로 관리할 수 있습니다.
+
+각 SVM의 볼륨은 접합을 통해 연결되고 접합 경로로 마운트됩니다. 각 볼륨의 파일 시스템이 분기점에서 마운트된 것처럼 보입니다. SVM의 루트 볼륨은 네임스페이스 계층 구조의 최상위 레벨에 있으며, 추가 볼륨은 SVM 루트 볼륨에 마운트되어 글로벌 네임스페이스를 확장합니다. SVM의 데이터 볼륨은 파일 및 LUN을 포함합니다.
+
+* UNIX용 SnapDrive를 사용하여 SVM에서 스토리지 프로비저닝, 스냅샷 복사본 작업 및 구성 작업을 수행할 수 있습니다.
+* 애플리케이션 데이터는 SVM의 루트 볼륨에 저장되지 않습니다.
+* SVM의 루트가 qtree인 경우 스냅샷 복사본 작업은 지원되지 않습니다.
+* SVM에 생성된 모든 볼륨은 접합 경로에 마운트해야 합니다.
+
+
+* 관련 정보 *
+
+xref:concept_configuration_information_for_vserver_environment.adoc[SVM에 대한 구성 정보]
+
+xref:task_verifying_login_information_for_vserver.adoc[SVM에 대한 로그인 정보 확인]
+
+xref:task_specifying_login_information_for_vserver.adoc[SVM에 대한 로그인 정보 지정]
+
+xref:task_deleting_a_user_for_a_vserver.adoc[SVM에서 사용자 삭제]
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["ONTAP 9 소프트웨어 설치 안내서"]

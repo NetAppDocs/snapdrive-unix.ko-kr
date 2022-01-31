@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_connectingsnapshot_copies_onmirrored_storagesystems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, snapshot, copy, mirrored, storage 
+summary: 미러링된 스토리지 시스템의 스냅샷 복사본의 경우 소스 스토리지 시스템과 타겟 시스템에 스냅샷 복사본을 연결할 수 있습니다. 
+---
+= 미러링된 스토리지 시스템에서 스냅샷 복사본 연결
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+미러링된 스토리지 시스템의 스냅샷 복사본의 경우 소스 스토리지 시스템과 타겟 시스템에 스냅샷 복사본을 연결할 수 있습니다.
+
+미러링된 스토리지 시스템에 스냅샷 복사본을 생성할 경우 스냅샷 복사본은 생성된 소스 시스템에서 대상(미러링된) 스토리지 시스템으로 자동으로 복제됩니다. SnapDrive for UNIX를 사용하면 소스 스토리지 시스템에서 스냅샷 복사본을 연결할 수 있습니다. 또한 타겟 스토리지 시스템에서 스냅샷 복사본을 연결할 수도 있습니다.

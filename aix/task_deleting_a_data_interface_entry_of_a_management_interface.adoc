@@ -1,0 +1,25 @@
+---
+permalink: aix/task_deleting_a_data_interface_entry_of_a_management_interface.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, data, interface, management 
+summary: SnapDrive config delete -mgmtd path 명령을 사용하여 NFS 환경의 특정 관리 인터페이스와 연결된 데이터 인터페이스 항목을 삭제할 수 있습니다. 
+---
+= 관리 인터페이스의 데이터 인터페이스 항목 삭제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive config delete -mgmtd path 명령을 사용하여 NFS 환경의 특정 관리 인터페이스와 연결된 데이터 인터페이스 항목을 삭제할 수 있습니다.
+
+. CLI에서 다음 명령을 입력합니다.
++
+'* SnapDrive config delete -mgmtpath_data_interface_ * '
+
++
+[listing]
+----
+#snapdrive config delete –mgmtpath f3050-197-91
+Deleted configuration for appliance: f3050-197-91
+----
+

@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_audit_recovery_and_trace_logging_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, audit, recovery, trace, log 
+summary: UNIX용 SnapDrive를 사용하면 감사, 복구 및 추적 로그 파일과 같은 다양한 유형의 로그 파일을 유지 관리할 수 있습니다. 이러한 로그 파일은 나중에 문제 해결에 사용됩니다. 
+---
+= UNIX용 SnapDrive의 감사, 복구 및 추적 로깅
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하면 감사, 복구 및 추적 로그 파일과 같은 다양한 유형의 로그 파일을 유지 관리할 수 있습니다. 이러한 로그 파일은 나중에 문제 해결에 사용됩니다.

@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_mandatory_checks_for_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mandatory, check, volume, snaprestore 
+summary: 볼륨 기반 SnapRestore를 수행하기 전에 SnapDrive for UNIX는 시스템에서 몇 가지 필수 검사를 수행합니다. 볼륨 기반 SnapRestore를 안전하게 사용하려면 이러한 점검이 필요합니다. 필수 검사는 사용자가 오버라이드할 수 없습니다. 
+---
+= 볼륨 기반 SnapRestore에 대한 필수 검사
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+볼륨 기반 SnapRestore를 수행하기 전에 SnapDrive for UNIX는 시스템에서 몇 가지 필수 검사를 수행합니다. 볼륨 기반 SnapRestore를 안전하게 사용하려면 이러한 점검이 필요합니다. 필수 검사는 사용자가 오버라이드할 수 없습니다.
+
+다음은 볼륨 기반 SnapRestore를 구축하기 전에 UNIX용 SnapDrive에서 수행해야 하는 필수 검사입니다.
+
+* 볼륨 기반 SnapRestore는 UNIX용 SnapDrive를 사용하여 생성된 스냅샷에서만 작동합니다.
+* 볼륨 기반 SnapRestore의 볼륨은 스토리지 시스템의 루트 볼륨이 아니어야 합니다.
+* SnapDrive for UNIX에서 볼륨 클론을 확인합니다. 새 스냅샷 복사본에 있는 볼륨 클론이 있는 경우 볼륨 복원 작업을 허용하지 않습니다. 이는 Data ONTAP에 의해 적용되는 제한 사항입니다.
+* 볼륨 기반 SnapRestore의 볼륨에는 복구를 위해 지정된 LUN(파일 시스템, 디스크 그룹 또는 호스트 볼륨에 존재하는 물리적 LUN 또는 LUN)과 별도로 매핑된 LUN이 없어야 합니다.
+* SnapDrive for UNIX는 볼륨이 SnapMirror 관계에 있는지 확인합니다.
+* SnapDrive for UNIX는 볼륨이 SnapVault 관계에 있는지 여부를 확인합니다.
+
+
+UNIX용 SnapDrive가 RBAC에 운영 관리자를 사용하고 있고 사용자에게 SD.SNSHOT.DisruptBaseline 기능이 있는 경우 SnapMirror 및 SnapVault 검사를 재정의할 수 있습니다. 사용자가 이러한 확인을 재정의하는 특정 RBAC 기능에 대한 자세한 내용은 SnapDrive for UNIX의 역할 기반 액세스 제어 를 참조하십시오.
+
+* 관련 정보 *
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[UNIX용 SnapDrive에서 역할 기반 액세스 제어]

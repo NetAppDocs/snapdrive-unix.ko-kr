@@ -1,0 +1,42 @@
+---
+permalink: aix/concept_operation_with_multiple_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multiple, storage, object, operation 
+summary: 다음 예제는 특정 작업을 수행할 권한이 있는 사용자가 아닐 때 나타나는 오류 메시지를 보여줍니다. 
+---
+= 여러 스토리지 객체를 사용하는 작업입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음 예제는 특정 작업을 수행할 권한이 있는 사용자가 아닐 때 나타나는 오류 메시지를 보여줍니다.
+
+[listing]
+----
+[john]$ snapdrive storage show –all
+
+Connected LUNs and devices:
+
+device filename   adapter  path  size  proto  state  clone  lun path                           backing Snapshot
+----------------  -------  ----  ----  -----  -----  -----  --------                           ---------------
+/dev/sdao            -     -     200m  iscsi  online  No    storage_array1:/vol/vol2/passlun1           -
+/dev/sda1            -     -     200m  fcp    online  No    storage_array1:/vol/vol2/passlun2           -
+
+Host devices and file systems:
+
+dg: testfs1_SdDg                dgtype lvm
+hostvol: /dev/mapper/testfs1_SdDg-testfs1_SdHv  state: AVAIL
+fs: /dev/mapper/testfs1_SdDg-testfs1_SdHv       mount point: /mnt/testfs1 (persistent) fstype jfs2
+
+device filename   adapter  path  size  proto  state   clone  lun path                                backing Snapshot
+----------------  -------  ----  ----  -----  -----   -----  --------                                ---------
+/dev/sdn             -      P    108m  iscsi  online   No    storage_array1:/vol/vol2/testfs1_SdLun         -
+/dev/sdn1             -      P    108m  fcp  online   No    storage_array1:/vol/vol2/testfs1_SdLun1         -
+
+0002-719 Warning: SD.Storage.Read access denied on volume storage_array1:/vol/vol1 for user unix_host\john on Operations Manager server ops_mngr_server
+----
+John은 vol2에 스토리지 엔터티를 나열할 수 있지만 vol1에는 나열할 수 없습니다. UNIX용 SnapDrive는 vol1의 엔터티를 표시하고 vol2에 대한 경고 메시지를 표시합니다.
+
+
+NOTE: 스토리지 목록, 스토리지 쇼, 스냅 목록, '스냅 쇼' 명령의 경우 SnapDrive for UNIX에서 오류 대신 경고 메시지가 표시됩니다.

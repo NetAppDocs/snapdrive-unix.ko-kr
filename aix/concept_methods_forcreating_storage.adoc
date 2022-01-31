@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_methods_forcreating_storage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, storage, method 
+summary: UNIX용 SnapDrive에서는 SnapDrive 스토리지 create 명령에 대한 몇 가지 기본 형식을 제공하므로 원하는 스토리지를 쉽게 만들 수 있습니다. 스토리지 생성 작업은 다양한 일반 범주에 속합니다. 
+---
+= 스토리지 생성 방법입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 "SnapDrive storage create" 명령을 위한 몇 가지 기본 형식을 제공하므로 원하는 스토리지를 쉽게 생성할 수 있습니다. 스토리지 생성 작업은 다양한 일반 범주에 속합니다.
+
+* LUN 생성 -- 'SnapDrive storage create' 명령은 스토리지 시스템에 LUN을 자동으로 생성하지만 추가 스토리지 엔터티는 생성하지 않습니다. UNIX용 SnapDrive는 호스트 준비와 관련된 모든 작업을 수행하고 각 LUN에 대한 스토리지 검색을 생성하는 것은 물론 매핑 및 접속도 수행합니다.
+* LUN에 직접 파일 시스템을 생성하고 LUN을 자동으로 설정 -- UNIX용 SnapDrive는 파일 시스템을 설정하는 데 필요한 모든 작업을 수행합니다. 생성할 LUN을 지정할 필요가 없습니다.
+* LUN에 직접 파일 시스템을 생성하고 연결할 LUN을 지정합니다. 이 경우 'SnapDrive storage create' 명령을 사용하여 설정할 파일 시스템과 파일 시스템에 연결할 LUN을 지정합니다.
+* LVM 생성 및 LUN 자동 설정 -- 'SnapDrive storage create' 명령을 사용하면 호스트에 파일 시스템, 논리 볼륨 또는 디스크 그룹을 생성할 수 있습니다. SnapDrive for UNIX는 필요한 디스크 그룹 및 LUN 자동 생성을 포함하여 엔터티를 설정하는 데 필요한 모든 작업을 수행합니다. 생성할 LUN을 지정할 필요가 없습니다.
+* 호스트에 LVM 개체 생성 및 호스트에 연결할 LUN 지정 -- 이 경우 'SnapDrive storage create' 명령을 사용하여 설정할 개체(파일 시스템, 논리 볼륨 또는 디스크 그룹)와 해당 엔티티에 연결할 LUN을 모두 지정합니다.
+* 호스트 클러스터 환경의 공유 호스트에 파일 시스템 생성 -- 이 경우 공유 호스트에 파일 시스템, 논리 볼륨 또는 디스크 그룹을 생성합니다.
+

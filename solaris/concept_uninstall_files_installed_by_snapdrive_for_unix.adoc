@@ -1,0 +1,17 @@
+---
+permalink: solaris/concept_uninstall_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, uninstall, install 
+summary: UNIX용 SnapDrive는 제거 파일을 사용하여 UNIX용 SnapDrive를 제거합니다. 
+---
+= SnapDrive for UNIX에서 설치한 파일을 제거합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 제거 파일을 사용하여 UNIX용 SnapDrive를 제거합니다.
+
+파일은 다음 위치에 설치됩니다.
+
+'/opt/NTAPsnapdrive/SnapDrive.conf'

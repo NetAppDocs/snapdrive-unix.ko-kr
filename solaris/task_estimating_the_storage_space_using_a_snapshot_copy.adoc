@@ -1,0 +1,69 @@
+---
+permalink: solaris/task_estimating_the_storage_space_using_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, space, snapshot, copy, estimate 
+summary: '클론 분할 추정치는 스토리지 시스템의 스냅샷 복사본에 사용할 수 있는 클론이 없을 때 스냅샷 복사본을 사용하여 필요한 스토리지 공간(MB\)을 추정하는 데 도움이 됩니다.' 
+---
+= 스냅샷 복사본을 사용하여 스토리지 공간 추정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+클론 분할 추정치는 스토리지 시스템의 스냅샷 복사본에 사용할 수 있는 클론이 없을 때 스냅샷 복사본을 사용하여 필요한 스토리지 공간(MB)을 추정하는 데 도움이 됩니다.
+
+.단계
+. 다음 명령을 입력하여 필요한 스토리지 공간을 예측합니다.
++
+``SnapDrive clone split estimate-snapname[_long_snap_name_]{-volclone|-lunclone}][-v|-verbose] *
+
+
+
+다음 예에서는 스냅샷 복사본을 사용하여 LUN 클론을 분할할 스토리지 공간을 예측합니다.
+
+[listing]
+----
+snapdrive clone split estimate -snapname f3050-220-112:/vol/vol_1:snap_1 -lunclone
+Resource       Container  Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112: f3050-220 	5120	   14078    AVAILABLE
+/vol/vol_1:snap_1 -112:/vol/vol_1
+----
+다음 예에서는 '-fs' 옵션이 있는 스냅샷 복제본을 사용하여 LUN 클론을 분할할 스토리지 공간을 예측합니다.
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/my_mnt1 -snapname f3050-220-112:/vol/vol_1:snap_1 -lunclone
+Resource         Container Required Available Storage
+                            Space(MB)Space(MB) Status
+f3050-220-112:   f3050-220  4120     14078  AVAILABLE
+/vol/vol_1:snap_1 -112:/vol/vol_1
+----
+다음 예에서는 '-fs' 옵션이 있는 스냅샷 복제본을 사용하여 볼륨 클론을 분할할 스토리지 공간을 예측합니다.
+
+[listing]
+----
+# snapdrive clone split estimate -fs /mnt/fs1 -snapname f3050-220-112:/vol/vol_1:snap_1 -volclone
+Resource      Container   Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112:  f3050-220 54019   54517  AVAILABLE
+/vol/vol0:snap_1 112:aggr0
+----
+다음 예에서는 스냅샷 복사본을 사용하여 볼륨 클론을 분할할 스토리지 공간을 예측합니다.
+
+[listing]
+----
+# snapdrive clone split estimate -snapname f3050-220-112:/vol/vol_1:snap_1 -volclone
+Resource      Container   Required Available Storage
+                          Space(MB)Space(MB) Status
+f3050-220-112:  f3050-220 54019    54517    AVAILABLE
+/vol/vol0:snap_1 112:aggr0
+----
+[NOTE]
+====
+* 스냅샷 복사본에 대한 클론 분할 추정치가 수행된 경우 "리소스" 필드에 스냅샷 복사본 이름이 포함되어 있습니다.
+* "-lunclone" 옵션이 있는 스냅샷 복사본과 함께 비활성 파일 사양을 제공하는 경우 "필요한 공간"이 0으로 표시됩니다.
+* 스냅샷을 사용한 LUN 클론 분할 추정치는 UNIX용 SnapDrive 4.2 이상에서 생성된 스냅샷 복사본에만 사용할 수 있습니다.
+
+
+====

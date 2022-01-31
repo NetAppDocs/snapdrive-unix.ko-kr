@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/concept_what_the_web_service_and_daemon_are.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, web, service, daemon, interface, snapmanager, cli, command 
+summary: 'UNIX용 SnapDrive 웹 서비스는 모든 NetApp SnapManager 및 타사 제품에 대해 일관된 인터페이스를 제공하므로 UNIX용 SnapDrive와 원활하게 통합할 수 있습니다. SnapDrive for UNIX에서 명령줄 인터페이스\(CLI\) 명령을 사용하려면 데몬을 시작해야 합니다.' 
+---
+= 웹 서비스 및 데몬은 무엇입니까
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 웹 서비스는 모든 NetApp SnapManager 및 타사 제품에 대해 일관된 인터페이스를 제공하므로 UNIX용 SnapDrive와 원활하게 통합할 수 있습니다. SnapDrive for UNIX에서 CLI(Command-Line Interface) 명령을 사용하려면 데몬을 시작해야 합니다.
+
+다양한 NetApp SnapManager 제품은 CLI(Command-Line Interface)를 사용하여 UNIX용 SnapDrive와 통신합니다. CLI를 사용하면 SnapManager 및 UNIX용 SnapDrive의 성능과 관리 편의성에 제약이 있습니다. UNIX용 SnapDrive 데몬을 사용하는 경우 모든 명령이 고유한 프로세스로 작동합니다. 데몬 서비스는 SnapDrive for UNIX 명령 사용 방법에 영향을 주지 않습니다.
+
+UNIX용 SnapDrive 웹 서비스를 사용하면 타사 애플리케이션을 UNIX용 SnapDrive와 원활하게 통합할 수 있습니다. API를 사용하여 UNIX용 SnapDrive와 상호 작용합니다.
+
+데몬을 시작하면 SnapDrive for UNIX 데몬이 먼저 데몬이 실행 중인지 확인합니다. 데몬이 실행되고 있지 않으면 데몬을 시작합니다. 데몬이 이미 실행 중이고 데몬을 시작하려고 하면 SnapDrive for UNIX에 다음 메시지가 표시됩니다.
+
+SnapDrive 디먼이 이미 실행 중입니다
+
+데몬의 상태를 확인하여 SnapDrive for UNIX가 실행 중인지 여부를 확인할 수 있습니다. 데몬을 시작하기로 결정하기 전에 상태를 확인해야 합니다. 루트 사용자 이외의 사용자가 상태를 확인하려고 하면 SnapDrive for UNIX는 사용자의 자격 증명을 확인하고 다음 메시지를 표시합니다.
+
+SnapDrive 디몬 상태는 루트 사용자만 볼 수 있습니다
+
+데몬을 중지하려고 하면 SnapDrive for UNIX에서 자격 증명을 확인합니다. 루트 사용자가 아닌 사용자인 경우 UNIX용 SnapDrive에서 메시지를 표시합니다
+
+SnapDrive 데몬은 루트 사용자만 중지할 수 있습니다
+
+데몬을 중지한 후 구성 파일 또는 모듈의 변경 내용을 적용하려면 UNIX용 SnapDrive 데몬을 다시 시작해야 합니다. 루트 사용자 이외의 사용자가 SnapDrive for UNIX 데몬을 다시 시작하려고 하면 SnapDrive for UNIX는 사용자의 자격 증명을 확인하고 메시지를 표시합니다
+
+SnapDrive 데몬은 루트 사용자만 재시작할 수 있습니다

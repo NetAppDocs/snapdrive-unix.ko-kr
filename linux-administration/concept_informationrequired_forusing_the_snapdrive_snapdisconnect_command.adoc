@@ -1,0 +1,97 @@
+---
+permalink: linux-administration/concept_informationrequired_forusing_the_snapdrive_snapdisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, disconnect, lun, disk, file 
+summary: 스냅샷 복사본의 연결을 끊으려면 LUN, 디스크 그룹, 파일 시스템 등과 같은 사용할 스토리지 엔터티의 유형을 또는 호스트 볼륨입니다. 
+---
+= SnapDrive snap disconnect 명령을 사용하는 데 필요한 정보입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본의 연결을 끊으려면 LUN, 디스크 그룹, 파일 시스템 등과 같은 사용할 스토리지 엔터티의 유형을 또는 호스트 볼륨입니다.
+
+다음 표에는 'SnapDrive snap disconnect' 명령을 사용할 때 제공해야 하는 정보가 나와 있습니다.
+
+|===
+| 요구 사항/옵션 | 인수 
+
+
+ a| 
+LUN('-lun_file_spec_')
+ a| 
+_LUN의 이름입니다. 파일러, 볼륨 및 LUN의 이름을 포함합니다. _
+
+
+
+ a| 
+디스크 그룹('-dg_file_spec_') 또는 볼륨 그룹('-vg_file_spec_')
+ a| 
+_ 디스크 또는 볼륨 그룹의 이름 _
+
+
+
+ a| 
+파일 시스템('-fs_file_spec_')
+ a| 
+'_filesystem_name_'
+
+
+
+ a| 
+호스트 볼륨('-hostvol_file_spec_') 또는 논리 볼륨('-lvol_file_spec_')
+ a| 
+_호스트 또는 논리적 볼륨의 이름 _
+
+
+
+ a| 
+스냅샷 복사본의 연결을 끊는 데 사용할 스토리지 엔터티의 유형을 지정하고 해당 엔터티의 이름을 적절한 인수로 제공합니다.
+
+이것은 '_file_spec_' 인수의 값입니다.
+
+
+
+ a| 
+'-가득 참'
+ a| 
+~
+
+
+
+ a| 
+명령줄에서 -full 옵션을 포함시키십시오. UNIX용 SnapDrive가 명령줄에서 호스트측 엔터티에 호스트 볼륨이 하나 이상 있는 디스크 그룹과 같은 다른 엔터티가 있더라도 스냅샷 복사본에서 개체의 연결을 끊도록 하려면 명령줄에서 -full 옵션을 포함합니다. 이 옵션을 포함하지 않으면 빈 호스트쪽 요소만 지정해야 합니다.
+
+
+
+ a| 
+'-fstype'입니다
+ a| 
+'_type_'
+
+
+
+ a| 
+'-vmtype'입니다
+ a| 
+'_type_'
+
+
+
+ a| 
+선택 사항: 사용할 파일 시스템 및 볼륨 관리자의 유형을 지정합니다.
+
+
+
+ a| 
+'-스플릿'
+ a| 
+~
+
+
+
+ a| 
+스냅샷 연결 및 스냅샷 연결 끊기 작업 중에 클론 복제된 볼륨 또는 LUN을 분할할 수 있습니다.
+
+|===

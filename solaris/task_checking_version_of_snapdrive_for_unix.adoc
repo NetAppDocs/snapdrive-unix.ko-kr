@@ -1,0 +1,33 @@
+---
+permalink: solaris/task_checking_version_of_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, version, check, command 
+summary: SnapDrive version 명령을 입력하여 UNIX용 SnapDrive 버전을 확인할 수 있습니다. 
+---
+= UNIX용 SnapDrive 버전 확인
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive version 명령을 입력하여 UNIX용 SnapDrive 버전을 확인할 수 있습니다.
+
+.단계
+. CLI 프롬프트에서 다음 명령을 입력합니다.
++
+'* SnapDrive 버전 * '
+
+
+
+
+
+== 예
+
+[listing]
+----
+# snapdrive version
+snapdrive Version 5.2
+snapdrive Daemon Version 5.2
+----
+
+NOTE: 이 명령어가 허용하는 유일한 인수는 -v로, 추가적인 버전 세부 정보를 표시합니다. 추가 인수를 포함할 경우 UNIX용 SnapDrive에서 경고를 표시한 다음 버전 번호를 표시합니다.

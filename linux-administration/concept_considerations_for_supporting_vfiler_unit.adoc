@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_considerations_for_supporting_vfiler_unit.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, vfiler, support, issues, unit 
+summary: 'UNIX용 SnapDrive는 FlexVol 볼륨에서 생성된 vFiler 유닛에서 SnapDrive 작업을 지원합니다. 그러나 FC(Fibre Channel\)를 사용하는 경우 UNIX용 SnapDrive는 vFiler 유닛을 지원하지 않습니다.' 
+---
+= vFiler 유닛 지원 문제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 FlexVol 볼륨에서 생성된 vFiler 유닛에서 SnapDrive 작업을 지원합니다. 그러나 FC(파이버 채널)를 사용하는 경우 UNIX용 SnapDrive에서는 vFiler 유닛을 지원하지 않습니다.
+
+vFiler 유닛을 지원하는 UNIX용 SnapDrive와 관련된 몇 가지 고려 사항을 알고 있어야 합니다.
+
+* qtree에서 생성된 vFiler 장치에서는 SnapDrive 작업이 지원되지 않습니다.
++
+vFiler 장치가 전체 스토리지 볼륨을 소유하는 경우 이러한 작업이 허용됩니다.
+
+* vFiler 유닛을 지원하도록 SnapDrive를 구성할 때는 vFiler0의 인터페이스에 대해 관리 및 데이터 경로가 구성되지 않도록 해야 합니다.
+* 7-Mode에서 작동하는 Data ONTAP에서는 vFiler 유닛의 볼륨 또는 LUN에 대한 스냅샷 복사본에 연결할 Data ONTAP 구성 변수 "vFiler.vol_clone_ZAPI_ALLOW"가 "On"으로 설정되어 있는지 확인해야 합니다.
+

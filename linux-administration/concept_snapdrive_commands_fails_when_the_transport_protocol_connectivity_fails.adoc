@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_snapdrive_commands_fails_when_the_transport_protocol_connectivity_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, fail, transport, fc, iscsi, storage 
+summary: 호스트와 스토리지 시스템 간의 iSCSI 또는 FC 연결에 장애가 발생하거나 스토리지 시스템의 iSCSI 또는 FC에 장애가 발생하면 SnapDrive 명령이 실패합니다. 
+---
+= 전송 프로토콜 연결에 실패하면 SnapDrive 명령이 실패합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트와 스토리지 시스템 간의 iSCSI 또는 FC 연결에 장애가 발생하거나 스토리지 시스템의 iSCSI 또는 FC에 장애가 발생하면 SnapDrive 명령이 실패합니다.
+
+
+
+== 해결 방법
+
+UNIX용 SnapDrive 명령을 사용하려면 먼저 iSCSI 또는 FC 서비스를 복구해야 합니다.

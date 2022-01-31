@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_snap_connect_procedure.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, procedure 
+summary: 스냅 연결 절차는 Data ONTAP 7.2 이상에서 사용할 수 있으며 스냅 연결 작업의 단계를 설명합니다. 
+---
+= 스냅 연결 절차
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅 연결 절차는 Data ONTAP 7.2 이상에서 사용할 수 있으며 스냅 연결 작업의 단계를 설명합니다.
+
+다음 단계에서는 스냅 연결 절차를 설명합니다.
+
+.단계
+. UNIX용 SnapDrive는 스냅 연결 CLI에서 파일 사양 이름과 스냅샷 이름을 가져옵니다. 그런 다음 스냅샷이 상주하는 원래 스토리지 시스템 볼륨을 찾습니다.
+. SnapDrive for UNIX는 CLI 구성 옵션을 기반으로 스토리지 시스템 엔터티에 적합한 클론 생성 방법을 선택합니다.
++
+
+NOTE: CLI 옵션을 지정하면 항상 'napdrive.conf' 파일 옵션이 무시됩니다.
+
++
+.. CLI 또는 sapdrive.conf 파일의 'san-clone-method=lunclone' 옵션에 '-clone lunclone' 옵션이 지정되어 있으면 SnapDrive for UNIX는 지정된 스냅샷에서 동일한 볼륨에 LUN 클론을 생성합니다.
+.. CLI에서 '-clone unrestricted' 옵션을 지정하거나, 'napdrive.conf' 파일에서 'an-clone-method=unrestricted' 옵션을 지정하면, UNIX용 SnapDrive는 해당 스냅샷에서 다목적 FlexClone을 생성하거나 재사용합니다.
+.. CLI에서 '-clone optimal' 옵션을 지정하거나 'napdrive.conf' 파일에서 'an-clone-method=optimal' 옵션을 지정하면 SnapDrive for UNIX는 스토리지 시스템 구성에 따라 제한된 FlexClone과 LUN 클론 중에서 자동으로 선택합니다.
+
+
+
+
+
+NOTE: 기본적으로 UNIX용 SnapDrive에서 생성한 클론은 백업 클론입니다.

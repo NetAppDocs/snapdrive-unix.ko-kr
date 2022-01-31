@@ -1,0 +1,48 @@
+---
+permalink: aix/reference_host_side_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, side, command, line 
+summary: UNIX용 SnapDrive 명령은 호스트 측 작업에 사용됩니다. 
+---
+= 호스트측 명령줄
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령은 호스트 측 작업에 사용됩니다.
+
+다음 표에는 호스트 측 작업에 대한 다양한 명령줄 옵션이 나와 있습니다.
+
+|===
+| 작동 | 명령줄 옵션입니다 
+
+
+ a| 
+호스트 연결
+ a| 
+'SnapDrive host connect-lun_long_lun_name_[_lun_name..._][-vmtype_type_]'
+
+
+
+ a| 
+'SnapDrive host connect-fs_file_spec_-nolvm-lun_long_lun_name_[-npersist] [-mntpts options] [-fstype_type_] [-vmtype_type_]'
+
+
+
+ a| 
+'SnapDrive host connect-fs_file_spec_-hostvol_file_spec_-lun_long_lun_name_[_lun_name_][-npersist][-mntopts_options_][-vmtype_type_]'
+
+
+
+ a| 
+호스트 연결 끊기
+ a| 
+'SnapDrive host disconnect - lun_long_lun_name _ [_lun_name..._] [-vmtype_type_]'
+
+
+
+ a| 
+"SnapDrive 호스트 연결 끊기{-vg|-dG|-fs|-lvol|-hostvol}_file_spec_[_file_spec..._][{-vg|-dg|-fs|-lvol|-hostvol}_file_spec_[_file_spec...]...] [-FULL] [-fstype_type_] [-vmtype_type_]'
+
+|===

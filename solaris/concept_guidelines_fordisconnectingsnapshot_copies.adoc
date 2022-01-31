@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_guidelines_fordisconnectingsnapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy 
+summary: 다음은 LUN, 스토리지 엔터티 또는 NFS 디렉터리의 스냅샷 복사본을 끊는 지침입니다. 
+---
+= 스냅샷 복사본 연결 끊기 지침
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음은 LUN, 스토리지 엔터티 또는 NFS 디렉터리의 스냅샷 복사본을 끊는 지침입니다.
+
+* 파일 시스템의 연결을 끊으면 SnapDrive for UNIX에서 항상 마운트 지점을 제거합니다.
+* 스냅샷 연결 작업의 영향을 취소하려면 스냅샷 연결 해제 명령을 사용합니다.
+* 스냅샷 연결 작업 중에 '_enable-split-clone_' 구성 변수 값을 'on' 또는 'sync'로 설정하고 스냅샷 연결 해제 작업 중에 'off'로 설정하면 SnapDrive for UNIX는 스냅샷 복사본에 있는 원래 볼륨 또는 LUN을 삭제하지 않습니다.
+

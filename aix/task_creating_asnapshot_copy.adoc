@@ -1,0 +1,28 @@
+---
+permalink: aix/task_creating_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, snapshot, copy 
+summary: 스냅샷 복사본을 생성하려면 SnapDrive snap create 명령을 실행합니다. 
+---
+= 스냅샷 복사본 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본을 생성하려면 'SnapDrive snap create' 명령을 실행합니다.
+
+이 구문을 실행하기 전에 이 명령에 언급된 옵션, 키워드 및 인수를 이해해야 합니다.
+
+.단계
+. 다음 명령 구문을 입력하여 스냅샷 복사본을 생성합니다.
++
+``SnapDrive 스냅 생성{-lun|-dG|-fs|-hostvol}_file_spec [file_spec...]_[{-lun|-dg|-fs|-hostvol}_file_spec_[_file_spec_...]] -snapname_snap_name_ [-force [-nop프롬프트] [-reloded] [-nofilerfence] [-fstype_type_] [-vmtype_type_] * ``입니다
+
+
+
+'_file_spec_' 인수는 하나 이상의 스토리지 시스템에 있는 스토리지 엔터티의 집합을 나타냅니다. 스냅샷 생성 작업은 해당 엔터티가 포함된 스토리지 시스템 볼륨의 스냅샷 복사본을 가져와 'snap_name' 인수에 지정된 이름을 지정합니다.
+
+* 관련 정보 *
+
+xref:concept_creating_snapshotcopies_of_unrelatedentities.adoc[관련 없는 엔터티의 스냅샷 복사본 생성]

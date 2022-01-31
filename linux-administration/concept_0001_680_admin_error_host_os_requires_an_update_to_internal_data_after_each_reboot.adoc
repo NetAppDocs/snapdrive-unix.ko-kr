@@ -1,0 +1,38 @@
+---
+permalink: linux-administration/concept_0001_680_admin_error_host_os_requires_an_update_to_internal_data_after_each_reboot.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reboot, error, update, connect, admin, administration 
+summary: Red Hat Enterprise Linux 4 및 Oracle Enterprise Linux 4 호스트에서 스냅샷 연결 및 스토리지 생성 작업을 재부팅할 때마다 오류 메시지가 발생합니다. 
+---
+= 각 재부팅 후 스냅 접속에서 "0001-680 관리자 오류: 호스트 OS에서 내부 데이터에 대한 업데이트가 필요함"
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Red Hat Enterprise Linux 4 및 Oracle Enterprise Linux 4 호스트에서 스냅샷 연결 및 스토리지 생성 작업을 재부팅할 때마다 오류 메시지가 발생합니다.
+
+재부팅 후 '/dev/sgXX' 파일에서 'sg driver'가 모든 비활성 장치를 삭제하므로 다음과 같은 오류 메시지가 나타납니다.
+
+
+
+== 해결 방법
+
+. ''/opt/netapp/SnapDrive/SnapDrive.conf' 파일에서 구성 변수 '_enable-implicithost-preparation_'의 값을 확인합니다. 켜짐으로 설정해야 합니다.
++
+호스트를 재부팅한 후 SnapDrive for UNIX를 사용하기 전에 다음 단계를 수행하십시오.
+
+. 다음 명령을 입력하여 sg 및 iSCSI 서비스가 로드되었는지 확인합니다.
++
+훈훈제
+
+. sg 및 iSCSI(iSCSI 설정을 사용하는 경우) 서비스가 로드되지 않은 경우 다음 명령을 입력합니다.
++
+** '도프로브 sg'입니다
+** 'Service iSCSI start(서비스 iSCSI 시작)'
+
+
+
+
+
+NOTE: 2단계와 3단계를 수동으로 수행하지 않으려면 호스트 시작 스크립트에 'modprobe sg' 및 'service iscsi start' 명령을 추가합니다.

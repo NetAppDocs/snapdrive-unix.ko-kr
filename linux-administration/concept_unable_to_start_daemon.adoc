@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_unable_to_start_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restart, daemon, host, storage, communicate, start 
+summary: 호스트가 구성된 스토리지 시스템과 통신할 수 없는 경우 데몬을 시작할 수 없습니다. 
+---
+= 호스트가 스토리지 시스템과 통신할 수 없는 경우 데몬을 다시 시작할 수 없습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트가 구성된 스토리지 시스템과 통신할 수 없는 경우 데몬을 시작할 수 없습니다.
+
+이 상태에서 데몬을 다시 시작하려고 하면 데몬이 시작되지 않고 다음 오류 메시지가 표시됩니다.
+
+[listing]
+----
+Unable to start daemon...check daemon log file for more details
+----
+기본적으로 스토리지 시스템에 대한 ping 명령을 실행하여 호스트가 스토리지 시스템과 통신하고 있는지 확인해야 합니다. 호스트가 여전히 스토리지 시스템과 통신할 수 없는 경우 다음 옵션을 사용해 보십시오.
+
+* 호스트와 통신하지 않는 스토리지 시스템을 삭제한 다음 데몬을 다시 시작합니다.
+* 호스트에 구성된 스토리지 시스템을 삭제하지 않으려면 'sapdrive.conf' 파일에서 '_autosupport-enabled_' 옵션을 '_off_'로 해제하여 오류 메시지를 표시하지 않도록 합니다.
+

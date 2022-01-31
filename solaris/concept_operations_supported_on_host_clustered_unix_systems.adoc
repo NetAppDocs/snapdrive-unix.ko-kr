@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_operations_supported_on_host_clustered_unix_systems.html 
+sidebar: sidebar 
+keywords: snap, snpadrive, support, host, cluster 
+summary: 호스트 클러스터 UNIX 시스템의 UNIX용 SnapDrive를 사용하면 스토리지를 생성하고 호스트 클러스터 전체의 공유 스토리지에서 스냅샷 작업을 수행할 수 있습니다. 
+---
+= 호스트 클러스터 UNIX 시스템에서 지원되는 작업입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 클러스터 UNIX 시스템의 UNIX용 SnapDrive를 사용하면 스토리지를 생성하고 호스트 클러스터 전체의 공유 스토리지에서 스냅샷 작업을 수행할 수 있습니다.
+
+스냅샷 작업은 디스크 그룹, 파일 시스템 및 LUN을 포함하는 스토리지 시스템에서 수행됩니다. 생성, 이름 바꾸기, 복원, 연결, 연결 끊기 등의 스냅샷 작업을 수행할 수 있습니다. 표시 및 삭제.
+
+
+NOTE: 호스트 클러스터형 시스템의 작업은 Solaris 호스트의 Veritas SFRAC에만 사용할 수 있습니다.

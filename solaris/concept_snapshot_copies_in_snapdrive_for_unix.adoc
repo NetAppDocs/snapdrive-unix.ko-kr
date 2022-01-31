@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_snapshot_copies_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, snapshot, copy 
+summary: SnapDrive for UNIX를 사용하면 호스트 데이터의 스냅샷 복사본을 생성할 수 있습니다. 
+---
+= UNIX용 SnapDrive에서 스냅샷 복사본 생성 및 사용
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX를 사용하면 호스트 데이터의 스냅샷 복사본을 생성할 수 있습니다.

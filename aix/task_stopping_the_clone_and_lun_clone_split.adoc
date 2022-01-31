@@ -1,0 +1,55 @@
+---
+permalink: aix/task_stopping_the_clone_and_lun_clone_split.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stop, volume, clone, split, operation 
+summary: 작업 ID 또는 파일 사양을 사용하여 볼륨 클론 또는 LUN 클론에 대한 클론 분할을 중지할 수 있습니다. 
+---
+= 볼륨 클론 또는 LUN 클론 분할 작업을 중지하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+작업 ID 또는 파일 사양을 사용하여 볼륨 클론 또는 LUN 클론에 대한 클론 분할을 중지할 수 있습니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+``SnapDrive 클론 분할 중지[-lun]_long_lun_name_[_long_lun_name_...] | [{-DG|-vg|-fs|-hostvol|-lvol}_file_spec_[_file_spec_...]] [-job_<jobid>_] *
+
++
+SnapDrive for UNIX는 진행 중인 클론 분할 중지 작업을 중지합니다.
+
+
+
+다음 예제에서는 파일 사양을 사용하여 중지된 클론 분할 작업을 보여 줍니다.
+
+[listing]
+----
+# snapdrive clone split stop -fs /mnt/my_mnt4 /mnt/my_mnt3
+Clone-Split for "/mnt/my_mnt4" is 0% Completed and Stopped.
+Clone-Split for "/mnt/my_mnt3" is 0% Completed and Stopped.
+----
+다음 예에서는 작업 ID를 사용하여 중지된 클론 분할 작업을 보여 줍니다.
+
+[listing]
+----
+# snapdrive clone split stop -job B265Dbv8gh
+Clone-Split for "/mnt/my_mnt3" is 14% Completed and Stopped.
+Clone-Split for "/mnt/my_mnt4" is 17% Completed and Stopped.
+----
+다음 예제는 이미 중지된 파일 사양에 대한 클론 분할 중지 작업을 보여 주는 일반적인 출력입니다.
+
+[listing]
+----
+# snapdrive clone split stop -fs /mnt/my_mnt4 /mnt/my_mnt3
+Clone-Split for "/mnt/my_mnt3" is not stopped : No split is in progress for this resource
+Clone-Split for "/mnt/my_mnt4" is not stopped : No split is in progress for this resource
+----
+[NOTE]
+====
+* 작업 ID의 특정 파일 사양에 대해 클론 분할을 중지하고 클론 분할 중지가 성공한 경우 작업에서 파일 사양이 제거됩니다.
+* 작업에 대한 클론 분할이 중지되었고 작업의 모든 파일 사양에 대해 클론 분할 중지가 성공한 경우 작업이 작업 세트에서 제거됩니다.
+
+
+====

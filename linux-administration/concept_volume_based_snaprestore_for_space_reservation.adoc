@@ -1,0 +1,73 @@
+---
+permalink: linux-administration/concept_volume_based_snaprestore_for_space_reservation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, space, reservation, volume, file, reserve 
+summary: 볼륨 기반 스냅 예약 공간을 사용하려면 SnapDrive.conf 파일에서 space-reservations-volume-enabled 옵션을 설정해야 합니다. 
+---
+= 공간 예약을 위한 볼륨 기반 SnapRestore입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+볼륨 기반 스냅 예약 공간을 사용하려면 'sapdrive.conf' 파일에서 '_space-reservations-volume-enabled_' 옵션을 설정해야 합니다.
+
+'_space-enervations-volume-enabled_' 옵션은 볼륨에 대한 공간 보장 정책을 설정하는 데 사용되며 다음 세 가지 값을 사용할 수 있습니다.
+
+* * 스냅샷 *: 기본값입니다. 볼륨의 공간 보장은 변경되지 않습니다.
+* * 볼륨 *: 볼륨의 공간 보장이 볼륨 레벨에 있습니다.
+* * 없음 *: 공간 보장이 없음으로 설정됩니다.
+
+
+다음 표에서는 공간 예약을 위한 볼륨 기반 스냅 예약 동작에 대해 설명합니다.
+
+|===
+| 사용된 공간 예약 CLI 옵션이 없습니다. '-vbsr execute'가 지정됩니다 | 공간 예약 - 볼륨 사용 = | 결과 
+
+
+ a| 
+없음
+ a| 
+스냅샷
+ a| 
+볼륨의 공간 보장은 변경되지 않습니다.
+
+
+
+ a| 
+없음
+ a| 
+없음
+ a| 
+볼륨에 대해 공간 보장을 "없음"으로 설정하려고 합니다.
+
+
+
+ a| 
+'-예비'
+ a| 
+구성 값이 오버라이드됩니다
+ a| 
+볼륨에 대한 공간 보장을 "볼륨"으로 설정하려고 합니다.
+
+
+
+ a| 
+'-noreserve'입니다
+ a| 
+구성 값이 오버라이드됩니다
+ a| 
+볼륨에 대한 공간 보장을 "없음"으로 설정합니다.
+
+
+
+ a| 
+없음
+ a| 
+볼륨
+ a| 
+볼륨에 대한 공간 보장을 "볼륨"으로 설정하려고 합니다.
+
+|===
+
+NOTE: '-vbsr 미리보기'는 공간 예약 옵션을 확인하지 않습니다.

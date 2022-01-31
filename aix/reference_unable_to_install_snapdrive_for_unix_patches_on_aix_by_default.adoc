@@ -1,0 +1,19 @@
+---
+permalink: aix/reference_unable_to_install_snapdrive_for_unix_patches_on_aix_by_default.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, aix, patch, default 
+summary: '시스템 관리 인터페이스 도구 \(SMIT\)를 사용하여 기본적으로 AIX용 SnapDrive 패치 릴리스를 설치할 수 없습니다.' 
+---
+= 기본적으로 AIX에 UNIX용 SnapDrive 패치를 설치할 수 없습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+시스템 관리 인터페이스 도구(SMIT)를 사용하여 기본적으로 AIX에 UNIX용 SnapDrive 패치 릴리스를 설치할 수 없습니다.
+
+
+
+== 해결 방법
+
+AIX용 SnapDrive 패치 릴리스를 설치할 때 SMIT에서 '덮어쓰기' 옵션을 선택해야 합니다.

@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_commands_appear_blocked_commands_appear_blocked.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, blocked 
+summary: 명령이 10분 이상 차단되어 있는 것으로 보이기 때문에 UNIX용 SnapDrive 명령을 실행할 수 없습니다. 명령이 완료될 때까지 기다려야 할 수 있습니다. 
+---
+= 명령이 차단된 것으로 나타납니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+명령이 10분 이상 차단되어 있는 것으로 보이기 때문에 UNIX용 SnapDrive 명령을 실행할 수 없습니다. 명령이 완료될 때까지 기다려야 할 수 있습니다.
+
+이 동작은 드문 경우지만, VxVM/DMP에서 볼륨 구성 데몬을 관리하는 데 시간이 필요한 경우 발생합니다. 이 동작의 트리거는 다음과 같습니다.
+
+* 패닉 상태로 복구된 스토리지 시스템
+* 스토리지 시스템의 대상 어댑터는 오프라인 상태에서 온라인 상태로 전환한 어댑터입니다
+
+
+
+
+== 해결 방법
+
+명령이 완료될 때까지 기다립니다. Veritas 구성 데몬을 실행하고 디바이스의 현재 상태를 검색하는 데 몇 분이 필요합니다.

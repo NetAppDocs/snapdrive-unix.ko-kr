@@ -1,0 +1,39 @@
+---
+permalink: solaris/concept_san_filespec_created_with_solaris_volume_manager_svm_using_iscsi_does_not_automount.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, filespec, iscsi, volume, solaris, manager, network, mount 
+summary: '호스트 시스템이 다시 시작되면 iSCSI를 사용하여 Solaris Volume Manager\(SVM\)로 생성된 스토리지 영역 네트워크 파일 사양이 자동으로 마운트되지 않고 호스트가 시작되지 않습니다.' 
+---
+= iSCSI를 사용하여 Solaris Volume Manager에서 생성한 스토리지 영역 네트워크 파일 사양은 자동으로 마운트되지 않습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 시스템이 다시 시작되면 iSCSI를 사용하여 Solaris Volume Manager(SVM)로 생성된 스토리지 영역 네트워크 파일 사양이 자동으로 마운트되지 않고 호스트가 시작되지 않습니다.
+
+호스트가 시작되면 설명된 단계를 사용하여 파일 사양을 마운트할 수 있습니다.
+
+
+
+== 해결 방법
+
+. 메타 세트 를 입력합니다
++
+'*-s DgName-t * '
+
++
+디스크 세트 소유권을 수동으로 변경하는 명령입니다.
+
++
+
+NOTE: 메타 디바이스가 정의되어 있는지 확인합니다.
+
+. 를 입력합니다
++
+' * mount-a *'
+
++
+명령을 사용하여 파일 사양을 마운트합니다.
+
+

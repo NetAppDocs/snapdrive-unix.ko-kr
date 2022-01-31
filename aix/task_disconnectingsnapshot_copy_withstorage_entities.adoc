@@ -1,0 +1,87 @@
+---
+permalink: aix/task_disconnectingsnapshot_copy_withstorage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, command, snapshot, storage 
+summary: SnapDrive snap disconnect 명령을 사용하여 스토리지 엔터티가 포함된 스냅샷 복사본의 연결을 끊을 수 있습니다. 
+---
+= 스토리지 엔터티와 스냅샷 복사본의 연결을 끊는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap disconnect" 명령을 사용하여 스토리지 엔터티가 포함된 스냅샷 복사본의 연결을 끊을 수 있습니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+"* SnapDrive 스냅 분리 {-dG|-fs|-hostvol}_file_spec_[_file_spec..._] {-dg|-fs|-hostvol} file_spec [file_spec...] [-FULL] [-fstype type] [-vmtype type] [-split] *
+
++
+이 명령은 항상 '-lun', '-dg', '-hostvol' 등의 스토리지 엔터티로 시작해야 합니다. 또는 '-fs'입니다.
+
++
+** LUN('-lun')을 지정하는 경우 긴 LUN 이름을 입력해야 합니다. 다른 스토리지 엔터티('-vg', '-dg', '-fs', '-lvol' 또는 '-hostvol' 옵션)와 동일한 명령줄에 '-lun' 옵션을 사용하여 LUN을 지정할 수 없습니다.
+** NFS 마운트 지점을 지정하는 경우 동일한 명령줄에 NFS가 아닌 엔터티('-vg', '-dg', '-fs', '-lvol' 또는 '-hostvol')를 지정할 수 없습니다. 별도의 명령을 사용하여 NFS 마운트 지점을 지정해야 합니다.
+
+
+
+
+
+NOTE: 호스트 엔터티가 스냅샷 복사본의 일부가 아닌 LUN을 사용하는 경우 오류 메시지가 표시됩니다. 각 타겟 디스크 그룹에 포함된 호스트 볼륨 및/또는 파일 시스템의 하위 집합을 지정하는 경우에도 오류가 발생합니다.
+
+UNIX용 SnapDrive는 명령줄에 지정된 스토리지 엔터티에 대한 매핑을 제거합니다.
+
+이 명령줄은 호스트 볼륨 dg5/myvolume의 기반이 되는 모든 LUN에 대한 매핑을 제거합니다. 그러면 스냅샷 연결 작업을 통해 에서 생성되는 모든 임시 LUN이 제거됩니다.
+
+[listing]
+----
+# snapdrive snap disconnect -hostvol dg5/myvolume
+----
+이 명령줄은 호스트 볼륨 dg5/myvolume의 기반이 되는 모든 LUN에 대한 매핑을 제거합니다. 그러면 스냅샷 연결 작업을 통해 에서 생성되는 모든 임시 LUN이 제거됩니다.
+
+[listing]
+----
+# snapdrive snap disconnect -hostvol dg5/myvolume
+----
+이 명령어는 DG1(Disk Group 1) 및 기본 LUN에 대한 매핑을 해제합니다. 또한 다음과 같이 스냅샷 연결 작업으로 생성되는 임시 LUN도 제거합니다.
+
+[listing]
+----
+# snapdrive snap disconnect -lun toaster:/vol/vol1/luna -dg dg1
+----
+이 명령줄은 파일 시스템 fs1과 그 밑줄이 있는 LUN에 대한 매핑을 제거합니다. 또한 다음과 같이 스냅샷 연결 작업으로 생성되는 임시 LUN도 제거합니다.
+
+[listing]
+----
+# snapdrive snap disconnect -fs mnt/fs1
+----
+이 명령줄은 디스크 그룹 DG1, dg2 및 dg3에 대한 매핑을 제거합니다. 그러면 스냅샷 연결 작업을 통해 에서 생성되는 임시 LUN이 제거됩니다.
+
+[listing]
+----
+# snapdrive snap disconnect -dg dg1 dg2 dg3
+----
+이 예에서는 파일 시스템, Veritas 스택의 디스크 그룹이 있는 스냅샷 복사본의 연결을 끊습니다.
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1_clone -fstype vxfs
+delete file system /mnt/fs1_clone
+- fs /mnt/fs1_clone ... deleted
+- hostvol vxvm1_0/fs1_SdHv_0 ... deleted
+- dg vxvm1_0 ... deleted
+- LUN snoopy:/vol/vol1/lunVxvm1_0 ... deleted
+----
+이 예에서는 LVM 스택의 파일 시스템, 디스크 그룹과 스냅샷 복사본의 연결을 끊습니다.
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/fs1_clone -fstype jfs2
+
+delete file system /mnt/fs1_clone
+- fs /mnt/fs1_clone ... deleted
+- hostvol lvm1_0/fs1_SdHv_0 ... deleted
+- dg lvm1_0 ... deleted
+- LUN snoopy:/vol/vol1/lunLvm1_0 ... deleted
+----

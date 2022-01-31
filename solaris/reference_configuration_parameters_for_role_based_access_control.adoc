@@ -1,0 +1,67 @@
+---
+permalink: solaris/reference_configuration_parameters_for_role_based_access_control.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, variable, rbac, access, control, role 
+summary: SnapDrive.conf 파일에서 역할 기반 액세스 제어와 관련된 다양한 구성 변수를 설정해야 합니다. 
+---
+= 역할 기반 액세스 제어를 위한 구성 변수
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'napdrive.conf' 파일에서 역할 기반 액세스 제어와 관련된 다양한 구성 변수를 설정해야 합니다.
+
+|===
+| 변수 | 설명 
+
+
+ a| 
+'_contact-http-dFM-port=8088_'
+ a| 
+Operations Manager 콘솔 서버와 통신하는 데 사용할 HTTP 포트를 지정합니다. 기본값은 8088입니다.
+
+
+
+ a| 
+'_contact-ssl-dFM-port=8488_'
+ a| 
+Operations Manager 콘솔 서버와 통신하는 데 사용할 SSL 포트를 지정합니다. 기본값은 8488입니다.
+
+
+
+ a| 
+'_RBAC-method=DFM_'
+ a| 
+액세스 제어 방법을 지정합니다. 가능한 값은 '네이티브'와 'dfm'입니다.
+
+값이 'native'이면 '/vol/vol0/sdprbac/sdhost-name.prbac'에 저장된 액세스 제어 파일이 액세스 검사에 사용됩니다.
+
+값이 DIFM으로 설정되어 있으면 Operations Manager 콘솔이 필수 구성 요소입니다. 이러한 경우 UNIX용 SnapDrive는 작업 관리자 콘솔에 액세스 검사를 보냅니다.
+
+
+
+ a| 
+'_RBAC-cache=on_'
+ a| 
+UNIX용 SnapDrive는 액세스 검사 쿼리의 캐시 및 해당 결과를 유지합니다. UNIX용 SnapDrive는 구성된 모든 Operations Manager 콘솔 서버가 다운된 경우에만 이 캐시를 사용합니다.
+
+이 값은 캐시를 사용하려면 "켜짐"으로 설정하고, 사용하지 않으려면 "꺼짐"으로 설정할 수 있습니다. 기본값은 'OFF'로, UNIX용 SnapDrive에서 Operations Manager 콘솔을 사용하도록 구성하고 'RBAC-method' 설정 변수를 'dfm'로 설정할 수 있습니다.
+
+
+
+ a| 
+'_RBAC-cache-timeout_'
+ a| 
+RBAC 캐시 시간 초과 기간을 지정하며 '_RBAC-cache_'가 활성화된 경우에만 적용됩니다. 기본값은 24시간입니다.
+
+UNIX용 SnapDrive는 구성된 모든 Operations Manager 콘솔 서버가 다운된 경우에만 이 캐시를 사용합니다.
+
+
+
+ a| 
+'_use-https-to-DFM = on_'
+ a| 
+이 변수를 사용하면 UNIX용 SnapDrive가 Operations Manager 콘솔과 통신할 때 SSL 암호화(HTTPS)를 사용하도록 설정할 수 있습니다. 기본값은 'on'입니다.
+
+|===

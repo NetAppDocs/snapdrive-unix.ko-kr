@@ -1,0 +1,21 @@
+---
+permalink: solaris/task_resetting_the_snap_reserve_option_by_using_filerview.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, reset, snap, reserve, option, filerview 
+summary: 'FC 또는 iSCSI 환경에서 Data ONTAP를 사용하는 경우 FilerView를 사용하여 스냅 예약 옵션을 0%로 재설정해야 합니다.' 
+---
+= FilerView를 사용하여 스냅 예약 옵션을 재설정합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC 또는 iSCSI 환경에서 Data ONTAP를 사용하는 경우 FilerView를 사용하여 '스냅 예약' 옵션을 0%로 재설정해야 합니다.
+
+.단계
+. 스냅 예약 설정이 변경될 볼륨을 보유하는 스토리지 시스템에 대한 FilerView 세션을 엽니다.
+. 기본 FilerView에서 * 볼륨 * > * 스냅샷 * > * 구성 * 으로 이동합니다.
+. Volume * 필드에서 '스냅 예약' 설정을 변경할 볼륨을 선택합니다.
+. Snapshot Reserve * 필드에 0을 입력합니다.
+. 적용 * 을 클릭합니다.
+

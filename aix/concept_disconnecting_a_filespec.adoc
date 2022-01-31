@@ -1,0 +1,44 @@
+---
+permalink: aix/concept_disconnecting_a_filespec.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, file, specification, filespec 
+summary: 파일 사양을 연결 해제할 수 있습니다. 다음 예제에서는 이 작업을 완료하는 방법을 설명합니다. 
+---
+= 파일 사양 연결을 끊는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+파일 사양을 연결 해제할 수 있습니다. 다음 예제에서는 이 작업을 완료하는 방법을 설명합니다.
+
+다음 표에서는 '/mnt/fs1_0'의 레이아웃을 제공합니다.
+
+[listing]
+----
+# snapdrive storage show -fs /mnt/fs_1_0 -capabilities
+raw device: /dev/sde1   mount point: /mnt/fs_1_0 (persistent) fstype jfs2
+allowed operations: all
+
+device filename    adapter  path    size    proto   state   clone         lun path                                                         backing snapshot
+----------------   -------  ----    ----    -----   -----   -----         --------                                                         ----------------
+/dev/sde              -      P      100m    iscsi   online  flex-clone    homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1    vol1:snap2
+----
+다음 출력에서는 파일 시스템 '/mnt/fs_1_0'의 연결을 끊는 방법을 보여 줍니다.
+
+[listing]
+----
+#snapdrive snap disconnect -fs /mnt/fs_1_0
+ delete file system /mnt/fs_1_0
+- fs /mnt/fs_1_0 ... deleted
+         - LUN homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1 ... disconnected
+         - deleting volume clone ... homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot  done
+----
+파일 시스템 '/mnt/fs_1_0'의 연결을 끊은 후 다음 조건이 충족되면 UNIX용 SnapDrive는 복제된 볼륨 'sapdrive_vol1_0_volume_clone_from_Snap2_snapshot'도 삭제합니다.
+
+* 볼륨에 매핑된 LUN이 없습니다
+* 새 LUN이 없습니다
+* 새 스냅샷 복사본이 없습니다
+
+
+* UNIX용 SnapDrive에서 생성하지 않은 FlexClone 삭제 *: UNIX용 SnapDrive에서는 FlexClone을 삭제하지 않습니다.

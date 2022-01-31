@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_user_name_formats_for_access_check_with_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, user, name, manger, access, check, operations, nis, network, information 
+summary: 'UNIX용 SnapDrive는 사용자 이름 형식을 사용하여 Operations Manager 콘솔을 사용하여 액세스 검사를 수행합니다. 이러한 형식은 사용자가 NIS(Network Information System)\ 또는 로컬 사용자인지에 따라 달라집니다.' 
+---
+= Operations Manager 콘솔을 사용하여 액세스 검사를 수행하기 위한 사용자 이름 형식입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 사용자 이름 형식을 사용하여 Operations Manager 콘솔을 사용하여 액세스 검사를 수행합니다. 이러한 형식은 사용자가 NIS(Network Information System)인지 로컬 사용자인지에 따라 달라집니다.
+
+UNIX용 SnapDrive는 다음 형식을 사용하여 사용자가 특정 작업을 수행할 수 있는 권한이 있는지 여부를 확인합니다.
+
+* SnapDrive 명령을 실행하는 NIS 사용자인 경우 UNIX용 SnapDrive는 '<nisdomain>\<username>' 형식을 사용합니다(예: ' netapp.com\marc`).
+* lnx197-141과 같은 UNIX 호스트의 로컬 사용자인 경우 UNIX용 SnapDrive는 '<hostname>\<username>' 형식(예: ' lnx197-141\john')을 사용합니다.
+* UNIX 호스트의 관리자(루트)인 경우 UNIX용 SnapDrive는 항상 관리자를 로컬 사용자로 취급하며 "lnx197-141\root" 형식을 사용합니다.
+

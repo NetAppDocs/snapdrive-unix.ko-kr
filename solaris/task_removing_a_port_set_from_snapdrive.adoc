@@ -1,0 +1,32 @@
+---
+permalink: solaris/task_removing_a_port_set_from_snapdrive.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, remove, port, set, command 
+summary: SnapDrive 포트셋 삭제 명령을 사용하여 SnapDrive에 구성된 포트 세트를 삭제할 수 있습니다. 
+---
+= SnapDrive에서 포트 세트 제거
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'SnapDrive 포트셋 삭제' 명령을 사용하여 SnapDrive에 설정된 포트 세트를 삭제할 수 있습니다.
+
+.단계
+. 호스트 시스템에서 다음 명령을 입력합니다.
++
+'* SnapDrive delete_filername_[_filername..._] * '
+
++
+'_filername_'은 포트 세트가 구성된 SVM 이름입니다.
+
++
+[listing]
+----
+snapdrive portset delete vs91
+Deleted portset configuration for appliance: vs91
+----
++
+SnapDrive에 대해 구성된 포트 세트가 성공적으로 제거되었습니다.
+
+

@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/concept_multipath_configuration_variables.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipath, configuration, variables, file, mpio 
+summary: Linux에서 작동하려면 MPIO용 SnapDrive.conf 파일에서 몇 가지 구성 변수를 변경해야 합니다. 
+---
+= 다중 경로 구성 변수
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Linux에서 작동하려면 MPIO용 'napdrive.conf' 파일에서 몇 가지 구성 변수를 변경해야 합니다.
+
+호스트에 UNIX용 SnapDrive를 설치한 후 '/opt/netapp/SnapDrive/SnapDrive.conf' 파일을 편집하고 다음 설정을 적절한 값으로 변경합니다.
+
+[listing]
+----
+enable-implicit-host-preparation=on  # Enable implicit host preparation for LUN creation
+  default-transport="FCP"  # Transport type to use for storage provisioning, when a decision is needed
+  multipathing-type= "nativempio"  # Multipathing software to use when more than one multipathing solution is available
+----
+SnapDrive 데몬을 다시 시작하여 'napdrive.conf' 파일 변경 사항을 적용합니다. SnapDrive 데몬을 다시 시작한 후 SnapDrive 명령은 DM-MP 스택을 사용하여 시작합니다.

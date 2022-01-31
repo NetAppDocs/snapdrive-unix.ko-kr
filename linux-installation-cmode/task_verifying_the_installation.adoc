@@ -1,0 +1,26 @@
+---
+permalink: linux-installation-cmode/task_verifying_the_installation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, installation, install 
+summary: UNIX용 SnapDrive를 설치한 후 설치가 성공적으로 완료되었는지 확인해야 합니다. SnapDrive for UNIX는 실행 파일, 구성 파일, 제거 파일, 진단 파일 등 호스트에 여러 파일을 설치합니다. 및 Man 페이지. 
+---
+= 설치를 확인하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 설치한 후 설치가 성공적으로 완료되었는지 확인해야 합니다. SnapDrive for UNIX는 실행 파일, 구성 파일, 제거 파일, 진단 파일 등 호스트에 여러 파일을 설치합니다. 및 Man 페이지.
+
+.단계
+. 'sapdrive.conf' 파일이 '/opt/netapp/SnapDrive/' 폴더에 있는지 확인합니다.
+. Linux 운영 체제용 SnapDrive for UNIX 실행 파일이 다음 위치에 설치되어 있는지 확인합니다.
++
+** '/opt/netapp/SnapDrive/bin/SnapDrive'
+** '/opt/netapp/SnapDrive/bin/snapdrived'
+
+
+. UNIX용 SnapDrive 진단 파일이 "/opt/netapp/SnapDrive/diag" 폴더에 설치되었는지 확인합니다.
+. UNIX용 SnapDrive man 페이지가 "/opt/netapp/SnapDrive/docs" 폴더에 설치되었는지 확인합니다.
+. '/var/log/sdconfcheck.out' 파일에서 설치된 구성 요소의 세부 정보를 확인합니다.
+

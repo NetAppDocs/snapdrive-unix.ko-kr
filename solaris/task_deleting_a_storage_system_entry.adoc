@@ -1,0 +1,31 @@
+---
+permalink: solaris/task_deleting_a_storage_system_entry.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, storage, mapping, host, information 
+summary: 호스트 시스템에서 스토리지 시스템 매핑 정보를 삭제할 수 있습니다. 
+---
+= 호스트 시스템에서 스토리지 시스템 매핑 정보 삭제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 시스템에서 스토리지 시스템 매핑 정보를 삭제할 수 있습니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+'* SnapDrive config migrate delete_new_storage_system_name_[_new_storage_system_name..._] *
+
++
+** 새 스토리지 시스템의 이름은 '_new_storage_system_name_'입니다.
+** "_[new_storage_system_name...]_"은 한 명령줄에서 여러 스토리지 시스템 이름을 삭제할 수 있음을 정의합니다.
++
+[listing]
+----
+snapdrive config migrate delete roaster
+Deleted entry for appliance: roaster
+----
+
+
+

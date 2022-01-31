@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_aix_mpio_cfmode_support_limited_sdu.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, aix, mpio, support, limited 
+summary: FC IBM AIX Host Utilities의 MPIO 환경은 cfmode에 대한 지원이 제한되어 있습니다. Data ONTAP 7.1.x를 실행하는 경우 단일 이미지 또는 cfmode만 지원됩니다. Data ONTAP 7.2.4 이상에서는 단일 이미지 cfmode와 파트너 cfmode가 모두 지원됩니다. 
+---
+= (AIX) MPIO cfmode는 제한적으로 지원합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC IBM AIX Host Utilities의 MPIO 환경은 cfmode에 대한 지원이 제한되어 있습니다. Data ONTAP 7.1.x를 실행하는 경우 단일 이미지 또는 cfmode만 지원됩니다. Data ONTAP 7.2.4 이상에서는 단일 이미지 cfmode와 파트너 cfmode가 모두 지원됩니다.

@@ -1,0 +1,52 @@
+---
+permalink: solaris/reference_limitations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations 
+summary: UNIX용 SnapDrive를 사용할 경우 환경에 영향을 줄 수 있는 특정 제한 사항을 알고 있어야 합니다. 
+---
+= 제한 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용할 경우 환경에 영향을 줄 수 있는 특정 제한 사항을 알고 있어야 합니다.
+
+
+
+== 일반 제한 사항
+
+* SnapDrive for UNIX를 사용하려면 SnapManager for Virtual Infrastructure(SMVI) 지원을 위해 부팅하는 동안 VM에서 BIOS를 사용해야 합니다. UEFI(Unified Extensible Firmware Interface) 사용은 지원되지 않습니다.
+* SnapDrive for UNIX는 VSC(가상 스토리지 콘솔)에서 MetroCluster 구성을 지원하지 않기 때문에 게스트 운영 체제의 RDM(원시 장치 매핑) 환경에서 MetroCluster 구성을 지원하지 않습니다.
+* Kerberos 보안 인증 유형 krb5, krb5i 또는 krb5p를 사용하여 볼륨을 내보낼 때 UNIX용 SnapDrive는 NFS 마운트 지점에서 스냅샷 작업을 지원하지 않습니다.
+* 스냅샷 복사본에 생성된 엔터티가 아닌 다른 엔터티가 마운트된 마운트 지점에서 스냅 복구 작업을 수행하면 스냅샷 작업이 일치하지 않을 수 있습니다.
+* UNIX용 SnapDrive는 7-Mode 및 clustered Data ONTAP 스토리지 시스템에서 실행되는 Data ONTAP에 있는 파일 사양 또는 LUN에 대한 작업을 지원하지 않습니다.
+* Clustered Data ONTAP을 사용하여 SnapDrive for UNIX로 SVM(스토리지 가상 시스템)을 구성하는 경우 SVM LIF의 IP 주소가 DNS 또는 '/etc/hosts' 파일에 있는 SVM 이름에 매핑되어 있는지 확인합니다.
++
+또한 SnapDrive for UNIX에서 'SnapDrive config set_vsadmin SVM name_' 명령을 사용하여 SVM 이름이 구성되었는지 확인해야 합니다.
+
+* SnapDrive for UNIX는 VBSR 작업 후에 비루트 사용자의 마운트 지점 권한을 qtree의 루트 사용자로 수정합니다.
+* UNIX용 SnapDrive는 영어 이외의 언어 환경을 지원하지 않습니다.
+* LUN을 다른 볼륨으로 이동하기 전에 생성된 스냅샷 복사본에서 복원하면 스냅 복구 작업이 실패합니다.
+* ONTAP 8.2 이상을 사용하는 경우 진행 중인 클론 작업에서 동일한 스냅샷 복사본을 사용하면 스냅샷 복사본의 스냅샷 작업에 장애가 발생할 수 있습니다.
++
+나중에 작업을 다시 시도해야 합니다.
+
+* OnCommand Unified Manager 6.0 이상은 clustered Data ONTAP의 Protection Manager를 지원하지 않습니다. 따라서 OnCommand Unified Manager 6.0 이상과 UNIX용 SnapDrive 간의 통합은 지원되지 않으며 UNIX용 SnapDrive 기능은 지원되지 않습니다.
++
+** RBAC(역할 기반 액세스 제어) 및 ONTAP의 OnCommand Unified Manager 6.0 이상과 통합
+** OnCommand에서 ONTAP Unified Manager 6.0 이상과 Protection Manager 통합
+
+
+* SVM이 포함된 애그리게이트를 SVM의 애그리게이트 목록에 할당하여 SVM을 구성하고 SnapDrive for UNIX 운영을 실행해야 합니다.
+* SnapDrive for UNIX는 automount를 지원하지 않습니다. 어떤 유형의 automount를 사용해도 UNIX용 SnapDrive 작업이 실패할 수 있습니다.
+
+
+
+
+== Solaris의 제한 사항
+
+* SMI(Storage Management Initiative) 레이블이 있는 1TB 이상의 LUN은 지원되지 않습니다.
+* 동일한 디스크 그룹의 EFI(Extensible Firmware Interface) 및 SMI LUN은 지원되지 않습니다.
+* 게스트 운영체제에서는 SnapDrive LUN fixpaths 명령이 지원되지 않습니다.
+

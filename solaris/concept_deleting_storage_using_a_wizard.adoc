@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_deleting_storage_using_a_wizard.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, storage, wizard 
+summary: 스토리지 삭제 마법사를 사용하여 특정 삭제 작업을 수행할 수 있습니다. 
+---
+= 마법사를 사용하여 스토리지 삭제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 삭제 마법사를 사용하여 특정 삭제 작업을 수행할 수 있습니다.
+
+'SnapDrive storage wizard delete' 명령어를 사용해 마법사를 시작할 수 있다.
+
+다음 요소를 삭제할 수 있습니다.
+
+* LUN
+* 디스크 그룹
+* 논리적 볼륨입니다
+* 파일 시스템
+

@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_guidelines_fordeleting_snapshotcopies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: 사용 중인 스냅샷 복사본이나 스냅샷 복사본이 여러 스토리지 시스템 볼륨에 포함되어 있는 경우에는 삭제할 수 없습니다. 
+---
+= 스냅샷 복사본 삭제 지침
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+사용 중인 스냅샷 복사본이나 스냅샷 복사본이 여러 스토리지 시스템 볼륨에 포함되어 있는 경우에는 삭제할 수 없습니다.
+
+'SnapDrive snap delete' 명령을 사용할 때는 다음 지침을 따르십시오.
+
+* 삭제하려는 스냅샷 복사본이 사용 중이거나 SnapDrive for UNIX에서 생성되지 않은 경우 스냅샷 삭제 작업이 실패합니다. '-force' 옵션을 'SnapDrive snap delete' 명령으로 포함하면 이 동작을 재정의할 수 있습니다.
+* 여러 스토리지 시스템 볼륨에 걸쳐 있는 스냅샷 복사본이 있는 경우 각 볼륨의 스냅샷 복사본을 수동으로 삭제해야 합니다.
+

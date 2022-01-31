@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, snaprestore 
+summary: UNIX 이상용 SnapDrive 4.0은 볼륨 레벨에서 스냅샷 복원 기능을 제공합니다. 이는 볼륨 기반 Snapshot 복원을 사용하여 수행할 수 있는 다양한 스토리지 작업에 대해 설명합니다. 
+---
+= 볼륨 기반 SnapRestore
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX 이상용 SnapDrive 4.0은 볼륨 레벨에서 스냅샷 복원 기능을 제공합니다. 이는 볼륨 기반 Snapshot 복원을 사용하여 수행할 수 있는 다양한 스토리지 작업에 대해 설명합니다.

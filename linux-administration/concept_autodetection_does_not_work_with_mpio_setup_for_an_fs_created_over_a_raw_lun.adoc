@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_autodetection_does_not_work_with_mpio_setup_for_an_fs_created_over_a_raw_lun.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, autodetection, lun, mpio 
+summary: 자동 감지는 SnapDrive for UNIX가 있는 Linux MPIO 설정에서 원시 LUN의 파일 시스템에서 작동하지 않습니다. 
+---
+= 자동 감지는 원시 LUN을 통해 생성된 FS에 대한 MPIO 설정과 함께 작동하지 않습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+자동 감지는 SnapDrive for UNIX가 있는 Linux MPIO 설정에서 원시 LUN의 파일 시스템에서 작동하지 않습니다.
+
+
+
+== 해결 방법
+
+모든 SnapDrive 작업에 '-fs' 옵션을 사용합니다.

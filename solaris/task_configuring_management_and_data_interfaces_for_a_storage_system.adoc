@@ -1,0 +1,39 @@
+---
+permalink: solaris/task_configuring_management_and_data_interfaces_for_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, management, data, interface, storage 
+summary: NFS 환경에서 단일 관리 인터페이스에 여러 데이터 인터페이스를 구성하여 스토리지 시스템의 데이터 트래픽과 관리 트래픽을 분리할 수 있습니다. 
+---
+= 스토리지 시스템에 대한 관리 및 데이터 인터페이스 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS 환경에서 단일 관리 인터페이스에 여러 데이터 인터페이스를 구성하여 스토리지 시스템의 데이터 트래픽과 관리 트래픽을 분리할 수 있습니다.
+
+.단계
+. 새 관리 인터페이스의 구성을 설정합니다.
++
+`* SnapDrive config set root * '
+
++
+[listing]
+----
+# snapdrive config set root f3050-197-91
+Password for root:
+Retype password:
+----
+. 새 관리 인터페이스에 대한 데이터 인터페이스를 구성합니다.
++
+'* SnapDrive 구성 세트 * '
+
++
+[listing]
+----
+# snapdrive config set -mgmtpath f3050-197-91 f3050-220-91#
+----
++
+앞의 명령에서 f3050-197-191은 관리 인터페이스이고 f3050-220-91은 데이터 인터페이스입니다.
+
+

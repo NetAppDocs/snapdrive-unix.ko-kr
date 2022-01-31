@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_executables_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, executables, install, unix 
+summary: SnapDrive for UNIX는 AIX 운영 체제용 실행 파일을 설치합니다. 
+---
+= UNIX용 SnapDrive에서 설치한 실행 파일
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 AIX 운영 체제용 실행 파일을 설치합니다.
+
+이러한 실행 파일은 '/opt/netapp/SnapDrive/bin/SnapDrive'에 설치됩니다.

@@ -1,0 +1,22 @@
+---
+permalink: aix/task_checking_the_status_of_the_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, check, daemon, status, command 
+summary: 데몬의 상태를 확인하여 데몬이 실행 중인지 확인할 수 있습니다. 데몬이 이미 실행 중인 경우에는 SnapDrive for UNIX 구성 파일이 업데이트될 때까지 데몬을 다시 시작할 필요가 없습니다. 
+---
+= 데몬의 상태를 확인하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데몬의 상태를 확인하여 데몬이 실행 중인지 확인할 수 있습니다. 데몬이 이미 실행 중인 경우에는 SnapDrive for UNIX 구성 파일이 업데이트될 때까지 데몬을 다시 시작할 필요가 없습니다.
+
+루트 사용자로 로그인해야 합니다.
+
+.단계
+. 데몬의 상태를 확인합니다.
++
+'* 스냅샷 상태 * '
+
+

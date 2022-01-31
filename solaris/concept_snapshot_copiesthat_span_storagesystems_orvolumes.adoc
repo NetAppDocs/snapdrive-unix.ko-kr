@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_snapshot_copiesthat_span_storagesystems_orvolumes.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, copy, storage, volume 
+summary: SnapDrive for UNIX를 사용하면 같거나 다른 스토리지 시스템의 여러 스토리지 시스템 볼륨에 있는 스냅샷 복사본을 생성할 수 있습니다. 
+---
+= 스토리지 시스템 또는 볼륨에 걸쳐 있는 Snapshot 복사본
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX를 사용하면 같거나 다른 스토리지 시스템의 여러 스토리지 시스템 볼륨에 있는 스냅샷 복사본을 생성할 수 있습니다.
+
+SnapDrive for UNIX를 사용하면 여러 스토리지 시스템 볼륨 또는 여러 스토리지 시스템에 걸쳐 있는 Snapshot 복사본을 생성할 수 있습니다. 이러한 볼륨은 동일한 스토리지 시스템 또는 다른 스토리지 시스템에 상주할 수 있습니다. "SnapDrive snap create" 명령은 요청한 엔터티를 구성하는 모든 볼륨의 스냅샷 복사본을 생성하지만 SnapDrive for UNIX는 "SnapDrive snap create" 명령에서 지정한 엔터티만 복구합니다.
+
+"SnapDrive snap create" 명령을 사용하여 여러 볼륨에 걸쳐 있는 Snapshot 복사본을 만드는 경우 명령 프롬프트에서 볼륨의 이름을 지정할 필요가 없습니다. UNIX용 SnapDrive는 사용자가 지정하는 "file_spec" 인수에서 이 정보를 가져옵니다.
+
+* 입력한 "file_spec"이 디스크 그룹 또는 디스크 그룹에 상주하는 파일 시스템 또는 호스트 볼륨을 요청하는 경우, SnapDrive for UNIX는 사용자가 지정한 디스크 그룹, 볼륨 또는 파일 시스템의 모든 스토리지 시스템 볼륨을 포함하는 스냅샷 복사본을 자동으로 생성합니다.
+* 입력한 "file_spec"이 LUN을 요청하는 경우 SnapDrive for UNIX는 LUN이 포함된 스토리지 시스템 볼륨의 스냅샷 복사본을 사용합니다.
+* 입력한 "file_spec"이 LUN에 직접 상주하는 파일 시스템을 요청하는 경우 SnapDrive for UNIX는 지정한 LUN 및 파일 시스템이 포함된 스토리지 시스템 볼륨의 스냅샷 복사본을 사용합니다.
+* 입력한 "file_spec"이 NFS 디렉토리를 요청하는 경우 SnapDrive for UNIX는 NFS 디렉토리 트리가 포함된 볼륨의 스냅샷 복사본을 생성합니다.
+
+
+여러 스토리지 시스템 및 스토리지 시스템 볼륨의 엔터티를 기반으로 하는 'file_spec' 인수를 사용하는 것 외에도 각 값이 단일 스토리지 시스템 또는 스토리지 시스템 볼륨을 기반으로 하는 'file_spec' 인수를 함께 사용할 수도 있습니다. 예를 들어, 디스크 그룹 DG1이 스토리지 시스템 스토리지 시스템2와 스토리지 시스템3에, dg2는 스토리지 시스템2에, dg3은 스토리지 시스템3에 걸쳐 있는 설정이 있다고 가정합니다. 이 경우 다음 명령줄 중 하나가 맞습니다.
+
+SnapDrive SNAP CREATE - DG DG1 - snapname snapdg1
+
+SnapDrive SNAP CREATE - DG dg2 dg3 - snapname snapdg23
+
+SnapDrive SNAP CREATE - DG DG1 dg2 dg3 - snapname snapdg123
+
+스토리지 시스템과 볼륨에 걸쳐 있는 스냅샷 복사본을 생성할 때 유의해야 할 것은 UNIX용 SnapDrive에서 각 스토리지 시스템 볼륨에 짧은 이름을 사용하여 스냅샷 복사본을 생성한다는 점입니다. 볼륨이 다른 스토리지 시스템에 있더라도 전체 경로 이름은 이름에 포함되지 않습니다. 즉, 나중에 스냅샷 복사본의 이름을 바꿀 경우 각 스토리지 시스템과 볼륨으로 이동하여 이름을 변경해야 합니다.

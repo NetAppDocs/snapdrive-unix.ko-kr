@@ -1,0 +1,19 @@
+---
+permalink: solaris/concept_executables_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, executable, install, unix 
+summary: SnapDrive for UNIX는 Solaris 운영 체제용 실행 파일을 설치합니다. 
+---
+= UNIX용 SnapDrive에서 설치한 실행 파일
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 Solaris 운영 체제용 실행 파일을 설치합니다.
+
+이러한 실행 파일은 다음 위치에 설치됩니다.
+
+* '/opt/NTAPsnapdrive/bin/SnapDrive'
+* '/opt/NTAPsnapdrive/bin/snapdrived'
+

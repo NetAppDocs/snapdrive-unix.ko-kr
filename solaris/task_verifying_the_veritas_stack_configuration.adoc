@@ -1,0 +1,53 @@
+---
+permalink: solaris/task_verifying_the_veritas_stack_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, veritas, stack, configuration 
+summary: Veritas 스택 구성을 확인하려면 SnapDrive 스토리지 접속 및 vxdisk list 명령을 실행해야 합니다. 
+---
+= Veritas 스택 구성을 확인하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Veritas 스택 구성을 확인하려면 "SnapDrive storage connect" 및 "vxdisk list" 명령을 실행해야 합니다.
+
+Veritas 스택 구성을 확인하려면 먼저 다음 항목을 순서대로 설치했는지 확인해야 합니다.
+
+. NTAPASl 라이브러리
+. Veritas 라이센스
+. Veritas 스택(스토리지 기반)
+. 다중 경로 라이센스
+. UNIX용 SnapDrive 소프트웨어
+
+
+그런 다음 다음 다음 단계를 수행하십시오.
+
+.단계
+. 운영 체제별 장치에 연결하려면 다음 명령을 입력합니다.
++
+' * SnapDrive storage connect-lun_long_lun_name_ * '
+
++
+여기서 long_lun_name은 LUN 이름입니다.
+
+. 다음 명령을 입력하여 장치 정보를 가져옵니다.
++
+'* vxdisk list*'
+
+
+
+다음 결과 중 하나를 얻을 수 있습니다.
+
+* 호스트의 Veritas 구성이 올바른 경우 디바이스 상태에 대한 예상 출력은 입니다
++
+"온라인이 유효하지 않습니다.
+
+* 호스트의 Veritas 구성이 잘못된 경우 디바이스 상태에 대한 예상 출력은 입니다
++
+"오류.
+
++
+이 오류 메시지는 NTAPasl 라이브러리를 설치하지 않고 Veritas 스택을 설치할 때 발생합니다. 이 오류 메시지를 해결하려면 NTAPasl 라이브러리를 설치하고 "vxinstall" 명령을 실행하여 LUN 및 디스크 그룹을 온라인으로 설정해야 합니다.
+
+

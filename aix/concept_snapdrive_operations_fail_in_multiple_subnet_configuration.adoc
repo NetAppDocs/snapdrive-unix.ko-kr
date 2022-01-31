@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_snapdrive_operations_fail_in_multiple_subnet_configuration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fail, subnet, configuration, multiple 
+summary: 'ICMP\(인터넷 제어 메시지 프로토콜) 액세스가 비활성화되었거나 호스트와 스토리지 시스템 네트워크 간에 ICMP 패킷이 손실된 경우, 여러 서브넷 구성에서 SnapDrive 작업이 실패합니다.' 
+---
+= 여러 서브넷 구성에서 SnapDrive 작업이 실패했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ICMP(Internet Control Message Protocol) 액세스가 비활성화되거나 호스트와 스토리지 시스템 네트워크 간에 ICMP 패킷이 삭제되는 경우, 여러 서브넷 구성에서 SnapDrive 작업이 실패합니다.
+
+
+
+== 해결 방법
+
+'_enable-ping-to-check-filer-achability_'가 'off'로 설정되어 있는지 확인합니다.

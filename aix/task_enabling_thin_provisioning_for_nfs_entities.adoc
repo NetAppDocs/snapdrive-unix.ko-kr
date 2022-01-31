@@ -1,0 +1,17 @@
+---
+permalink: aix/task_enabling_thin_provisioning_for_nfs_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, enable, thin, provisioning, nfs 
+summary: UNIX용 SnapDrive를 사용하여 스토리지 시스템의 NFS 엔터티에 대한 씬 프로비저닝을 수행할 수 있습니다. 씬 프로비저닝을 공간 예약이라고 합니다. 
+---
+= NFS 엔터티에 대한 씬 프로비저닝 설정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하여 스토리지 시스템의 NFS 엔터티에 대한 씬 프로비저닝을 수행할 수 있습니다. 씬 프로비저닝을 공간 예약이라고 합니다.
+
+.단계
+. 스냅 연결 작업에 대한 공간 예약을 활성화하려면 NFS 엔터티와 관련된 명령에서 '-reserve' 매개 변수를 사용하여 볼륨에 대한 공간 예약을 활성화할 수 있습니다. NFS 엔터티의 경우 명령에 '-reserve' 또는 '-noreserve' 매개 변수가 지정되지 않은 경우 UNIX용 SnapDrive는 스냅샷 복사본에서 사용할 수 있는 공간 예약을 사용합니다.
+

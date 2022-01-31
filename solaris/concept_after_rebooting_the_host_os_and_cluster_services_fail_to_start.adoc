@@ -1,0 +1,102 @@
+---
+permalink: solaris/concept_after_rebooting_the_host_os_and_cluster_services_fail_to_start.html 
+sidebar: sidebar 
+keywords: reboot, host, os, cluster, fail, start 
+summary: Solaris 10 호스트에서 재부팅 후 파일 시스템이 마운트되지 않으면 OS 및 클러스터가 시작되지 않습니다. 
+---
+= 호스트를 재부팅한 후 OS 및 클러스터 서비스가 시작되지 않습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris 10 호스트에서 재부팅 후 파일 시스템이 마운트되지 않으면 OS 및 클러스터가 시작되지 않습니다.
+
+Solaris 10 호스트를 재부팅한 후 서비스 'VC:/system/filesystem/local'이 다음 파일 시스템을 마운트하지 못하면 종속 OS 또는 클러스터 서비스가 시작되지 않습니다.
+
+* 로컬 파일 시스템
+* 공유 파일 시스템
+
+
+
+NOTE: 이전 파일 시스템은 SnapDrive for UNIX에서 생성해야 합니다.
+
+
+
+== 해결 방법
+
+. 다음 명령을 사용하여 재부팅 후 시작하지 못한 서비스를 찾습니다.
++
+'svcs-vx/network/inetd'
+
++
+* 예: *
+
++
+[listing]
+----
+# svcs -vx /network/inetd
+svc:/network/inetd:default (inetd)
+State: offline since Fri 25 May 2008 04:06:59 PM IST
+Reason: Service svc:/system/filesystem/local:default
+is not running because a method failed.
+----
+. 'service/system/filesystem/local:default'가 실패하는 경우 다음 명령을 사용하여 마운트하지 못한 영구 파일 시스템을 찾습니다.
++
+"tail/var/svc/log/system-filesystem-local: default.log
+
++
+* 예: *
+
++
+[listing]
+----
+# tail /var/svc/log/system-filesystem-local:default.log
+[ May 25 15:58:35 Method "start" exited with status 95 ]
+[ May 25 16:07:17 Executing start method
+("/lib/svc/method/fs-local") ]
+UX:vxfs fsck: ERROR: V-3-20693: cannot access device
+/dev/vx/rdsk/dg2/fs1_SdHv:
+UX:vxfs mount: ERROR: V-3-20003: Cannot open
+/dev/vx/dsk/dg2/fs1_SdHv: No such device or address
+UX:vxfs mount: ERROR: V-3-24996: Unable to get disk
+layout version
+WARNING: /sbin/mountall -l failed: exit status 1
+[ May 25 16:07:18 Method "start" exited with status 95 ]
+----
+. 호스트를 재부팅한 후 마운트하지 못한 파일 시스템의 '/etc/vfstab'에 항목을 주석으로 표시합니다.
+. 다음 명령을 실행하여 OS 서비스를 다시 시작합니다. 'svc:/system/filesystem/local: default'
++
+.. '신분 불활성'
++
+'SVC:/system/filesystem/local: default
+
+.. '신도 활성화'
++
+'SVC:/system/filesystem/local: default
+
+
+
++
+OS 및 클러스터 서비스가 시작됩니다.
+
+. 마운트하지 못한 로컬 파일 시스템의 경우 다음 단계를 수행하십시오.
++
+.. 파일 시스템을 수동으로 마운트합니다.
+.. '/etc/vfstab' 항목의 주석을 제거합니다.
+
+
+. 클러스터 서비스의 경우 다음 단계를 수행하십시오.
++
+.. "cfsmount" 명령을 사용하여 공유 파일 시스템이 제대로 마운트되어 있는지 확인합니다.
+.. 이 파일 시스템의 모든 클러스터 노드에서 '/etc/vfstab' 항목의 주석을 제거합니다.
++
+'신도 활성화'
+
++
+'SVC:/system/filesystem/local: default
+
+
+
+. 이전 단계를 완료한 후에도 로컬 또는 클러스터 파일 시스템이 마운트되지 않으면 NetApp 기술 지원 팀에 문의하십시오.
+

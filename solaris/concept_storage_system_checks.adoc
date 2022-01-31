@@ -1,0 +1,24 @@
+---
+permalink: solaris/concept_storage_system_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, prepare 
+summary: UNIX용 SnapDrive를 설치하기 전에 스토리지 시스템이 일부 요구 사항을 충족하는지 확인하여 스토리지 시스템을 준비해야 합니다. 
+---
+= 스토리지 시스템 준비 중
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 설치하기 전에 스토리지 시스템이 일부 요구 사항을 충족하는지 확인하여 스토리지 시스템을 준비해야 합니다.
+
+다음 조건을 확인하여 스토리지 시스템을 준비해야 합니다.
+
+* 스토리지 시스템 준비
+* 시스템 요구 사항
+* 스토리지 시스템 파트너의 IP 주소입니다
+* NFS 환경의 UNIX용 SnapDrive 구성
+* UNIX LUN 및 NFS 엔터티를 위한 볼륨 준비
+* 스냅 예약 옵션은 0으로 설정되어 있습니다
+* 7-Mode에서 작동하는 Data ONTAP에서 vFiler.vol_clone_ZAPI_allow 구성 변수는 vFiler 유닛의 볼륨 또는 LUN에 대한 스냅샷 복사본에 연결할 수 있도록 "On"으로 설정됩니다.
+

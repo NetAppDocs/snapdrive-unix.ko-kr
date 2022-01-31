@@ -1,0 +1,172 @@
+---
+permalink: linux-administration/reference_stack_requirements.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, stack, host, nfs, manager, ontap, multistore, utilities, iscsi, fc 
+summary: 'UNIX용 SnapDrive를 사용하려면 호스트 운영 체제, 호스트 파일 시스템, NFS, 볼륨 관리자, FC 또는 iSCSI 호스트 유틸리티, 스토리지 시스템 라이센스, ONTAP 소프트웨어, MultiStore 소프트웨어 및 인터넷 프로토콜\(IP\) 액세스가 필요합니다. UNIX용 SnapDrive에는 특정 스택 요구 사항도 충족해야 합니다.' 
+---
+= 스택 요구사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하려면 호스트 운영 체제, 호스트 파일 시스템, NFS, 볼륨 관리자, FC 또는 iSCSI 호스트 유틸리티, 스토리지 시스템 라이센스, ONTAP 소프트웨어, MultiStore 소프트웨어 및 IP(인터넷 프로토콜) 액세스가 필요합니다. UNIX용 SnapDrive에는 특정 스택 요구 사항도 충족해야 합니다.
+
+
+
+== 호스트측 요소
+
+다음은 호스트측 요소 목록입니다.
+
+* 호스트 운영 체제입니다
+* 볼륨 관리자
+* 파일 시스템
+* Linux 호스트 유틸리티
+
+
+
+
+== RDM LUN 지원을 위한 게스트 측 엔터티
+
+다음은 게스트 측 요소 목록입니다.
+
+* 게스트 운영 체제입니다
+* 볼륨 관리자
+* 파일 시스템
+* 프로토콜이 iSCSI인 경우 Linux iSCSI 호스트 유틸리티만 있으면 충분합니다
+
+
+
+
+== UNIX 스택용 SnapDrive
+
+매트릭스 스택에 제공된 대로 '_multipathing-type_', '_fstype_', '_default-transport_', '_vmtype_' 변수에 허용되는 값을 입력해야 합니다. 입력한 값이 호스트 시스템에 설치되어 실행 중인지 확인해야 합니다.
+
+|===
+| 호스트 플랫폼 | 기본 전송 유형입니다 | 다중 경로 유형입니다 | fstype 을 선택합니다 | vmtype입니다 
+
+
+ a| 
+리눅스
+ a| 
+FCP
+ a| 
+없음
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+없음
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+네이티브엠피오
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+네이티브엠피오
+ a| 
+ext4
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+없음
+ a| 
+ext3
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+없음
+ a| 
+ext3
+ a| 
+LVM
+
+
+
+ a| 
+FCP
+ a| 
+네이티브엠피오
+ a| 
+ext3
+ a| 
+LVM
+
+
+
+ a| 
+iSCSI
+ a| 
+네이티브엠피오
+ a| 
+ext3
+ a| 
+LVM
+
+|===
+
+NOTE: UNIX용 SnapDrive는 Ext2 파일 시스템을 지원하지 않습니다.
+
+* FCP 및 iSCSI 스토리지 스택이 있는 경우 SnapDrive는 FCP 스토리지 스택만 지원합니다.
++
+SnapDrive는 AIX용 iSCSI 스토리지 스택을 지원하지 않습니다.
+
+* 호스트 운영 체제 및 Linux용 패치가 설치됩니다.
+* Linux의 볼륨 관리자는 LVM2입니다.
+* 호스트 유틸리티는 Linux에 설치됩니다
+* ONTAP 소프트웨어가 스토리지 시스템에 설치되어 있습니다.
+* vFiler 유닛 설정을 위해 MultiStore 소프트웨어가 스토리지 시스템에 설치됩니다.
+* 호스트와 스토리지 시스템 간에 IP(인터넷 프로토콜) 액세스를 사용할 수 있습니다.
+
+
+NetApp은 호스트 유틸리티 및 구성요소를 지속적으로 수정합니다. SAN 환경에서 NetApp 제품을 사용하기 위한 최신 정보가 포함된 상호 운용성 매트릭스를 사용하여 이러한 변경 사항을 추적할 수 있습니다.
+
+스토리지 시스템 라이센스 및 MultiStore 라이센스는 스토리지 시스템 엔터티를 구성합니다.
+
+
+
+== 스토리지 시스템의 라이센스 요구 사항
+
+* 구성에 따라 FC, iSCSI 또는 NFS 라이센스가 필요합니다
+* FlexClone 라이센스
+* 스토리지 시스템의 SnapRestore 라이센스입니다
+
+
+* 관련 정보 *
+
+xref:concept_unable_to_select_a_storage_stack.adoc[스토리지 스택을 선택할 수 없습니다]
+
+xref:concept_when_to_use_the_snapdrive_configuration_wizard.adoc[SnapDrive 구성 마법사]
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp 상호 운용성"]

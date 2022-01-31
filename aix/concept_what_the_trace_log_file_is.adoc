@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_what_the_trace_log_file_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, trace, log, file 
+summary: 기술 지원 부서에서는 추적 로그 파일을 사용하여 문제를 해결합니다. 
+---
+= 추적 로그 파일의 정의
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+기술 지원 부서에서는 추적 로그 파일을 사용하여 문제를 해결합니다.
+
+추적 로그 파일을 활성화해도 시스템 성능에는 영향을 주지 않습니다. 기본적으로 이 파일은 활성화되어 있습니다. 'napdrive.conf trace-enabled' 변수를 'off'로 설정하여 비활성화할 수 있습니다.

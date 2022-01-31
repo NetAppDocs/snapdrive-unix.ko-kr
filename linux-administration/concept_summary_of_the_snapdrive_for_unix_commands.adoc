@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_summary_of_the_snapdrive_for_unix_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, summary, command, management, storage 
+summary: UNIX용 SnapDrive 명령은 구성, 스토리지 프로비저닝, 호스트 측 관리 및 스냅샷 작업에 사용됩니다. 
+---
+= UNIX용 SnapDrive 명령 요약
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령은 구성, 스토리지 프로비저닝, 호스트 측 관리 및 스냅샷 작업에 사용됩니다.

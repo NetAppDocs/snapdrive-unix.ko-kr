@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_automatic_storage_system_update_on_operations_manager.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, automatic, storage, update, operations, manager, console 
+summary: Operations Manager 콘솔은 네트워크에서 지원되는 스토리지 시스템을 검색합니다. 검색된 스토리지 시스템에서 수집하는 데이터를 주기적으로 모니터링합니다. 데이터는 설정된 간격으로 새로 고쳐집니다. Operations Manager 콘솔 관리자는 새로 고침 간격을 구성할 수 있습니다. 
+---
+= Operations Manager 콘솔의 자동 스토리지 시스템 업데이트
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager 콘솔은 네트워크에서 지원되는 스토리지 시스템을 검색합니다. 검색된 스토리지 시스템에서 수집하는 데이터를 주기적으로 모니터링합니다. 데이터는 설정된 간격으로 새로 고쳐집니다. Operations Manager 콘솔 관리자는 새로 고침 간격을 구성할 수 있습니다.
+
+LUN 모니터링 간격, qtree 모니터링 간격, vFiler 모니터링 간격은 LUN, qtree 및 vFiler 업데이트의 빈도를 결정하는 중요한 필드입니다. 예를 들어, 스토리지 시스템에 새 LUN이 생성되면 Operations Manager 콘솔에서 새 LUN이 즉시 업데이트되지 않습니다. 따라서 Operations Manager 콘솔에 대한 해당 LUN의 액세스 검사가 실패합니다. 이러한 상황을 방지하려면 LUN 모니터링 간격을 요구사항에 맞게 수정할 수 있습니다.
+
+. Operations Manager 콘솔에서 * Setup * > * Options * 를 선택하여 모니터링 간격을 변경합니다.
+. Operations Manager 콘솔 관리자는 명령줄 인터페이스에서 dFM 호스트 검색 파일 이름 을 실행하여 Operations Manager 콘솔을 강제로 새로 고칠 수도 있습니다.
+. 또한 운영 관리자 콘솔 관리자는 글로벌 그룹의 DFM.Database.Write' 기능을 SD-admin에 부여하여 SnapDrive for UNIX가 운영 관리자 콘솔의 스토리지 시스템 엔터티를 새로 고칠 수 있도록 할 수 있습니다.
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Database.Write Global
+Added 1 capability to role sd-admin-role.
+----
+

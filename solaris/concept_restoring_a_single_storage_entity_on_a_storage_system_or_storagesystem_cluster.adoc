@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_restoring_a_single_storage_entity_on_a_storage_system_or_storagesystem_cluster.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy, ha, storage, pair 
+summary: 단일 스토리지 엔터티가 포함된 스냅샷 복사본을 복원할 수 있습니다. 
+---
+= 스토리지 시스템 또는 스토리지 시스템 HA 쌍에서 단일 스토리지 엔터티를 복원합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+단일 스토리지 엔터티가 포함된 스냅샷 복사본을 복원할 수 있습니다.
+
+스토리지 시스템 또는 스토리지 시스템 HA 쌍에 상주하는 단일 스토리지 엔터티가 포함된 스냅샷 복사본을 복원할 수 있습니다. 대상 스토리지 시스템의 볼륨 이름은 소스 스토리지 시스템의 볼륨 이름과 일치해야 합니다.

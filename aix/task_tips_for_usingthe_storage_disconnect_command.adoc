@@ -1,0 +1,28 @@
+---
+permalink: aix/task_tips_for_usingthe_storage_disconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconnect, command 
+summary: 일부 운영 체제에서 SnapDrive storage disconnect 명령을 사용하면 호스트 볼륨 이름, 파일 시스템 마운트 지점, 스토리지 시스템 볼륨 이름 및 LUN 이름과 같은 정보가 손실됩니다. 이 정보가 없으면 나중에 다시 스토리지에 연결하기가 어렵습니다. 
+---
+= 스토리지 연결 끊기 명령 사용 팁
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 운영 체제에서 'SnapDrive storage disconnect' 명령을 사용하면 호스트 볼륨 이름, 파일 시스템 마운트 지점, 스토리지 시스템 볼륨 이름 및 LUN 이름과 같은 정보가 손실됩니다. 이 정보가 없으면 나중에 다시 스토리지에 연결하기가 어렵습니다.
+
+정보 손실을 방지하려면 "SnapDrive storage disconnect" 명령을 실행하기 전에 먼저 "SnapDrive snap create" 명령을 사용하여 스토리지의 스냅샷 복사본을 생성해야 합니다.
+
+이렇게 하면 나중에 스토리지를 다시 연결하려는 경우 다음 해결 방법을 사용할 수 있습니다.
+
+.단계
+. 다음 명령을 실행합니다.
++
+'SnapDrive snap restore filespec-snapname long_snap_name'입니다
+
++
+이 명령에 스냅샷 복사본의 전체 경로를 포함합니다.
+
+. 필요한 경우 'SnapDrive snap delete' 명령을 실행하여 스냅샷 복사본을 제거합니다.
+

@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_splitting_the_flexclone_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume, splitting, command 
+summary: SnapDrive for UNIX 명령을 사용하여 기존 FlexClone 볼륨을 분할할 수 있습니다. 
+---
+= FlexClone 볼륨 분할
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 명령을 사용하여 기존 FlexClone 볼륨을 분할할 수 있습니다.
+
+FlexClone 볼륨을 분할하려면 'Snap connect' 명령으로 '-spli' CLI 옵션을 추가로 지정해야 합니다. 연결을 끊으려면 '-split' 옵션과 dissconnect' 명령을 함께 사용하여 분할된 FlexClone 볼륨을 분리해야 합니다. 여기서 분할 동작을 시작하는 블로킹 및 비블로킹 모드가 유효하다.
+
+* 관련 정보 *
+
+xref:concept_splitting_the_volume_or_lun_clone_operations.adoc[볼륨 클론 또는 LUN 클론 분할]

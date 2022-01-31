@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_restoring_a_file_system_from_a_restoring_a_file_system_from_a_snapshot_copy_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, file, snapshot, copy, fail, error 
+summary: Red Hat Enterprise Linux 3 업데이트를 Red Hat Enterprise Linux 4 업데이트로 마이그레이션한 후, 즉 LVM1에서 LVM2로 마이그레이션하면 스냅샷 복사본에서 파일 시스템을 복원할 수 없습니다. 
+---
+= 스냅샷 복사본에서 파일 시스템을 복원하지 못했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Red Hat Enterprise Linux 3 업데이트를 Red Hat Enterprise Linux 4 업데이트로 마이그레이션한 후, 즉 LVM1에서 LVM2로 마이그레이션하면 스냅샷 복사본에서 파일 시스템을 복원할 수 없습니다.
+
+LVM2를 사용하여 스냅샷 복사본에서 파일 시스템(LVM1에서 사용됨)을 복구하는 동안 'SnapDrive snap restore-fs' 명령은 파일 시스템을 마운트하지 않습니다. 그러나 연결된 디스크 그룹 및 호스트 볼륨이 성공적으로 복원됩니다.
+
+예를 들어, LVM1에서 생성된 호스트 볼륨에는 '/dev/Mydg_SDDg/Mydg_Sdhv'의 디바이스 파일이 있고, LVM2에서 생성된 호스트 볼륨에는 '/dev/mapper/Mydg_SdDg-Mydg_Sdhv'의 디바이스 파일이 있습니다
+
+Red Hat Enterprise Linux 4 업데이트 3 호스트는 커널과 인터페이스하기 위해 장치 매퍼를 사용하는 LVM2를 사용하는 반면, Red Hat Enterprise Linux 3 업데이트 5 호스트는 장치 매퍼를 사용하지 않는 LVM1을 사용하기 때문입니다.

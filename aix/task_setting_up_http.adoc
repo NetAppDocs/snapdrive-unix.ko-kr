@@ -1,0 +1,35 @@
+---
+permalink: aix/task_setting_up_http.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, http, configure 
+summary: 호스트 플랫폼에 HTTP를 사용하도록 UNIX용 SnapDrive를 구성할 수 있습니다. 
+---
+= HTTP 설정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 플랫폼에 HTTP를 사용하도록 UNIX용 SnapDrive를 구성할 수 있습니다.
+
+루트 사용자로 로그인했는지 확인합니다.
+
+.단계
+. 'napdrive.conf' 파일을 백업합니다.
+. 텍스트 편집기에서 'napdrive.conf' 파일을 엽니다.
+. '_use-https-to-filer_' 변수의 값을 'off'로 변경합니다.
++
+'napdrive.conf' 파일을 수정할 때는 다음 단계를 수행하는 것이 좋습니다.
+
++
+.. 수정할 행에 주석을 표시합니다.
+.. 주석 처리된 줄을 복사합니다.
+.. 파운드(#) 기호를 제거하여 복사한 텍스트의 주석을 제거합니다.
+.. 값을 수정합니다.
+
+
+. 변경한 후 파일을 저장합니다.
++
+SnapDrive for UNIX는 시작할 때마다 이 파일을 자동으로 검사합니다. 변경 사항을 적용하려면 SnapDrive for UNIX 데몬을 다시 시작해야 합니다.
+
+

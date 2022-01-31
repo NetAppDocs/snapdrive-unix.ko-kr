@@ -1,0 +1,23 @@
+---
+permalink: aix/task_disabling_consistency_group_snapshots.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disable, snapshot, copy, consistency, group 
+summary: 일관성 그룹 스냅샷 복사본을 사용하지 않도록 SnapDrive for UNIX를 구성할 수 있습니다. 
+---
+= 정합성 보장 그룹 스냅샷 복사본을 사용하지 않도록 설정합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일관성 그룹 스냅샷 복사본을 사용하지 않도록 SnapDrive for UNIX를 구성할 수 있습니다.
+
+.단계
+. 입력:
++
+``SnapDrive SNAP CREATE -fs /mnt/fs3_-snapname_nfs_snap_-nofilerfence_*'
+
++
+일관성 그룹 스냅샷 복사본이 성공적으로 비활성화되었습니다.
+
+

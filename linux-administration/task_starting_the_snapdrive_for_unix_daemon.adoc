@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/task_starting_the_snapdrive_for_unix_daemon.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, daemon, unix, start 
+summary: UNIX용 SnapDrive 명령을 사용하려면 먼저 UNIX용 SnapDrive 데몬을 시작하고 실행해야 합니다. 
+---
+= UNIX용 SnapDrive 데몬을 시작합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령을 사용하려면 먼저 UNIX용 SnapDrive 데몬을 시작하고 실행해야 합니다.
+
+루트 사용자로 로그인해야 합니다.
+
+.단계
+. 데몬을 시작합니다.
++
+``스냅드라이브 시작 *’
+
+

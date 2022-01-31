@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_flexclone_volumes_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume 
+summary: SnapDrive for UNIX는 Data ONTAP FlexClone 기술을 기반으로 하는 FlexClone 볼륨을 지원합니다. FlexClone 볼륨은 유연한 상위 볼륨의 특정 시점 복사본입니다. FlexClone 볼륨은 LUN 복제보다 빠르며, 여러 데이터 복사본을 유연하게 생성할 수 있습니다. 
+---
+= UNIX용 SnapDrive의 FlexClone 볼륨
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 Data ONTAP FlexClone 기술을 기반으로 하는 FlexClone 볼륨을 지원합니다. FlexClone 볼륨은 유연한 상위 볼륨의 특정 시점 복사본입니다. FlexClone 볼륨은 LUN 복제보다 빠르며, 여러 데이터 복사본을 유연하게 생성할 수 있습니다.

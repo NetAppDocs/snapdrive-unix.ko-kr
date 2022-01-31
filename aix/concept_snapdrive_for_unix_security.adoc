@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_snapdrive_for_unix_security.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, security, feature 
+summary: UNIX용 SnapDrive를 사용하기 전에 해당 보안 기능을 이해하고 이러한 기능에 액세스하는 방법을 익혀야 합니다. 
+---
+= UNIX용 SnapDrive의 보안 기능
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하기 전에 해당 보안 기능을 이해하고 이러한 기능에 액세스하는 방법을 익혀야 합니다.

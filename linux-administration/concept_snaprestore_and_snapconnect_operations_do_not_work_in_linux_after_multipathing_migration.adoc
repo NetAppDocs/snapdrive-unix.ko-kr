@@ -1,0 +1,32 @@
+---
+permalink: linux-administration/concept_snaprestore_and_snapconnect_operations_do_not_work_in_linux_after_multipathing_migration.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, snapconnect, migration, multipathing, operations 
+summary: 다중 경로 유형이 마이그레이션된 경우 SnapRestore 및 SnapConnect 작업이 작동하지 않습니다. 
+---
+= 다중 경로 유형 마이그레이션 후 Linux에서 SnapRestore 및 Snapconnect 작업이 작동하지 않습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다중 경로 유형이 마이그레이션된 경우 SnapRestore 및 SnapConnect 작업이 작동하지 않습니다.
+
+기존 경로 다중화 유형이 '_None_'으로 설정된 경우 그리고 나중에 경로 다중화 유형을 "_NativeMPIO_"로 변경하는 경향이 있습니다. 기존 스냅샷 복사본에 대해 Snapconnect 및 SnapRestore 작업을 실행할 때 ""스냅샷에 있는 경로 다중화 소프트웨어 linux를 찾을 수 없습니다"라는 오류 메시지가 나타날 수 있습니다.
+
+SnapRestore 작업의 예
+
+[listing]
+----
+snapdrive snap restore -fs /mnt/tstmp -snapname withoutmpio
+0002-105 Command error: Unable to find multipathing software linuxnull as present in the snapshot
+----
+Snapconnect 작업의 예
+
+[listing]
+----
+snapdrive snap connect -fs /mnt/tstmp -snapname
+f3020-225-54:/vol/vol1:withoutmpio -autorename
+0002-105 Command error: Unable to find multipathing software
+linuxnull as present in the snapshot
+----

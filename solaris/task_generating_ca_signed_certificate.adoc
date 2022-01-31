@@ -1,0 +1,118 @@
+---
+permalink: solaris/task_generating_ca_signed_certificate.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, certificate, generate, ca 
+summary: SnapDrive for UNIX 데몬 서비스를 사용하려면 데몬 통신에 사용할 CA 서명 인증서를 생성해야 합니다. SnapDrive.conf 파일에 지정된 경로에서 CA 서명 인증서를 제공해야 합니다. 
+---
+= CA 서명 인증서를 생성하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 데몬 서비스를 사용하려면 데몬 통신에 사용할 CA 서명 인증서를 생성해야 합니다. 'napdrive.conf' 파일에 지정된 경로에 CA 서명 인증서를 제공해야 합니다.
+
+* 루트 사용자로 로그인해야 합니다.
+* 통신에 HTTPS를 사용하려면 'napdrive.conf' 파일에서 다음 매개 변수를 설정해야 합니다.
++
+** https-to-SDU-daemon=on을 사용합니다
+** Contact-https-port-SDU-daemon = 4095
+** SDU-daemon-certificate-path="/opt/NetApp/SnapDrive/SnapDrive.pem"
+
+
+
+
+.단계
+. PEM 형식으로 암호화되지 않은 새 RSA 개인 키를 생성합니다.
++
+'*$openssl genrsa-out privkey.pem 1024 *'
+
++
+[listing]
+----
+Generating RSA private key, 1024 bit long modulus
+ ....................++++++ ....................................++++++
+e is 65537 (0x10001)
+----
+. CA 개인 키와 인증서 'vi /etc/ssl/opensssl.cnf'를 생성하도록 '/etc/ssl/openssl.cnf'를 구성합니다.
+. RSA 개인 키를 사용하여 서명되지 않은 인증서를 생성합니다.
++
+'*$openssl req-new-x509-key privkey.pem-out cert.pem *'
+
++
+[listing]
+----
+You are about to be asked to enter information that will be
+incorporated into your certificate request.
+What you are about to enter is what is called a Distinguished Name or
+a DN.
+There are quite a few fields but you can leave some blank For some
+fields there will be a default value, If you enter '.', the field
+will be left blank.
+-----
+Country Name (2 letter code) [XX]:NY
+State or Province Name (full name) []:Nebraska Locality Name (eg,
+city) [Default City]:Omaha Organization Name (eg, company) [Default
+Company Ltd]:abc.com Organizational Unit Name (eg, section) []:
+Common Name (eg, your name or your server's hostname) []:localhost
+Email Address []:abc@example.org
+----
+. 개인 키와 인증서를 사용하여 CSR을 생성합니다.
++
+'* cat certt. pem privkey.pem|openssl x509-x509torq -signkey privkey.pem-out certreq.csr *'
+
++
+[listing]
+----
+Getting request Private Key Generating certificate request
+----
+. 방금 만든 CSR을 사용하여 CA 개인 키로 인증서에 서명합니다.
++
+'*$openssl ca-in certreq.csr-out newcert.pem *'
+
++
+[listing]
+----
+Using configuration from /etc/pki/tls/openssl.cnf Check that the
+request matches the signature Signature ok Certificate Details:
+         Serial Number: 4096 (0x1000)
+         Validity
+            Not Before: May 17 06:02:51 2015 GMT
+             Not After : May 16 06:02:51 2016 GMT
+             Subject:
+             countryName               = NY
+             stateOrProvinceName       = Nebraska
+             organizationName          = abc.com
+             commonName                = localhost
+             emailAddress              = abc@example.org
+             X509v3 extensions:
+             X509v3 Basic Constraints:
+                 CA:FALSE
+             X509v3 Key Usage:
+                 Digital Signature, Non Repudiation, Key Encipherment
+             Netscape Comment:
+                 OpenSSL Generated Certificate
+             X509v3 Subject Key Identifier:
+                 FB:B0:F6:A0:9B:F2:C2:BC:50:BF:45:B2:9D:DB:AA:3B:C5:07:5B:7F
+             X509v3 Authority Key Identifier:
+
+ keyid:FB:B0:F6:A0:9B:F2:C2:BC:50:BF:45:B2:9D:DB:AA:3B:C5:07:5B:7F
+
+ Certificate is to be certified until May 16 06:02:51 2016 GMT (365
+ days) Sign the certificate? [y/n]:y
+
+
+ 1 out of 1 certificate requests certified, commit? [y/n]y Write out
+ database with 1 new entries Data Base Updated
+----
+. SSL 서버에서 사용할 서명된 인증서와 개인 키를 설치합니다.
++
+[listing]
+----
+The newcert.pem is the certificate signed by your local CA that you can then use in an
+ssl server:
+( openssl x509 -in newcert.pem; cat privkey.pem ) > server.pem
+ln -s server.pem `openssl x509 -hash -noout -in server.pem`.0 # dot-zero
+( server.pem refers to location of https server certificate)
+----
+

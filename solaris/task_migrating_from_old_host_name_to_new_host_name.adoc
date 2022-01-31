@@ -1,0 +1,30 @@
+---
+permalink: solaris/task_migrating_from_old_host_name_to_new_host_name.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, migrate, old, new, storage, system 
+summary: SnapDrive config migrate set 명령을 사용하여 이전 스토리지 시스템에서 새 스토리지 시스템으로 마이그레이션할 수 있습니다. 마이그레이션 후 새 스토리지 시스템을 사용하여 호스트 시스템에서 모든 SnapDrive 작업을 수행할 수 있습니다. 
+---
+= 이전 스토리지 시스템에서 새 스토리지 시스템으로 마이그레이션
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'SnapDrive config migrate set' 명령을 사용하여 이전 스토리지 시스템에서 새 스토리지 시스템으로 마이그레이션할 수 있습니다. 마이그레이션 후 새 스토리지 시스템을 사용하여 호스트 시스템에서 모든 SnapDrive 작업을 수행할 수 있습니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+'* SnapDrive config migrate set_old_storage_system_name new_storage_system_name_ *
+
+
+
+다음 예에서는 이전 스토리지 시스템 "tuffleskin"에서 새 스토리지 시스템 "roaster"로 마이그레이션할 수 있음을 보여 줍니다.
+
+[listing]
+----
+snapdrive config migrate set tuffleskin roaster
+----
+* 관련 정보 *
+
+xref:concept_migrating_to_new_vserver_name.adoc[새 Vserver 이름으로 마이그레이션]

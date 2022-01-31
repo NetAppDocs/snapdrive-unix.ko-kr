@@ -1,0 +1,23 @@
+---
+permalink: linux-administration/task_adding_sd_hostname_to_the_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, sd, hostname, storage, manager, operations, administrator 
+summary: Operations Manager 콘솔 관리자는 Operations Manager 콘솔을 사용하여 스토리지 시스템에 SD-호스트 이름 사용자를 생성할 수 있습니다. 단계를 완료한 후 Operations Manager 콘솔 관리자는 SnapDrive for UNIX 관리자에게 자격 증명을 수동으로 전송해야 합니다. SD-호스트 이름 대신 모든 이름을 사용할 수 있지만 SD-호스트 이름을 사용하는 것이 좋습니다. 
+---
+= 스토리지 시스템에 SD-호스트 이름을 추가하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Operations Manager 콘솔 관리자는 Operations Manager 콘솔을 사용하여 스토리지 시스템에 SD-호스트 이름 사용자를 생성할 수 있습니다. 단계를 완료한 후 Operations Manager 콘솔 관리자는 SnapDrive for UNIX 관리자에게 자격 증명을 수동으로 전송해야 합니다. SD-호스트 이름 대신 모든 이름을 사용할 수 있지만 SD-호스트 이름을 사용하는 것이 좋습니다.
+
+. 스토리지 시스템의 루트 암호를 얻고 암호를 저장합니다.
++
+스토리지 시스템의 암호를 추가하려면 * Management * > * Storage System * 을 선택합니다.
+
+. 각 UNIX 시스템에 대한 SD-호스트 이름 사용자를 생성합니다.
+. SD 역할과 같은 역할에 API- *, login- * 기능을 할당합니다.
+. SD-usergroup과 같은 새 사용자 그룹에 이 역할(SD-ROLE)을 포함합니다.
+. 이 사용자 그룹(SD-usergroup)을 스토리지 시스템의 SD-호스트 이름 사용자와 연결합니다.
+

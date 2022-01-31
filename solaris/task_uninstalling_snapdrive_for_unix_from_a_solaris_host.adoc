@@ -1,0 +1,41 @@
+---
+permalink: solaris/task_uninstalling_snapdrive_for_unix_from_a_solaris_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, solaris, host, uninstall 
+summary: Solaris 시스템에서 UNIX용 SnapDrive를 제거하려면 uninstall 명령을 사용해야 합니다. 
+---
+= Solaris 호스트에서 UNIX용 SnapDrive 제거
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Solaris 시스템에서 UNIX용 SnapDrive를 제거하려면 "uninstall" 명령을 사용해야 합니다.
+
+루트 사용자로 로그인했는지 확인합니다.
+
+스파스 루트 존에서 UNIX용 SnapDrive를 제거할 경우 스파스 루트 존에서 심볼 링크가 읽기 전용 파일 시스템으로 마운트되기 때문에 제거 프로세스에서 UNIX용 SnapDrive의 심볼 링크가 "/usr/bin" 및 "/usr/sbin"에서 제거되지 않습니다. 글로벌 영역에서 이러한 심볼 링크를 제거해야 합니다. 심볼 링크를 제거하기 전에 다른 스파스 루트 영역이 UNIX용 SnapDrive를 사용하고 있지 않은지 확인합니다.
+
+rm /usr/sbin/SnapDrive
+
+rm /usr/sbin/snapdrived
+
+rm /usr/bin/SnapDrive
+
+.단계
+. 다음 명령을 사용하여 소프트웨어를 제거합니다.
++
+'* 제거 * '
+
+. 연결 키트를 제거할지 묻는 메시지가 표시되면 y(또는 yes)를 선택합니다.
++
+n(또는 no)로 대답하는 경우 명령은 Attach Kit를 제거하지 않습니다.
+
++
+확인 쿼리를 받지 않으려면 '-f' 옵션을 사용하여 './uninstall' 명령을 입력하여 제거 스크립트가 대화형 모드에서 실행되지 않도록 합니다.
+
++
+
+NOTE: UNIX용 SnapDrive 서비스가 모두 중지되도록 하려면 UNIX용 SnapDrive 제거 스크립트를 사용하고 "pkgrm"과 같은 운영 체제 도구는 사용하지 마십시오.
+
+

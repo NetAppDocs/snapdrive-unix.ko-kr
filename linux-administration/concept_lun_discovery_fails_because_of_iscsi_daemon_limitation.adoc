@@ -1,0 +1,88 @@
+---
+permalink: linux-administration/concept_lun_discovery_fails_because_of_iscsi_daemon_limitation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, discovery, fail, iscsi, daemon, limitation 
+summary: UNIX용 SnapDrive 명령은 여러 번 반복한 후 LUN을 검색하지 못합니다. 
+---
+= iSCSI 데몬 제한으로 인해 LUN 검색이 실패합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령은 여러 번 반복한 후 LUN을 검색하지 못합니다.
+
+다음과 같은 오류 메시지가 표시될 수 있습니다.
+
+[listing]
+----
+0000-001 Admin error: iscsi transport protocol has dropped sessions in the host. Please ensure the connection and the service in the storage system.
+----
+이 문제는 다음 호스트의 iSCSI 데몬 제한 때문에 발생합니다.
+
+* Red Hat Enterprise Linux 4.0
+* Oracle Enterprise Linux 4.0
+
+
+
+
+== 해결 방법
+
+[listing]
+----
+Before modifying the following system parameters, contact the OS vendor.
+----
+. '/etc/sysctl.conf' 파일에 ' * fs.file-max * ' 매개 변수를 추가합니다.
++
+다음은 명령줄의 예입니다.
+
++
+[listing]
+----
+# sysctl -w fs.file-max=65536
+----
++
+
+NOTE: 매개 변수 값을 "65536"으로 설정하는 것이 좋지만 호스트의 응용 프로그램에 따라 값을 설정할 수도 있습니다.
+
+. ' * fs.file-max * ' 매개 변수에 ' 65536 '을 할당합니다.
+. 루트 사용자의 UNIX 계정에 대한 기본 셸 '시작' 파일을 업데이트합니다.
++
+** Bourne, Bash 또는 Korn 셸의 경우 다음 명령을 실행하여 '/etc/profile' 파일에 다음 줄을 추가합니다.
++
+[listing]
+----
+cat >> /etc/profile <<EOF
+if [ \$USER = "root" ]; then
+if [ \$SHELL = "/bin/ksh" ]; then
+ulimit -p 16384
+ulimit -n 65536
+else
+ulimit -u 16384 -n 65536
+fi
+umask 022
+fi
+EOF
+----
+** C 셸(csh 또는 tcsh)의 경우 다음 명령을 실행하여 '/etc/csh.login' 파일에 다음 줄을 추가합니다.
++
+[listing]
+----
+cat >> /etc/csh.login <<EOF
+if ( \$USER == "root" ) then
+limit maxproc 16384
+limit descriptors 65536
+endif
+EOF
+----
+
+
+. 다음 명령을 실행하여 '/etc/security/limits.conf' 파일에 다음 매개 변수를 추가합니다.
++
+[listing]
+----
+root soft nofile 65536
+root hard nofile 65536
+----
+. 'sysctl -p' 명령어를 실행해 시스템의 모든 커널 파라미터를 활성화한다
+

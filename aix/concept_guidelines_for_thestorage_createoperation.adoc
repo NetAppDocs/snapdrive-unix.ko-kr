@@ -1,0 +1,36 @@
+---
+permalink: aix/concept_guidelines_for_thestorage_createoperation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, storage, create, operation 
+summary: 스토리지 생성 작업에 SnapDrive storage create 명령을 사용할 때는 특정 지침을 따라야 합니다. 
+---
+= 스토리지 생성 작업에 대한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 생성 작업에 "SnapDrive storage create" 명령을 사용할 때는 특정 지침을 따라야 합니다.
+
+* 서로 다른 스토리지 시스템 볼륨의 LUN을 "-lun" 옵션과 함께 나열하면 명령 프롬프트에 "-dg", "-hostvol" 또는 "-fs" 옵션을 포함할 수 없습니다.
+* '-nolvm' 옵션은 호스트 LVM을 활성화하지 않고 LUN에 직접 파일 시스템을 생성합니다.
++
+이 옵션을 사용할 때는 호스트 볼륨이나 디스크 그룹을 지정할 수 없습니다.
+
+* SnapDrive for UNIX 스토리지 용량 할당 명령을 NFS 파일 또는 디렉토리 트리에 사용할 수 없습니다.
+* 'SnapDrive storage create' 명령을 사용하여 LUN에 직접 파일 시스템을 생성하는 경우 LUN을 두 개 이상 지정할 수 없습니다.
++
+UNIX용 SnapDrive에서는 이 형태의 명령을 사용할 때 항상 새 LUN을 생성합니다.
+
+* 일부 운영 체제에서는 생성할 수 있는 LUN 수에 제한이 있습니다.
++
+호스트에서 이러한 운영 체제 중 하나를 실행 중인 경우 'SnapDrive 구성 검사 LUN' 명령을 실행할 수 있습니다.
+
+* DMP 다중 경로를 사용하여 물리적 LUN에 파일 시스템을 생성할 수 있습니다.
+
+
+* 관련 정보 *
+
+xref:concept_snapdrive_create_comand_fails_while_discovering_mapped_devices.adoc[UNIX용 SnapDrive 스토리지 생성 명령이 일부 매핑된 디바이스를 검색하는 동안 실패합니다]
+
+xref:concept_configuration_options_and_their_default_values.adoc[구성 옵션 및 해당 기본값]

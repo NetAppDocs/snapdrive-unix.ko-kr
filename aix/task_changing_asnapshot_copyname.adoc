@@ -1,0 +1,33 @@
+---
+permalink: aix/task_changing_asnapshot_copyname.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, name, change 
+summary: SnapDrive snap rename 명령을 사용하여 스냅샷 복사본의 이름을 변경할 수 있습니다. 스냅샷 이름 바꾸기 작업을 수행하면 소스 스냅샷 복사본의 이름이 타겟 인수에 지정된 이름으로 변경됩니다. 
+---
+= 스냅샷 복사본 이름 변경
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'SnapDrive snap rename' 명령을 사용하여 스냅샷 복사본의 이름을 변경할 수 있습니다. 스냅샷 이름 바꾸기 작업을 수행하면 소스 스냅샷 복사본의 이름이 타겟 인수에 지정된 이름으로 변경됩니다.
+
+이 구문을 실행하기 전에 이 명령에 언급된 옵션, 키워드 및 인수를 이해해야 합니다.
+
+.단계
+. 다음 명령을 입력하여 스냅샷 복사본 이름을 변경합니다.
++
+``SnapDrive 스냅 이름 변경[-snapname]_old_long_snap_name__new_snap_name_[-force[-nop프롬프트]] *’
+
+
+
+다음은 SnapDrive snap rename 명령어의 예이다. 첫 번째 명령줄에는 새 스냅샷 복사본이라는 스냅샷 복사본이 이미 존재하므로 `-force ' 옵션이 포함됩니다. 두 번째 예에서는 두 스냅샷 복사본 이름이 모두 긴 형태의 이름을 사용하지만 둘 다 동일한 스토리지 시스템 볼륨으로 해결됩니다.
+
+[listing]
+----
+snapdrive snap rename -force filer1:/vol/vol1:oldsnap new snapshot
+----
+[listing]
+----
+snapdrive snap rename filer1:/vol/vol1:FridaySnap filer1:/vol/vol1:Snap040130
+----

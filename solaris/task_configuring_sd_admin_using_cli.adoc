@@ -1,0 +1,66 @@
+---
+permalink: solaris/task_configuring_sd_admin_using_cli.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, sd, admin, command, line, interface 
+summary: 스토리지 시스템 관리자는 명령줄 인터페이스를 사용하여 SD-admin 사용자를 구성할 수 있습니다. 
+---
+= 명령줄 인터페이스를 사용하여 SD-admin 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템 관리자는 명령줄 인터페이스를 사용하여 SD-admin 사용자를 구성할 수 있습니다.
+
+.단계
+. SD-admin이라는 사용자를 추가합니다.
++
+[listing]
+----
+# useradd sd-admin
+----
++
+[listing]
+----
+# passwd sd-admin
+Changing password for sd-admin.
+New password:
+Re-enter new password:
+Password changed
+----
+. 이름이 sd-admin 인 관리자를 추가합니다.
++
+[listing]
+----
+# dfm user add sd-admin
+Added administrator sd-admin.
+----
+. sd-admin-role이라는 역할을 생성합니다.
++
+[listing]
+----
+# dfm role create sd-admin-role
+Created role sd-admin-role.
+----
+. 3단계에서 만든 역할에 기능을 추가합니다.
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Core.AccessCheck Global
+Added 1 capability to role sd-admin-role.
+----
+. 운영 관리자 관리자는 글로벌 그룹의 DFM.Database.Write 기능을 "<SD-admin>"에 부여하여 SnapDrive for UNIX가 운영 관리자의 스토리지 시스템 엔터티를 새로 고칠 수 있도록 할 수 있습니다.
++
+[listing]
+----
+# dfm role add sd-admin-role DFM.Database.Write Global
+Added 1 capability to role sd-admin-role.
+----
+. SD-ADMIN-ROLE 역할을 SD-ADMIN 사용자에게 추가합니다.
++
+[listing]
+----
+# dfm user role set sd-admin sd-admin-role
+Set 1 role for administrator sd-admin.
+----
+

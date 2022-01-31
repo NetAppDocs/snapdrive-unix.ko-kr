@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/concept_restoring_asnapshot_copy_froma_different_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy, host, command 
+summary: SnapDrive snap restore 명령을 사용하여 다른 호스트에서 스냅샷 복사본을 복구할 수 있습니다. 
+---
+= 다른 호스트에서 스냅샷 복사본 복원
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'SnapDrive snap restore' 명령을 사용하여 다른 호스트에서 스냅샷 복사본을 복구합니다.
+
+일반적으로 스냅샷 복사본을 생성한 호스트에서 스냅샷 복사본을 복구할 수 있습니다. 경우에 따라 다른 호스트 또는 비원본 호스트를 사용하여 스냅샷 복사본을 복원해야 할 수 있습니다. 원래 호스트가 아닌 호스트를 사용하여 스냅샷 복사본을 복원하려면 일반적으로 사용하는 것과 동일한 "SnapDrive snap restore" 명령을 사용합니다. 복원하는 스냅샷 복사본에 NFS 엔터티가 포함되어 있는 경우 비발신 호스트는 NFS 디렉토리에 액세스할 수 있는 권한이 있어야 합니다.

@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_standard_exit_status_values.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, standard, exit, status, value 
+summary: UNIX용 SnapDrive의 오류 메시지 ID에 연결된 종료 상태 값이 있습니다. 종료 상태 값을 사용하여 UNIX용 SnapDrive 명령의 성공 또는 실패를 확인할 수 있습니다. 
+---
+= 표준 종료 상태 값
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive의 오류 메시지 ID에 연결된 종료 상태 값이 있습니다. 종료 상태 값을 사용하여 UNIX용 SnapDrive 명령의 성공 또는 실패를 확인할 수 있습니다.

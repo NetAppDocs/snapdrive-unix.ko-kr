@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_considerations_for_using_volume_based_snaprestore.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snaprestore, volume 
+summary: '몇 가지 사항을 염두에 두고 볼륨 기반 SnapRestore\(VBSR\)를 사용할 수 있습니다. 이러한 점을 염두에 두면 VBSR 기능을 안전하게 사용할 수 있습니다.' 
+---
+= 볼륨 기반 SnapRestore 사용에 대한 고려 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+몇 가지 사항을 염두에 두고 볼륨 기반 SnapRestore(VBSR)를 사용할 수 있습니다. 이러한 점을 염두에 두면 VBSR 기능을 안전하게 사용할 수 있습니다.
+
+다음 사항을 염두에 두어야 합니다.
+
+* VBSR은 스냅샷 복사본이 생성된 시점의 상태로 전체 볼륨을 되돌립니다. 이 시간은 VBSR에 사용됩니다. VBSR에는 다음이 포함됩니다.
++
+** '스냅 생성' 작업 중 지정된 호스트 파일 사양에 대한 모든 파일 및 LUN
+** '스냅 생성' 작업 중에 애플리케이션의 정합성 보장 스냅샷 복사본에 포함된 모든 파일 및 LUN
+
+
+* VBSR은 복원에 사용된 스냅샷 복사본 이후에 현재 볼륨에 생성된 모든 최신 파일과 LUN을 제거합니다.
+* VBSR은 복원에 사용되는 스냅샷 복사본 이후에 생성된 새로운 스냅샷 복사본을 모두 제거합니다.
+* '-vbsr execute' 명령을 사용하기 전에 '-vbsr preview' 명령을 실행하는 것이 좋습니다.
+

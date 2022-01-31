@@ -1,0 +1,55 @@
+---
+permalink: linux-administration/concept_contents_of_an_audit_log_file.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, audit, log, file 
+summary: 감사 로그에는 UNIX용 SnapDrive에서 실행한 명령에 대한 정보가 표시됩니다. 
+---
+= 감사 로그 파일의 내용입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+감사 로그에는 UNIX용 SnapDrive에서 실행한 명령에 대한 정보가 표시됩니다.
+
+감사 로그 파일은 다음 정보의 기록을 유지합니다.
+
+* 명령이 실행되었습니다.
+* 해당 명령의 반환 값
+* 명령을 호출한 사용자의 사용자 ID입니다.
+* 명령이 시작된 시간(반환 코드 없음)과 명령이 완료된 시간(반환 코드 포함)을 나타내는 다른 타임스탬프입니다. 감사 로그 기록에는 SnapDrive 사용(발행된 명령어)에 대한 정보만 표시됩니다.
+
+
+감사 로그 파일에는 다음 정보가 포함됩니다.
+
+|===
+| 필드에 입력합니다 | 설명 
+
+
+ a| 
+UID
+ a| 
+사용자 ID입니다
+
+
+
+ a| 
+GID
+ a| 
+그룹 ID입니다
+
+
+
+ a| 
+msgText 를 클릭합니다
+ a| 
+메시지 텍스트입니다
+
+
+
+ a| 
+반환 코드
+ a| 
+명령에서 코드를 반환합니다
+
+|===

@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/concept_connecting_to_a_snapshot_copy_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, fails 
+summary: UNIX용 SnapDrive 작업 중에 Linux 호스트가 재부팅될 때 UNIX용 SnapDrive가 스냅샷 복사본에 연결하지 못합니다. 
+---
+= 스냅샷 복사본에 연결할 수 없습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 작업 중에 Linux 호스트가 재부팅될 때 UNIX용 SnapDrive가 스냅샷 복사본에 연결하지 못합니다.
+
+이는 UNIX용 SnapDrive 작업 중에 재부팅되는 원래 호스트에서 스냅 연결 작업 중에 Linux LVM2에서 발생합니다.
+
+[listing]
+----
+Volume manager configuration file has tags that are added by SnapDrive for UNIX. Clean the file manually.
+----
+
+
+== 해결 방법
+
+. 디스크 그룹에 연결된 디바이스의 LUN 클론이 호스트에 매핑되지 않았는지 확인합니다. 호스트에 매핑된 경우 매핑을 해제하고 삭제합니다. 이전에 실패한 SnapDrive 작업에서 발생한 것일 수 있습니다.
+. 다음과 같은 방법으로 'lvm.configfile'('/etc/lvm/'에 위치)을 편집합니다.
++
+.. 접미사가 '##SDUTEMP'인 모든 줄을 제거합니다.
+.. 주석 태그 '#SDUEXISTING'이 앞에 있는 모든 행을 복원합니다.
++
+위의 방법으로도 문제가 해결되지 않으면 NetApp 기술 지원 팀에 문의하십시오.
+
+
+
+

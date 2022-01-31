@@ -1,0 +1,29 @@
+---
+permalink: aix/task_deleting_igroup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, igroup, delete 
+summary: 스토리지 시스템용으로 구성되었지만 더 이상 필요하지 않은 모든 igroup을 삭제할 수 있습니다. 
+---
+= igroup 삭제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템용으로 구성되었지만 더 이상 필요하지 않은 모든 igroup을 삭제할 수 있습니다.
+
+.단계
+. 호스트에서 다음 명령을 입력합니다.
++
+'* SnapDrive igroup delete_filer_name_*'
+
++
+[listing]
+----
+snapdrive igroup delete toaster
+Deleted igroup configuration for appliance: toaster
+----
++
+스토리지 시스템 토스터용으로 구성된 igroup 'IG'가 성공적으로 제거되었습니다.
+
+

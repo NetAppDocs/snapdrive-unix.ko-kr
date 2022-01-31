@@ -1,0 +1,28 @@
+---
+permalink: solaris/concept_pure_nfs_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, pure, nfs, environment 
+summary: 여러 서브넷에 대해 시스템을 구성하고 관리 인터페이스를 통해 하나 이상의 NFS 볼륨을 마운트하는 경우 항상 첫 번째 데이터 인터페이스를 관리 인터페이스로 구성해야 합니다. 
+---
+= Pure NFS 환경
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여러 서브넷에 대해 시스템을 구성하고 관리 인터페이스를 통해 하나 이상의 NFS 볼륨을 마운트하는 경우 항상 첫 번째 데이터 인터페이스를 관리 인터페이스로 구성해야 합니다.
+
+다음 예에서 관리 인터페이스는 10.72.221.19이고 데이터 인터페이스는 10.72.220.45입니다.
+
+[listing]
+----
+# snapdrive config list
+username    appliance name   appliance type
+-------------------------------------------
+root        10.72.221.19     StorageSystem
+
+# snapdrive config list -mgmtpath
+system name    management interface   datapath interface
+--------------------------------------------------------
+f2040-221-19   10.72.221.19           10.72.220.45
+----

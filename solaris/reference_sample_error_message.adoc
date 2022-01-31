@@ -1,0 +1,23 @@
+---
+permalink: solaris/reference_sample_error_message.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, message 
+summary: UNIX용 SnapDrive의 오류 메시지입니다. 
+---
+= 샘플 오류 메시지입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive의 오류 메시지입니다.
+
+다음 메시지는 명령 프롬프트에 문제가 있음을 나타냅니다. message-ID는 0001-377입니다.
+
+[listing]
+----
+Return Code: 43
+
+0001-377 Command error: Disk group name dg2 is already in use or
+conflicts with another entity.
+----

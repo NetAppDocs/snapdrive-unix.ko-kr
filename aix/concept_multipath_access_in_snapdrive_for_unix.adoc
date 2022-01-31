@@ -1,0 +1,29 @@
+---
+permalink: aix/concept_multipath_access_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, support, multipath, access 
+summary: UNIX용 SnapDrive는 표준 다중 경로 소프트웨어 솔루션을 사용하여 스토리지 시스템에 대한 FC 다중 경로 액세스를 지원합니다. 다중 경로를 사용하여 호스트와 스토리지 시스템 간에 여러 네트워크 경로를 구성할 수 있습니다. 
+---
+= UNIX용 SnapDrive에서 다중 경로 액세스 지원
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 표준 다중 경로 소프트웨어 솔루션을 사용하여 스토리지 시스템에 대한 FC 다중 경로 액세스를 지원합니다. 다중 경로를 사용하여 호스트와 스토리지 시스템 간에 여러 네트워크 경로를 구성할 수 있습니다.
+
+|===
+| 플랫폼 | 다중 경로 솔루션 
+
+
+ a| 
+AIX
+ a| 
+FC의 경우
+
+* NativeMPIO
+* DMP
+
+
+|===
+하나의 경로에 장애가 발생할 경우 FC 트래픽은 나머지 경로에 대해 계속됩니다. 다중 경로는 호스트에 LUN에 대한 다중 경로가 있고 사용자에게 영향을 주지 않는 기본 경로를 만드는 데 필요합니다. UNIX용 SnapDrive 작업에 대해 구성 파일에 지정된 다중 경로 솔루션이 구성 및 지원되는 경우 UNIX용 SnapDrive는 지정된 다중 경로 솔루션을 사용합니다.

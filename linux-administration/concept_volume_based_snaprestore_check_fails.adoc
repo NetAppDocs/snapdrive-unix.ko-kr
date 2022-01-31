@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/concept_volume_based_snaprestore_check_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, snaprestore, check, fail, nfs, vbsr, host, export 
+summary: '볼륨 기반 SnapRestore\(Vbsr\) 검사에 실패했습니다. \(NFS가 외부 호스트가 없는 목록을 내보내려고 할 때\) /etc/hosts 파일에 호스트 이름에 대해 서로 다른 두 IP가 있는 클라이언트 시스템 \(SLES 11\)에 있습니다.' 
+---
+= 볼륨 기반 SnapRestore 검사에 실패했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+볼륨 기반 SnapRestore(Vbsr) 검사에 실패했습니다. ( NFS가 외부 호스트가 없는 목록을 내보내려고 할 때) '/etc/hosts' 파일에서 호스트 이름에 대해 서로 다른 IP가 두 개 있는 클라이언트 시스템(SLES 11)에 있습니다.
+
+이 문제를 해결하려면 '/etc/hosts' 파일에서 호스트 이름에 대한 IP가 하나만 있어야 합니다.

@@ -1,0 +1,26 @@
+---
+permalink: linux-administration/concept_snapdrive_limitations_for_data_ontap_operating_in_cluster_mode.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, clustered, ontap, limitations, operations 
+summary: 일부 SnapDrive 기능은 clustered Data ONTAP에서 지원되지 않습니다. 
+---
+= Clustered Data ONTAP의 SnapDrive 제한
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 SnapDrive 기능은 clustered Data ONTAP에서 지원되지 않습니다.
+
+* SVM 루트 볼륨에서는 스토리지 프로비저닝 및 스냅샷 관리 작업이 지원되지 않습니다.
+* 7-Mode에서 운영 중인 Data ONTAP와 clustered Data ONTAP에서 실행 중인 스토리지 시스템에 적용되는 파일 사양 또는 LUN에 대한 작업은 지원되지 않습니다.
+* 마운트 지점 내에 있는 심볼 링크는 지원되지 않습니다.
+* SVM 볼륨이 포함된 애그리게이트는 SVM의 애그리게이트 목록에 할당되어 SVM을 구성하고 SnapDrive 작업을 실행해야 합니다.
+* SnapDrive for UNIX는 clustered Data ONTAP에서 지원되지 않으므로 SVM의 마이그레이션을 지원하지 않습니다.
+* '-readonly' 옵션을 사용한 스냅 접속 작업은 호스트에 '.snapshot' 디렉토리만 마운트하고 클론 볼륨은 생성하지 않습니다.
++
+Clustered Data ONTAP에서 엑스포트 정책은 디렉토리 레벨이 아닌 볼륨 레벨에서만 정의됩니다. 따라서 '.snapshot' 디렉토리를 보조 호스트(상위 볼륨에 대한 내보내기 권한이 없는 호스트)로 내보낼 수 없습니다.
+
+* SnapDrive for UNIX는 볼륨이 SnapMirror 또는 SnapVault 작업 시 기본 스냅샷 복사본 이전에 생성된 스냅샷 복사본의 VBSR(볼륨 기반 SnapRestore) 작업을 지원하지 않습니다.
+* SnapDrive for UNIX는 볼륨이 XDP(SnapVault) 관계에 있을 때 SnapVault 업데이트 전에 생성된 스냅샷 복사본의 '스냅샷 삭제' 작업을 지원하지 않습니다.
+

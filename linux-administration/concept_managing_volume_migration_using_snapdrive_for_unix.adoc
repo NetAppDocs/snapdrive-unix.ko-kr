@@ -1,0 +1,27 @@
+---
+permalink: linux-administration/concept_managing_volume_migration_using_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, migration, setup, cutover, move 
+summary: 볼륨 마이그레이션 중에 SnapDrive 작업을 실행할 수 있습니다. 
+---
+= UNIX용 SnapDrive에서 볼륨 마이그레이션
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+볼륨 마이그레이션 중에 SnapDrive 작업을 실행할 수 있습니다.
+
+볼륨 마이그레이션은 다음 3단계로 구성됩니다.
+
+* 설정
+* 이동
+* 컷오버
+
+
+SnapDrive for UNIX 작업은 설정 및 이동 단계에서 원활하게 작동합니다.
+
+컷오버 단계에서 SnapDrive 명령을 실행하면 SnapDrive for UNIX는 'sapdrive.conf' 파일의 변수 'volmove-cutover-retry'와 'volmove-cutover-retry-sleep'에 정의된 대로 작업을 다시 시도할 수 있습니다.
+
+
+NOTE: 볼륨 마이그레이션 중에 SnapDrive for UNIX 작업이 실패할 경우 볼륨 마이그레이션 작업이 완료된 후 SnapDrive for UNIX 작업을 수행해야 합니다.

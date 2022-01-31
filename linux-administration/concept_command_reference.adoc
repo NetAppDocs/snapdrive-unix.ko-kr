@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_command_reference.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, reference 
+summary: UNIX용 SnapDrive는 다양한 명령을 지원합니다. 이러한 명령 참조는 명령, 옵션, 키워드 및 인수에 대해 배우는 데 도움이 됩니다. 
+---
+= 명령 참조
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 다양한 명령을 지원합니다. 이러한 명령 참조는 명령, 옵션, 키워드 및 인수에 대해 배우는 데 도움이 됩니다.

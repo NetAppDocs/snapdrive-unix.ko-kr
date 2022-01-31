@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_deleting_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, snapshot, copy 
+summary: SnapDrive snap delete 명령을 사용하여 스토리지 시스템의 스냅샷 복사본을 삭제할 수 있습니다. 
+---
+= 스냅샷 복사본 삭제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap delete" 명령을 사용하여 스토리지 시스템의 스냅샷 복사본을 삭제할 수 있습니다.

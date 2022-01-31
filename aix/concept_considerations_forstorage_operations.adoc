@@ -1,0 +1,32 @@
+---
+permalink: aix/concept_considerations_forstorage_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, considerations, storage, operations 
+summary: 다양한 스토리지 명령과 관련된 몇 가지 고려 사항을 염두에 두어야 합니다. 
+---
+= 스토리지 작업에 대한 고려 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다양한 스토리지 명령과 관련된 몇 가지 고려 사항을 염두에 두어야 합니다.
+
+* 여러 스토리지 시스템 볼륨 또는 여러 스토리지 시스템에 걸쳐 있는 볼륨 그룹의 경우 지원이 제한됩니다. "SnapDrive storage create" 명령을 사용하여 스토리지 시스템에 걸쳐 있는 볼륨 그룹을 생성할 수는 없습니다.
++
+이 경우 UNIX용 SnapDrive는 다음 주요 명령을 지원합니다.
+
++
+** 'SnapDrive 스냅 생성'
+** SnapDrive 스냅 복구
+** 'SnapDrive SNAP CONNECT
+** 'SnapDrive 스냅 분리
+
+
+* SnapDrive 스토리지 크기 조정 명령은 호스트에 직접 매핑된 LUN이나 LUN에 포함된 파일 시스템에서는 작동하지 않습니다.
+* SnapDrive for UNIX에서는 생성하는 호스트 볼륨의 형식을 제어하는 옵션을 제공하지 않습니다. SnapDrive for UNIX는 연결된 호스트 볼륨만 생성합니다. 다른 애플리케이션을 사용하여 생성된 다른 형식(예: 스트라이프 볼륨)의 호스트 볼륨에서 제대로 작동합니다.
+* 디스크 그룹의 일부는 복원할 수 없습니다. UNIX용 SnapDrive는 전체 디스크 그룹만 백업 및 복원합니다.
+
+
+
+NOTE: 비 Linux 운영 체제에서 Linux 운영 체제로 수행되는 SnapDrive 작업은 Red Hat Enterprise Linux 6 이전의 모든 버전에서 NFS용 '-mnttops' 명령도 사용하여 실패합니다.

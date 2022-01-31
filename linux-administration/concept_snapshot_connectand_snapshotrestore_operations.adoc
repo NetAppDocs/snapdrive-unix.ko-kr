@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_snapshot_connectand_snapshotrestore_operations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, restore, clones, copy, snapshot 
+summary: 스냅샷 복사본은 스냅샷 복사본에 연결할 때 해당 정보를 복제합니다. 
+---
+= 스냅샷 연결 및 스냅샷 복원 작업
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본은 스냅샷 복사본에 연결할 때 해당 정보를 복제합니다.
+
+스냅샷 복원 작업과 달리 스냅샷 연결 작업은 호스트 엔터티를 구성하는 LUN의 기존 콘텐츠를 스냅샷 복사본 콘텐츠로 대체하지 않습니다. 정보를 복제합니다.
+
+연결이 설정되면 스냅샷 연결 및 스냅샷 복원 작업 모두 유사한 작업을 수행합니다.
+
+* 스냅샷 접속 작업은 스토리지 엔티티의 논리적 볼륨을 활성화하고, 파일 시스템을 마운트하며, 선택적으로 호스트 파일 시스템 테이블에 항목을 추가합니다.
+* 스냅샷 복원 작업은 스토리지 엔티티의 논리적 볼륨을 활성화하고, 파일 시스템을 마운트하며, 스냅샷 복사본에 보존된 호스트 파일 시스템 마운트 항목을 적용합니다.
+

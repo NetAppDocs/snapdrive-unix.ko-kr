@@ -1,0 +1,244 @@
+---
+permalink: linux-administration/concept_snapdrive_commands_and_capabilities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, commands, rbac, role, access, control 
+summary: '역할 기반 액세스 제어\(RBAC\)에서는 각 작업의 성공을 위해 특정 기능이 필요합니다. 사용자는 스토리지 작업을 수행하기 위해 올바른 기능 세트를 할당해야 합니다.' 
+---
+= SnapDrive 명령 및 기능
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC(역할 기반 액세스 제어)에서는 각 작업의 성공을 위해 특정 기능이 필요합니다. 사용자는 스토리지 작업을 수행하기 위해 올바른 기능 세트를 할당해야 합니다.
+
+다음 표에는 명령과 필요한 해당 기능이 나열되어 있습니다.
+
+|===
+| 명령 | 제공합니다 
+
+
+ a| 
+'스토리지 쇼'
+ a| 
+SD.Storage.Read on volume(SD.저장 공간.볼륨에서 읽기)
+
+
+
+ a| 
+'Storage list'를 선택합니다
+ a| 
+SD.Storage.Read on volume(SD.저장 공간.볼륨에서 읽기)
+
+
+
+ a| 
+'스토리지 생성'
+ a| 
+* 볼륨 내 LUN의 경우 볼륨에 대한 'D.Storage.Write'(저장 공간.쓰기)를 선택합니다
+* Qtree에 포함된 LUN의 경우: 'D. Storage.Write'(qtree에 기록)입니다
+
+
+
+
+ a| 
+'스토리지 크기 조정'
+ a| 
+LUN에 대한 '스토리지.쓰기'입니다
+
+
+
+ a| 
+'스토리지 삭제'
+ a| 
+LUN의 '저장.삭제'
+
+
+
+ a| 
+낮잠 쇼
+ a| 
+'스냅샷.읽기'를 선택합니다
+
+
+
+ a| 
+'낮잠 목록'
+ a| 
+'스냅샷.읽기'를 선택합니다
+
+
+
+ a| 
+'스냅 삭제'
+ a| 
+'저장.삭제' - 볼륨에 있음
+
+
+
+ a| 
+'낮잠 이름 바꾸기'입니다
+ a| 
+'저장.쓰기'를 볼륨에 표시합니다
+
+
+
+ a| 
+'낮잠' 연결
+ a| 
+* 볼륨에 있는 LUN 클론의 경우: 볼륨에 있는 'D. snapshot.Clone'입니다
+* qtree의 LUN 클론의 경우: 'D. snapshot.Clone' qtree의 경우
+* 기존 볼륨 클론의 경우 스토리지 시스템의 '스냅샷.클론'입니다
+* FlexClone 볼륨의 경우: 상위 볼륨의 'D. snapshot.Clone'입니다
+* 무제한 FlexClone 볼륨의 경우: 상위 볼륨의 'sD. snapshot.UnrestrictedClone'입니다
+
+
+
+
+ a| 
+'스냅 연결 분할'
+ a| 
+* LUN 클론(LUN 복제됨 및 볼륨 분할)의 경우: 'D.snapshot.Clone'은 볼륨에 있고 'D.Storage.Write'는 볼륨에 있습니다
+* LUN 클론의 경우(LUN이 복제되고 qtree로 분할됨): '스냅샷.클론'은 qtree, '저장.쓰기'는 qtree에 있습니다
+* 스토리지 시스템의 경우 '스냅샷.클론'과 스토리지 시스템의 경우 '저장.쓰기'가 분할되는 기존 볼륨 클론입니다
+* 분할된 Flex 볼륨 클론의 경우 상위 볼륨의 'sD snapshot.Clone'입니다.
+
+
+
+
+ a| 
+클론 분할 시작
+ a| 
+* LUN이 볼륨 또는 qtree에 있는 LUN 클론의 경우: 볼륨 또는 qtree가 포함된 '스냅샷.클론'입니다
+* 볼륨 클론의 경우 상위 볼륨의 'D. snapshot.Clone'입니다
+
+
+
+
+ a| 
+'낮잠 끊기다
+ a| 
+* LUN이 볼륨 또는 qtree에 있는 LUN 클론의 경우: 볼륨 또는 qtree가 포함된 '스냅샷.클론'입니다
+* 볼륨 클론의 경우 상위 볼륨의 'D. snapshot.Clone'입니다
+* 무제한 볼륨 클론 삭제의 경우 볼륨에 대한 'sD. snapshot.DestroyUnrestrictedClone'이 있습니다
+
+
+
+
+ a| 
+'낮잠 분리-분리'
+ a| 
+* LUN이 볼륨 또는 qtree에 있는 LUN 클론의 경우 포함하는 볼륨 또는 qtree의 'D. snapshot.Clone'입니다
+* 볼륨 클론의 경우 상위 볼륨의 'd. 스토리지.삭제'입니다
+* 무제한 볼륨 클론 삭제의 경우 볼륨에 대한 'sD. snapshot.DestroyUnrestrictedClone'이 있습니다
+
+
+
+
+ a| 
+낮잠 복원
+ a| 
+* 볼륨에 있는 LUN의 경우 'D. snapshot. Restore' on volume, 'D. Storage.Write' on LUN
+* Qtree에 존재하는 LUN의 경우: '스냅샷 복구'는 qtree, '디스크 스토리지.쓰기'는 LUN에 표시됩니다
+* 볼륨에 없는 LUN의 경우: 'D. snapshot. Restore' on volume 및 'D. Storage.Write' on volume
+* qtree가 아닌 LUN의 경우: '스냅샷 D.. 복구' qtree 및 '저장. 쓰기' qtree에 있는 LUN
+* 볼륨의 경우: 기존 볼륨의 스토리지 시스템에 있는 '스냅샷.복구' 또는 유연한 볼륨의 경우 Aggregate에 있는 '스냅샷.복원'입니다
+* 볼륨에 있는 단일 파일 스냅 복구의 경우 볼륨에 있는 'D. snapshot.Restore'입니다
+* Qtree에서 단일 파일 스냅 복구의 경우 '스냅샷.복원' qtree입니다
+* 기준 스냅샷 복사본을 재정의하는 경우 볼륨의 'sD snapshot.DisruptBaseline
+
+
+
+
+ a| 
+호스트 연결, 호스트 연결 해제
+ a| 
+LUN에 대한 '구성.쓰기'입니다
+
+
+
+ a| 
+'config access'
+ a| 
+스토리지 시스템에 대한 '구성 읽기'입니다
+
+
+
+ a| 
+구성 준비
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성.쓰기'
+
+
+
+ a| 
+구성 확인
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성 읽기'입니다
+
+
+
+ a| 
+구성 쇼
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성 읽기'입니다
+
+
+
+ a| 
+구성 세트
+ a| 
+스토리지 시스템의 '구성 쓰기'입니다
+
+
+
+ a| 
+'config set-DFM, config set-mgmtd path'
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성.쓰기'
+
+
+
+ a| 
+'config delete
+ a| 
+스토리지 시스템의 '구성 삭제'입니다
+
+
+
+ a| 
+'config delete DFM_appliance, config delete -mgmtd path
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성 삭제'를 선택합니다
+
+
+
+ a| 
+'구성 목록'
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성 읽기'입니다
+
+
+
+ a| 
+'config migrate set'
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성.쓰기'
+
+
+
+ a| 
+'config migrate delete
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성 삭제'를 선택합니다
+
+
+
+ a| 
+'config migrate list
+ a| 
+적어도 하나의 스토리지 시스템에 대한 '구성 읽기'입니다
+
+|===
+
+NOTE: UNIX용 SnapDrive에서는 관리자(루트)에 대한 기능을 확인하지 않습니다.

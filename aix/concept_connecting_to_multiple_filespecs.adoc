@@ -1,0 +1,73 @@
+---
+permalink: aix/concept_connecting_to_multiple_filespecs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, multiple, filspec 
+summary: 볼륨에 상주하는 여러 개의 파일 시스템에 연결할 수 있습니다. 다음 예제에서는 이 작업을 완료하는 방법을 설명합니다. 
+---
+= 여러 개의 파일 에 연결 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+볼륨에 상주하는 여러 개의 파일 시스템에 연결할 수 있습니다. 다음 예제에서는 이 작업을 완료하는 방법을 설명합니다.
+
+제한된 FlexClone을 만들려면 여러 filespec에 연결하기 전에 'napdrive.conf' 파일에서 'an-clone-method=unrestricted'를 설정하거나 '-clone unrestricted'를 제공해야 합니다. 이 예제에서는 볼륨 vol1에 있는 snap1의 여러 filespec '/mnt/fs_1' 및 '/mnt/fs_2'에 연결하려는 경우에 결과를 표시합니다.
+
+/mnt/fs_1 및 /mnt/fs_2의 레이아웃은 다음과 같습니다.
+
+[listing]
+----
+ # snapdrive storage show -fs /mnt/fs_1 /mnt/fs_2 -capabilities
+raw device: /dev/sdc1   mount point: /mnt/fs_1 (persistent) fstype jfs2
+allowed operations: all
+
+device filename      adapter     path     size    proto   state     clone     lun path           backing snapshot
+----------------     -------     ----    ------   -----   -----    -------  ----------------     ----------------
+/dev/sdc                -         P       100m    iscsi   online      No    homer:/vol/vol1/lun1        -
+
+raw device: /dev/sdo1   mount point: /mnt/fs_2 (persistent) fstype jfs2
+allowed operations: all
+
+device filename     adapter path    size     proto   state   clone    lun path               backing snapshot
+----------------    ------- ----    ----    -------  -----   -----    --------               ----------------
+/dev/sdo               -     P      100m     iscsi   online   No      homer:/vol/vol1/lun2        -
+----
+여기서 사용자는 스냅 접속용 '/mnt/fs1' 및 '/mnt/fs2'의 애플리케이션 정합성 보장 스냅샷을 포함하는 Snapshot Snap2를 사용했습니다.
+
+[listing]
+----
+ # snapdrive snap connect -fs /mnt/fs_1 -fs /mnt/fs_2 -snapname homer:/vol/vol1:snap2 -autorename -clone unrestricted
+
+ connecting /mnt/fs_1:
+        creating unrestricted volume clone homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot ... success
+
+        mapping new lun(s) ... done
+
+ connecting /mnt/fs_2:
+
+        mapping new lun(s) ... done
+        discovering new lun(s) ... done
+Successfully connected to snapshot homer:/vol/vol1:snap2
+        file system: /mnt/fs_1_0
+        file system: /mnt/fs_2_0
+----
+여기서 UNIX용 SnapDrive는 스냅샷 Snap2에서 무제한 FlexClone의 napdrive_vol1_0_volume_clone_from_Snap2_Snapshot을 하나 만들었습니다. 그런 다음 LUN testlun1 및 testlun2에 연결되어 복제된 호스트 파일 시스템 '/mnt/fs1_0'과 '/mnt/fs2_0'을 각각 생성합니다.
+
+[listing]
+----
+# snapdrive storage show -fs /mnt/fs_1_0 /mnt/fs_2_0 -capabilities
+raw device: /dev/sde1   mount point: /mnt/fs_1_0 (persistent) fstype jfs2
+allowed operations: all
+
+device filename      adapter   path  size    proto   state   clone      lun path                                                         backing snapshot
+----------------      -------  ----  ----    -----   -----   -----       --------                                                        ----------------
+/dev/sde                 -      P    100m    iscsi   online  flex-clone  homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun1   vol1:snap2
+
+raw device: /dev/sdac1  mount point: /mnt/fs_2_0 (persistent) fstype jfs2
+allowed operations: all
+
+device filename      adapter  path    size    proto   state   clone      lun path                                                            backing snapshot
+----------------      -------  ----    ----    -----   -----   -----      --------                                                           ----------------
+/dev/sdac                 -     P      100m    iscsi   online  flex-clone homer:/vol/Snapdrive_vol1_volume_clone_from_snap2_snapshot/lun2     vol1:snap2
+----

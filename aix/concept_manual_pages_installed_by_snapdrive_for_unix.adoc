@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_manual_pages_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, man, pages, install 
+summary: UNIX용 SnapDrive에서는 다양한 형식의 man 페이지를 제공합니다. 
+---
+= SnapDrive for UNIX에서 설치한 man 페이지
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에서는 다양한 형식의 man 페이지를 제공합니다.
+
+man 페이지는 다음 위치에서 사용할 수 있습니다.
+
+* '/opt/netapp/SnapDrive/docs/SnapDrive.dc.1'
+* '/opt/netapp/SnapDrive/docs/SnapDrive.1'
+* '/opt/netapp/SnapDrive/docs/SnapDrive.1.html'
+* '/opt/netapp/SnapDrive/docs/브로케이드_info.1'
+* '/opt/netapp/SnapDrive/docs/McData_info.1'
+* '/opt/netapp/SnapDrive/docs/cisco_info.1'
+* '/opt/netapp/SnapDrive/docs/filer_info.1'
+* '/opt/netapp/SnapDrive/docs/aix_info.1'
+

@@ -1,0 +1,63 @@
+---
+permalink: linux-administration/task_configuring_management_and_data_interfaces_for_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, management, configure, data, interface, nfs, traffic 
+summary: NFS 환경에서 단일 관리 인터페이스에 여러 데이터 인터페이스를 구성하여 스토리지 시스템의 데이터 트래픽과 관리 트래픽을 분리할 수 있습니다. 
+---
+= 스토리지 시스템에 대한 관리 및 데이터 인터페이스 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS 환경에서 단일 관리 인터페이스에 여러 데이터 인터페이스를 구성하여 스토리지 시스템의 데이터 트래픽과 관리 트래픽을 분리할 수 있습니다.
+
+.단계
+. 새 관리 인터페이스의 구성을 설정합니다.
++
+`* SnapDrive config set root * '
+
++
+[listing]
+----
+# snapdrive config set root f3050-197-91
+Password for root:
+Retype password:
+----
++
+다음은 스토리지 가상 머신(SVM, 이전의 Vserver)의 예입니다.
+
++
+[listing]
+----
+# snapdrive config set vsadmin clstr-vs2
+Password for vsadmin:
+Retype password:
+----
+. 새 관리 인터페이스에 대한 데이터 인터페이스를 구성합니다.
++
+'* SnapDrive 구성 세트 * '
+
++
+[listing]
+----
+# snapdrive config set -mgmtpath f3050-197-91 f3050-220-91#
+----
++
+앞의 명령에서 f3050-197-191은 관리 인터페이스이고 f3050-220-91은 데이터 인터페이스입니다.
+
++
+다음은 SVM의 예입니다.
+
++
+[listing]
+----
+snapdrive config set -mgmtpath clstr-vs2  clstr-vs2-2
+system name   management interface   datapath interface
+-------------------------------------------------------
+clstr-vs2     10.72.220.203          10.72.221.155
+----
++
+출력물에서는 10.72.220.203이 관리 인터페이스이고 10.72.221.155는 데이터 인터페이스입니다.
+
+

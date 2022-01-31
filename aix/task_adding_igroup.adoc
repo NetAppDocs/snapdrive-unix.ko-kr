@@ -1,0 +1,35 @@
+---
+permalink: aix/task_adding_igroup.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, igroup, add 
+summary: SnapDrive for UNIX를 사용하면 스토리지 시스템에 대한 특정 igroup을 호스트에 추가하고 구성된 igroup을 사용하여 SnapDrive 작업을 수행할 수 있습니다. 스토리지 시스템에서 igroup을 사용할 수 있는지 확인해야 합니다. 
+---
+= igroup 추가
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX를 사용하면 스토리지 시스템에 대한 특정 igroup을 호스트에 추가하고 구성된 igroup을 사용하여 SnapDrive 작업을 수행할 수 있습니다.
+
+igroup을 호스트에 추가하려면 다음을 수행해야 합니다.
+
+* 'SnapDrive igroup add' 명령을 사용합니다
+* 스토리지 시스템에서 igroup을 사용할 수 있는지 확인합니다
+
+
+.단계
+. 호스트에서 다음 명령을 입력하여 igroup을 추가합니다.
++
+'* SnapDrive igroup add_igroup_name filer_name [filer_name...]_*'
+
++
+다음 예제 출력은 스토리지 시스템 토스터에 성공적으로 추가된 igroup을 보여줍니다.
+
++
+[listing]
+----
+snapdrive igroup add ig toaster
+Added igroup configuration for appliance: toaster
+----
+

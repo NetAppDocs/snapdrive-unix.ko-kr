@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapshot, data, collection, utility, troubleshoot 
+summary: SnapDrive 데이터 수집 유틸리티는 문제를 진단하는 정보를 수집하는 문제 해결 도구입니다. 
+---
+= 데이터 수집 유틸리티
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 데이터 수집 유틸리티는 문제를 진단하는 정보를 수집하는 문제 해결 도구입니다.
+
+SnapDrive for UNIX는 SnapDrive for UNIX, SnapDrive 구성 검사기 및 시스템 설정에 대한 진단 정보를 수집하는 데이터 수집 유틸리티(SnapDrive.DC)를 제공합니다.

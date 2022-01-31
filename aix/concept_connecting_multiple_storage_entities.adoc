@@ -1,0 +1,22 @@
+---
+permalink: aix/concept_connecting_multiple_storage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, connect, multiple, storage, entities 
+summary: 여러 스토리지 엔터티가 포함된 스냅샷 복사본을 연결할 수 있습니다. 
+---
+= 여러 스토리지 요소 연결
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여러 스토리지 엔터티가 포함된 스냅샷 복사본을 연결할 수 있습니다.
+
+여러 대상 스토리지 시스템에 상주하는 스토리지 엔터티가 포함된 스냅샷 복사본을 연결하려면 다음 요구사항을 충족해야 합니다.
+
+* 명령 프롬프트에서 지정하는 스토리지 엔터티는 단일 스토리지 시스템 또는 HA 쌍에 있어야 합니다.
+* 소스 스토리지 시스템의 볼륨 이름은 대상 스토리지 시스템의 볼륨 이름과 일치해야 합니다.
+* SnapDrive.conf 파일에서 ""on""으로 "_snapmirror-dest-multiple-filervolumes-enabled_" 변수를 설정해야 합니다.
+
+
+하나의 명령을 사용하여 단일 스토리지 시스템 또는 HA 쌍에 있는 스토리지 엔터티를 연결할 수 있습니다.

@@ -1,0 +1,13 @@
+---
+permalink: solaris/concept_snapshot_copy_rename.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, rename 
+summary: 스냅샷 스냅 이름 바꾸기 명령을 사용하여 스냅샷 복사본의 이름을 변경할 수 있습니다. 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 있는 스냅샷 복사본의 이름을 바꿀 수도 있습니다. 
+---
+= 스냅샷 복사본의 이름 변경
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본의 이름은 '스냅샷 스냅 이름 바꾸기' 명령을 사용하여 변경할 수 있습니다. 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 있는 스냅샷 복사본의 이름을 바꿀 수도 있습니다.

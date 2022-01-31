@@ -1,0 +1,28 @@
+---
+permalink: linux-administration/concept_restoring_snapshotcopies_ona_destination_storagesystem.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, storage, system, snapshot, copy 
+summary: 생성된 스토리지 시스템에서 스냅샷 복사본을 복원할 수 있습니다. 
+---
+= 타겟 스토리지 시스템의 스냅샷 복사본 복원
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+생성된 스토리지 시스템에서 스냅샷 복사본을 복원할 수 있습니다.
+
+타겟 스토리지 시스템에 스냅샷 복사본을 생성하면 소스 시스템에서 스냅샷 복사본이 자동으로 복제되고, 소스 시스템에서 타겟 스토리지 시스템으로 스냅샷 복사본이 생성됩니다. SnapDrive for UNIX를 사용하면 소스 스토리지 시스템에서 스냅샷 복사본을 복구할 수 있습니다. 또한 타겟 스토리지 시스템에서 스냅샷 복사본을 복원할 수 있습니다.
+
+SnapMirror 관계에서 단일 파일 스냅 복원을 수행하는 경우 소스 및 타겟 볼륨 이름이 동일하지 않아야 합니다. SnapDrive for UNIX는 소스 및 대상 볼륨 이름이 같은 경우 다음 오류 메시지를 표시합니다.
+
+[listing]
+----
+0001-636 Command error: Snapdrive cannot restore LUNs on SnapMirror
+destination filer volumes: <filer-vol-name>
+----
+UNIX 이상 버전용 SnapDrive 4.0에서 역할 기반 액세스 제어가 활성화된 경우 vFiler 유닛에 스냅샷 복원 기능이 있는 경우에만 vFiler 유닛에서 스냅 복원을 수행할 수 있습니다.
+
+* 관련 정보 *
+
+xref:concept_role_based_access_control_in_snapdrive_for_unix.adoc[UNIX용 SnapDrive에서 역할 기반 액세스 제어]

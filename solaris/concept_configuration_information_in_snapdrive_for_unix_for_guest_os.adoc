@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_configuration_information_in_snapdrive_for_unix_for_guest_os.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, guest, operating, system 
+summary: RDM LUN을 프로비저닝하려면 게스트 운영 체제에서 스토리지 시스템과 가상 스토리지 콘솔을 구성해야 합니다. 
+---
+= 게스트 운영 체제용 UNIX용 SnapDrive의 구성 정보
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RDM LUN을 프로비저닝하려면 게스트 운영 체제에서 스토리지 시스템과 가상 스토리지 콘솔을 구성해야 합니다.
+
+RDM LUN을 프로비저닝하기 위해 가상 스토리지 콘솔과 통신하려면 로그인 정보가 필요합니다. 구성이 완료되면 UNIX용 SnapDrive를 사용하여 게스트 운영 체제에서 RDM LUN을 생성할 수 있습니다.

@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/concept_displayingsnapshot_copies_of_a_storage_system_volume.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, storage, volume, copy, display 
+summary: SnapDrive 명령을 사용하여 스토리지 시스템 볼륨의 스냅샷 복사본을 표시할 수 있습니다. 
+---
+= 스토리지 시스템 볼륨의 스냅샷 복사본 표시
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 명령을 사용하여 스토리지 시스템 볼륨의 스냅샷 복사본을 표시할 수 있습니다.
+
+스토리지 시스템 볼륨의 스냅샷 복사본에 대한 정보를 표시하려면 다음 구문을 사용합니다.
+
+'SnapDrive snap show-filervol filervol[filervol...] [-verbose]'

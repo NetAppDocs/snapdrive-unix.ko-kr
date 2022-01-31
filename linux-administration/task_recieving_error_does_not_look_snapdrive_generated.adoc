@@ -1,0 +1,15 @@
+---
+permalink: linux-administration/task_recieving_error_does_not_look_snapdrive_generated.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, delete, clone, fail, error 
+summary: 경우에 따라 SnapDrive 스냅 연결 끊기 작업이 복제된 볼륨을 삭제하지 못하여 오류 메시지가 SnapDrive 생성 작업으로 보이지 않습니다. 
+---
+= 스냅 분리 작업이 복제된 볼륨을 삭제하지 못했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+경우에 따라 SnapDrive 스냅 연결 끊기 작업이 복제된 볼륨을 삭제하지 못하고 'SnapDrive를 생성하지 않습니다.'라는 오류 메시지가 나타납니다.
+
+이 문제의 해결 방법은 스냅샷 복사본의 원래 이름으로 되돌리고 'sapdrive.conf' 파일에서 '_bypass-SnapDrive-clone-generated-check_'가 ON으로 설정되어 있는지 확인하는 것입니다.

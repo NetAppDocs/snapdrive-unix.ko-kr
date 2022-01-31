@@ -1,0 +1,23 @@
+---
+permalink: aix/concept_diagnostic_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, diagnostic, file, install 
+summary: UNIX용 SnapDrive는 UNIX용 SnapDrive의 문제를 감지하는 데 도움이 되는 진단 파일을 설치합니다. 
+---
+= UNIX용 SnapDrive에서 설치한 진단 파일
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 UNIX용 SnapDrive의 문제를 감지하는 데 도움이 되는 진단 파일을 설치합니다.
+
+* '/opt/netapp/SnapDrive/diag/SnapDrive.dc'
+* '/opt/netapp/SnapDrive/diag/filer_info'
+* '/opt/netapp/SnapDrive/diag/Brocade_info'
+* '/opt/netapp/SnapDrive/diag/cisco_info'
+* '/opt/netapp/SnapDrive/diag/McData_info'
+* '/opt/netapp/SnapDrive/diag/SHsupport.pm'
+* '/opt/netapp/SnapDrive/diag/Telnet.pm'
+* '/opt/netapp/SnapDrive/diag/aix_info'
+

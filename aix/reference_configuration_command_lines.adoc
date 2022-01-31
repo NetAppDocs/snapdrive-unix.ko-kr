@@ -1,0 +1,32 @@
+---
+permalink: aix/reference_configuration_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, command, line 
+summary: UNIX용 SnapDrive 명령은 구성 작업에 사용됩니다. 
+---
+= 구성 명령줄
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 명령은 구성 작업에 사용됩니다.
+
+다음 명령줄 옵션은 구성 작업에 사용됩니다.
+
+* 'SnapDrive config access{show|list}_filername_'
+* 'SnapDrive config check LUNs'를 선택합니다
+* 'SnapDrive config delete_appliance_name [appliance_name...]_'
+* 'SnapDrive 설정 목록'
+* 'SnapDrive config set [-DFM]_user_name_appliance_name [appliance_name...]'
+* 'SnapDrive config set[-viadmin]_user_name viadmin_name_'
+* 'SnapDrive config show_[host_file_name]_'
+* 'SnapDrive config check cluster'
+* SnapDrive config prepare LUNs-count 수이다
+* 'SnapDrive config migrate set_storage_system_name new_storage_system_name_'
+* 'SnapDrive config migrate delete_new_storage_system_name [new_storage_system_name...] _'
+* 'SnapDrive config migrate list
+* 'SnapDrive igroup add igroup_name filername [filername...]'
+* 'SnapDrive igroup delete filername [filername...]'
+* 'SnapDrive igroup 목록'
+

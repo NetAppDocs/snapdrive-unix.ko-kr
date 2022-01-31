@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_mixed_environments_of_san_and_nfs.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, mixed, san, nfs, environment 
+summary: 혼합 SAN 및 NFS 환경에서는 관리 및 데이터 인터페이스를 매핑하여 첫 번째 데이터 인터페이스가 관리 인터페이스와 같아야 합니다. 
+---
+= 혼합 SAN 및 NFS 환경
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+혼합 SAN 및 NFS 환경에서는 관리 및 데이터 인터페이스를 매핑하여 첫 번째 데이터 인터페이스가 관리 인터페이스와 같아야 합니다.
+
+다음 예에서 관리 인터페이스는 10.72.197.91이고 데이터 인터페이스는 a10.72.220.91입니다.
+
+[listing]
+----
+
+#snapdrive config set -mgmtpath f3050-197-91 f3050-197-91 f3050-197-91 f3050-220-91
+
+#snapdrive config list -mgmtpath
+ system name        management interface   datapath interface
+ --------------------------------------------------------------------
+ bart               10.72.197.91           10.72.197.91|10.72.220.91
+----

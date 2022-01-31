@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_what_configuration_checker_is.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configuration, checker, tool 
+summary: SnapDrive 구성 검사기 툴을 사용하면 UNIX용 SnapDrive에서 지원하는 구성을 식별하고 확인할 수 있습니다. 
+---
+= 구성 검사기는 무엇입니까
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 구성 검사기 툴을 사용하면 UNIX용 SnapDrive에서 지원하는 구성을 식별하고 확인할 수 있습니다.
+
+구성 검사기 툴은 NAS 환경과 SAN 환경 모두에서 사용자 구성을 확인하여 여러 지원 구성 문제를 해결합니다.
+
+SnapDrive 구성 검사기 툴은 SnapDrive for UNIX에서 다음 구성 검사를 지원합니다.
+
+* Default Location에서 사용할 수 있는 'napdrive.conf' 파일에 지정된 설정을 확인한다.
+* CLI를 사용하여 지정된 설정을 확인한다.
+

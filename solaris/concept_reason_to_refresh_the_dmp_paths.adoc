@@ -1,0 +1,35 @@
+---
+permalink: solaris/concept_reason_to_refresh_the_dmp_paths.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, refresh, dmp, path 
+summary: FC 및 DMP 구성이 있는 호스트에서 SnapDrive storage delete -lun 명령이 중단될 수 있습니다. 
+---
+= DMP 경로를 새로 고치는 이유
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC 및 DMP 구성을 사용하는 호스트에서는 SnapDrive storage delete -lun" 명령이 중단될 수 있습니다.
+
+다음 구성 요소의 부적절한 설치 또는 구성으로 인해 명령이 중단될 수 있습니다.
+
+* NTAPASL
+* Veritas 스택(스토리지 기반)
+* 다중 경로 라이센스
+
+
+FC 경로를 설정, 해제 또는 추가한 후에는 DMP 경로 정보를 제대로 새로 고쳐야 합니다. DMP 경로를 새로 고치려면 아래 나열된 순서대로 다음 명령을 실행합니다.
+
+|===
+| * 플랫폼 * | * 명령 * 
+
+
+ a| 
+Solaris
+ a| 
+* 디프스름-CV
+* 'vxdisk scandisk'
+
+
+|===

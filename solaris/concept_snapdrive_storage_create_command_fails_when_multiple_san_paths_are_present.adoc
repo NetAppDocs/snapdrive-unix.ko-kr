@@ -1,0 +1,38 @@
+---
+permalink: solaris/concept_snapdrive_storage_create_command_fails_when_multiple_san_paths_are_present.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, create, command, fail, san, multipathing, disable 
+summary: 여러 SAN 경로가 있지만 다중 경로가 비활성화된 경우 SnapDrive storage create 명령이 실패합니다. 
+---
+= 여러 SAN 경로가 있지만 다중 경로가 비활성화된 경우 SnapDrive 스토리지 생성 명령이 실패합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여러 SAN 경로가 있지만 다중 경로가 비활성화된 경우 SnapDrive 스토리지 "create" 명령이 실패합니다.
+
+예를 들어, SVM을 위한 iSCSI LIF 2개의 경우:
+
+[listing]
+----
+[root@scspr0189449001 etc]# iscsiadm --mode session --rescan
+Rescanning session [sid: 1, target: iqn.1992-08.com.netapp:sn.f7335762b23e11e695360050569c153a:vs.3, portal: 10.224.70.253,3260]
+Rescanning session [sid: 2, target: iqn.1992-08.com.netapp:sn.f7335762b23e11e695360050569c153a:vs.3, portal: 10.224.70.254,3260]
+----
+SnapDrive.conf 파일에서 '경로 다중화-유형'이 '없음'으로 설정되고 다중 경로 서비스가 비활성화되면 LVM을 사용하여 스토리지를 생성하려고 하면 다음 오류가 반환됩니다.
+
+[listing]
+----
+root@scspr0189449001 etc]# snapdrive storage create -fs /mnt/test -lun rgvsim:/vol/asmvol/test -lunsize 500m
+        LUN rgvsim:/vol/asmvol/test ... created
+        mapping new lun(s) ... done
+        discovering new lun(s) ... *failed*
+        Cleaning up ...
+         - LUN rgvsim:/vol/asmvol/test ... deleted
+         0001-422 Admin error: LVM initialization of luns failed:
+        Device /dev/sdb,/dev/sdc not found (or ignored by filtering).
+----
+이는 "pvcreate" 명령이 쉼표로 구분된 두 장치를 모두 단일 디바이스 pvcreate/dev/sdb, /dev/sdc, 이름이 '/dev/sdb, /dev/sdc'인 장치로 사용하고 존재하지 않는 디바이스를 모두 사용하기 때문입니다.
+
+스토리지에 대한 경로가 여러 개 있고 LVM을 사용해야 하는 경우 다중 경로를 활성화해야 합니다.

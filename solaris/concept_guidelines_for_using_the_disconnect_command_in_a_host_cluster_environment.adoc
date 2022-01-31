@@ -1,0 +1,25 @@
+---
+permalink: solaris/concept_guidelines_for_using_the_disconnect_command_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, command, host, cluster 
+summary: 다음은 호스트 클러스터 환경에서 SnapDrive storage disconnect 명령을 사용하기 위한 지침입니다. 
+---
+= 호스트 클러스터 환경에서 disconnect 명령을 사용하기 위한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음은 호스트 클러스터 환경에서 'SnapDrive storage disconnect' 명령을 사용하는 지침입니다.
+
+* "SnapDrive storage disconnect" 명령은 호스트 클러스터의 모든 노드에서 실행할 수 있다.
+* 스토리지 연결 해제 작업이 성공하려면 다음 중 하나가 참이어야 합니다.
++
+** 스토리지 엔터티는 호스트 클러스터의 모든 노드에서 공유해야 합니다.
+** LUN은 호스트 클러스터의 모든 노드에 매핑되어야 합니다.
+
+
+* '-DeviceType dedicated' 옵션을 사용하거나 기본값은 dedicated 이므로 명령에서 '-DeviceType' 옵션을 모두 생략하여 특정 노드에서 스토리지 엔터티의 연결을 해제할 수 있습니다.
+* 공유 스토리지 엔터티 또는 LUN의 연결이 'dedicated' 옵션과 분리되거나 전용 스토리지 엔터티 또는 LUN의 연결이 '공유' 옵션과 분리된 경우 'SnapDrive storage disconnect' 명령이 오류를 표시합니다.
+* SnapDrive for UNIX는 마스터 노드에서 'SnapDrive storage disconnect' 명령을 실행합니다. 이 경우 스토리지 엔터티가 폐기되고 마스터가 아닌 모든 노드의 LUN 연결이 끊기며 호스트 클러스터의 마스터 노드에서 LUN의 연결이 끊어집니다. 이 시퀀스 중에 오류 메시지가 발생하면 스토리지 연결 해제 작업이 실패합니다.
+

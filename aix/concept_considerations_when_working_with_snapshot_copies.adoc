@@ -1,0 +1,34 @@
+---
+permalink: aix/concept_considerations_when_working_with_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, considerations, snapshot, copy 
+summary: 스냅샷 복사본을 사용할 때는 SnapDrive for UNIX가 생성한 스냅샷 복사본에서만 작동한다는 점, 또는 스냅샷 복사본이 스토리지 시스템에서 호스트로 자동으로 복제된다는 점 등과 같이 주의해야 할 몇 가지 사항이 있습니다. 
+---
+= Snapshot 복사본으로 작업할 때의 고려 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본을 사용할 때는 SnapDrive for UNIX가 생성한 스냅샷 복사본에서만 작동한다는 점, 또는 스냅샷 복사본이 스토리지 시스템에서 호스트로 자동으로 복제된다는 점 등과 같이 주의해야 할 몇 가지 사항이 있습니다.
+
+스냅샷 작업을 수행할 때는 다음 사항을 고려해야 합니다.
+
+* SnapDrive for UNIX는 생성한 스냅샷 복사본에서만 작동합니다.
++
+생성하지 않은 스냅샷 복사본은 복원할 수 없습니다.
+
+* 타겟 스토리지 시스템에 스냅샷 복사본을 생성하면 스냅샷 복사본이 타겟 스토리지 시스템에 생성되는 소스 스토리지 시스템에서 스냅샷 복사본이 자동으로 복제됩니다.
++
+SnapDrive for UNIX를 사용하면 대상 스토리지 시스템에도 스냅샷 복사본을 복원할 수 있습니다.
+
+* "SnapDrive snap connect" 명령을 사용하여 마지막 연결(또는 아직 연결)된 동일한 호스트의 새 위치에 있는 스냅샷 복사본에 연결할 때 원래 호스트에 연결됩니다.
+* 여러 스토리지 시스템 볼륨 또는 여러 스토리지 시스템에 걸쳐 있는 스토리지 엔터티에 대한 스냅샷 지원은 소프트웨어 스택에서 고정 작업을 허용하지 않는 구성에 따라 제한됩니다.
+* NFS 프로토콜을 통해 볼륨을 내보내는 경우 UNIX용 SnapDrive 명령이 작동하려면 익명 사용자 ID 옵션을 0으로 설정해야 합니다.
+* 단일 디스크 그룹에 JFS 파일 시스템(JFS 및 JFS2)이 두 개 있는 경우 SnapDrive for UNIX는 JFS2 파일 시스템에 대해서만 작업을 지원합니다.
+* SnapDrive for UNIX를 사용하면 동시 볼륨 그룹의 스냅샷 복사본을 생성하고 동일한 속성을 사용하여 클론 복제 또는 복원할 수 있습니다.
+* 단일 파일 SnapRestore(SFSR) 작업 후 스냅샷 복사본 생성이 즉시 실패합니다.
++
+시간이 지난 후 작업을 다시 시도해야 합니다. 자세한 내용은 를 참조하십시오 link:http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/home.html["Clustered Data ONTAP 논리적 스토리지 관리 가이드 를 참조하십시오"].
+
+

@@ -1,0 +1,27 @@
+---
+permalink: solaris/task_disconnectingsnapshot_copieswith_shared_storageentities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy, shared, storage 
+summary: SnapDrive snap disconnect 명령을 사용하여 공유 스토리지 엔터티가 포함된 스냅샷 복사본의 연결을 끊을 수 있습니다. 
+---
+= 공유 스토리지 엔터티와 스냅샷 복사본의 연결을 끊는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap disconnect" 명령을 사용하여 공유 스토리지 엔터티가 포함된 스냅샷 복사본의 연결을 끊을 수 있습니다.
+
+.단계
+. 다음 명령 구문을 입력합니다.
++
+"* SnapDrive 스냅 분리 {-dG|-fs}_file_spec_[_file_spec..._] {-dg|-fs}_file_spec_[_file_spec..._]...] _long_snap_name_[-full] [-DeviceType 공유] [-fstype_type_] [-vmtype_type_] [-split] *
+
+
+
+이 예에서는 공유 파일 시스템의 연결을 끊습니다.
+
+[listing]
+----
+# snapdrive snap disconnect -fs /mnt/oracle
+----

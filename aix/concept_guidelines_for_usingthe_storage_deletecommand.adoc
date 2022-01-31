@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_guidelines_for_usingthe_storage_deletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, storage, delete, command 
+summary: SnapDrive 스토리지 삭제 명령은 UNIX용 SnapDrive에서 몇 가지 제한 사항이 있습니다. 
+---
+= storage delete 명령을 사용하기 위한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 스토리지 삭제 명령은 UNIX용 SnapDrive에서 몇 가지 제한 사항이 있습니다.
+
+* 파일 시스템을 삭제하면 SnapDrive for UNIX가 항상 파일 시스템의 마운트 지점을 제거합니다.
+* '-lun' 옵션을 사용하여 호스트 디스크 그룹 또는 파일 시스템의 구성원인 LUN의 이름을 지정하는 경우 'SnapDrive storage delete' 명령이 실패합니다.
+* 호스트에서 다중경로 소프트웨어로 검색되지 않는 LUN의 이름을 지정하기 위해 '-lun' 옵션을 사용하면 SnapDrive storage delete' 명령이 실패합니다.
+

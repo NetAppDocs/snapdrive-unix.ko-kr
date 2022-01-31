@@ -1,0 +1,19 @@
+---
+permalink: linux-administration/concept_guidelines_for_the_storage_resize_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, command, resize, guidelines 
+summary: SnapDrive 스토리지 크기 조정 명령을 사용할 때는 몇 가지 지침을 따라야 합니다. 
+---
+= 스토리지 크기 조정 명령에 대한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 스토리지 크기 조정 명령을 사용할 때는 몇 가지 지침을 따라야 합니다.
+
+* 스토리지 크기 조정 작업은 스토리지 크기만 늘릴 수 있습니다. 이 방법을 사용하여 요소의 크기를 줄일 수 없습니다.
+* 모든 LUN은 동일한 스토리지 시스템 볼륨에 있어야 합니다.
+* 크기 조정 작업은 논리 호스트 볼륨이나 논리 호스트 볼륨 또는 LUN에 상주하는 파일 시스템에서는 직접 지원되지 않습니다. 이 경우 LVM 명령을 사용하여 스토리지의 크기를 조정해야 합니다.
+* LUN의 크기는 조정할 수 없습니다. 새 LUN을 추가하려면 '-addlun' 옵션을 사용해야 합니다.
+

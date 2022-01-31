@@ -1,0 +1,31 @@
+---
+permalink: aix/concept_using_the_snapshotdisconnectoperation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, disconnect, operation 
+summary: SnapDrive snap disconnect 명령을 사용하여 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 있는 스냅샷 복사본의 연결을 끊을 수 있습니다. 
+---
+= 스냅샷 연결 해제 작업 사용
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap disconnect" 명령을 사용하여 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 걸쳐 있는 스냅샷 복사본의 연결을 끊을 수 있습니다.
+
+"SnapDrive snap disconnect" 명령을 사용하여 LUN에 대한 매핑을 제거하거나, 스토리지 엔터티 및 기본 LUN에 대한 매핑을 제거하거나, 스냅샷 복사본의 NFS 디렉토리에 대한 매핑을 제거할 수 있습니다.
+
+이 명령을 사용하면 여러 스토리지 시스템 볼륨 또는 여러 스토리지 시스템에 걸쳐 있는 스냅샷 복사본의 연결을 끊을 수 있습니다. 스토리지 엔터티와 볼륨은 동일한 스토리지 시스템 또는 다른 스토리지 시스템에 상주할 수 있습니다.
+
+이 명령을 사용하여 다음 중 하나를 분리합니다.
+
+* LUN을 클릭합니다
+* LUN에 직접 생성된 파일 시스템입니다
+* LUN에 생성된 디스크 그룹, 호스트 볼륨 및 파일 시스템
+* NFS 디렉토리 트리입니다
+* LUN에 생성된 공유 디스크 그룹, 호스트 볼륨 및 파일 시스템
+
+
+연결 끊기 작업으로 연결된 스냅샷 복사본이 수정되지 않습니다. 그러나 기본적으로 이 작업은 해당 접속 작업에서 생성된 모든 임시 LUN 또는 클론을 삭제합니다.
+
+
+NOTE: LUN, LUN의 파일 시스템 및 LVM 엔터티의 경우 이 명령은 'SnapDrive 스토리지 삭제'와 같습니다.

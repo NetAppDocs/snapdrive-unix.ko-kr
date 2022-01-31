@@ -1,0 +1,29 @@
+---
+permalink: aix/task_decompressing_the_downloaded_software.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, decompress, download, software 
+summary: NetApp Support 사이트에서 SnapDrive for UNIX 소프트웨어 패키지를 다운로드한 후 설치를 위해 파일의 압축을 풀어야 합니다. 
+---
+= 다운로드한 소프트웨어의 압축 해제
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Support 사이트에서 SnapDrive for UNIX 소프트웨어 패키지를 다운로드한 후 설치를 위해 파일의 압축을 풀어야 합니다.
+
+.단계
+. CLI(Command-Line Interface) 프롬프트에서 다음 명령을 입력합니다.
++
+'* NetApp.SnapDrive_AIX_5_2.Z* 압축 해제
+
++
+소프트웨어 다운로드는 NetApp Support 사이트 를 참조하십시오.
+
+
+
+* 관련 정보 *
+
+http://mysupport.netapp.com["NetApp 지원"]
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp 상호 운용성"]

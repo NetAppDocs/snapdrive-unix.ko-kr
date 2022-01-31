@@ -1,0 +1,25 @@
+---
+permalink: linux-administration/concept_supported_fc_iscsi_or_nfs_configurations.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, fc, iscsi, nfs, support, ha, host, cluster 
+summary: SnapDrive for UNIX는 호스트 클러스터 및 HA 쌍 토폴로지를 지원합니다. FC 또는 iSCSI 구성은 FC Host Utilities 또는 iSCSI Host Utilities가 지원하는 것과 동일한 호스트 클러스터 및 HA 쌍 구성을 지원합니다. 
+---
+= 지원되는 FC, iSCSI 또는 NFS 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 호스트 클러스터 및 HA 쌍 토폴로지를 지원합니다. FC 또는 iSCSI 구성은 FC Host Utilities 또는 iSCSI Host Utilities가 지원하는 것과 동일한 호스트 클러스터 및 HA 쌍 구성을 지원합니다.
+
+UNIX용 SnapDrive는 다음과 같은 호스트 클러스터 및 HA 쌍 토폴로지를 지원합니다.
+
+* 단일 호스트가 단일 스토리지 시스템에 접속되어 있는 독립 실행형 구성입니다
+* 스토리지 시스템의 HA 쌍 페일오버가 포함되는 모든 토폴로지
+* NetApp에서 지원하는 호스트 클러스터가 있는 모든 토폴로지
+
+
+사용 중인 호스트 및 스토리지 시스템에 권장되는 구성에 대한 자세한 내용은 Linux Host Utilities 설명서를 참조하십시오.
+
+
+NOTE: 유틸리티 설명서에 언급되지 않은 UNIX용 SnapDrive 구성이 필요한 경우 기술 지원 부서에 문의하십시오.

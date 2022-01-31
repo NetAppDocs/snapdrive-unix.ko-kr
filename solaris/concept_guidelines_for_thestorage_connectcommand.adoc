@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_guidelines_for_thestorage_connectcommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, command 
+summary: SnapDrive storage connect 명령을 사용하려면 몇 가지 지침을 따라야 합니다. 
+---
+= storage connect 명령에 대한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage connect 명령을 사용하려면 몇 가지 지침을 따라야 합니다.
+
+LVM 엔터티를 포함하는 스토리지에는 특별한 요구사항이 있습니다. "SnapDrive storage connect" 명령을 사용하여 LVM 엔티티를 연결하려면 스토리지 계층의 각 엔터티가 정확히 다음 엔티티의 인스턴스를 하나씩 가지고 있도록 스토리지를 생성해야 합니다. 예를 들어, "SnapDrive storage connect" 명령을 사용하여 하나의 호스트 볼륨(hostvol1)과 하나의 파일 시스템(fs1)을 가진 디스크 그룹(DG1)이 있는 스토리지 계층을 연결할 수 있습니다. 그러나 "SnapDrive storage connect" 명령을 사용하여 두 개의 호스트 볼륨(hostvol1 및 hostvol2)과 두 개의 파일 시스템(fs1 및 fs2)이 있는 디스크 그룹(DG1)이 있는 계층을 연결할 수는 없습니다.

@@ -1,0 +1,96 @@
+---
+permalink: aix/concept_informationrequired_forusing_the_snapdrive_storageresize_command.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, information, required, storage, resize, command 
+summary: SnapDrive 스토리지 크기 조정 명령을 사용하려면 먼저 몇 가지 정보를 제공해야 합니다. 이 정보는 명령을 올바르게 사용하는 데 도움이 됩니다. 
+---
+= SnapDrive 스토리지 크기 조정 명령을 사용하는 데 필요한 정보입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 스토리지 크기 조정 명령을 사용하기 전에 몇 가지 정보를 제공해야 합니다. 이 정보는 명령을 올바르게 사용하는 데 도움이 됩니다.
+
+|===
+| 요구 사항 | 인수 
+
+
+ a| 
+디스크 또는 볼륨 그룹의 크기를 늘릴 것인지 결정하고 해당 개체의 이름을 적절한 인수로 입력합니다.
+
+
+
+ a| 
+디스크 그룹(-DG file_spec) 또는 볼륨 그룹(-vg file_spec)
+ a| 
+_ 디스크 또는 볼륨 그룹의 이름 _
+
+
+
+ a| 
+스토리지 크기를 늘릴 방법을 결정합니다. 이 명령을 사용할 때는 다음 사항에 유의하십시오.
+
+* '-growby' 옵션을 사용하면 size 인수에 지정된 바이트 단위로 엔터티 크기를 늘릴 수 있습니다.
+* 새 총 크기가 '_size_' 인수에 지정된 바이트 수가 되도록 엔터티 크기를 늘리려면 '-growto' 옵션을 사용합니다.
+* '-addlun' 옵션을 사용하면 내부 디스크 그룹에 내부적으로 생성된 새 LUN을 추가하여 엔터티 크기를 늘릴 수 있습니다. 이 인수를 사용하지 않으면 SnapDrive for UNIX는 디스크 그룹의 마지막 LUN 크기를 '-growby' 옵션 또는 '-growto' 옵션에 지정된 바이트 크기에 맞게 늘립니다.
+
+
+
+
+ a| 
+스토리지를 늘릴 바이트 수 지정('-growby_size_')
+ a| 
+'_number_of_bytes _'
+
+
+
+ a| 
+스토리지가 도달할 바이트 크기('-growto_size_')를 지정합니다.
+ a| 
+'_number_of_bytes _'
+
+
+
+ a| 
+UNIX용 SnapDrive에 디스크 그룹에 새 LUN을 추가하여 크기를 늘릴 것을 알립니다("-addlun").
+ a| 
+
+
+
+ a| 
+SnapDrive for UNIX에서 공간 예약 '-reserve|-noreserve'를 생성하거나 생성하지 않고 크기를 늘리도록 합니다
+ a| 
+
+
+
+ a| 
+* 선택 사항: * igroup 이름을 제공하는 대신 호스트에서 기본 igroup을 사용하는 것이 좋습니다.
+
+
+
+ a| 
+iGroup 이름('-igroup')
+ a| 
+'_IG_NAME_'
+
+
+
+ a| 
+'-fstype'입니다
+ a| 
+'_type_'
+
+
+
+ a| 
+'-vmtype'입니다
+ a| 
+'_type_'
+
+
+
+ a| 
+*선택 사항:* UNIX용 SnapDrive 작업에 사용할 파일 시스템 및 볼륨 관리자의 유형을 지정합니다.
+
+|===

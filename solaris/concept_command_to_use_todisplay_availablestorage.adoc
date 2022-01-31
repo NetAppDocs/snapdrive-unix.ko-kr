@@ -1,0 +1,26 @@
+---
+permalink: solaris/concept_command_to_use_todisplay_availablestorage.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, display, nfs, lun, command 
+summary: SnapDrive storage show 또는 SnapDrive storage 목록에는 하나 이상의 스토리지 엔터티의 기반이 되는 LUN이나 NFS 디렉토리 트리가 표시됩니다. SnapDrive storage show 명령을 사용하여 디스크 그룹, 호스트 볼륨, 파일 시스템 또는 NFS 디렉토리 트리의 스냅샷 복사본에 있는 내용을 알아보고 확인할 수 있습니다. 
+---
+= 명령을 사용하여 사용 가능한 스토리지를 표시합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive storage show 또는 SnapDrive storage list는 하나 이상의 스토리지 엔터티의 기반이 되는 LUN이나 NFS 디렉토리 트리를 보여 줍니다. 'SnapDrive storage show' 명령을 사용하면 디스크 그룹, 호스트 볼륨, 파일 시스템 또는 NFS 디렉토리 트리의 스냅샷 복사본에 있는 내용을 파악하고 알 수 있습니다.
+
+다음 명령을 사용하여 다음 정보를 표시할 수 있습니다.
+
+* 특정 스토리지 시스템 또는 스토리지 시스템 볼륨에 사용할 수 있는 LUN입니다
+* 파일 시스템, 호스트 볼륨 또는 디스크 그룹과 연결된 LUN
+* NFS 마운트 지점 및 디렉토리 트리입니다
+* 특정 호스트에 알려진 LUN 및 LUN에 포함된 모든 LVM 엔티티입니다
+* 특정 호스트에 알려진 디바이스입니다
+* 공유 및 전용 호스트의 리소스
+
+
+
+NOTE: 명령줄에서 SnapDrive storage show 또는 SnapDrive storage list를 사용할 수 있습니다.

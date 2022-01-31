@@ -1,0 +1,31 @@
+---
+permalink: solaris/task_verifying_login_information_for_vserver.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, login, vserver, information 
+summary: SnapDrive for UNIX에서 SnapDrive config list 명령을 사용하여 SVM이 구성되었는지 확인할 수 있습니다. 
+---
+= SVM에 대한 로그인 정보 확인
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX에서 'SnapDrive config list' 명령을 사용하여 SVM이 구성되었는지 확인할 수 있습니다.
+
+.단계
+. SnapDrive config list 명령을 입력한다
++
+이 명령은 SnapDrive for UNIX에 지정된 사용자 이름 또는 SVM을 표시하며 SVM에 대한 암호를 표시하지 않습니다.
+
++
+다음 예에서는 '_vsadmin_'을 '_StorageSystem_'으로 표시합니다.
+
++
+[listing]
+----
+# snapdrive config list
+username    appliance name   appliance type
+-------------------------------------------
+vsadmin     clstr-vs2        StorageSystem
+----
+

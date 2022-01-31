@@ -1,0 +1,28 @@
+---
+permalink: aix/task_viewing_the_list_of_igroups.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, view, igroup, list 
+summary: 호스트에 구성된 모든 igroup을 볼 수 있습니다. 
+---
+= igroup 목록 보기
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트에 구성된 모든 igroup을 볼 수 있습니다.
+
+.단계
+. 호스트 시스템에서 다음 명령을 입력합니다.
++
+' * SnapDrive igroup list * '
+
++
+[listing]
+----
+snapdrive igroup list
+appliance name   igroup name
+-----------------------------
+toaster        ig
+----
+

@@ -1,0 +1,33 @@
+---
+permalink: solaris/concept_guidelines_for_storage_connection_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, connect, host, cluster 
+summary: 호스트 클러스터 환경에서 SnapDrive storage connect 명령을 사용하기 전에 몇 가지 지침을 따라야 합니다. 
+---
+= 호스트 클러스터 환경의 스토리지 접속 지침
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 클러스터 환경에서 'SnapDrive storage connect' 명령을 사용하기 전에 몇 가지 지침을 따라야 합니다.
+
+* 공유 디스크 그룹 또는 파일 시스템을 사용하는 호스트 클러스터 구성에 새 노드가 추가되면 "SnapDrive storage connect-DeviceType shared" 명령을 사용합니다. 호스트 클러스터의 모든 노드에서 SnapDrive 스토리지 접속 작업을 실행할 수 있습니다.
+* 스토리지 접속 작업을 성공적으로 수행하려면 다음과 같은 상황이 발생하지 않아야 합니다.
++
+** 스토리지 엔터티가 호스트 클러스터의 노드에 있어서는 안 됩니다.
+** LUN을 호스트 클러스터의 노드에 매핑하면 안 됩니다.
+
+
+* '-DeviceType dedicated' 옵션을 사용하거나, 기본값은 dedicated 이므로 명령줄 구문에 '-DeviceType' 옵션을 생략하여 특정 노드의 스토리지 엔터티에 연결할 수 있습니다.
+* 파일 시스템의 호스트 클러스터 전체 스토리지 연결은 VxFS(Veritas File System)와 함께 Veritas Volume Manager를 사용하는 디스크 그룹에서 지원됩니다. 이 작업은 원시 LUN에서 지원되지 않습니다. 즉, "-nolvm" 옵션은 지원되지 않습니다.
+* '-igroup' 옵션은 'SnapDrive storage connect' 명령에서 지원되지 않습니다.
+* 다음 중 하나가 참인 경우 스토리지 접속 작업이 실패합니다.
++
+** 스토리지 엔터티를 연결하는 동안 오류가 발생하는 경우 SnapDrive for UNIX는 호스트 클러스터의 마스터 노드에서 이 작업을 실행합니다. 공유 스토리지 엔터티를 생성하기 전에 LUN을 생성하고, LUN을 마스터 노드에 매핑한 다음, LUN을 마스터가 아닌 모든 노드에 매핑합니다. SnapDrive for UNIX는 내부적으로 모든 노드의 igroup을 생성하고 관리합니다.
+** CVM(clustered Volume Manager)을 시작하기 전에 호스트 클러스터의 노드가 종료되고 재부팅되면 LUN에서 사용하는 공유 디스크 그룹이 노드에서 검색되어야 합니다. 기본적으로 LUN은 FC 포트 주소가 변경되지 않으면 표시되며, 그렇지 않으면 "SnapDrive storage connect" 명령을 사용하여 LUN을 매핑해야 합니다.
+
+
+* 전용 스토리지 엔터티 데이터를 사용하여 생성된 LUN의 스토리지 엔터티에 대해 공유 스토리지 접속 작업을 수행할 수 있으며, 이후 연결이 끊어진 경우에는 스토리지 엔터티가 호스트 클러스터 노드에 없는 경우에만 공유 스토리지 접속 작업을 수행할 수 있습니다.
+* 현재 노드가 호스트 클러스터의 일부가 아니거나 호스트 클러스터에 스토리지 엔터티가 없는 경우에만 공유 스토리지 엔터티 메타데이터를 사용하는 LUN의 스토리지 엔터티에 대한 전용 스토리지 연결 작업을 수행할 수 있습니다.
+

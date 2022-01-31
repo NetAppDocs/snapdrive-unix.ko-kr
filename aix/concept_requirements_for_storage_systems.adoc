@@ -1,0 +1,68 @@
+---
+permalink: aix/concept_requirements_for_storage_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, requirement 
+summary: 설정하기 전에 스토리지 시스템 요구 사항을 고려해야 합니다. 
+---
+= 요구사항을 충족해야 합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+설정하기 전에 스토리지 시스템 요구 사항을 고려해야 합니다.
+
+|===
+| 구성 요소 | 요구 사항 
+
+
+ a| 
+운영 체제
+ a| 
+Data ONTAP 7.3.5 이상
+
+* UNIX용 SnapDrive는 FlexVol 볼륨을 지원하지만 모든 FlexVol 볼륨 기능을 사용하는 것은 아닙니다.
+* NFS를 사용하는 구성에서는 Data ONTAP 7.3.5 이상을 사용해야 하며 FlexVol 볼륨은 연결된 NFS 파일 또는 디렉토리 트리를 읽고 쓰려면 'SnapDrive snap connect'를 사용해야 합니다.
++
+기존 볼륨을 사용하는 구성에서는 NFS 파일 및 디렉토리 트리에 대한 읽기 전용 액세스가 제공됩니다.
+
+
+
+
+
+ a| 
+스토리지 시스템 설정
+ a| 
+스토리지 시스템 페일오버가 발생할 경우 사용할 수 있는 HA 쌍의 파트너 IP 주소를 지정해야 합니다.
+
+
+NOTE: 스토리지 시스템에서 설치 프로그램을 실행할 때 IP 주소를 지정합니다.
+
+
+
+ a| 
+추가 수익 실적을
+ a| 
+* 호스트 플랫폼에 따라 FC, iSCSI 또는 NFS가 사용됩니다
+* FlexClone 라이센스
++
+
+NOTE: SnapDrive for UNIX를 실행하려면 스토리지 시스템에서 실행 중인 적절한 프로토콜이 있어야 합니다.
+
+* SnapRestore 소프트웨어
+* MultiStore 소프트웨어
++
+스토리지 시스템을 설정할 때 SnapRestore 및 MultiStore 라이센스를 설정해야 합니다. vFiler 환경을 설정하려면 MultiStore 라이센스가 필요합니다.
+
+* 스토리지 시스템에 대한 보안 HTTP 액세스.
+
+
+|===
+UNIX용 SnapDrive 작업은 스토리지 시스템 호스트 이름과 관련하여 대/소문자를 구분하지 않으므로 스토리지 시스템을 구성할 때 IP 주소가 고유해야 합니다.
+
+
+NOTE: 최신 SnapDrive 요구사항은 상호 운용성 매트릭스 를 참조하십시오.
+
+* 관련 정보 *
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp 상호 운용성"]

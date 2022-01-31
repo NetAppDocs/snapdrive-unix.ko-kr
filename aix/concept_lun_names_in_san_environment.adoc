@@ -1,0 +1,28 @@
+---
+permalink: aix/concept_lun_names_in_san_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, san, environment 
+summary: 모든 SAN 작업에서 LUN 이름의 형식은 IP 주소로 확인되었는지에 관계없이 항상 호스트 이름이어야 합니다. 순수 SAN 환경에서는 데이터 경로의 개념이 없습니다. 관리 인터페이스 매핑은 데이터 경로 인터페이스와 같아야 합니다. 
+---
+= SAN 환경의 LUN 이름입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+모든 SAN 작업에서 LUN 이름의 형식은 IP 주소로 확인되었는지에 관계없이 항상 호스트 이름이어야 합니다. 순수 SAN 환경에서는 데이터 경로의 개념이 없습니다. 관리 인터페이스 매핑은 데이터 경로 인터페이스와 같아야 합니다.
+
+
+
+== SAN 다중 서브넷 환경의 구성 목록 출력
+
+[listing]
+----
+
+#snapdrive config set -mgmtpath f3050-197-91 f3050-197-91
+
+#snapdrive config list -mgmtpath
+system name        management interface   datapath interface
+------------------------------------------------------------
+bart               10.72.197.91           10.72.197.91
+----

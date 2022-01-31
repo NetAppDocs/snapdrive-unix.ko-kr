@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_command_to_use_todisplay_snapshotcopy_information.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, snapshot, copy, list 
+summary: 'SnapDrive snap show\(또는 list\) 명령을 사용하여 스냅샷 복사본에 대한 정보를 표시할 수 있습니다.' 
+---
+= 스냅샷 복사본 정보를 표시하는 데 사용되는 명령입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap show"(또는 "list") 명령을 사용하여 스냅샷 복사본에 대한 정보를 표시할 수 있습니다.
+
+"SnapDrive snap show"(또는 "list") 명령을 사용하여 UNIX용 SnapDrive에서 생성된 각 스냅샷 복사본에 대한 정보를 표시할 수 있습니다. 이 명령을 사용하여 다음 정보를 표시할 수 있습니다.
+
+* 기술을 자세히 소개합니다
+* 볼륨에 대해 생성할 수 있습니다
+* NFS 파일 및 디렉토리 트리, 볼륨 그룹, 디스크 그룹, 파일 시스템, 논리 볼륨, 볼륨을 지원합니다
+* Snapshot 복사본
+
+
+
+NOTE: 이 명령의 '표시'와 '목록'은 동의어입니다. UNIX 이상인 경우 SnapDrive 2.0에서 스냅샷 복사본에 대한 정보를 표시할 때 Snapshot 복사본 이름의 긴 형식을 사용해야 합니다.

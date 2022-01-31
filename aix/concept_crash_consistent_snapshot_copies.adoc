@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_crash_consistent_snapshot_copies.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, crash, consistent, snapshot, copy 
+summary: 파일 시스템 또는 디스크 그룹에 대해 충돌 시에도 정합성 보장 스냅샷 복사본을 생성해야 할 수 있습니다. SnapDrive for UNIX는 엔터티에 지정된 모든 스토리지 시스템 볼륨의 이미지가 포함된 스냅샷 복사본을 생성합니다. 
+---
+= 충돌 시에도 정합성 보장 스냅샷 복사본
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+파일 시스템 또는 디스크 그룹에 대해 충돌 시에도 정합성 보장 스냅샷 복사본을 생성해야 할 수 있습니다. SnapDrive for UNIX는 엔터티에 지정된 모든 스토리지 시스템 볼륨의 이미지가 포함된 스냅샷 복사본을 생성합니다.
+
+파일 시스템 또는 디스크 그룹과 같은 스토리지 엔터티의 스냅샷 복사본을 생성하면 SnapDrive for UNIX는 'file_spec' 인수를 사용하여 지정한 엔터티를 구성하는 모든 스토리지 시스템 볼륨의 이미지가 포함된 스냅샷 복사본을 생성합니다. "file_spec" 인수는 SnapDrive for UNIX가 스냅샷 복사본을 생성하는 데 사용하는 파일 시스템, LUN 또는 NFS 디렉토리 트리 같은 스토리지 엔터티를 지정합니다.
+
+SnapDrive for UNIX는 스냅샷 복사본에서 요청한 엔터티를 구성하는 일관된 스토리지 구성 요소를 만듭니다. 즉, 'SnapDrive snap create' 명령 'file_spec' 인수에 지정된 범위를 벗어나는 LUN 또는 디렉토리가 스냅샷 복사본에 정합성이 보장된 이미지를 가지고 있지 않을 수 있습니다. UNIX용 SnapDrive를 사용하면 스냅샷 복사본에서 일관된 "file_spec" 인수로 지정된 엔터티만 복원할 수 있습니다.
+
+단일 스토리지 시스템 볼륨에 포함된 엔터티의 스냅샷 복사본은 항상 충돌 시에도 정합성이 보장됩니다. SnapDrive for UNIX는 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 걸쳐 있는 Snapshot 복제본도 장애 발생 시 정합성이 보장되도록 하기 위해 특별한 단계를 수행합니다. Data ONTAP for UNIX에서 충돌 일관성을 보장하기 위해 사용하는 방법은 스냅샷 복사본의 스토리지 엔터티가 상주하는 위치에 사용되는 SnapDrive 버전에 따라 다릅니다.

@@ -1,0 +1,103 @@
+---
+permalink: solaris/reference_snapshot_operation_command_lines.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, command, line, operation 
+summary: SnapDrive for UNIX 명령은 스냅샷 작업에 사용됩니다. 
+---
+= 스냅샷 작업 명령줄
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 명령은 스냅샷 작업에 사용됩니다.
+
+다음 표에는 스냅샷 작업을 위한 다양한 명령줄 옵션이 나와 있습니다.
+
+|===
+| 작동 | 명령줄 옵션 
+
+
+ a| 
+생성
+ a| 
+'SnapDrive 스냅 생성[-lun|-dg|-vg|-hostvol|-lvol|-fs]_file_spec_[file_spec...] [{-LUN|-DG|-vg|-hostvol|-lvol|-fs}_file_spec_[file_spec...] ...] -snapname_snap_name_ [-force [-nop프롬프트] [-reloced] [-fstype] [-vmtype]
+
+
+
+ a| 
+표시/목록
+ a| 
+'SnapDrive snap{show|list} - filervol_filervol_[_filervol..._][-verbose]'
+
+
+
+ a| 
+'SnapDrive snap{show|list}[-verbose] {-vg|-dg|-fs|-lvol|-hostvol}_file_spec_[_file_spec..._][-fstype type][-vmtype]'
+
+
+
+ a| 
+'SnapDrive snap[-verbose][-snapname]_long_snap_name_[snap_name...]'
+
+
+
+ a| 
+'SnapDrive snap{show|list}[-verbose][-lun|-vg|-dg|-fs|-lvol|-hostvol]_file_spec_[_file_spec..._]'
+
+
+
+ a| 
+연결
+ a| 
+"SnapDrive snap connect-lun_s_lun_name d_lun_name _ [[-lun]_s_lun_named_lun_name _...] -snapname_long_snap_name_ [- DeviceType{shared|dedicated}] [-split] [-clone{lunclone|optimal|unrestricted}] [-prefixfvprefixstr] [-verbose]
+
+
+NOTE: SnapDrive snap connect 명령에서 LUN 이름은 "lun_name" 또는 "qtree_name/lun_name" 형식이어야 합니다.
+
+
+
+ a| 
+``SnapDrive snap connect_fspec_set_[_fspec_set..._] -snapname_long_snap_name_[-DeviceType{shared|dedicated}][-autostupe][-noptOptions][- mntopts options][{-reserve|-noreserve}][-readonly] licostfstr] licrevunrestricted
+
+[NOTE]
+====
+fspec_set 인수의 형식은 다음과 같습니다.
+
+'[-vg|-dg|-fs|-lvol|-hostvol]_src_file_spec_[_destdg|-destvg} DgName][{-destlv|-desthv} lvname]'
+
+====
+
+
+ a| 
+이름 바꾸기
+ a| 
+'SnapDrive snap rename - [snapname]_old_long_snap_name new_snap_name_[-force[-nop프롬프트]
+
+
+
+ a| 
+복원
+ a| 
+'SnapDrive snap restore[-lun|-dg|-vg|-hostvol|-lvol|-fs|-file]_file_spec_[file_spec...] [{-LUN|-DG|-vg|-hostvol|-lvol|-fs|-file}_file_spec_[_file_spec_...] ...] -snapname_snap_name_[-force [-not프롬프트] [-mntopts options] [{-reserve |-noreserve}] [-DeviceType{shared|dedicated}] [-vbsr [preview | execute]'
+
+
+
+ a| 
+연결을 끊습니다
+ a| 
+'SnapDrive snap disconnect-lun_long_lun_name_[_lun_name..._] [-DeviceType{shared|dedicated}] [-fstype type] [-vmtype] [-split]'
+
+
+
+ a| 
+'SnapDrive snap disconnect{-dg|-vg|-hostvol|-lvol|-fs}_file_spec_[file_spec...] [{-DG|-vg|-hostvol|-lvol|-fs}_file_spec_[file_spec...] ...] [-FULL] [-fstype type] [-vmtype type] [-split] [-DeviceType{shared|dedicated}]
+
+
+
+ a| 
+삭제
+ a| 
+'SnapDrive snap delete[-snapname]__long_snap_name_[_snap_name..._][-verbose][-force[-nop프롬프트]'
+
+|===

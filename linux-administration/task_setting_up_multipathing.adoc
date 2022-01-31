@@ -1,0 +1,116 @@
+---
+permalink: linux-administration/task_setting_up_multipathing.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multipathing, configure 
+summary: 다중 경로를 설정하여 호스트와 스토리지 시스템 간에 여러 네트워크 경로를 구성할 수 있습니다. SnapDrive for UNIX는 다중 경로 환경에서 별칭 사용을 지원합니다. /etc/multipath.conf 파일에 매퍼 장치에 대한 올바른 별칭 이름이 구성되어 있는지 확인해야 합니다. 
+---
+= 다중 경로 설정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다중 경로를 설정하여 호스트와 스토리지 시스템 간에 여러 네트워크 경로를 구성할 수 있습니다. SnapDrive for UNIX는 다중 경로 환경에서 별칭 사용을 지원합니다. '/etc/multipath.conf' 파일에 매퍼 디바이스의 적절한 별칭 이름이 구성되어 있는지 확인해야 합니다.
+
+.단계
+. 호스트를 재부팅한 후 다음 예에서와 같이 다중 경로 데몬이 실행되어야 합니다.
++
+[listing]
+----
+root@lnx197-123 ~]# ps -ef | grep multipathd
+root      5713     1  0 22:44 ?        00:00:00 /sbin/multipathd
+root      5739  1783  0 22:44 pts/1    00:00:00 grep multipathd
+----
++
+다중 경로 데몬이 실행되고 있지 않으면 재부팅 후 데몬을 다시 시작해야 합니다. 다음 명령을 실행하여 다중 경로 데몬을 시작할 수 있습니다.
+
++
+[listing]
+----
+[root@lnx197-123 ~]# chkconfig --level 345 multipathd on
+----
++
+
+NOTE: 다음 표에는 다중 경로 환경에서 별칭 이름 사용을 지원하는 일부 SnapDrive 작업이 나와 있습니다.
+
++
+|===
+| 작동 | 별칭 이름 지원 | 장치 유형 
+
+
+ a| 
+운영 호스트의 운영 호스트에서 SFSR 및 VBSR(Snap Create and Restore)을 수행합니다
+ a| 
+예
+ a| 
+별칭 장치
+
+
+
+ a| 
+운영 또는 2차 스토리지에서 클론 복제
+ a| 
+예
+ a| 
+앨리어싱된 장치
+
+
+
+ a| 
+대체 로 복원합니다
+ a| 
+예
+ a| 
+앨리어싱된 장치
+
+
+
+ a| 
+2차 스토리지에서 복원합니다
+ a| 
+예
+ a| 
+앨리어싱된 장치
+
+|===
++
+** RHEL(Red Hat Enterprise Linux) 6.4 이상 또는 Oracle Linux 6.4 이상을 사용하는 경우에는 '/etc/multipath.conf' 파일에 값을 설정하지 않아도 됩니다.
++
+그러나 필요한 경우 비어 있거나 블랙리스트된 정보와 별칭 이름을 포함할 수 있는 더미 '/etc/multipath.conf' 파일을 유지해야 합니다.
+
+** SUSE Linux Enterprise Server(SLES) 11 SP3 이상을 사용하는 경우 '/etc/multipath.conf' 파일을 유지 관리할 필요가 없습니다.
++
+그러나 필요한 경우 블랙리스팅 정보와 별칭 이름을 포함하는 `/etc/multipath.conf' 파일이 있을 수 있습니다.
+
+
+
+. 문자열 'Hitachi_HUS103073FL3800_V3WTL7XA'를 'scsi_id-Gus/block/<LD>'의 출력으로 교체합니다. 여기서 'LD'는 로컬 블록 디바이스 이름입니다.
++
+
+NOTE: 일부 로컬 블록 디바이스의 경우 scsi_id 명령이 문자열을 반환하지 않을 수 있습니다. 이 경우 devnode 지시문을 사용하여 로컬 블록 디바이스를 블랙리스트에 추가해야 합니다.
+
+. '/etc/security/limits.conf' 파일에 다음 줄을 추가하여 프로세스에서 호스트에서 열 수 있는 파일 설명자 수를 늘립니다.
++
+[listing]
+----
+soft nofile 4096
+       hard nofile 4096
+----
+. 다음 명령을 입력하여 시스템을 재부팅한 후 Linux SG 드라이버가 항상 로드되었는지 확인합니다.
++
+[listing]
+----
+echo "modprobe sg" >> /etc/rc.local
+----
+. 설정을 활성화하려면 호스트를 재부팅합니다.
++
+
+NOTE: lvm2-2.02.17-7.27.8 및 "_filter_" 설정은 "["r|/dev/.\ * /by-path/. * |", """ r|/dev/.\ * /by-id/. * |", """", "" r|/dev/cciss/.\ * |", """.sm/" 파일에 지정되어야 합니다.
+
+
+
+* 관련 정보 *
+
+http://mysupport.netapp.com["NetApp 지원"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Linux Unified Host Utilities 7.1 설치 가이드"]

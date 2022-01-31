@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_snapdrive_for_unix_installation_and_upgrade.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, upgrade, unix 
+summary: 호스트 시스템에 UNIX용 SnapDrive를 설치하려면 특정 작업을 수행해야 합니다. 설치를 시작하기 전에 다양한 시스템 요구 사항 및 구성 고려 사항을 숙지해야 합니다. 
+---
+= UNIX용 SnapDrive 설치 또는 업그레이드
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 시스템에 UNIX용 SnapDrive를 설치하려면 특정 작업을 수행해야 합니다. 설치를 시작하기 전에 다양한 시스템 요구 사항 및 구성 고려 사항을 숙지해야 합니다.

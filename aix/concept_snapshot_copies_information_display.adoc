@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_snapshot_copies_information_display.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, information, display, snapshot, copy 
+summary: '스토리지 시스템, 스토리지 시스템 볼륨, LUN 및 기타 스토리지 엔터티의 스냅샷 복사본을 표시할 수 있습니다. SnapDrive snap show\(또는 list\) 명령을 사용하여 스냅샷 복사본을 표시할 수 있습니다.' 
+---
+= Snapshot 복사본 정보 표시가 나타납니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템, 스토리지 시스템 볼륨, LUN 및 기타 스토리지 엔터티의 스냅샷 복사본을 표시할 수 있습니다. 스냅샷 복사본을 표시하려면 "SnapDrive snap show"(또는 "list") 명령을 사용합니다.

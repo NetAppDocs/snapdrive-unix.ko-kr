@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_command_to_use_torename_a_snapshotcopy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, rename, snapshot, copy 
+summary: 스냅샷 복사본의 이름을 변경하려면 스냅샷 스냅 이름 바꾸기 명령을 사용합니다. 
+---
+= 명령을 사용하여 스냅샷 복사본의 이름을 변경합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본의 이름을 변경하려면 '스냅샷 스냅 이름 바꾸기' 명령을 사용합니다.

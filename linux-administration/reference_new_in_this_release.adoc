@@ -1,0 +1,17 @@
+---
+permalink: linux-administration/reference_new_in_this_release.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, release, update, bug, fix 
+summary: UNIX용 SnapDrive 5.3.2 에는 버그 수정만 포함됩니다. 이 릴리즈에는 새로운 기능이 없습니다. 
+---
+= 이 릴리스의 새로운 기능
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive 5.3.2 에는 버그 수정만 포함됩니다. 이 릴리즈에는 새로운 기능이 없습니다.
+
+* 관련 정보 *
+
+https://mysupport.netapp.com/NOW/products/interoperability["NetApp 상호 운용성"]

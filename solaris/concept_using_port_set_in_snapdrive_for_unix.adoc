@@ -1,0 +1,15 @@
+---
+permalink: solaris/concept_using_port_set_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, port, set 
+summary: 포트 세트는 SAN 데이터 포트 또는 인터페이스의 그룹이며, SAN 데이터 포트 또는 인터페이스 집합을 그룹화하여 호스트에서 사용할 수 있는 경로를 제어하는 데 사용됩니다. 
+---
+= UNIX용 SnapDrive에서 설정된 포트 사용
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+포트 세트는 SAN 데이터 포트 또는 인터페이스의 그룹이며, SAN 데이터 포트 또는 인터페이스 집합을 그룹화하여 호스트에서 사용할 수 있는 경로를 제어하는 데 사용됩니다.
+
+포트 세트 구성은 스토리지 시스템의 스토리지 관리자에 의해 생성되며, 이는 선택적 작업입니다. 호스트에 구성된 포트가 없는 경우 호스트는 호스트 SCSI 구성 제한에 따라 모든 경로를 볼 수 있습니다. 스토리지 관리자는 SnapDrive for UNIX를 사용하여 SVM당 단일 포트 세트를 지정할 수 있습니다. 따라서 호스트에서 SVM을 통해 확인할 수 있는 경로 수에 제한이 있습니다.

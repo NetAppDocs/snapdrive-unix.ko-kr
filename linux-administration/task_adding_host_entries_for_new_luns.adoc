@@ -1,0 +1,33 @@
+---
+permalink: linux-administration/task_adding_host_entries_for_new_luns.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, host, entries, lun, command 
+summary: UNIX용 SnapDrive를 사용하여 특정 수의 새 LUN을 생성할 수 있습니다. UNIX용 SnapDrive에서는 이러한 용도로 사용할 수 있는 특정 명령을 제공합니다. 
+---
+= 새 LUN에 대한 호스트 항목 추가
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하여 특정 수의 새 LUN을 생성할 수 있습니다. UNIX용 SnapDrive에서는 이러한 용도로 사용할 수 있는 특정 명령을 제공합니다.
+
+호스트가 특정 수의 새 LUN을 생성할 준비가 되어 있는지 확인합니다. 이러한 LUN은 호스트에 매핑된 스토리지 시스템에 있습니다.
+
+.단계
+. SnapDrive config prepare LUNs-count 수이다
++
+count는 호스트를 준비할 새 LUN의 수입니다.
+
++
+Linux에서 이 명령은 디바이스 파일을 현재 사용할 수 없는 각 잠재적 LUN에 대해 새 '/dev/sg' 디바이스 파일을 추가합니다.
+
++
+[NOTE]
+====
+영구 바인딩을 위해 '/kernel/drv/lpfc.conf' 파일을 수동으로 편집한 경우 FC-bind-WWPN 항목이 뒤에 있는지 확인합니다
+
+'#BEGIN:LPUTIL- 관리형 영구 바인딩'
+
+====
+

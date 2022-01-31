@@ -1,0 +1,83 @@
+---
+permalink: solaris/task_generating_self_signed_certificates.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, certificate, generate, self, signed 
+summary: SnapDrive for UNIX 데몬 서비스를 사용하려면 인증을 위해 자체 서명된 인증서를 생성해야 합니다. CLI와 통신하는 동안 이 인증이 필요합니다. 
+---
+= 자체 서명된 인증서를 생성하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 데몬 서비스를 사용하려면 인증을 위해 자체 서명된 인증서를 생성해야 합니다. CLI와 통신하는 동안 이 인증이 필요합니다.
+
+.단계
+. RSA 키 생성:
++
+"*$openssl genrsa 1024> host.key $chmod 400 host.key *
+
++
+[listing]
+----
+# openssl genrsa 1024 > host.key Generating
+RSA private key, 1024 bit long modulus
+...............................++++++ ...++++++ e is 65537(0x10001)
+# chmod 400 host.key
+----
+. 인증서 생성:
++
+"*$openssl req-new-x509-nodes-sha1-days 365-key host.key > host.cert *"
+
++
+암호화되지 않은 인증서를 만드는 데 '-new', -x509', -nodes 옵션이 사용됩니다. '-days' 옵션은 인증서가 유효한 상태로 유지되는 일 수를 지정합니다.
+
+. 인증서의 x509 데이터를 채우라는 메시지가 나타나면 로컬 데이터를 입력합니다.
++
+[listing]
+----
+# openssl req -new -x509 -nodes -sha1 -days 365 -key host.key > host.cert
+You are about to be asked to enter information that will be incorporated into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN. There are quite a few fields
+but you can leave some blank For some fields there will be a default value, If you enter '.', the field will be left blank.
+
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:California
+Locality Name (eg, city) []:Sunnyvale
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:abc.com
+Organizational Unit Name (eg, section) []:
+Common Name (eg, YOUR name) []:localhost
+Email Address []:postmaster@example.org
+----
++
+
+NOTE: 공통 이름 값은 _localhost_이어야 합니다.
+
+. 메타데이터 추출(선택 사항)
++
+ $ openssl x509 -noout -fingerprint -text < host.cert > host.info
++
+나중에 빠르게 참조할 수 있도록 인증서 메타데이터를 저장할 수 있습니다.
+
+. 키와 인증서 데이터를 결합합니다.
++
+UNIX용 SnapDrive를 사용하려면 키와 인증서 데이터가 같은 파일에 있어야 합니다. 결합된 파일은 키 파일로 보호해야 합니다.
+
++
+"*$cat host.cert host.key>host.pem\*"
+
++
+'* &&rm host.key *'
+
++
+'*$chmod 400 host.pem*'
+
++
+[listing]
+----
+# cat host.cert host.key >   \# /opt/NTAPsnapdrive/snapdrive.pem
+# rm host.key rm: remove regular file `host.key'? y
+# chmod 400  /opt/NTAPsnapdrive/snapdrive.pem
+----
+. daemon 인증서의 전체 경로를 sapdrive.conf 파일의 '_SDU-daemon-certificate-path_' 변수에 추가합니다.
+

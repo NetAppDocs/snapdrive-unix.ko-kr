@@ -1,0 +1,47 @@
+---
+permalink: solaris/concept_log_file_rotation_settings.html 
+sidebar: sidebar 
+keywords: snap, snpadrive, log, file, rotation, setting 
+summary: SnapDrive.conf 파일에서 변수에 지정한 값은 로그 파일 순환에 영향을 줍니다. 
+---
+= 로그 파일 회전 설정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'napdrive.conf' 파일에서 변수에 지정하는 값은 로그 파일 순환에 영향을 줍니다.
+
+'napdrive.conf' 파일에서 지정하는 값은 자동 로그 파일 회전을 활성화합니다. 필요한 경우 'napdrive.conf' 변수를 편집하여 이러한 값을 변경할 수 있습니다. 다음 옵션은 로그 파일 순환에 영향을 줍니다.
+
+* 감사-로그-최대 크기
+* 감사-로그-저장
+* 미량-최대-크기
+* TRACE-LOG-max-save(트레이스-로그-최대-저장)
+* 다시 로그로 저장한다
+
+
+SnapDrive for UNIX는 자동 로그 회전을 통해 "audit-log-save", "trace-log-save" 및 "recoby-log-save" 변수에 지정된 제한에 도달할 때까지 오래된 로그 파일을 유지합니다. 그런 다음 가장 오래된 로그 파일을 삭제합니다.
+
+SnapDrive for UNIX는 파일을 생성할 때 파일 번호를 "0"으로 할당하여 가장 오래된 파일을 추적합니다. 새 파일을 만들 때마다 기존 로그 파일 각각에 할당된 번호가 1씩 증가합니다. 로그 파일 번호가 세이브 값에 도달하면 UNIX용 SnapDrive에서 해당 파일을 삭제합니다.
+
+* 예: * 이 예에서는 'ls' 명령을 사용하여 시스템의 로그 파일에 대한 정보를 표시합니다.
+
+이러한 설정에 따라 로그 파일에 다음 정보가 표시됩니다.
+
+[listing]
+----
+# ls -l /var/log/sd*
+-rw-r--r-- 1 root other 12247 Mar 13 13:09 /var/log/sd-audit.log
+-rw-r--r-- 1 root other 20489 Mar 12 16:57 /var/log/sd-audit.log.0
+-rw-r--r-- 1 root other 20536 Mar 12 03:13 /var/log/sd-audit.log.1
+-rw-r--r-- 1 root other 3250 Mar 12 18:38 /var/log/sd-recovery.log.1
+-rw-r--r-- 1 root other 6250 Mar 12 18:36 /var/log/sd-recovery.log.2
+-rw-r--r-- 1 root other 6238 Mar 12 18:33 /var/log/sd-recovery.log.3
+-rw-r--r-- 1 root other 191704 Mar 13 13:09 /var/log/sd-trace.log
+-rw-r--r-- 1 root other 227929 Mar 12 16:57 /var/log/sd-trace.log.0
+-rw-r--r-- 1 root other 213970 Mar 12 15:14 /var/log/sd-trace.log.1
+-rw-r--r-- 1 root other 261697 Mar 12 14:16 /var/log/sd-trace.log.2
+-rw-r--r-- 1 root other 232904 Mar 12 14:15 /var/log/sd-trace.log.3
+-rw-r--r-- 1 root other 206905 Mar 12 14:14 /var/log/sd-trace.log.4
+----

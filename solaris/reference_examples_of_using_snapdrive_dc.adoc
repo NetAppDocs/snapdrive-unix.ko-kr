@@ -1,0 +1,23 @@
+---
+permalink: solaris/reference_examples_of_using_snapdrive_dc.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, example, data, collection, command 
+summary: 다음은 데이터 수집 명령의 예입니다. 
+---
+= SnapDrive.DC 사용의 예
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음은 데이터 수집 명령의 예입니다.
+
+이 예제에서는 명령줄 옵션을 사용하여 결과 파일의 디렉토리와 이름을 지정합니다.
+
+[listing]
+----
+# snapdrive.dc -d . -n mysystem
+...
+     Compressed file is ./ntap_snapdrive_mysystem.tar.Z.
+     Please send this file to technical support for analysis.
+----

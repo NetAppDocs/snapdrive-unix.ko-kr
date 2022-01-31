@@ -1,0 +1,20 @@
+---
+permalink: linux-administration/concept_snapdrived_start_command_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, start, command, fails, troubleshoot, resolve, issue 
+summary: 일부 조건에서는 스냅드라이브 시작 명령이 실패할 수 있습니다. 이 문제를 해결하기 위한 몇 가지 문제 해결 단계가 있습니다. 
+---
+= 스냅된 시작 명령이 실패했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일부 상황에서는 '주행 시작' 명령이 실패할 수 있습니다. 이 문제를 해결하기 위한 몇 가지 문제 해결 단계가 있습니다.
+
+* 'napdrive.conf' 파일에 지정된 데몬 포트가 다른 응용 프로그램에서 이미 사용 중인지 확인합니다.
+* 데몬의 이전 인스턴스가 제대로 중지되었는지 확인합니다.
+* 시스템 전체의 세마포 제한에 도달했는지 확인합니다. 이 경우 데몬 시작이 작동하지 않습니다.
+* iSCSI, VxVM과 같은 서비스가 시스템에서 실행되고 있지 않은지 확인합니다.
+* HTTPS가 On으로 설정되어 있으면 지정된 디렉토리에 자체 서명된 인증서가 설치되어 있는지 확인합니다.
+

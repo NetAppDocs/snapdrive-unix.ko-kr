@@ -1,0 +1,71 @@
+---
+permalink: solaris/concept_informationrequired_forusing_the_snapdrive_snapdelete_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, delete, command 
+summary: 스냅샷 복사본을 삭제하려면 삭제할 스냅샷 복사본의 이름을 지정합니다. SnapDrive snap delete 명령을 사용하여 삭제된 스냅샷 복사본 목록을 볼 수 있습니다. 
+---
+= SnapDrive snap delete 명령을 사용하는 데 필요한 정보입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스냅샷 복사본을 삭제하려면 삭제할 스냅샷 복사본의 이름을 지정합니다. 'SnapDrive snap delete' 명령을 사용하면 삭제된 스냅샷 복사본의 목록을 볼 수 있습니다.
+
+다음 표에는 SnapDrive snap delete 명령에 대한 정보가 나와 있습니다.
+
+|===
+| 요구 사항/옵션 | 인수 
+
+
+ a| 
+스냅샷 복사본의 이름을 지정합니다. 스토리지 시스템 이름, 볼륨 및 스냅샷 복사본 이름을 입력하는 스냅샷 복사본 이름의 긴 형식을 사용합니다. 다음은 긴 Snapshot 복제본 이름 "big_filer:/vol/account_vol:snap_20031115"의 예입니다
+
+스냅샷 복사본을 추가로 지정하려면 해당 복사본이 첫 번째 스냅샷 복사본과 동일한 스토리지 시스템 및 볼륨에 있는 경우 짧은 형태의 이름을 사용합니다. 그렇지 않으면 긴 형식의 이름을 다시 사용합니다.
+
+
+
+ a| 
+스냅샷 사본 이름('-snapname')
+ a| 
+'_long_Snapshot copy_name_'
+
+
+
+ a| 
+추가 스냅샷 복사본
+ a| 
+'_Snapshot copy_name_'(긴 형태 또는 짧은 형태)
+
+
+
+ a| 
+'-verbose'
+ a| 
+~
+
+
+
+ a| 
+삭제된 스냅샷 복사본의 목록을 표시하려면 -verbose 옵션을 포함합니다. 이 옵션은 스냅샷 복사본 이름의 짧은 형식을 사용한 경우 누락된 스토리지 시스템 및 볼륨 정보를 채웁니다.
+
+
+
+ a| 
+``힘’’
+ a| 
+~
+
+
+
+ a| 
+``코프프롬프트’’
+ a| 
+~
+
+
+
+ a| 
+선택 사항: 기존 스냅샷 복사본을 덮어쓸지 결정합니다. 이 옵션이 없으면 기존 스냅샷 복사본의 이름을 제공하면 이 작업이 중지됩니다. 이 옵션을 제공하고 기존 스냅샷 복사본의 이름을 지정하면 스냅샷 복사본을 덮어쓸지 묻는 메시지가 표시됩니다. SnapDrive for UNIX에서 프롬프트를 표시하지 않으려면 '-nop프롬프트' 옵션도 포함합니다. ('-not프롬프트' 옵션을 사용하려면 반드시 '-force' 옵션을 포함해야 합니다.)
+
+|===

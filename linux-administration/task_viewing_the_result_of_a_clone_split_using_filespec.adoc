@@ -1,0 +1,71 @@
+---
+permalink: linux-administration/task_viewing_the_result_of_a_clone_split_using_filespec.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, clone, split, specification 
+summary: 작업 ID 또는 파일 사양을 사용하여 완료된 클론 분할 작업의 결과를 볼 수 있습니다. 
+---
+= 작업 ID 또는 파일 사양을 사용하여 클론 분할 작업의 결과 보기
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+작업 ID 또는 파일 사양을 사용하여 완료된 클론 분할 작업의 결과를 볼 수 있습니다.
+
+.단계
+. 파일 사양을 사용하여 클론 분할 결과를 보려면 다음 명령을 입력합니다.
++
+(* SnapDrive 클론 분할 결과 [-lun]_long_lun_name_[_long_lun_name..._] | [{-dG|-vg|-fs|-hostvol|-lvol}_file_spec_[_file_spec...]]|[-job_<jobid>_] *
+
++
+UNIX용 SnapDrive는 파일 사양에 대해 완료되거나 실패한 클론 분할의 결과를 표시한 다음 작업에서 파일 사양을 제거하고 작업을 작업 대기열에서 제거합니다.
+
+
+
+다음 예에서는 성공적으로 완료된 작업 ID에 대한 클론 분할 결과를 보여 줍니다.
+
+[listing]
+----
+# snapdrive clone split result -job VT1ov6Q8vU
+Clone-Split for "/mnt/my_mnt3" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+----
+두 가지 파일 사양이 있고 스토리지 시스템의 공간이 부족하여 파일 사양 중 하나가 실패하는 경우 클론 분할 작업의 결과가 한 파일 사양에 실패했으며 다른 파일 사양이 성공적으로 완료된 것으로 표시됩니다.
+
+다음 예에서는 성공적으로 완료된 파일 사양에 대한 클론 분할 결과를 보여 줍니다.
+
+[listing]
+----
+# snapdrive clone split result -fs /mnt/my_mnt3 /mnt/my_mnt4
+Clone-Split for "/mnt/my_mnt3" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+----
+다음 예에서는 클론 분할 작업이 아직 진행 중이고 아직 완료되지 않은 경우 클론 분할 결과를 보여 줍니다.
+
+[listing]
+----
+# snapdrive clone split result -job R57aCzUaeG
+Clone-Split for "/mnt/my_mnt3" is 0% completed and Split in progress
+----
+다음 예에서는 작업 세트에서 영구적으로 제거된 작업을 보여 주며 파일 사양을 사용하여 결과를 보려고 하면 SnapDrive for UNIX에서 "작업에 속하지 않음"이라는 오류 메시지가 나타납니다.
+
+[listing]
+----
+# snapdrive clone split result -fs /mnt/my_mnt2
+Storage resource /mnt/my_mnt2 does not belong to any job
+----
+다음 예에서는 작업 세트에서 영구적으로 제거된 작업을 보여 주며 작업 ID를 사용하여 결과를 보려고 하면 SnapDrive for UNIX에서 "작업 ID가 유효하지 않습니다"라는 오류 메시지가 나타납니다.
+
+[listing]
+----
+# snapdrive clone split result -job T59aCzUaeG
+Job ID is not valid
+----
+다음 예에서는 클론 분할 결과 중 하나가 진행 중이고 다른 하나가 실패한 클론 분할 결과를 표시합니다.
+
+[listing]
+----
+# snapdrive clone split result -job qJrG8U59mg
+Clone-Split for "/mnt/my_mnt4" is 100% completed and succeeded
+Clone-Split for "/mnt/my_mnt5" is 0% completed and split failed
+----

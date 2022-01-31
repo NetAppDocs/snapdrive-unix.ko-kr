@@ -1,0 +1,18 @@
+---
+permalink: aix/concept_guidelines_for_thesnapdrive_storagedisconnectcommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, guidelines, storage, disconnect, command 
+summary: SnapDrive storage disconnect 명령을 사용할 때는 다음 지침을 따르십시오. 
+---
+= SnapDrive 스토리지 연결 해제 명령에 대한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+'SnapDrive storage disconnect' 명령어를 사용할 때는 다음 지침을 따른다.
+
+* 파일 시스템의 연결을 끊으면 SnapDrive for UNIX에서 항상 마운트 지점을 제거합니다.
+* '-lun' 옵션을 사용하여 호스트 디스크 그룹 또는 파일 시스템의 구성원인 LUN의 이름을 지정하면 SnapDrive storage disconnect" 명령이 실패합니다.
+* '-lun' 옵션을 사용하여 호스트의 다중 경로 소프트웨어에서 검색되지 않는 LUN 이름을 지정하면 SnapDrive storage disconnect 명령이 실패합니다.
+

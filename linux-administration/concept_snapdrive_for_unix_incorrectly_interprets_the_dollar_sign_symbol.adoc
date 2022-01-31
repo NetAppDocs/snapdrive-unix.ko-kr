@@ -1,0 +1,50 @@
+---
+permalink: linux-administration/concept_snapdrive_for_unix_incorrectly_interprets_the_dollar_sign_symbol.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, dollar, sign, special, characters, value 
+summary: 'UNIX용 SnapDrive는 특수 문자가 구성 값의 일부로 지정된 경우 달러 기호 \($\)와 모든 특수 문자를 다르게 해석합니다.' 
+---
+= UNIX용 SnapDrive에서 달러 기호를 잘못 해석합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 특수 문자가 구성 값의 일부로 지정된 경우 달러 기호($)와 모든 특수 문자를 다르게 해석합니다.
+
+지정된 모든 구성 값은 숫자여야 합니다. $ 또는 다른 특수 문자를 구성 값의 일부로 지정하면 SnapDrive for UNIX는 값을 허용하지만 특수 문자 다음에 언급된 숫자 값은 다른 방식으로 해석합니다.
+
+
+
+== 예
+
+다음은 $가 해석되는 방법의 예입니다.
+
+[listing]
+----
+#a=$123
+#echo $a
+23
+
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_set volume-clone-retry-sleep=$129
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_show |grep volume-clone-retry-sleep
+volume-clone-retry-sleep:Number of seconds between retries during flex-clone create:'3':'29':1:0:'^[0-9]+$':filer
+----
+이 예에서 UNIX용 SnapDrive는 구성 값($123)을 23으로 해석합니다.
+
+
+
+== 해결 방법
+
+$ 앞에 백슬래시(\)를 지정하십시오. 이전 예제를 다음과 같이 수정합니다.
+
+[listing]
+----
+#a=\$123
+#echo $a
+23
+
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_set volume-clone-retry-sleep=$129
+[root@vm-linux-51-233 ~]# /opt/NetApp/snapdrive/bin/config_show |grep volume-clone-retry-sleep
+volume-clone-retry-sleep:Number of seconds between retries during flex-clone create:'3':'29':1:0:'^[0-9]+$':filer
+----

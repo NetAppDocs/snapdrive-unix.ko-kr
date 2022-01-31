@@ -1,0 +1,114 @@
+---
+permalink: solaris/concept_snapshot_create_and_delete_operation_fails.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, create, delete, fail, operation 
+summary: LUN이 사용 중이므로 스냅샷 생성 및 삭제 작업에서 스토리지 시스템의 스냅샷 복사본을 제거할 수 없습니다. 
+---
+= 스냅샷 생성 및 삭제 작업이 실패했습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN이 사용 중이므로 스냅샷 생성 및 삭제 작업에서 스토리지 시스템의 스냅샷 복사본을 제거할 수 없습니다.
+
+다음 오류 메시지가 나타납니다.
+
+[listing]
+----
+0001-124 Admin error: Failed to remove snapshot <snap-name> on
+filer <filer-name>: LUN clone
+----
+다음 조건에 해당하는 경우 이 오류가 발생하여 스냅샷 복사본을 직접 삭제하지 못할 수 있습니다.
+
+* 디스크 그룹은 여러 스토리지 시스템에 걸쳐 있습니다.
+* 다음 SnapDrive 명령은 50회 이상의 반복을 위해 루프에서 실행됩니다(반복 횟수는 호스트 운영 체제에 따라 다름).
++
+** 'SnapDrive 스토리지 생성'
+** 'SnapDrive 스냅 생성'
+** 'SnapDrive storage delete'(저장 공간 삭제)
+** SnapDrive 스냅 복구
+** 'SnapDrive SNAP CONNECT
+** 'SnapDrive storage delete'(저장 공간 삭제)
+** 'SnapDrive snap delete
+
+
+
+
+이때 스토리지 시스템의 스냅샷 복사본 상태가 ` * LUNs - Busy * '로 표시되고 이 상태가 몇 시간 동안 연장됩니다.
+
+
+
+== 해결 방법
+
+|===
+| * IF... * | 그 다음에... * 
+
+
+ a| 
+호스트에 연결되어 있지 않은 클론 복제된 LUN이 스냅샷 복사본에 있습니다.
+ a| 
+다음 중 하나를 수행하여 스냅샷 복사본을 삭제할 수 있습니다.
+
+* "filer split clone" 명령을 사용하여 스토리지 시스템에서 복제된 LUN을 분할합니다.
+* 클론 복제된 LUN을 삭제합니다.
+
+
+
+
+ a| 
+호스트에 연결되어 있지 않은 클론 복제된 LUN이 스냅샷 복사본에 있습니다.
+ a| 
+다음 단계를 수행하십시오.
+
+. SnapDrive snap disconnect 명령을 사용하여 클론된 LUN을 호스트에서 분리합니다.
+. 클론 복제된 LUN을 삭제합니다.
+. 스냅샷 복사본을 삭제합니다
+
+
+
+
+ a| 
+다음 중 하나가 있습니다.
+
+* 다른 스냅샷 복사본에도 있는 스냅샷 복사본의 클론 복제된 LUN
+* 클론 복제된 LUN을 백업합니다
+
+ a| 
+다음 단계를 완료합니다.
+
+. 스토리지 시스템 명령 프롬프트에서 'lun snap usage -s <VolumeName><snap-name>' 명령을 실행합니다
++
+다음 예에서와 같이, 클론 복제된 LUN의 스냅샷 복사본이 포함된 스냅샷 복사본의 이름을 나열합니다.
+
++
+[listing]
+----
+tonic*> lun snap usage vol1
+james_lun (filer view)
+mpiotest2:
+LUN:
+/vol/vol1/.snapshot/mpiotest2/d
+hilip_0
+Backed By:
+/vol/vol1/.snapshot/dhilip_lun/
+james
+----
+. 다음 예에 표시된 것처럼 스토리지 시스템의 스냅샷 복사본을 LUN snap usage 명령 출력에 표시된 순서대로 삭제합니다.
++
+'스냅 삭제 vol1 mpiotest2'
+
++
+
+NOTE: 삭제하려는 스냅샷 복사본이 다른 호스트에서 사용되지 않는지 확인합니다. 액세스 중인 경우 삭제할 수 없습니다.
+
+
+
+
+
+ a| 
+클론 복제된 LUN이 없습니다
+ a| 
+스토리지 시스템의 스냅샷 복사본의 'LUNs - Busy' 상태가 사라질 때까지 기다립니다.
+
+|===

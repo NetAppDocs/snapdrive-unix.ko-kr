@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_understanding_error_messages.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, error, message 
+summary: UNIX용 SnapDrive에서는 여러 위치와 다양한 형식으로 표시되는 오류 메시지에 대한 정보를 제공합니다. 
+---
+= 오류 메시지 이해
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에서는 여러 위치와 다양한 형식으로 표시되는 오류 메시지에 대한 정보를 제공합니다.

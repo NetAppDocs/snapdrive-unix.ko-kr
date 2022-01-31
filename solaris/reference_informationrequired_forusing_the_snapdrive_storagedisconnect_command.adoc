@@ -1,0 +1,112 @@
+---
+permalink: solaris/reference_informationrequired_forusing_the_snapdrive_storagedisconnect_command.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, disconenct, command, information, required 
+summary: 다음 표에는 SnapDrive 스토리지 연결 끊기 명령을 사용할 때 제공해야 하는 정보가 나와 있습니다. 
+---
+= SnapDrive storage disconnect 명령을 사용하는 데 필요한 정보입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음 표에는 'SnapDrive storage disconnect' 명령어를 사용할 때 제공해야 할 정보가 나와 있습니다.
+
+|===
+| 요구 사항 | 인수 
+
+
+ a| 
+입력한 명령에 따라 다음 중 하나를 통해 매핑을 제거할 수 있습니다.
+
+* LUN을 클릭합니다
++
+하나 이상의 LUN의 연결을 끊을 경우 첫 번째 인수는 긴 형태의 LUN 이름을 사용해야 합니다. 이 이름은 스토리지 시스템 이름, 볼륨 이름 및 볼륨 내의 LUN 이름을 지정합니다.
+
++
+새 LUN이 이전 LUN과 동일한 스토리지 시스템 및 볼륨에 있는 경우 추가 LUN을 지정하려면 LUN 이름만 사용할 수 있습니다. 그렇지 않으면 새 스토리지 시스템 이름과 볼륨 이름(또는 볼륨 이름)을 지정하여 이전 값을 바꿀 수 있습니다.
+
+* LUN의 파일 시스템
++
+'-fs'에 지정된 '_file_spec_'은 파일 시스템 마운트 지점의 이름입니다. UNIX용 SnapDrive는 사용자가 지정한 파일 시스템과 연결된 LUN을 자동으로 찾아서 연결을 끊습니다.
+
+* 디스크 또는 볼륨 그룹
+* 디스크 또는 볼륨 그룹의 파일 시스템
+* 호스트 또는 논리 볼륨
+
+
+file_spec 인수에 입력한 값은 연결을 끊는 스토리지 엔터티를 식별해야 합니다.
+
+
+
+ a| 
+LUN('-lun')
+ a| 
+'_LUN_name_'(긴 형태 또는 짧은 형태)
+
+
+
+ a| 
+디스크 그룹('-dg_file_spec_') 또는 볼륨 그룹('-vg_file_spec_')
+ a| 
+디스크 또는 볼륨 그룹의 이름입니다
+
+
+
+ a| 
+파일 시스템('-fs_file_spec_')
+ a| 
+'_filesystem_name_'
+
+
+
+ a| 
+호스트 볼륨('-hostvol_file_spec_') 또는 논리 볼륨('-lvol_file_spec_')
+ a| 
+호스트 또는 논리 볼륨의 이름입니다
+
+
+
+ a| 
+명령 프롬프트에서 호스트 볼륨이 하나 이상인 디스크 그룹과 같은 다른 엔터티가 있는 호스트 측 엔터티를 포함하더라도 SnapDrive for UNIX에서 지정한 스토리지의 연결을 끊으려면 명령 프롬프트에 '-full' 옵션을 포함합니다.
+
+이 옵션을 포함하지 않으면 빈 호스트쪽 요소만 지정해야 합니다.
+
+
+
+ a| 
+'-가득 참'
+ a| 
+~
+
+
+
+ a| 
+노드나 호스트 클러스터가 파일 시스템을 공유하지 않도록 설정하려는 경우
+
+
+
+ a| 
+'-장치 유형'
+ a| 
+
+
+
+ a| 
+'-fstype'입니다
+ a| 
+'_type_'
+
+
+
+ a| 
+'-vmtype'입니다
+ a| 
+'_type_'
+
+
+
+ a| 
+*선택 사항:* UNIX용 SnapDrive 작업에 사용할 파일 시스템 및 볼륨 관리자의 유형을 지정합니다.
+
+|===

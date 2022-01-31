@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_snapdrive_for_unix_provisioning_in_an_lvma_vxvm_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lvm, provisioning, environment 
+summary: SnapDrive for UNIX 스토리지 명령은 LVM 객체를 생성하여 LVM 엔티티를 프로비저닝합니다. 
+---
+= LVM 환경에서 UNIX용 SnapDrive 프로비저닝
+:icons: font
+:imagesdir: ../media/
+
+
+SnapDrive for UNIX 스토리지 명령은 LVM 객체를 생성하여 LVM 엔티티를 프로비저닝합니다.
+
+LVM 엔티티를 프로비저닝하는 SnapDrive for UNIX 스토리지 작업(예: 호스트 볼륨이나 파일 시스템을 포함하는 디스크 그룹)을 요청하는 경우 "SnapDrive storage" 명령은 LVM과 함께 작동하여 스토리지를 사용하는 LVM 객체 및 파일 시스템을 생성합니다.
+
+스토리지 프로비저닝 작업 중에 다음 작업이 수행됩니다.
+
+* 호스트 LVM은 스토리지 시스템의 LUN을 디스크 또는 볼륨 그룹으로 결합합니다.
++
+그런 다음 스토리지는 논리적 볼륨으로 분할됩니다. 논리적 볼륨은 파일 시스템 또는 원시 데이터를 저장하는 원시 디스크 디바이스처럼 사용됩니다.
+
+* SnapDrive for UNIX는 호스트 LVM과 통합되어 Snapshot 복사본에 대해 요청된 각 디스크 그룹, 호스트 볼륨 및 파일 시스템을 구성하는 NetApp LUN을 확인합니다.
++
+지정한 호스트 볼륨의 데이터를 디스크 그룹의 모든 디스크에 분산할 수 있으므로 스냅샷 복사본은 전체 디스크 그룹에 대해서만 생성 및 복원할 수 있습니다.
+
+

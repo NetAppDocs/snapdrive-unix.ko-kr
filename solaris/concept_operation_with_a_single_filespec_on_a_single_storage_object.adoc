@@ -1,0 +1,22 @@
+---
+permalink: solaris/concept_operation_with_a_single_filespec_on_a_single_storage_object.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, single, filespec, storage, object 
+summary: UNIX용 SnapDrive는 지정된 볼륨에 filespec를 만들 권한이 있는 사용자가 아닌 경우 오류 메시지를 표시합니다. 
+---
+= 단일 스토리지 개체에 대한 단일 파일 사양을 사용하는 작업입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 지정된 볼륨에 filespec를 만들 권한이 있는 사용자가 아닌 경우 오류 메시지를 표시합니다.
+
+_filespec:filespec은 파일 시스템, 호스트 볼륨, 디스크 그룹 또는 LUN._일 수 있습니다
+
+[listing]
+----
+[john]$ snapdrive storage create -fs /mnt/testfs -filervol storage_array1:/vol/vol1 -dgsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user unix_host\john on Operations Manager server ops_mngr_server
+----
+이 예제에서 John은 비루트 사용자이며 지정된 볼륨에 filespec를 만들 권한이 없습니다. John은 운영 관리자 콘솔 관리자에게 볼륨 'storage_array1:/vol/vol1'에 대한 'D. Storage.Write' 액세스 권한을 부여하도록 요청해야 합니다.

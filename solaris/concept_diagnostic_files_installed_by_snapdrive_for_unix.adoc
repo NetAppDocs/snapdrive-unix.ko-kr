@@ -1,0 +1,23 @@
+---
+permalink: solaris/concept_diagnostic_files_installed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snaprive, diagnostic, file 
+summary: UNIX용 SnapDrive는 UNIX용 SnapDrive의 문제를 감지하는 데 도움이 되는 진단 파일을 설치합니다. 
+---
+= UNIX용 SnapDrive에서 설치한 진단 파일
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 UNIX용 SnapDrive의 문제를 감지하는 데 도움이 되는 진단 파일을 설치합니다.
+
+* '/opt/NTAPsnapdrive/diag/SnapDrive.dc'
+* '/opt/NTAPsnapdrive/diag/Solaris_info'
+* '/opt/NTAPsnapdrive/diag/filer_info'
+* '/opt/NTAPsnapdrive/diag/Brocade_info'
+* '/opt/NTAPsnapdrive/diag/cisco_info'
+* '/opt/NTAPsnapdrive/diag/McData_info'
+* '/opt/NTAPsnapdrive/diag/SHsupport.pm'
+* '/opt/NTAPsnapdrive/diag/Telnet.pm'
+

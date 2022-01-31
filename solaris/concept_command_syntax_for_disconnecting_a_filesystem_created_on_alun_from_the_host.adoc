@@ -1,0 +1,32 @@
+---
+permalink: solaris/concept_command_syntax_for_disconnecting_a_filesystem_created_on_alun_from_the_host.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, command, syntax, lun, host, file system 
+summary: SnapDrive storage disconnect 명령을 사용하여 LUN에 직접 생성된 파일 시스템을 제거하려면 다음 구문을 사용합니다. 
+---
+= 호스트에서 LUN에 생성된 파일 시스템의 연결을 끊는 명령 구문입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive storage disconnect" 명령을 사용하여 LUN에 직접 생성된 파일 시스템을 제거하려면 다음 구문을 사용합니다.
+
+'SnapDrive storage disconnect -fs file_spec[-fstype type][-vmtype type]'
+
+
+
+== 예: RDM LUN에 생성된 파일 시스템의 연결을 끊습니다
+
+[listing]
+----
+
+#snapdrive storage disconnect -fs /mnt/fs
+disconnect file system /mnt/fs
+  - fs /mnt/fs ... disconnected
+  deporting lun(s) from Guest OS ... done
+   - LUN lech:/vol/vol1/lun1 ... disconnected
+0001-669 Warning:
+      Please save information provided by this command.
+      You will need it to re-connect disconnected filespecs.
+----

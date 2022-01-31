@@ -1,0 +1,35 @@
+---
+permalink: linux-administration/task_capturing_a_consistency_group_snapshot.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, consistency, group, snapshot, copy, configuration 
+summary: 일관성 그룹 스냅샷 복사본을 생성하도록 UNIX용 SnapDrive를 구성할 수 있습니다. 
+---
+= 일관성 그룹 스냅샷 복사본 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+일관성 그룹 스냅샷 복사본을 생성하도록 UNIX용 SnapDrive를 구성할 수 있습니다.
+
+.단계
+. 호스트에서 다음 명령을 입력합니다. +
++
+"* SnapDrive snap create -fs/mnt/test-snapname_SnapshotName_-f-nop프롬프트.*
+
++
+'_SnapshotName_'은 정합성 보장 그룹 스냅샷 복제본에 대해 지정된 이름입니다.
+
+
+
+
+
+== 예
+
+다음은 명령의 예입니다.
+
+[listing]
+----
+snapdrive snap create -fs /mnt/test -snapname snap_123 -f -noprompt
+----
+일관성 그룹 스냅샷 복사본이 생성되었습니다.

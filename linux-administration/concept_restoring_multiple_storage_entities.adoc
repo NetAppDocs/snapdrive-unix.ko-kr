@@ -1,0 +1,22 @@
+---
+permalink: linux-administration/concept_restoring_multiple_storage_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, storage, snapshot, multiple 
+summary: 여러 스토리지 엔터티가 포함된 스냅샷 복사본을 복원할 수 있습니다. 
+---
+= 여러 스토리지 요소 복구
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+여러 스토리지 엔터티가 포함된 스냅샷 복사본을 복원할 수 있습니다.
+
+여러 대상 스토리지 시스템에 있는 스토리지 엔터티가 포함된 스냅샷 복사본을 복원하려면 다음 요구사항을 충족해야 합니다.
+
+* 명령 프롬프트에서 지정하는 스토리지 엔터티는 단일 스토리지 시스템 또는 HA 쌍에 있어야 합니다.
+* 소스 스토리지 시스템의 볼륨 이름은 대상 스토리지 시스템의 볼륨 이름과 일치해야 합니다.
+* 'napdrive.conf' 파일에서 'napmirror-dest-multiple-filervolumes-enabled' 인수를 ON으로 설정해야 합니다.
+
+
+명령 하나를 사용하여 단일 스토리지 시스템 또는 HA 쌍에 있는 스토리지 엔터티를 복구할 수 있습니다.

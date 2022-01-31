@@ -1,0 +1,132 @@
+---
+permalink: linux-administration/task_displaying_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, shot, list, command 
+summary: SnapDrive snap show 또는 list 명령은 스냅샷 복사본이 생성되는 스토리지 시스템의 이름, 호스트 이름, 날짜 및 시간 등을 표시합니다. 
+---
+= 스냅샷 복사본 표시
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap show" 또는 "list" 명령은 스냅샷 복사본이 생성되는 스토리지 시스템의 이름, 호스트 이름, 날짜 및 시간 등을 표시합니다.
+
+.단계
+. 스냅샷 복사본을 표시하려면 다음 명령 구문을 입력합니다.
++
+``SnapDrive snap show[-snapname] long_snap_name [snap_name...] [-verbose] *
+
+
+
+이 작업은 최소한 스냅샷 복사본에 대한 다음 정보를 표시합니다.
+
+* 스냅샷 복사본이 생성되는 스토리지 시스템의 이름입니다
+* 스냅샷 복사본을 생성한 호스트의 이름입니다
+* 스토리지 시스템의 LUN에 대한 경로입니다
+* 스냅샷 복사본이 생성된 날짜 및 시간입니다
+* 스냅샷 복사본의 이름입니다
+* 스냅샷 복사본에 포함된 디스크 그룹의 이름입니다
+
+
+* 예 *: 'SnapDrive snap show' 명령의 예는 다음과 같습니다.
+
+[listing]
+----
+# snapdrive snap show -snapname toaster:/vol/vol2:snapA snapX snapY
+
+# snapdrive snap show -verbose toaster:/vol/vol2:snapA /vol/vol3:snapB snapC
+
+# snapdrive snap show toaster:/vol/vol2:snapA
+
+# snapdrive snap list -dg dg1 dg2
+----
+* 예 *: 이 예에서는 와일드카드를 사용하여 특정 볼륨에서 사용 가능한 스냅샷 복사본에 대한 정보를 표시합니다.
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/vol1:*
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+toaster:/vol/vol1:sss1 DBserver Mar 12
+16:19 dg1
+toaster:/vol/vol1:testdg DBserver Mar 12
+15:35 dg1
+toaster:/vol/vol1:t1 DBserver Mar 10
+18:06 dg1
+toaster:/vol/vol1:hp_1 HPserver Mar 8
+19:01 vg01
+toaster:/vol/vol1:r3 DBserver Mar 8
+13:39 rdg1
+toaster:/vol/vol1:r1 DBserver Mar 8
+13:20 rdg1
+toaster:/vol/vol1:snap2 DBserver Mar 8
+11:51 rdg1toaster:/vol/vol1:snap_p1 DBserver
+Mar 8 10:18 rdg1
+----
+* 예 *: 이 예에서는 '-verbose' 옵션과 함께 SnapDrive snap list 명령을 사용하여 Linux 호스트에서 NFS 마운트 디렉토리 트리의 스냅샷 복사본을 보여 줍니다.
+
+[listing]
+----
+# snapdrive snap list -fs /mnt/acctfs1 -v
+snap name host date
+snapped
+------------------------------------------------------------------
+----------
+besser:/vol/vol1:acctfs-s1 childs Aug 8 18:58
+/mnt/acctfs1
+host OS: Linux 2.4.21-9.ELsmp #1 SMP Thu Jan 8 17:08:56 EST 2004
+snapshot name: acctfs-s1 file system: type: nfs mountpoint:
+/mnt/acctfs1
+filer dir: besser:/vol/vol1
+----
+* 예 *: 이 예에서는 Linux 호스트에서 SnapDrive snap show 명령을 실행합니다.
+
+[listing]
+----
+# snapdrive snap show -snapname surf:/vol/vol1:swzldg5snapped
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+surf:/vol/vol1:bagel5snapped pons Aug 18
+20:06 dg5
+#
+# ./linux/ix86/snapdrive snap show -v -snapname
+surf:/vol/vol1:bagel5snapped >
+snap name host date
+snapped
+------------------------------------------------------------------
+-------------
+surf:/vol/vol1:bagel5snapped pons Aug 18
+20:06 dg5
+host OS: Linux 2.4.21-9.ELsmp #1 SMP Thu Jan 8 17:08:56 EST 2004
+snapshot name: bagel5snapped
+Volume Manager: linuxlvm 1.0.3
+disk group: dg5
+host volume: vol1
+host volume: vol2
+host volume: vol3
+lun path dev paths
+-------------------------------------------------------
+surf:/vol/vol1/glk19 /dev/sdu
+----
+* 예 *: 다음 예에서는 와일드카드를 사용합니다.
+
+[listing]
+----
+# snapdrive snap show toaster:/vol/volX:*
+# snapdrive snap show -v toaster:/vol/volX:DB1*
+filer1:/vol/volY:DB2*
+# snapdrive snap show toaster:/vol/vol2:mysnap* /vol/vol2:yoursnap*
+hersnap*
+# snapdrive snap show toaster:/vol/volX:*
+----
+* 예제 *: 이 예제에서는 와일드카드를 사용할 수 없습니다. 와일드카드가 끝 부분에 배치되지 않고 이름 중간에 있기 때문입니다.
+
+[listing]
+----
+# snap show toaster:/vol/vol1:my*snap
+----

@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_snapdrive_storage_show_command_returns_incorrect_path_if_volume_deleted_without_unmount.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, delete, vserver, unmounting, host, storage, incorrect, show, command 
+summary: 호스트 시스템에서 볼륨을 마운트 해제하지 않고 SVM에서 볼륨을 삭제한 경우, SnapDrive storage show -v 명령을 실행하면 실제 경로가 올바르지 않습니다. 
+---
+= 호스트 시스템에서 볼륨을 마운트 해제하지 않고 SVM에서 볼륨을 삭제하면 SnapDrive storage show 명령이 잘못된 실제 경로를 표시합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 시스템에서 볼륨을 마운트 해제하지 않고 SVM에서 볼륨을 삭제한 경우, 'SnapDrive storage show -v' 명령을 실행하면 실제 경로가 올바르지 않습니다.
+
+SVM에서 볼륨이 작동하는 가정이 아닌 경우에도 마찬가지입니다. 다음 예는 잘못된 실제 경로를 보여줍니다.
+
+[listing]
+----
+# snapdrive storage show -fs /mnt /file1 -v
+NFS device: vs1:/vol_test1 mount point: /mnt
+(non-persistent)
+Protocol: NFS Actual Path:
+vs1:/vol/roovol1/vol_test1
+----

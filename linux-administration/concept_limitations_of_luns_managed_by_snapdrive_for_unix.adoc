@@ -1,0 +1,24 @@
+---
+permalink: linux-administration/concept_limitations_of_luns_managed_by_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, limitations, lun 
+summary: SnapDrive로 작업할 때는 LUN과 관련된 제한 사항을 숙지해야 합니다. 
+---
+= SnapDrive에서 관리하는 LUN의 제한 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive로 작업할 때는 LUN과 관련된 제한 사항을 숙지해야 합니다.
+
+* SnapDrive에서 관리하는 LUN은 부팅 디스크 또는 시스템 디스크로 작동할 수 없습니다.
+* Linux 호스트에는 생성할 수 있는 LUN 수에 대한 운영 체제 제한이 있습니다.
++
+이러한 호스트에 LUN을 생성할 때 'SnapDrive config check LUNs' 명령을 실행할 수 있습니다. 이 명령을 사용하여 생성할 수 있는 LUN의 수를 결정할 수 있습니다.
+
+* SnapDrive은 LUN 및 스냅샷 복사본에 대한 긴 형식의 이름에 콜론(:)을 지원하지 않습니다.
++
+콜론은 긴 스냅샷 복사본 이름의 구성 요소 간 또는 스토리지 시스템 이름과 LUN의 스토리지 시스템 볼륨 이름 간에 허용됩니다. 예를 들어, '토스터:/vol/vol1:snap1'은 일반적인 긴 스냅샷 이름이고, '토스터:/vol/vol1/Luna'는 일반적인 긴 LUN 이름입니다.
+
+

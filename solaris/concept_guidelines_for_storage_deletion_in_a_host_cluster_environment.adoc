@@ -1,0 +1,37 @@
+---
+permalink: solaris/concept_guidelines_for_storage_deletion_in_a_host_cluster_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, host, cluster 
+summary: 호스트 클러스터 환경에서 napdrive storage delete 명령을 사용하는 데 대한 몇 가지 지침을 알고 있어야 합니다. 
+---
+= 호스트 클러스터 환경에서 스토리지를 삭제하기 위한 지침입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+호스트 클러스터 환경에서 'SnapDrive storage delete' 명령을 사용하는 방법에 대한 몇 가지 지침을 알고 있어야 합니다.
+
+* 호스트 클러스터의 비마스터 노드에서 '-DeviceType' 공유 옵션을 사용하여 SnapDrive storage delete 명령을 실행하면 명령이 마스터 노드로 전송되어 실행됩니다. 이 경우 모든 호스트 클러스터 노드에서 rsh 또는 ssh의 "암호 없는 액세스" 프롬프트가 허용되는지 확인해야 합니다.
+* "SnapDrive storage delete" 명령은 호스트 클러스터의 모든 노드에서 실행할 수 있다.
+* 스토리지 삭제 작업이 성공하려면 다음 중 어느 것도 거짓이 아니어야 합니다.
++
+** 스토리지 엔터티를 공유해야 합니다.
+** LUN은 호스트 클러스터의 모든 노드에 매핑되어야 합니다.
+
+
+* '-DeviceType Dedicated' 옵션을 사용하거나 명령줄 구문에 '-DeviceType' 옵션을 생략하여 특정 노드의 스토리지 엔터티를 삭제할 수 있습니다. 기본값은 Dedicated 이기 때문입니다.
+* 공유 스토리지 엔터티 또는 LUN이 '-DeviceType Dedicated' 옵션으로 삭제되거나 전용 스토리지 엔터티 또는 LUN이 공유 옵션으로 삭제된 경우 'SnapDrive storage delete' 명령을 실행하면 오류 메시지가 표시됩니다.
+* 다음 중 하나가 발생하면 스토리지 삭제 작업이 실패합니다.
++
+** 스토리지 엔터티를 삭제하는 동안 오류가 발생하는 경우
++
+SnapDrive for UNIX는 스토리지 엔터티를 삭제하고, 모든 비마스터 노드에서 LUN의 연결을 끊은 다음 호스트 클러스터의 마스터 노드에서 LUN의 연결을 끊고 삭제합니다.
+
+** "SnapDrive storage delete" 명령을 실행하기 전에 호스트 클러스터의 노드가 종료되고 재부팅되는 경우
++
+이 문제는 LUN이 아직 존재하지 않는 노드에 매핑되기 때문에 발생합니다. 이를 방지하려면 '-force' 옵션을 사용하십시오.
+
+
+
+

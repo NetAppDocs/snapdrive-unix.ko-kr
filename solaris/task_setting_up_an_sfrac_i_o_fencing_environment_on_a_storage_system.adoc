@@ -1,0 +1,57 @@
+---
+permalink: solaris/task_setting_up_an_sfrac_i_o_fencing_environment_on_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, sfrac, fencing, environment, storage 
+summary: UNIX용 SnapDrive는 스토리지 프로비저닝 및 스냅샷 관리 옵션을 제공하여 SFRAC 환경에서 호스트 클러스터 전체의 공유 및 노드 로컬 디스크 그룹과 파일 시스템을 관리합니다. 
+---
+= 스토리지 시스템에서 SFRAC I/O 펜싱 환경 설정
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 스토리지 프로비저닝 및 스냅샷 관리 옵션을 제공하여 SFRAC 환경에서 호스트 클러스터 전체의 공유 및 노드 로컬 디스크 그룹과 파일 시스템을 관리합니다.
+
+.단계
+. 모든 호스트 클러스터 노드에서 루트 사용자에 대한 암호 없이 액세스를 사용하려면 "rsh" 또는 "ssh"를 수동으로 설정합니다.
++
+설치 지침은 Solaris_용 _Veritas Cluster Server 설치 가이드 를 참조하십시오.
+
+. 호스트 클러스터의 모든 노드에 UNIX용 SnapDrive를 설치합니다.
++
+다른 버전의 UNIX용 SnapDrive가 다른 노드에 설치된 경우 UNIX용 SnapDrive 작업이 실패합니다.
+
+. 스토리지 시스템 간의 FC 연결을 확인합니다.
++
+호스트의 하드웨어 요구 사항에 대한 자세한 내용은 SFRAC_Release Notes_를 참조하십시오.
+
++
+
+NOTE: 모든 노드의 '/opt/NTAPsnapdrive/SnapDrive.conf' 파일에는 'default-transport' 구성 변수가 FCP로 설정되어 있어야 합니다.
+
+. 루트 사용자에 대한 "rsh" 또는 "sh" 액세스(암호 없음) 프롬프트가 클러스터의 모든 노드에 대해 구성되도록 '_secure-communication-d사이의 -nodes_' 구성 변수 값을 설정합니다.
++
+이 값은 호스트 클러스터의 모든 노드(마스터 또는 비마스터)에서 UNIX용 SnapDrive 명령을 시작할 경우 SnapDrive for UNIX가 호스트 클러스터의 다른 노드에서 작업을 수행하기 때문에 필요합니다.
+
+. 호스트 클러스터의 각 노드에서 다음 명령을 실행하여 호스트 클러스터 노드에서 디바이스 검색을 확인합니다.
++
+(* SnapDrive storage create-lun_long_lun_name_[_lun_name..._] - lunsize[{_-reserve_|_-noreserve_}] [_-igroup IG_name_[_IG_name..._] *
+
++
+[listing]
+----
+
+	# snapdrive storage create -lun f270-197-109:/vol/vol2/luntest -lunsize 20m
+
+		LUN f270-197-109:/vol/vol2/luntest ... created
+
+		mapping new lun(s) ... done
+		discovering new lun(s) ... done
+
+		LUN to device file mappings:
+	-f270-197-109:/vol/vol2/luntest => /dev/vx/dmp/c5t0d6s2
+
+	# snapdrive storage delete -lun f270-197-109:/vol/vol2/luntest -lunsize 20m
+	- LUN f270-197-109:/vol/vol2/luntest ... deleted
+----
+

@@ -1,0 +1,58 @@
+---
+permalink: linux-installation-7mode/reference_linux_host_requirements.html 
+sidebar: sidebar 
+keywords: snapdrive, snap, host, linux, requirements 
+summary: UNIX용 SnapDrive를 설치하려면 먼저 Linux 호스트를 준비해야 합니다. 
+---
+= Linux 호스트 요구 사항
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 설치하려면 먼저 Linux 호스트를 준비해야 합니다.
+
+* FC 또는 iSCSI 프로토콜을 사용하는 경우 NetApp Support 사이트에서 Linux 호스트 유틸리티를 다운로드하고 설치해야 합니다.
++
+http://mysupport.netapp.com/NOW/cgi-bin/software["NetApp 다운로드: 소프트웨어"]
+
++
+'Sanlun version' 명령을 사용하여 Linux Host Utilities가 성공적으로 설치되었는지 확인해야 합니다.
+
+* SnapDrive for UNIX 명령이 제대로 작동하려면 모든 Linux 시스템에 'sg3_utils' 패키지를 설치해야 합니다.
++
+
+NOTE: RHEL(Red Hat Enterprise Linux)과 OEL(Oracle Enterprise Linux)에서 'G3_utils' 및 'G3_utils' 라이브러리를 사용할 수 있는지 확인해야 합니다. SG3_utils의 라이브러리는 SLES 10 이하 버전의 'scsi *' 패키지와 SLES 11 이상 버전의 'G3_utils *' 패키지에서 사용할 수 있습니다.
+
+* 호스트가 64비트 Linux 운영 체제이고 UNIX용 32비트 SnapDrive를 설치하려는 경우 이러한 라이브러리 또는 바이너리 패키지를 다운로드하여 설치해야 합니다.
++
+** Red Hat Enterprise Linux 사이트에서 제공하는 32비트 버전의 glibc, libnl, libhba, libgcc 패키지는 _.
++
+http://www.redhat.com["Red Hat Enterprise Linux 사이트"]
+
++
+호스트 시스템에 32비트 버전의 glibc 패키지가 없는 경우 UNIX용 SnapDrive 설치가 실패합니다.
+
+** QLogic site_에서 "QConvergConsoleCLI" 패키지의 32비트 바이너리입니다. 호스트가 64비트 Linux 운영 체제인 경우 QLogic HBA의 "/etc/hba.conf" 파일에서 "qla2xxx64/usr/lib64/libqlsdm.so"를 "qla2xxx/usr/lib/libqlsdm.so"로 변경하고 Emulex OnCommand Manager 패키지의 32비트 바이너리를 HBA에 설치해야 합니다.
++
+http://support.qlogic.com/["QLogic 사이트"]
+
+** SnapDrive for UNIX가 호스트에서 작동하려면 전송 프로토콜이 "FC"인 경우 "libHBAAPI" 패키지 또는 공급업체별 패키지를 설치해야 합니다.
+
+
+* UNIX용 SnapDrive를 설치하기 전에 지원되는 호스트 서비스 팩을 호스트에 설치해야 합니다.
++
+상호 운용성 매트릭스 툴 _ 은(는) 지원되는 서비스 팩에 대한 자세한 정보를 제공합니다.
+
++
+http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"]
+
+
+
+* 관련 정보 *
+
+http://mysupport.netapp.com/matrix["NetApp 상호 운용성 매트릭스 툴"]
+
+http://mysupport.netapp.com["NetApp 지원"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2547936["Linux Unified Host Utilities 7.1 설치 가이드"]

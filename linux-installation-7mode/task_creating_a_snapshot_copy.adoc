@@ -1,0 +1,20 @@
+---
+permalink: linux-installation-7mode/task_creating_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, create, copy 
+summary: 'NAS\(Network-Attached Storage)에서 SAN\(Storage Area Network) 및 NFS 볼륨을 사용하는 동안 단일 명령을 사용하여 여러 파일 시스템, 호스트 볼륨, LUN 또는 디스크 그룹의 스냅샷 복사본을 생성할 수 있습니다.' 
+---
+= 스냅샷 복사본 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NAS(Network-Attached Storage)에서 SAN(Storage Area Network) 및 NFS 볼륨을 사용하는 동안 단일 명령을 사용하여 여러 파일 시스템, 호스트 볼륨, LUN 또는 디스크 그룹의 스냅샷 복사본을 생성할 수 있습니다.
+
+.단계
+. 스냅샷 복사본 생성:
++
+'* SnapDrive snap create -fs_file_spec_-snapname_snapshot_copy_name_*'
+
+

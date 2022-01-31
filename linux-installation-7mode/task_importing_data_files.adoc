@@ -1,0 +1,25 @@
+---
+permalink: linux-installation-7mode/task_importing_data_files.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, import, data, file, configuration, check 
+summary: 도구를 실행하기 전에 최신 지원 매트릭스 데이터를 다운로드하고 구성 검사기 도구를 업데이트할 수 있으므로 UNIX용 SnapDrive에 대해 지원되는 최신 구성이 도구에 표시됩니다. 업데이트된 데이터 파일이 포함된 구성 검사기 도구는 SnapDrive for UNIX에서 지원되는 구성을 확인하고 시스템에서 지원되는 모든 구성 요소를 나열합니다. 
+---
+= 데이터 파일을 가져오는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+도구를 실행하기 전에 최신 지원 매트릭스 데이터를 다운로드하고 구성 검사기 도구를 업데이트할 수 있으므로 UNIX용 SnapDrive에 대해 지원되는 최신 구성이 도구에 표시됩니다. 업데이트된 데이터 파일이 포함된 구성 검사기 도구는 SnapDrive for UNIX에서 지원되는 구성을 확인하고 시스템에서 지원되는 모든 구성 요소를 나열합니다.
+
+.단계
+. ToolChest에서 최신 데이터 파일을 다운로드합니다.
+. 최신 데이터 파일 가져오기:
++
+'* sdconfcheck import-file./confcheck_data.tar.gz *
+
+
+
+* 관련 정보 *
+
+http://mysupport.netapp.com/NOW/download/tools/snapdrive_config_checker_unix/["NetApp 다운로드: UNIX용 SnapDrive 구성 검사기"]

@@ -1,0 +1,15 @@
+---
+permalink: aix/concept_reset_the_snap_reserve_option.html 
+sidebar: sidebar 
+keywords: reset, snap, snapdrive, reserve, option 
+summary: 'FC\(Fibre Channel\) 또는 iSCSI\(Internet Small Computer System Interface\) 환경에서 Data ONTAP를 사용하는 경우 UNIX LUN용 SnapDrive가 포함된 모든 스토리지 시스템 볼륨에서 스냅 예약 옵션을 0%로 재설정해야 합니다.' 
+---
+= 스냅 예약 옵션을 재설정하는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC(Fibre Channel) 또는 iSCSI(Internet Small Computer System Interface) 환경에서 Data ONTAP를 사용하는 경우 UNIX LUN용 SnapDrive가 포함된 모든 스토리지 시스템 볼륨에서 '스냅 예약' 옵션을 0%로 재설정해야 합니다.
+
+기본적으로 Data ONTAP 7.1.x에 대한 스냅 예약 옵션은 20%입니다.

@@ -1,0 +1,29 @@
+---
+permalink: solaris/concept_creating_snapshotcopies_of_unrelatedentities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, copy, unrelated, create 
+summary: SnapDrive for UNIX는 개별 장애 발생 시 정합성이 보장되는 Snapshot 복제본을 유지하여 관련 없는 엔터티의 Snapshot 복제본을 생성합니다. 
+---
+= 관련 없는 엔터티의 스냅샷 복사본 생성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX는 개별 장애 발생 시 정합성이 보장되는 Snapshot 복제본을 유지하여 관련 없는 엔터티의 Snapshot 복제본을 생성합니다.
+
+달리 지정하지 않는 한, UNIX용 SnapDrive는 특정 SnapDrive 스냅 생성 명령줄에 지정한 모든 엔터티가 관련되어 있다고 가정합니다. 즉, 한 엔터티에 대한 업데이트의 유효성은 지정된 다른 엔터티에 대한 업데이트에 따라 달라질 수 있습니다. 이러한 방식으로 스토리지 엔터티에 종속 쓰기가 있을 경우 SnapDrive for UNIX는 모든 스토리지 엔터티에 대해 충돌 정합성이 보장되는 스냅샷 복제본을 생성하는 단계를 수행합니다.
+
+다음 예에서는 SnapDrive for UNIX가 종속 쓰기를 가질 수 있는 스토리지 엔터티의 스냅샷 복사본을 생성하는 방법을 보여 줍니다. 다음 예제에서 SnapDrive snap create 명령은 LUN 및 디스크 그룹의 파일 시스템을 지정합니다. 디스크 그룹은 단일 스토리지 시스템에 상주하는 LUN으로 구성됩니다(스냅샷 복사본 생성 참조). LUN의 파일 시스템은 다른 스토리지 시스템 및 스토리지 시스템 볼륨에 상주합니다. 하나의 그룹으로 파일 시스템과 디스크 그룹은 여러 스토리지 시스템 볼륨에 걸쳐 있으며 개별적으로 확장되지 않습니다.
+
+다음 명령은 파일 시스템 '/mnt/fs1과 디스크 그룹 DG1:SnapDrive snap create -fs/mnt/fs1-dg dg1-snapname fs1_dg1'이 모두 포함된 스냅샷 복사본을 지정합니다
+
+이러한 스토리지 엔터티에는 종속 쓰기가 있을 수 있기 때문에 SnapDrive for UNIX는 장애 발생 시 정합성이 보장되는 스냅샷 복제본을 생성하고 파일 시스템 /mnt/fs1과 디스크 그룹 DG1을 그룹으로 처리합니다. 즉, 스냅샷 복사본을 생성하기 전에 SnapDrive for UNIX에서 스토리지 시스템 볼륨에 대한 I/O 작업을 중단해야 합니다.
+
+여러 볼륨에 걸쳐 여러 스토리지 엔터티에 대해 충돌 시에도 정합성이 보장되는 Snapshot 복사본을 생성하는 데 추가 시간이 소요되므로, SnapDrive for UNIX에서 I/O 작업을 동결할 수 없는 경우에는 항상 이 복제본을 생성할 수 없습니다. 따라서 UNIX용 SnapDrive를 사용하면 관련 없는 스토리지 엔터티의 스냅샷 복사본을 생성할 수 있습니다. 관련 없는 스토리지 엔터티는 스냅샷 복사본을 생성할 때 종속 쓰기가 없도록 지정할 수 있는 엔터티입니다. 엔터티에는 종속 쓰기가 없으므로 SnapDrive for UNIX에서는 엔터티를 그룹으로 일관되게 만들기 위한 단계를 수행하지 않습니다. 대신 UNIX용 SnapDrive에서는 각 개별 스토리지 엔터티가 충돌에 대해 정합성이 보장되는 스냅샷 복사본을 생성합니다.
+
+다음 명령을 실행하면 앞서 설명한 LUN 및 디스크 그룹에 있는 파일 시스템의 스냅샷 복사본이 지정됩니다. 관련 없는 옵션이 지정되어 있으므로 SnapDrive for UNIX는 파일 시스템 /mnt/fs1과 디스크 그룹 DG1이 개별 스토리지 엔터티로 장애 발생 시 정합성이 보장되지만 그룹으로 취급되지 않는 스냅샷 복제본을 생성합니다. 다음 명령을 실행하면 SnapDrive for UNIX에서 스토리지 시스템 볼륨에 대한 입출력 작업을 중지하지 않아도 됩니다. 'SnapDrive snap create -fs /mnt/fs1-dg dg1-reloed-snapname fs1_dg1
+
+* 관련 정보 *
+
+xref:task_creating_asnapshot_copy.adoc[스냅샷 복사본 생성]

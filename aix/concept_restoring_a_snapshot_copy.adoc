@@ -1,0 +1,13 @@
+---
+permalink: aix/concept_restoring_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy 
+summary: 단일 스토리지 엔터티 또는 여러 스토리지 엔터티의 스냅샷 복사본을 복원할 수 있습니다. 
+---
+= 스냅샷 복사본 복원
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+단일 스토리지 엔터티 또는 여러 스토리지 엔터티의 스냅샷 복사본을 복원할 수 있습니다.

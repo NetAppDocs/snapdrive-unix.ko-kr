@@ -1,0 +1,32 @@
+---
+permalink: aix/concept_storage_system_partner_ip_address_or_interface_name_confirmation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, ip, interface, name, address 
+summary: 스토리지 시스템에서 설치 프로그램을 실행하면 페일오버 시 사용할 파트너 스토리지 시스템의 IP 주소 또는 인터페이스 이름을 입력하라는 메시지가 표시됩니다. 이 기능을 제공하지 않으면 SnapDrive for UNIX에서 대신 사용되는 스토리지 시스템의 스토리지 엔터티를 검색할 수 없습니다. 
+---
+= 스토리지 시스템 파트너의 IP 주소 또는 인터페이스 이름 확인
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템에서 설치 프로그램을 실행하면 페일오버 시 사용할 파트너 스토리지 시스템의 IP 주소 또는 인터페이스 이름을 입력하라는 메시지가 표시됩니다. 이 기능을 제공하지 않으면 SnapDrive for UNIX에서 대신 사용되는 스토리지 시스템의 스토리지 엔터티를 검색할 수 없습니다.
+
+파트너 IP 주소 또는 인터페이스 이름은 HA 쌍 설정에서 파트너 스토리지 시스템의 IP 주소 또는 인터페이스 이름입니다. 운영 스토리지 시스템에 장애가 발생하면 파트너 스토리지 시스템이 운영 스토리지 시스템의 기능을 대신 사용합니다.
+
+
+
+== 예: 스토리지 시스템 설치 스크립트
+
+스토리지 시스템 설정 스크립트의 다음 샘플 출력에서는 IP 주소를 요청합니다.
+
+[listing]
+----
+storage_system_A> setup...
+Should interface e0 take over a partner IP address during failover?
+[n]: y
+Please enter the IP address or interface name to be taken over by e0
+[]: 10.2.21.35
+storage_system_A> reboot -t 0
+----
+이 예에서는 IP 주소 10.2.21.35를 사용합니다.

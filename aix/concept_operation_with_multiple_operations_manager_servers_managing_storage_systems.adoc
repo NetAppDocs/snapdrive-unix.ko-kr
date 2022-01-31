@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_operation_with_multiple_operations_manager_servers_managing_storage_systems.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, multiple, console, server, storage, manager, operations 
+summary: 다음 출력에서는 여러 Operations Manager 콘솔에서 스토리지 시스템을 관리할 때 표시되는 오류 메시지를 보여 줍니다. 
+---
+= 스토리지 시스템을 관리하는 여러 Operations Manager 콘솔 서버와 함께 작동합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음 출력에서는 여러 Operations Manager 콘솔에서 스토리지 시스템을 관리할 때 표시되는 오류 메시지를 보여 줍니다.
+
+[listing]
+----
+[root]# snapdrive storage create -lun storage_array1:/vol/vol1/lun5 lun6 -lun storage_array2:/vol/vol1/lun2 -lunsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user unix_host\root on Operations Manager server ops_mngr_server1
+SD.Storage.Write access denied on volume storage_array2:/vol/vol1 for user unix_host\root on Operations Manager server ops_mngr_server2
+----
+storage_array1은 ops_mgr_server1에 의해 관리되며 storage_array2는 ops_mgr_server2에 의해 관리됩니다. UNIX_HOST 관리자가 storage_array1과 storage_array2에 파일을 생성할 권한이 없습니다. 위의 UNIX용 SnapDrive 예에서는 액세스를 결정하는 데 사용되는 Operations Manager 콘솔을 표시합니다.

@@ -1,0 +1,31 @@
+---
+permalink: aix/concept_storage_system_volume_preparation.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, system, volume, preparation 
+summary: 스토리지 시스템의 명령 프롬프트 또는 FilerView 옵션을 사용하여 SnapDrive for UNIX 전용 스토리지 시스템 볼륨을 생성할 수 있습니다. 
+---
+= 스토리지 시스템 볼륨 준비
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+스토리지 시스템의 명령 프롬프트 또는 FilerView 옵션을 사용하여 SnapDrive for UNIX 전용 스토리지 시스템 볼륨을 생성할 수 있습니다.
+
+단일 호스트에 연결된 SnapDrive for UNIX LUN(Logical Unit Number) 또는 NFS(Network File System) 엔터티를 보관할 수 있는 볼륨을 생성하려면 스토리지 시스템에서 다음 작업을 완료해야 합니다.
+
+* 스토리지 시스템 볼륨을 생성합니다.
+* Fibre Channel 또는 iSCSI(Internet Small Computer System Interface) 환경에 있는 경우 볼륨 최적화를 위해 호스트에 연결된 모든 LUN이 있는 스토리지 시스템 볼륨에서 'SnapDrive snap reserve' 옵션을 0%로 재설정합니다.
+
+
+LUN 또는 NFS 디렉토리 트리를 저장하기 위해 스토리지 시스템에 볼륨을 생성할 때 다음 사항을 염두에 두어야 합니다.
+
+* 스토리지 시스템 볼륨에 여러 개의 LUN 또는 NFS 디렉토리 트리를 생성할 수 있습니다.
+* 사용자 데이터를 스토리지 시스템 또는 vFiler 유닛의 루트 볼륨에 저장하면 안 됩니다.
+
+
+* 관련 정보 *
+
+http://docs.netapp.com/ontap-9/topic/com.netapp.doc.cdot-famg-nfs/home.html["ONTAP 9 NFS 참조"]
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["7-Mode용 Data ONTAP 8.2 파일 액세스 및 프로토콜 관리 가이드 를 참조하십시오"]

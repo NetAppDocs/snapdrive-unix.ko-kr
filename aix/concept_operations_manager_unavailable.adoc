@@ -1,0 +1,26 @@
+---
+permalink: aix/concept_operations_manager_unavailable.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, manager, console, unavailable, operations 
+summary: UNIX용 SnapDrive에는 액세스 검사를 위한 Operations Manager 콘솔이 필요합니다. 경우에 따라 Operations Manager 콘솔 서버를 여러 가지 이유로 사용하지 못할 수 있습니다. 
+---
+= Operations Manager 콘솔을 사용할 수 없습니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive에는 액세스 검사를 위한 Operations Manager 콘솔이 필요합니다. 경우에 따라 Operations Manager 콘솔 서버를 여러 가지 이유로 사용하지 못할 수 있습니다.
+
+RBAC 메소드 '_RBAC-method=DFM_'이 설정되어 있고 Operations Manager 콘솔을 사용할 수 없는 경우 SnapDrive for UNIX에서 다음 오류 메시지를 표시합니다.
+
+[listing]
+----
+[root]# snapdrive storage delete -lun storage_array1:/vol/vol2/qtree1/lun1
+0002-333 Admin error: Unable to connect to the DFM ops_mngr_server
+----
+SnapDrive for UNIX는 또한 Operations Manager 콘솔에서 반환된 사용자 액세스 검사 결과의 캐시를 유지할 수 있습니다. 이 캐시는 24시간 동안 유효하며 구성할 수 없습니다. Operations Manager 콘솔을 사용할 수 없는 경우 SnapDrive for UNIX는 캐시를 사용하여 액세스를 결정합니다. 이 캐시는 구성된 모든 Operations Manager 콘솔 서버가 응답하지 않는 경우에만 사용됩니다.
+
+UNIX용 SnapDrive에서 액세스 검사에 캐시를 사용하려면 액세스 결과의 캐시를 유지하려면 '_RBAC-cache_' 구성 변수를 설정해야 합니다. '_RBAC-cache_' 설정 변수는 기본적으로 OFF입니다.
+
+운영 관리자 콘솔을 사용할 수 없는 경우에도 UNIX용 SnapDrive를 사용하려면 서버 관리자는 역할 기반 액세스 제어(RBAC) 방법을 'sapdrive.conf' 파일에서 '_RBAC-method=NATIVE_'로 재설정해야 합니다. 'napdrive.conf' 파일을 변경한 후에는 SnapDrive for UNIX 데몬을 다시 시작해야 합니다. '_RBAC-method=NATIVE_'가 설정된 경우 루트 사용자만 UNIX용 SnapDrive를 사용할 수 있습니다.

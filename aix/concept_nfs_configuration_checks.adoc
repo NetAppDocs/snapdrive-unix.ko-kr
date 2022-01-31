@@ -1,0 +1,25 @@
+---
+permalink: aix/concept_nfs_configuration_checks.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, nfs, configuration, check 
+summary: 'NFS(Network File System)\(NFS\)를 사용하는 구성의 경우, 호스트 및 스토리지 시스템을 설정하기 전에 NFS 클라이언트가 올바르게 작동하고 있는지 확인해야 합니다.' 
+---
+= NFS 구성 검사
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NFS(Network File System)를 사용하는 구성의 경우, 호스트 및 스토리지 시스템을 설정하기 전에 NFS 클라이언트가 올바르게 작동하고 있는지 확인해야 합니다.
+
+NFS를 사용하는 구성이 있는 경우 다음 작업을 완료해야 합니다.
+
+* NFS 클라이언트가 올바르게 작동하는지 확인합니다.
++
+NFS 프로토콜 관리에 대한 자세한 내용은 를 참조하십시오 link:https://library.netapp.com/ecm/ecm_download_file/ECMP1401220["7-Mode용 파일 액세스 및 프로토콜 관리 가이드 를 참조하십시오"] Data ONTAP 7-Mode를 사용하는 경우 를 참조하십시오  clustered Data ONTAP을 사용하는 경우:
+
+* 호스트 및 스토리지 시스템 설정
++
+스토리지 시스템에서 NFS 마운트 디렉토리와 함께 UNIX용 SnapDrive를 사용하려면 스토리지 시스템 디렉토리를 호스트로 올바르게 내보내야 합니다. 호스트에 스토리지 시스템에 대한 데이터 및 관리 인터페이스와 함께 여러 IP(인터넷 프로토콜) 인터페이스가 있는 경우 디렉토리가 데이터 및 관리 인터페이스 모두에 올바르게 내보내지는지 확인해야 합니다. SnapDrive for UNIX는 이러한 모든 인터페이스에 읽기 또는 쓰기 권한이 없거나, -readonly 옵션이 있는 SnapDrive snap connect 명령의 경우 읽기 전용 권한 이상이 아니면 경고를 발행합니다. 해당 인터페이스에 디렉토리를 액세스할 수 있는 권한이 없으면 SnapDrive 스냅 복구 및 SnapDrive 스냅 연결 명령이 실패합니다.
+
+

@@ -1,0 +1,18 @@
+---
+permalink: solaris/concept_access_permissions_on_a_storage_system.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, access, permission, storage, system 
+summary: 액세스 권한은 호스트가 특정 스냅샷 복사본 및 스토리지 작업을 수행할 수 있는지 여부를 나타냅니다. 액세스 권한은 SnapDrive 스토리지 표시 또는 스토리지 목록 작업에 영향을 주지 않습니다. SnapDrive를 사용하면 스토리지 시스템에 상주하는 파일의 각 호스트에 대한 액세스 권한을 지정할 수 있습니다. 
+---
+= 스토리지 시스템의 액세스 권한
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+액세스 권한은 호스트가 특정 스냅샷 복사본 및 스토리지 작업을 수행할 수 있는지 여부를 나타냅니다. 액세스 권한은 SnapDrive 스토리지 표시 또는 스토리지 목록 작업에 영향을 주지 않습니다. SnapDrive를 사용하면 스토리지 시스템에 상주하는 파일의 각 호스트에 대한 액세스 권한을 지정할 수 있습니다.
+
+또한 지정된 호스트에 대한 권한 파일을 찾을 수 없을 때 SnapDrive에서 수행해야 하는 작업을 지정할 수도 있습니다. '_all-access-if-RBAC-unspecified_'에 대한 'sapdrive.conf' 설정 파일의 값을 설정하여 동작을 지정할 수 있습니다. 액세스 권한을 수정하여 스토리지 시스템에 대한 액세스를 설정하거나 해제할 수도 있습니다.
+
+
+NOTE: UNIX용 SnapDrive 4.0 이상에서는 역할 기반 액세스 제어 기능에 따라 스토리지 작업을 수행할 수 있습니다.

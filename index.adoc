@@ -1,0 +1,10 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+---
+= UNIX용 SnapDrive 5.3.2 설명서
+
+
+UNIX용 SnapDrive 정보 라이브러리에 오신 것을 환영합니다. 여기에서는 Linux, Solaris 및 AIX용 SnapDrive의 설치, 구성, 사용 및 관리 방법을 비롯하여 UNIX용 SnapDrive 소프트웨어의 5.3.2 설명서를 찾을 수 있습니다.
+
+Unix용 SnapDrive의 이전 릴리스에 대한 문서는 에서 확인할 수 있습니다 link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=30050["NetApp Support 사이트"].

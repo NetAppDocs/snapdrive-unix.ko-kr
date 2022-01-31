@@ -1,0 +1,47 @@
+---
+permalink: aix/task_creating_a_filesystem_on_a_lunand_setting_up_thelun_automatically.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, lun, file, system, create 
+summary: UNIX용 SnapDrive를 사용하여 LUN에 파일 시스템을 생성할 수 있습니다. UNIX용 SnapDrive는 연결된 LUN을 자동으로 생성합니다. 
+---
+= LUN에 파일 시스템을 생성하고 LUN을 자동으로 설정합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하여 LUN에 파일 시스템을 생성할 수 있습니다. UNIX용 SnapDrive는 연결된 LUN을 자동으로 생성합니다.
+
+.단계
+. 명령줄에 다음 명령을 입력합니다.
++
+``SnapDrive storage create-fs_file_spec_-nolvm[-fstype type][-fsopts options][-mntopts options][-nopstist][-npersist] -filervol_long_filer_path_-lunsize_size_[-igroup_IG_name [IG_name]]_[{-reserve| * noreserve]
+
++
+SnapDrive for UNIX는 사용자가 지정한 파일 시스템을 생성하고 지정한 스토리지 시스템에 LUN을 생성합니다. LUN을 위한 호스트 준비 및 검색과 관련된 모든 작업을 수행하고, LUN을 호스트 엔티티에 매핑 및 연결합니다.
+
+
+
+
+
+== 예:
+
+* LUN에 직접 100MB 파일 시스템 생성: *
+
+[listing]
+----
+# snapdrive storage create -fs /mnt/acct1 -filervol acctfiler:/vol/vol1 -lunsize 100m -nolvm
+----
+* 볼륨 관리자 없이 원시 LUN에 파일 시스템 생성: *
+
+[listing]
+----
+# snapdrive storage create -fs /mnt/vxfs2 -fstype vxfs -lun
+snoopy:/vol/vol1/lunVxvm2 -lunsize 50m -nolvm
+LUN snoopy:/vol/vol1/lunVxvm2 ... created
+mapping new lun(s) ... done
+discovering new lun(s) ... done
+LUN to device file mappings:
+- snoopy:/vol/vol1/lunVxvm2 => /dev/vx/dmp/Disk_1
+file system /mnt/vxfs2 created
+----

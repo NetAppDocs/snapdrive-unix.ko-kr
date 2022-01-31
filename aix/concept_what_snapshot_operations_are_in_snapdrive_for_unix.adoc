@@ -1,0 +1,17 @@
+---
+permalink: aix/concept_what_snapshot_operations_are_in_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, operation, ontap, data, host 
+summary: 'UNIX용 SnapDrive를 사용하면 Data ONTAP 스냅샷 기술을 사용하여 스토리지 시스템에 저장된 호스트 데이터의 이미지 \(스냅샷 복사본\)를 만들 수 있습니다.' 
+---
+= UNIX용 SnapDrive의 스냅샷 작업은 무엇입니까
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive를 사용하면 Data ONTAP 스냅샷 기술을 사용하여 스토리지 시스템에 저장된 호스트 데이터의 이미지(스냅샷 복사본)를 만들 수 있습니다.
+
+이 스냅샷 복사본은 나중에 복원할 수 있는 데이터 복사본을 제공합니다. 스냅샷 복사본의 데이터는 한 스토리지 시스템에 존재하거나 여러 스토리지 시스템과 해당 볼륨에 걸쳐 있을 수 있습니다. 이러한 스토리지 시스템은 호스트 클러스터 환경에서 HA 쌍 또는 노드 로컬 파일 시스템, 디스크 그룹 또는 LUN일 수 있습니다. UNIX용 SnapDrive가 설치된 비클러스터 UNIX 호스트에서 스토리지 시스템에 있는 하나 이상의 볼륨 그룹의 스냅샷 복사본을 생성할 수 있습니다.
+
+스냅샷 복사본에는 파일 시스템, 논리적 볼륨, 디스크 그룹, LUN 및 NFS 디렉토리 트리가 포함될 수 있습니다. 스냅샷 복사본을 생성한 후에는 이름을 바꾸거나 복원, 삭제할 수 있습니다. 동일한 호스트 또는 다른 호스트의 다른 위치에 연결할 수도 있습니다. 연결한 후 스냅샷 복사본의 콘텐츠를 확인 및 수정하거나 스냅샷 복사본을 분리할 수 있습니다. 또한 UNIX용 SnapDrive를 사용하면 생성한 스냅샷 복사본에 대한 정보를 표시할 수 있습니다. UNIX용 SnapDrive가 설치된 클러스터된 UNIX 호스트에서 디스크 그룹 및 파일 시스템이 포함된 호스트 클러스터 노드에 대해 스냅샷 작업을 수행할 수 있습니다. 스냅샷 작업에는 생성, 이름 바꾸기, 복원, 연결, 연결 끊기, 표시 및 삭제.

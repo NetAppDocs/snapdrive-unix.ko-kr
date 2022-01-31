@@ -1,0 +1,19 @@
+---
+permalink: aix/concept_volume_optimization_in_an_fc_or_iscsi_environment.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, volume, optimization, fc, iscsi, environment 
+summary: '동일한 볼륨에 호스트별 논리 단위 번호\(LUN\)를 지정하여 FC 및 iSCSI(Internet Small Computer System Interface\) 환경에서 볼륨 사용을 최적화할 수 있습니다.' 
+---
+= FC 또는 iSCSI 환경에서 볼륨 최적화
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+동일한 볼륨에 호스트별 LUN(논리 단위 번호)을 지정하여 FC 및 iSCSI(Internet Small Computer System Interface) 환경에서 볼륨 사용을 최적화할 수 있습니다.
+
+또한 다음과 같은 몇 가지 작업을 수행하여 볼륨을 최적화할 수도 있습니다.
+
+* 여러 호스트가 동일한 스토리지 시스템을 공유하는 경우 각 호스트에는 해당 호스트에 접속된 모든 LUN을 보관할 수 있는 전용 스토리지 시스템 볼륨이 있어야 합니다.
+* 스토리지 시스템 볼륨에 LUN이 여러 개 있는 경우 LUN이 상주하는 전용 볼륨에 가장 적합한 것으로, 단일 호스트의 LUN만 포함할 수 있습니다. 다른 파일이나 디렉토리는 포함하지 않아야 합니다.
+

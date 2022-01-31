@@ -1,0 +1,21 @@
+---
+permalink: linux-administration/concept_operation_with_multiple_filespec_and_storage_objects.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, filespec, storage, objects, operation, multiple 
+summary: 다음 예제는 특정 작업을 수행할 권한이 있는 사용자가 아닐 때 나타나는 오류 메시지를 보여줍니다. 
+---
+= 여러 filespec 및 스토리지 객체를 사용하는 작업입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+다음 예제는 특정 작업을 수행할 권한이 있는 사용자가 아닐 때 나타나는 오류 메시지를 보여줍니다.
+
+[listing]
+----
+[marc]$ snapdrive storage create -lun storage_array1:/vol/vol1/lun5 lun6 -lun storage_array1:/vol/vol2/lun2 -lunsize 100m
+0002-332 Admin error:SD.Storage.Write access denied on volume storage_array1:/vol/vol1 for user nis_domain\marc on Operations Manager server ops_mngr_server
+SD.Storage.Write access denied on volume storage_array1:/vol/vol2 for user nis_domain\marc on Operations Manager server ops_mngr_server
+----
+이 예에서는 3개의 LUN이 2개의 스토리지 시스템 볼륨, 즉 vol1과 vol2에 상주합니다. 사용자 마크는 NIS_DOMAIN에 속하며 vol1 및 vol2에 filespec를 만들 권한이 없습니다. UNIX용 SnapDrive는 위의 예제에서 두 개의 오류 메시지를 표시합니다. 오류 메시지는 사용자가 vol1과 vol2에 대한 'D. Storage.Write' 액세스 권한이 있어야 한다는 것을 나타냅니다.

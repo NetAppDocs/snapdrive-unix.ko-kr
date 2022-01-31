@@ -1,0 +1,33 @@
+---
+permalink: aix/concept_executing_the_data_collection_utility.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, data, collection, utility, executing 
+summary: 데이터 수집 유틸리티를 실행하려면 몇 가지 단계를 완료해야 합니다. 
+---
+= 데이터 수집 유틸리티 실행
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 수집 유틸리티를 실행하려면 몇 가지 단계를 완료해야 합니다.
+
+루트 사용자로 로그인했는지 확인합니다.
+
+.단계
+. UNIX용 SnapDrive 진단 디렉터리로 변경합니다. 경로는 'install_directory/diag'입니다
++
+install_directory는 호스트 운영 체제의 UNIX용 SnapDrive 설치 디렉토리입니다. 이 디렉토리는 호스트 운영 체제에 따라 다를 수 있습니다.
+
+. 명령 프롬프트에서 다음 명령을 입력합니다.
++
+``SnapDrive.DC[-d 디렉토리][-n file_name][-f] *'
+
++
+'-d directory'는 이 유틸리티가 만드는 압축 파일의 위치를 지정합니다. 기본 위치는 '/tmp/netapp'입니다.
+
++
+'-n file_name'은 디렉터리 및 압축된 출력 파일의 이름에 포함할 문자열을 지정합니다. 이 인수에 값을 입력하면 'napdrive.dc' 유틸리티는 ntap_SnapDrive_name 이라는 디렉토리와 ntap_SnapDrive_name.tar.Z라는 파일 이름을 생성합니다. 기본 경로 이름은 '/tmp/NetApp/NTAP_SnapDrive_info.tar.Z'입니다
+
+. 분석을 위해 NetApp 기술 지원 팀에 didecory/ntap_SnapDrive_name.tar.Z 파일을 보냅니다.
+

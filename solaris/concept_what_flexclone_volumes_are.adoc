@@ -1,0 +1,20 @@
+---
+permalink: solaris/concept_what_flexclone_volumes_are.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, flexclone, volume 
+summary: 유연한 볼륨 클론인 FlexClone은 유연한 상위 볼륨의 시점 복사본입니다. FlexClone 볼륨은 클론이 생성된 후 상위 Flex 볼륨의 변경 사항을 상속하지 않습니다. 
+---
+= FlexClone 볼륨이란
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+유연한 볼륨 클론인 FlexClone은 유연한 상위 볼륨의 시점 복사본입니다. FlexClone 볼륨은 클론이 생성된 후 상위 Flex 볼륨의 변경 사항을 상속하지 않습니다.
+
+Data ONTAP FlexClone 기술을 사용하면 생성 시 추가 스토리지 공간을 요구하지 않고 데이터 볼륨을 즉시 복제할 수 있습니다. 각 클론 볼륨은 제품 또는 시스템 개발 테스트, 버그 수정, 업그레이드 확인 등과 같은 다양한 작업에 사용할 수 있는 투명한 가상 복사본입니다.
+
+FlexClone 기술은 최소한의 오버헤드로 공간을 크게 절감해 줍니다. 이 기술을 사용하면 더 짧은 시간에 더 적은 위험으로 더 많은 데이터 세트 조합을 관리할 수 있습니다. FlexClone 볼륨은 기본적으로 쓰기 예약이 없습니다. UNIX용 SnapDrive 4.1은 NFS 및 SAN 환경에서 FlexClone 기술을 사용합니다.
+
+
+NOTE: FlexClone 볼륨은 Data ONTAP 7.0.x 이상에서 지원되지만 Data ONTAP 7.2 이상을 실행하는 스토리지 시스템에서 vFiler 장치에서 지원되지 않습니다.

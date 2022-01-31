@@ -1,0 +1,45 @@
+---
+permalink: solaris/task_restoring_asnapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, restore, snapshot, copy 
+summary: SnapDrive snap restore 명령을 사용하여 스냅샷 복사본을 복구할 수 있습니다. 복원 작업은 복원 중인 데이터의 유형 및 양에 따라 몇 분 정도 걸릴 수 있습니다. 
+---
+= 스냅샷 복사본 복원
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive snap restore 명령을 사용하여 스냅샷 복사본을 복구할 수 있습니다. 복원 작업은 복원 중인 데이터의 유형 및 양에 따라 몇 분 정도 걸릴 수 있습니다.
+
+.단계
+. 다음 명령을 입력하여 스냅샷 복사본을 복원합니다.
++
+"* SnapDrive snap restore-snapname_snap_name_{-lun|-dg|-fs|-hostvol|-file}_file_spec_[_file_spec_...] [{-LUN|-DG|-fs|-hostvol|-file}_file_spec_[_file_spec_...]...] [-force [-not프롬프트] [-mntopts_options_] [{-reserve |-noreserve}] [-DeviceType{shared|dedicated}] *
+
+
+
+UNIX용 SnapDrive는 'SnapDrive snap restore' 명령줄에서 지정한 LUN의 컨텐츠를 지정한 스냅샷 복사본의 LUN 컨텐츠로 대체합니다. 이 작업은 몇 분 정도 걸릴 수 있습니다. 작업이 완료되면 UNIX용 SnapDrive는 'Snap restore<filespec list>Succeeded'와 유사한 메시지를 표시합니다
+
+다음 예에서는 파일 시스템 1(fs1)이 스토리지 시스템1에 상주하고 파일 시스템 2(fs2)가 스토리지 시스템1과 파트너 스토리지 시스템인 스토리지 시스템 2에 상주합니다. 파일 시스템 3(fs3)은 스토리지 시스템1, 파트너 스토리지 시스템 2, 스토리지 시스템3에 상주하며, 이 시스템은 HA 쌍의 일부가 아닙니다. 추가 파일 시스템인 fs4는 전적으로 스토리지 시스템 4에 있습니다.
+
+다음 명령을 실행하면 fs1, fs2, fs3, fs4 등의 스냅샷 복사본이 생성됩니다.
+
+[listing]
+----
+# snapdrive snap create -fs /mnt/fs1 /mnt/fs2 /mnt/fs3 /mnt/fs4
+-snapname fs_all_snap
+----
+다음 명령은 대상 스토리지 시스템에서 fs1과 fs2를 복구합니다. fs1과 fs2는 모두 HA 페어에 상주하므로 하나의 명령으로 복구할 수 있습니다.
+
+[listing]
+----
+# snapdrive snap restore -fs /mnt/fs1 /mt/fs2 -snapname fs_all_snap
+----
+다음 명령을 실행하면 fs4가 복구됩니다.
+
+[listing]
+----
+snapdrive snap restore -fs /mnt/fs4 -snapname fs_all_snap
+----
+SnapDrive for UNIX는 이 파일 시스템이 스토리지 시스템 1, 스토리지 시스템 2 및 스토리지 시스템 3에 상주하므로 대상 스토리지 시스템에서 fs3을 복구할 수 없습니다.

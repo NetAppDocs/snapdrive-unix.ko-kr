@@ -1,0 +1,36 @@
+---
+permalink: solaris/concept_tasks_performed_by_snapdrive_dc.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, task, perform, data, collection, utility 
+summary: 데이터 수집 유틸리티는 NetApp 진단 유틸리티를 실행하고, UNIX용 SnapDrive 로그 파일을 복사하고, 분석에 사용되는 압축 파일을 만듭니다. 
+---
+= SnapDrive.DC에서 수행하는 작업
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+데이터 수집 유틸리티는 NetApp 진단 유틸리티를 실행하고, UNIX용 SnapDrive 로그 파일을 복사하고, 분석에 사용되는 압축 파일을 만듭니다.
+
+'napdrive.dc' 유틸리티는 다음 작업을 수행합니다.
+
+* Host_info와 filer_info 유틸리티를 실행하여 호스트에 연결된 호스트 및 스토리지 시스템에 대한 정보를 수집하고 이 정보를 압축된 파일에 저장합니다. host_info 유틸리티와 filer_info 유틸리티는 UNIX용 SnapDrive 설치 패키지와 함께 제공됩니다.
++
+예를 들어 Solaris 키트에는 Solaris_info 유틸리티가 포함되어 있습니다.
+
+* /tmp/NetApp/NTAP_SnapDrive_name 디렉토리를 생성합니다. 이 도구는 다음 파일의 복사본을 디렉터리에 배치합니다.
++
+** UNIX용 SnapDrive 버전. SnapDrive version 명령을 실행하여 알 수 있습니다
+** 'napdrive.conf' 파일입니다
+** 감사 로그 파일
+** 추적 로그 파일
+** 복구 로그 파일
+** host_info 유틸리티에서 생성된 파일입니다
+
+
+* 디렉토리 내용의 압축된 파일을 생성하고 이 파일을 NetApp 기술 지원 팀에 전송한다는 메시지를 표시합니다.
+
+
+* 관련 정보 *
+
+https://library.netapp.com/ecm/ecm_download_file/ECMP1148981["Solaris Host Utilities 6.1 설치 및 설정 가이드"]

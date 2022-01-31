@@ -1,0 +1,13 @@
+---
+permalink: linux-administration/concept_how_to_configure_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, configure, host, variable 
+summary: SnapDrive for UNIX에서 사용되는 모든 구성 변수와 옵션이 포함된 SnapDrive.conf 파일을 편집하여 요구 사항에 따라 옵션을 설정하거나 해제할 수 있습니다. 변수를 추가하여 호스트별 사용량을 생성할 수도 있습니다. 
+---
+= UNIX용 SnapDrive 구성
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX에서 사용되는 모든 구성 변수와 옵션이 포함된 'napdrive.conf' 파일을 편집하여 요구 사항에 따라 옵션을 설정하거나 해제할 수 있습니다. 변수를 추가하여 호스트별 사용량을 생성할 수도 있습니다.

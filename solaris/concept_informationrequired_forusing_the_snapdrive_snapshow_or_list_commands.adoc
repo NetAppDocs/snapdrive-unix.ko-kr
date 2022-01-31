@@ -1,0 +1,98 @@
+---
+permalink: solaris/concept_informationrequired_forusing_the_snapdrive_snapshow_or_list_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, show, list, command 
+summary: SnapDrive snap show 또는 list 명령을 사용하여 스토리지 시스템, 스토리지 시스템 볼륨, 디스크 또는 볼륨 그룹, 파일 시스템, Snapshot 복사본 등. 
+---
+= SnapDrive snap show 또는 list 명령을 사용하는 데 필요한 정보입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive snap show" 또는 "list" 명령을 사용하여 스토리지 시스템, 스토리지 시스템 볼륨, 디스크 또는 볼륨 그룹, 파일 시스템, Snapshot 복사본 등.
+
+다음 표는 SnapDrive snap show | list 명령을 사용할 때 제공해야 하는 정보를 제공합니다.
+
+
+NOTE: SnapDrive snap show 또는 SnapDrive snap list를 명령으로 입력하든 관계없이 동일한 인수를 사용할 수 있습니다. 이러한 명령은 동의어입니다.
+
+|===
+| 요구 사항/옵션 | 인수 
+
+
+ a| 
+입력한 명령에 따라 다음 정보를 표시할 수 있습니다.
+
+* 기술을 자세히 소개합니다
+* 스토리지 시스템 볼륨
+* 디스크 또는 볼륨 그룹
+* 파일 시스템
+* 호스트 또는 논리 볼륨
+* Snapshot 복사본
+
+
+'file_spec' 인수에 입력한 값은 정보를 표시할 스토리지 엔터티를 식별해야 합니다. 명령은 엔터티가 현재 호스트에 있다고 가정합니다.
+
+
+
+ a| 
+스토리지 시스템('-filer')
+ a| 
+'_filername_'
+
+
+
+ a| 
+스토리지 시스템의 볼륨("-filervol")
+ a| 
+'_filervol_'
+
+
+
+ a| 
+디스크 그룹('-dg_file_spec_') 또는 볼륨 그룹('-vg_file_spec_')
+ a| 
+'_ 디스크 또는 볼륨 그룹의 이름 _'
+
+
+
+ a| 
+파일 시스템('-fs_file_spec_')
+ a| 
+'_filesystem_name_'
+
+
+
+ a| 
+호스트 볼륨('-hostvol_file_spec_') 또는 논리 볼륨('-lvol_file_spec_')
+ a| 
+'_ 호스트 또는 논리적 볼륨의 이름 _'
+
+
+
+ a| 
+스냅샷 사본 이름('-snapname_long_snap_name_')
+ a| 
+'_long_snap_name_'
+
+
+
+ a| 
+추가 스냅샷 복사본 이름
+ a| 
+'_SNAP_NAME_'(긴 버전 또는 짧은 버전)
+
+
+
+ a| 
+스냅샷 복사본에 대한 정보를 표시하려면 스냅샷 복사본의 이름을 지정합니다. 첫 번째 스냅샷 복사본 '_long_snap_name_'에 스토리지 시스템 이름, 볼륨 및 스냅샷 복사본 이름이 포함된 이름의 긴 버전을 입력합니다. 동일한 스토리지 시스템 및 볼륨에 있는 스냅샷 복사본 이름의 짧은 버전을 사용할 수 있습니다.
+
+
+
+ a| 
+'-verbose'
+ a| 
+~
+
+|===

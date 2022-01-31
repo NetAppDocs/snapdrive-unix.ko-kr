@@ -1,0 +1,27 @@
+---
+permalink: solaris/task_verifying_that_the_guest_is_ready.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, verify, guest 
+summary: UNIX용 SnapDrive는 게스트가 스토리지 시스템과 통신할 준비가 되었는지 확인해야 합니다. 
+---
+= 게스트가 준비되었는지 확인
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+UNIX용 SnapDrive는 게스트가 스토리지 시스템과 통신할 준비가 되었는지 확인해야 합니다.
+
+NetApp Virtual Storage Console for VMware vSphere의 백업 및 복구 기능이 Windows 시스템에 설치되고 vCenter에 등록되어 있는지 확인합니다.
+
+NetApp Virtual Storage Console 구성은 RDM FC LUN에 대해서만 필요합니다.
+
+.단계
+. 다음 명령을 입력합니다.
++
+'* SnapDrive config set-viadmin 사용자 viadmin_name*'
+
++
+명령이 완료되면 "SnapDrive storage show -all" 명령을 실행하여 게스트가 스토리지 시스템과 통신할 수 있는지 확인할 수 있습니다.
+
+

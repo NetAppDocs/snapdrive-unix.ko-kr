@@ -1,0 +1,35 @@
+---
+permalink: solaris/concept_how_to_manage_snapshot_copies_of_lvm_vxvm_raw_devices_and_nfs_entities.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, snapshot, vxvm, raw, nfs, device, copy 
+summary: SnapDrive 명령을 사용하여 VxVM, 원시 장치 및 NFS 엔터티의 스냅샷 복사본을 생성, 복원 및 관리할 수 있습니다. 
+---
+= VxVM, 원시 장치 및 NFS 엔터티의 스냅샷 복사본을 관리하는 방법
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive 명령을 사용하여 VxVM, 원시 장치 및 NFS 엔터티의 스냅샷 복사본을 생성, 복원 및 관리할 수 있습니다.
+
+호스트에서 명령을 실행하여 스토리지 엔터티의 Snapshot 복사본을 생성, 복원 및 관리해야 합니다.
+
+* 볼륨 관리자 요소
++
+볼륨 관리자 엔터티는 호스트 볼륨 관리자를 사용하여 생성한 호스트 볼륨 및 파일 시스템을 포함하는 디스크 그룹입니다.
+
+* 원요소
++
+원시 엔터티는 볼륨 또는 디스크 그룹을 생성하지 않고 파일 시스템을 포함하는 LUN 또는 LUN이며 호스트에 직접 매핑됩니다.
+
+* NFS 엔터티
++
+NFS 엔터티는 NFS 파일 및 디렉토리 트리입니다.
+
++
+
+NOTE: 호스트 클러스터 시스템은 NFS 엔터티를 지원하지 않습니다.
+
+
+
+생성한 스냅샷 복사본은 여러 스토리지 시스템 및 스토리지 시스템 볼륨에 존재할 수 있습니다. SnapDrive은 스냅샷 복사본의 스토리지 엔터티에 대해 읽기 또는 쓰기 권한을 확인하여 모든 스냅샷 복사본 데이터가 충돌 시에도 정합성이 보장되는지 확인합니다. 충돌 시에도 정합성 보장 데이터가 아닌 경우 SnapDrive에서 스냅샷 복사본을 생성하지 않습니다.

@@ -1,0 +1,16 @@
+---
+permalink: aix/concept_disconnecting_a_snapshot_copy.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, disconnect, snapshot, copy 
+summary: LUN, LUN의 파일 시스템, 디스크 그룹, NFS 디렉토리 또는 공유 디스크 그룹, 호스트 볼륨 및 LUN의 파일 시스템에서 스냅샷 복사본을 분리할 수 있습니다. 
+---
+= 스냅샷 복사본의 연결을 끊는 중입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN, LUN의 파일 시스템, 디스크 그룹, NFS 디렉토리 또는 공유 디스크 그룹, 호스트 볼륨 및 LUN의 파일 시스템에서 스냅샷 복사본을 분리할 수 있습니다.
+
+
+NOTE: SnapDrive for UNIX 4.2 이상 버전에서 분할된 클론 볼륨을 분리할 수 있습니다.

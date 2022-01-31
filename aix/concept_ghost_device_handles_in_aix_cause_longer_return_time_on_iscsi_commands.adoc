@@ -1,0 +1,21 @@
+---
+permalink: aix/concept_ghost_device_handles_in_aix_cause_longer_return_time_on_iscsi_commands.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, ghost, device, aix, handle, iscsi, command, return 
+summary: '유령 장치 처리 장치(장치가 정의 또는 실패 상태에서 처리)가 있는 iSCSI 또는 FC를 통해 AIX 디바이스를 쿼리하면 SCSI 명령이 약 30초의 AIX 기본 시간 초과를 대기하게 될 수 있습니다.' 
+---
+= AIX에서 고스트 디바이스 핸들을 사용하면 iSCSI 명령에서 더 긴 반환 시간이 발생합니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+고스트 장치 핸들(장치가 정의 또는 실패 상태에서 처리됨)이 있는 iSCSI 또는 FC를 통해 AIX 디바이스를 쿼리하면 SCSI 명령이 약 30초의 AIX 기본 시간 초과를 기다릴 수 있습니다.
+
+FC 하위 장치 핸들이 정리되지 않았거나 FC HBA가 스위치에 연결되지 않은 경우 AIX 시스템을 FC에서 iSCSI 사용으로 전환한 후에 이 문제를 볼 수 있습니다.
+
+* 해결 방법: *
+
+* Fibre Channel HBA가 스위치에 연결되어 있지 않은 경우 Fibre Channel 스위치에 연결되어 있지 않은 모든 Fibre Channel 이니시에이터에 Fibre Channel IOA 랩 플러그를 설치합니다.
+* Fibre Channel HBA가 스위치에 연결되어 있지만 장애가 발생하거나 정의된 디바이스가 하위 디바이스로 처리되면 "rmdev" 명령을 사용하여 오래된 고스트 디바이스 핸들을 제거합니다.
+

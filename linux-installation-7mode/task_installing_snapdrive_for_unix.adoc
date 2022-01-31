@@ -1,0 +1,33 @@
+---
+permalink: linux-installation-7mode/task_installing_snapdrive_for_unix.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, install, linux 
+summary: 명령줄 인터페이스에서 Linux 호스트에 UNIX용 SnapDrive를 설치할 수 있습니다. 
+---
+= UNIX용 SnapDrive 설치
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+명령줄 인터페이스에서 Linux 호스트에 UNIX용 SnapDrive를 설치할 수 있습니다.
+
+.단계
+. NetApp Support 사이트에서 UNIX용 SnapDrive 설치 프로그램을 다운로드하십시오 http://mysupport.netapp.com/NOW/cgi-bin/software["NetApp 다운로드: 소프트웨어"] 파일을 Linux 호스트에 복사합니다.
+. 호스트 시스템에 루트 사용자로 로그인합니다.
++
+설치 관리자 파일을 원격으로 실행 중이고 시스템 구성에서 루트 사용자로 로그인할 수 없는 경우 'u' 명령을 사용하여 루트 사용자로 로그인합니다.
+
+. 설치 프로그램을 복사한 Linux 호스트의 디렉토리로 이동합니다.
+. UNIX용 SnapDrive 설치:
++
+'* rpm -ivh_installer_file_name_ * '
+
+
+
+SnapDrive 데몬은 설치 후 자동으로 시작됩니다.
+
+[listing]
+----
+Starting snapdrive daemon: Successfully started daemon
+----

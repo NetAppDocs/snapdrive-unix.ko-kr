@@ -1,0 +1,27 @@
+---
+permalink: aix/task_identifying_the_installed_components.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, installed, component, identify 
+summary: SnapDrive for UNIX 구성 검사기 툴을 사용하여 호스트 플랫폼에 설치된 구성 요소를 식별할 수 있습니다. 
+---
+= 설치된 구성 요소 식별
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapDrive for UNIX 구성 검사기 툴을 사용하여 호스트 플랫폼에 설치된 구성 요소를 식별할 수 있습니다.
+
+.단계
+. 설치된 구성 요소를 식별합니다.
++
+'* sdconfcheck detect*'
+
++
+'dsconf.out' 로그 파일은 '/var/log' 파일에 설치된 구성 요소를 식별하는 데 사용됩니다. 로그 파일은 점증적으로 'dconfcheck.out.1', 'dconfcheck.out.2' 등으로 이름이 변경됩니다.
+
++
+UNIX용 SnapDrive 구성 검사기 도구는 Red Hat Enterprise Linux 6 환경에서 ext3 파일 시스템을 검색하지 않습니다. ext3 파일 시스템을 로드하려면 'modprobe-v ext3' 명령을 실행해야 합니다.
+
+. 'dconfcheck detect' 명령어를 실행한 후 나열된 컴포넌트를 설치하거나 구성해야 할 수 있습니다.
+

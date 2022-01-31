@@ -1,0 +1,16 @@
+---
+permalink: solaris/concept_the_storagedeletecommand.html 
+sidebar: sidebar 
+keywords: snap, snapdrive, storage, delete, command 
+summary: SnapDrive storage delete 명령은 호스트의 스토리지 엔터티와 이를 백업하는 모든 기본 호스트 측 엔터티를 제거합니다. 
+---
+= 스토리지 삭제 명령입니다
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+"SnapDrive storage delete" 명령은 호스트의 스토리지 엔터티와 이를 백업하는 모든 기본 호스트 측 엔터티와 스토리지 시스템 LUN을 제거합니다.
+
+
+IMPORTANT: 이 명령은 데이터를 삭제합니다.
