@@ -5,6 +5,7 @@ keywords: snap, snapdrve, guest, os, install, prepare
 summary: 시스템에 SnapDrive for UNIX를 설치하기 전에 게스트 시스템을 준비해야 합니다. 게스트 준비의 일환으로 Solaris Host Utilities를 설치해야 합니다. 
 ---
 = UNIX용 SnapDrive 설치를 위한 게스트 OS 준비
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

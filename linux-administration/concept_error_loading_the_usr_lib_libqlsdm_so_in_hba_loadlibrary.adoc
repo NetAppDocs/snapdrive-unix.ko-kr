@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, update, unloading, library
 summary: iSCSI 설정이 있는 Red Hat Enterprise Linux 4 및 Oracle Enterprise Linux 4 호스트의 모든 업데이트에 대해 모든 UNIX용 SnapDrive 명령 오류 아웃이 발생합니다. 
 ---
 = HBA_LoadLibrary에서 /usr/lib/libqlsdm.so를 로드하는 중 오류가 발생했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

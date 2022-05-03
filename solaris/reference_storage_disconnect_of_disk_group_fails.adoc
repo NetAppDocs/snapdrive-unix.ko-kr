@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, disconnect, disk, group, fail
 summary: Solaris 버전 10을 사용하는 스토리지 시스템에서는 UNIX용 SnapDrive 명령을 사용하여 디스크 그룹을 삭제하고 연결을 끊는 작업이 -full 옵션 없이 실패합니다. 호스트 볼륨의 연결이 완전히 끊겼거나 삭제되지 않아 삭제 및 연결 끊기 명령이 실패합니다. 
 ---
 = 디스크 그룹의 스토리지 연결이 끊깁니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

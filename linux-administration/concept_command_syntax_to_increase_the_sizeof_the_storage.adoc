@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, syntax, size, storage, increase
 summary: 스토리지의 크기를 늘리려면 사용할 올바른 구문을 알아야 합니다. 
 ---
 = 스토리지 크기를 늘리는 명령 구문
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

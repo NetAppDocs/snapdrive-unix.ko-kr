@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, stale, devices
 summary: '구성 문제로 인해 SnapDrive for UNIX 작업이 실패할 경우 FCoE(Fibre Channel over Ethernet) 환경에서 오래된 디바이스를 그대로 둘 수 있습니다. 이러한 오래된 디바이스는 자동으로 삭제되지 않으므로 해결 방법을 알아야 합니다.' 
 ---
 = UNIX용 SnapDrive는 UNIX에서 오래된 디바이스를 자동으로 삭제하지 않습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, crash, consistent, snapshot, copy
 summary: 파일 시스템 또는 디스크 그룹에 대해 충돌 시에도 정합성 보장 스냅샷 복사본을 생성해야 할 수 있습니다. SnapDrive for UNIX는 엔터티에 지정된 모든 스토리지 시스템 볼륨의 이미지가 포함된 스냅샷 복사본을 생성합니다. 
 ---
 = 충돌 시에도 정합성 보장 스냅샷 복사본
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

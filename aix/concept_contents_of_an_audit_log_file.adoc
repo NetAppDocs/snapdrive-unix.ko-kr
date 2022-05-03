@@ -5,6 +5,7 @@ keywords: snap, snapdrive, contents, aufit, log, file
 summary: 감사 로그에는 UNIX용 SnapDrive에서 실행한 명령에 대한 정보가 표시됩니다. 
 ---
 = 감사 로그 파일의 내용입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

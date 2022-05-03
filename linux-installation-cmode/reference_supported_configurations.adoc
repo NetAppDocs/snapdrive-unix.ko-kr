@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configurations, supported, interoperability, tool
 summary: 'UNIX용 SnapDrive를 설치하기 전에 NetApp 상호 운용성 매트릭스 툴\(IMT\)을 사용하여 구성에 대한 SnapDrive 지원을 확인해야 합니다.' 
 ---
 = 지원되는 구성
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

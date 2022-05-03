@@ -5,6 +5,7 @@ keywords: snapdrive, snap, linux, host, requirements
 summary: UNIX용 SnapDrive를 설치하려면 먼저 Linux 호스트를 준비해야 합니다. 
 ---
 = Linux 호스트 요구 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

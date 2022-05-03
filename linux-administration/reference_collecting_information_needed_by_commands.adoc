@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, information, keywords, arguments, values, op
 summary: UNIX용 SnapDrive 명령은 형식을 따르고 해당 명령과 연결된 키워드가 있습니다. 명령에는 옵션과 인수가 있으며 사용자가 값을 입력해야 합니다. 
 ---
 = 명령에 필요한 정보 수집
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, manager, console, operations
 summary: '역할 기반 액세스 제어\(RBAC\)의 사용은 Operations Manager 콘솔 인프라에 따라 다릅니다. Operations Manager 콘솔 관리자는 UNIX용 SnapDrive의 사용자 이름을 만들어야 합니다. 액세스 점검을 위해 모든 스토리지 작업 요청이 먼저 Operations Manager 콘솔로 전송됩니다. Operations Manager 콘솔이 특정 SnapDrive 사용자로부터 스토리지 작업을 확인하면 작업이 완료됩니다.' 
 ---
 = UNIX용 SnapDrive 및 Operations Manager 콘솔 상호 작용
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

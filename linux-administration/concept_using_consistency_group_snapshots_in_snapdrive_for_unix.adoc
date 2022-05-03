@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, consistency, group, vserver, node, cl
 summary: 정합성 보장 그룹 스냅샷은 단일 엔티티로 관리되는 클러스터의 여러 서버 또는 노드에 걸쳐 있는 볼륨 세트의 스냅샷 복사본입니다. 
 ---
 = UNIX용 SnapDrive의 일관성 그룹 스냅샷 복사본
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

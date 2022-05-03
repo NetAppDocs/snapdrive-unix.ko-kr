@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, fail, create, file, system
 summary: Solaris 호스트에서 LUN에 직접 UFS 파일 시스템을 생성하지 못합니다. 
 ---
 = LUN에서 직접 파일 시스템을 생성하지 못합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

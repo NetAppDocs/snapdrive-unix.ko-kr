@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, collection, utility
 summary: SnapDrive 데이터 수집 유틸리티는 문제를 진단하는 정보를 수집하는 문제 해결 도구입니다. 
 ---
 = 데이터 수집 유틸리티
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

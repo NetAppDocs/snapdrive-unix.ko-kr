@@ -5,6 +5,7 @@ keywords: snap, snapdrive, host, check
 summary: 일부 호스트 시스템에서는 새 LUN을 생성하기 전에 LUN을 준비해야 합니다. SnapDrive for UNIX는 호스트에서 새 LUN을 생성할 수 있도록 다음 단계를 완료하는 명령을 제공합니다. 
 ---
 = 호스트 정보를 확인하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

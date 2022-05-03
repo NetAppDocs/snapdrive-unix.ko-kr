@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, partner, ip, address, interface, name
 summary: 스토리지 시스템에서 설치 프로그램을 실행하면 페일오버 시 사용할 파트너 스토리지 시스템의 IP 주소 또는 인터페이스 이름을 입력하라는 메시지가 표시됩니다. 이 기능을 제공하지 않으면 SnapDrive for UNIX에서 대신 사용되는 스토리지 시스템의 스토리지 엔터티를 검색할 수 없습니다. 
 ---
 = 스토리지 시스템 파트너의 IP 주소 또는 인터페이스 이름 확인
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

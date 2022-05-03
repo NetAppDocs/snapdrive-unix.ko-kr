@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, filespec, iscsi, volume, solaris, manager, n
 summary: '호스트 시스템이 다시 시작되면 iSCSI를 사용하여 Solaris Volume Manager\(SVM\)로 생성된 스토리지 영역 네트워크 파일 사양이 자동으로 마운트되지 않고 호스트가 시작되지 않습니다.' 
 ---
 = iSCSI를 사용하여 Solaris Volume Manager에서 생성한 스토리지 영역 네트워크 파일 사양은 자동으로 마운트되지 않습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

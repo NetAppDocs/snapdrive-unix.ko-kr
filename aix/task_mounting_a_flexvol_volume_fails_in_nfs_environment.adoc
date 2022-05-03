@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mount, flexclone, fail, volume, nfs
 summary: FlexVol 볼륨을 마운트하면 /etc/exports 파일에 항목이 추가됩니다. NFS 환경에서는 UNIX용 SnapDrive에 장애가 발생하고 오류 메시지가 생성됩니다. 
 ---
 = NFS 환경에서는 FlexVol 볼륨을 마운트하지 못합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

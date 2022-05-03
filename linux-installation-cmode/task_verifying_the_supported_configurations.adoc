@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verfiy, supported, configurations
 summary: 'SnapDrive for UNIX에서 지원되는 구성을 확인하려면 호스트 시스템의 구성 요소(예: 운영 체제, 호스트에 설치된 소프트웨어 버전, 프로토콜, 호스트의 파일 시스템 등)와 SnapDrive.conf 파일의 각 구성 매개 변수에 대해 지정된 값을 확인합니다.' 
 ---
 = 지원되는 구성을 확인하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

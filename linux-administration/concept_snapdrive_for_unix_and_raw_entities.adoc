@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, raw, entity, lun, file, host, lvm
 summary: SnapDrive for UNIX는 LUN과 같은 원시 엔터티나 LUN에서 직접 생성할 수 있는 파일 시스템에 대한 스토리지 작업을 활성화하고 호스트 시스템인 LVM을 사용하지 않고 스토리지 작업을 수행합니다. 
 ---
 = UNIX 및 원시 엔터티용 SnapDrive
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

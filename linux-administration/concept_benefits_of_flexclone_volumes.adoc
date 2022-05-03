@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexclone, volumes
 summary: FlexClone 볼륨은 데이터 관리 및 성능 이점을 제공합니다. 
 ---
 = FlexClone 볼륨의 이점
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

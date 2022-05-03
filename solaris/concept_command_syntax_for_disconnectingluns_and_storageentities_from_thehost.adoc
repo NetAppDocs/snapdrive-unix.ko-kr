@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, syntax, lun, storage, host, disconnect
 summary: SnapDrive storage disconnect 명령을 사용하여 스토리지 엔터티가 있는 LUN에 대한 매핑을 제거하려면 다음 구문을 사용합니다. 
 ---
 = 호스트에서 LUN 및 스토리지 엔터티를 분리하는 명령 구문입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

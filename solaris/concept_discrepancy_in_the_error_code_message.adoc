@@ -5,6 +5,7 @@ keywords: snap, snapdrive, discrepancy, error, message
 summary: FC 및 iSCSI 서비스가 모두 작동 중이거나 작동 중지 상태일 때 SnapDrive storage delete 명령을 실행하면 SnapDrive for UNIX에 잘못된 오류 메시지가 표시됩니다. 
 ---
 = 오류 코드 메시지의 불일치
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

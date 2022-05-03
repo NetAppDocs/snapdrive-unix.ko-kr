@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, summary, configuration, snapshot, host
 summary: UNIX용 SnapDrive는 구성, 스토리지 프로비저닝, 호스트 측 관리 등과 같은 다양한 명령줄을 지원합니다. 스냅샷 작업을 지원합니다. 
 ---
 = 명령 요약
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

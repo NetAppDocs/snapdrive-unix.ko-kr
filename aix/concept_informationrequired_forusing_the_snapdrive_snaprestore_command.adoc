@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, command, information, required
 summary: 스냅샷 복사본을 복원하려면 복원할 스토리지 엔터티를 결정하고 스냅샷 복사본의 이름을 지정하는 방법 등을 수행합니다. 
 ---
 = SnapDrive snap restore 명령을 사용하는 데 필요한 정보입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

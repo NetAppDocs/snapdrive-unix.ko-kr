@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, command, operation, required
 summary: 스토리지 생성 작업을 완료할 때 일부 정보를 제공해야 합니다. 
 ---
 = 스토리지 생성 작업에 필요한 정보입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

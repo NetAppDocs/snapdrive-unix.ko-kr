@@ -5,6 +5,7 @@ keywords: snap, snapdrive, limitations, limits
 summary: UNIX용 SnapDrive를 사용할 경우 환경에 영향을 줄 수 있는 특정 제한 사항을 알고 있어야 합니다. 
 ---
 = 제한 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

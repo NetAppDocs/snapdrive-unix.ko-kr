@@ -5,6 +5,7 @@ keywords: snap, snapdrive, reboot, error, update, connect, admin, administration
 summary: Red Hat Enterprise Linux 4 및 Oracle Enterprise Linux 4 호스트에서 스냅샷 연결 및 스토리지 생성 작업을 재부팅할 때마다 오류 메시지가 발생합니다. 
 ---
 = 각 재부팅 후 스냅 접속에서 "0001-680 관리자 오류: 호스트 OS에서 내부 데이터에 대한 업데이트가 필요함"
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

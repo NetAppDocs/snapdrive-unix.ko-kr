@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, disconnect, operation, command, copy, stora
 summary: SnapDrive snap disconnect 명령을 사용하여 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 있는 스냅샷 복사본의 연결을 끊을 수 있습니다. 
 ---
 = 스냅샷 연결 해제 작업 사용
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

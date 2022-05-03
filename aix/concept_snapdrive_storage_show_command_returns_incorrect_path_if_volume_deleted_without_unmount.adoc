@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, vserver, storage, show, incorrect, unmount
 summary: 호스트 시스템에서 볼륨을 마운트 해제하지 않고 SVM에서 볼륨을 삭제한 경우, SnapDrive storage show -v 명령을 실행하면 실제 경로가 올바르지 않습니다. 
 ---
 = 호스트 시스템에서 볼륨을 마운트 해제하지 않고 SVM에서 볼륨을 삭제하면 SnapDrive storage show 명령이 잘못된 실제 경로를 표시합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

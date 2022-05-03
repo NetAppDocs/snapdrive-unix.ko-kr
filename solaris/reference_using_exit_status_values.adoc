@@ -5,6 +5,7 @@ keywords: snap, snapdrive, exit, status, value
 summary: 종료 상태 값은 스크립트에서 SnapDrive for UNIX 명령의 성공 또는 실패를 확인하는 데 사용됩니다. 
 ---
 = 종료 상태 값 사용
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

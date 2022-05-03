@@ -5,6 +5,7 @@ keywords: snap, snpadrive, support, host, cluster
 summary: 호스트 클러스터 UNIX 시스템의 UNIX용 SnapDrive를 사용하면 스토리지를 생성하고 호스트 클러스터 전체의 공유 스토리지에서 스냅샷 작업을 수행할 수 있습니다. 
 ---
 = 호스트 클러스터 UNIX 시스템에서 지원되는 작업입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

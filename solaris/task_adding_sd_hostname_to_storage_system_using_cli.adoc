@@ -5,6 +5,7 @@ keywords: snap, snapdrive, add, sd, hostname, storage, cli
 summary: 스토리지 시스템 관리자는 useradmin 명령을 사용하여 SD-호스트 이름 사용자를 생성하고 구성할 수 있습니다. 
 ---
 = CLI를 사용하여 스토리지 시스템에 SD-호스트 이름을 추가합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, fail, error, operation, reboot, reload
 summary: 호스트를 재부팅한 후 스냅 연결 작업이 실패하고 원래 볼륨 그룹이 로드되지 않습니다. 
 ---
 = 스냅 연결 작업이 실패했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

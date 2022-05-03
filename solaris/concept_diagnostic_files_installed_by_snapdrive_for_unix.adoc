@@ -5,6 +5,7 @@ keywords: snap, snaprive, diagnostic, file
 summary: UNIX용 SnapDrive는 UNIX용 SnapDrive의 문제를 감지하는 데 도움이 되는 진단 파일을 설치합니다. 
 ---
 = UNIX용 SnapDrive에서 설치한 진단 파일
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

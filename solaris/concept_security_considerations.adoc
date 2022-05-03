@@ -5,6 +5,7 @@ keywords: snap, snapdrive, security
 summary: SnapDrive for UNIX에서 호스트에 접속된 스토리지 시스템을 액세스하도록 설정할 수 있으며 스토리지 시스템에 할당된 로그인 이름과 암호를 사용하도록 호스트를 구성해야 합니다. 이 정보를 제공하지 않으면 SnapDrive for UNIX가 스토리지 시스템과 통신할 수 없습니다. 
 ---
 = 보안 고려 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

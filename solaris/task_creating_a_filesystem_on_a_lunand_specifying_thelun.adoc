@@ -5,6 +5,7 @@ keywords: snap, snapdrive, create, file, lun, specify
 summary: LUN에 파일 시스템을 생성하고 해당 LUN의 일부로 생성되는 LUN을 지정할 수 있습니다. 
 ---
 = LUN에 파일 시스템을 생성하고 LUN을 지정합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

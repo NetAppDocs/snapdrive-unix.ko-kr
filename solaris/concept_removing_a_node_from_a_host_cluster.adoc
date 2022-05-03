@@ -5,6 +5,7 @@ keywords: snap, snapdrive, remove, node, host, cluster
 summary: 호스트 클러스터에서 새 노드를 제거하려면 Solaris용 Veritas Cluster Server 설치 가이드 의 지침을 따르십시오. LLT 및 Gab을 구성한 후에는 SnapDrive storage disconnect 명령을 사용하여 호스트 클러스터의 모든 공유 스토리지 엔터티에 대한 모든 LUN 매핑을 해제해야 합니다. 
 ---
 = 호스트 클러스터에서 노드 제거
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, fail, nfsv3, nfsv4, host, storage, operation
 summary: 호스트 및 스토리지 시스템에서 NFSv3 및 NFSv4 버전이 설정되어 있으면 스냅 복구 작업이 실패합니다. 
 ---
 = 호스트 및 스토리지 시스템에서 NFSv3 및 NFSv4 버전이 설정되어 있으면 스냅 복구 작업이 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

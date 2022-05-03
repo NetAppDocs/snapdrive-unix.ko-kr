@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, storage, copy, destination
 summary: 생성된 스토리지 시스템에서 스냅샷 복사본을 복원할 수 있습니다. 
 ---
 = 타겟 스토리지 시스템의 스냅샷 복사본 복원
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

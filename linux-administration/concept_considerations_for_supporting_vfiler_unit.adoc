@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vfiler, support, issues, unit
 summary: 'UNIX용 SnapDrive는 FlexVol 볼륨에서 생성된 vFiler 유닛에서 SnapDrive 작업을 지원합니다. 그러나 FC(Fibre Channel\)를 사용하는 경우 UNIX용 SnapDrive는 vFiler 유닛을 지원하지 않습니다.' 
 ---
 = vFiler 유닛 지원 문제
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

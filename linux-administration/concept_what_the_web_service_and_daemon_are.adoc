@@ -5,6 +5,7 @@ keywords: snap, snapdrive, web, service, daemon, interface, snapmanager, cli, co
 summary: 'UNIX용 SnapDrive 웹 서비스는 모든 NetApp SnapManager 및 타사 제품에 대해 일관된 인터페이스를 제공하므로 UNIX용 SnapDrive와 원활하게 통합할 수 있습니다. SnapDrive for UNIX에서 명령줄 인터페이스\(CLI\) 명령을 사용하려면 데몬을 시작해야 합니다.' 
 ---
 = 웹 서비스 및 데몬은 무엇입니까
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

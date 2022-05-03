@@ -5,6 +5,7 @@ keywords: snap, snapdrive, force, daemon, restart, command
 summary: 데몬을 강제로 다시 시작할 수 있습니다. 데몬을 강제로 다시 시작하면 실행 중인 모든 명령이 실행되지 않습니다. 
 ---
 = 강제 데몬 재시작
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

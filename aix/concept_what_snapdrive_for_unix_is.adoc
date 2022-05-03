@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, management, provisioning
 summary: UNIX용 SnapDrive는 스토리지 관리 작업을 단순화합니다. SnapDrive for UNIX는 스냅샷 기술을 사용하여 공유 또는 비공유 스토리지 시스템에 저장된 데이터의 이미지를 생성합니다. 또한 SnapDrive는 스토리지 프로비저닝을 지원합니다. 
 ---
 = UNIX용 SnapDrive의 기능
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

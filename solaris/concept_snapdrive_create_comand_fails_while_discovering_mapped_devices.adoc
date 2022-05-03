@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, command, fail, mapped, device
 summary: UNIX용 SnapDrive에서 스토리지 생성 명령을 실행하면 검색 단계 중에 매핑된 디바이스 중 일부가 검색되고 명령이 실패합니다. 
 ---
 = UNIX용 SnapDrive 스토리지 생성 명령이 일부 매핑된 디바이스를 검색하는 동안 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

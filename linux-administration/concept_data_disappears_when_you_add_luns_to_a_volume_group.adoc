@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, lun, volume, group, disappear
 summary: 기존 LUN을 볼륨 그룹에 추가하면 LUN의 데이터가 사라집니다. 
 ---
 = 볼륨 그룹에 LUN을 추가하면 데이터가 사라집니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

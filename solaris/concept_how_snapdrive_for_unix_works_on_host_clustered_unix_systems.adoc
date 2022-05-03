@@ -5,6 +5,7 @@ keywords: snap, snapdrive, unix, host, cluster
 summary: SnapDrive for UNIX는 호스트 클러스터 전체 스토리지를 관리하기 위한 스토리지 용량 할당 및 스냅샷 관리 옵션을 지원합니다. 호스트 클러스터 전체의 공유 스토리지에는 Solaris 호스트의 SFRAC 환경에 있는 디스크 그룹 및 파일 시스템이 포함됩니다. 모든 작업은 호스트 클러스터의 모든 노드에서 허용됩니다. 
 ---
 = UNIX용 SnapDrive가 호스트 클러스터 UNIX 시스템에서 작동하는 방식
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, limitations, rdm, lun
 summary: SnapDrive에는 RDM LUN 용량 할당에 대한 몇 가지 제한 사항이 있습니다. 환경에 영향을 줄 수 있는 제한 사항을 숙지해야 합니다. 
 ---
 = SnapDrive에서 관리하는 RDM LUN의 제한 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

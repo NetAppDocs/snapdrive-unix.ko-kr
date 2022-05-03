@@ -5,6 +5,7 @@ keywords: enable, snap, snapdrive, lun, provision
 summary: UNIX용 SnapDrive를 사용하여 스토리지 시스템에서 씬 프로비저닝을 수행할 수 있습니다. 씬 프로비저닝을 공간 예약이라고도 합니다. 
 ---
 = LUN에 대한 씬 프로비저닝 설정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

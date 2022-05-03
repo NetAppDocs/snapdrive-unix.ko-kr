@@ -5,6 +5,7 @@ keywords: snap, snapdrive, install, aix, patch, default
 summary: '시스템 관리 인터페이스 도구 \(SMIT\)를 사용하여 기본적으로 AIX용 SnapDrive 패치 릴리스를 설치할 수 없습니다.' 
 ---
 = 기본적으로 AIX에 UNIX용 SnapDrive 패치를 설치할 수 없습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

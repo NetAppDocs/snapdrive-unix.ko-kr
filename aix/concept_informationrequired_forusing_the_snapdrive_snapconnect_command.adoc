@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, command, required, information
 summary: 스냅샷 복사본에 연결하려면 스토리지 개체의 유형을 확인하고 스냅샷 복사본을 NFS 디렉토리 트리와 함께 Data ONTAP 7.3 구성 등에 연결합니다. 
 ---
 = SnapDrive snap connect 명령을 사용하는 데 필요한 정보입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

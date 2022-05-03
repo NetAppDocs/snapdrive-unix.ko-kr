@@ -5,6 +5,7 @@ keywords: snap, snapdrive, nfs, directory, tree, limitations
 summary: SnapDrive는 NFS 파일 또는 디렉토리 트리에 대한 스토리지 프로비저닝 명령을 제공하지 않습니다. SnapDrive는 Data ONTAP 7.3.5 이상을 사용하는 경우에만 SnapDrive 스냅 생성 및 SnapDrive 스냅 복구 명령을 지원합니다. 
 ---
 = NFS 파일 또는 디렉토리 트리에 대한 제한 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

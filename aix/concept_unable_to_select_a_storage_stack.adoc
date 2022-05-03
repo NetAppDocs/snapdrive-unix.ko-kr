@@ -5,6 +5,7 @@ keywords: snap, snapshot, select, storage, stack, unable
 summary: SnapDrive.conf 파일에 지정된 부적절한 값으로 인해 스토리지 스택을 선택할 수 없습니다. 
 ---
 = 스토리지 스택을 선택할 수 없습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

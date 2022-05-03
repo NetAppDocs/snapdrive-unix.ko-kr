@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, procedure, ontap, operation
 summary: 스냅 연결 절차는 Data ONTAP 7.2 이상에서 사용할 수 있으며 스냅 연결 작업의 단계를 설명합니다. 
 ---
 = 스냅 연결 절차
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

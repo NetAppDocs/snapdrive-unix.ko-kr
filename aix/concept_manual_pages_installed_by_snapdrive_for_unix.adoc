@@ -5,6 +5,7 @@ keywords: snap, snapdrive, man, pages, install
 summary: UNIX용 SnapDrive에서는 다양한 형식의 man 페이지를 제공합니다. 
 ---
 = SnapDrive for UNIX에서 설치한 man 페이지
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

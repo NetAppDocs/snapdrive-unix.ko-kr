@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multipathing
 summary: UNIX용 SnapDrive는 다중 경로를 지원합니다. SnapDrive for UNIX는 mknod 및/또는 rendev 명령을 사용하여 생성된 디바이스에 대한 별칭 사용을 지원하지 않습니다. 
 ---
 = UNIX용 SnapDrive의 다중 경로
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, options, keyword, argument
 summary: UNIX용 SnapDrive 명령에는 옵션, 키워드 및 인수가 연결되어 있습니다. 
 ---
 = UNIX용 SnapDrive 옵션, 키워드 및 인수
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, daemon
 summary: UNIX용 SnapDrive 명령을 실행하기 전에 웹 서비스 및 데몬과 그 사용 방법을 이해해야 합니다. 모든 UNIX용 SnapDrive 명령은 데몬 서비스를 사용하여 작동합니다. AIX 호스트에서 UNIX용 SnapDrive를 사용하려면 먼저 데몬을 시작해야 합니다. 그러면 SnapDrive for UNIX가 다른 NetApp 제품 및 비 NetApp 제품과 원활하고 안전하게 통합될 수 있습니다. 
 ---
 = UNIX용 SnapDrive 데몬 이해
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

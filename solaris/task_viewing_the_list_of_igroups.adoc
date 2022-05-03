@@ -5,6 +5,7 @@ keywords: snap, snapdrive, view, list, igroup
 summary: 호스트에 구성된 모든 igroup을 볼 수 있습니다. 
 ---
 = igroup 목록 보기
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

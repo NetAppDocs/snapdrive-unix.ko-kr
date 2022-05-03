@@ -5,6 +5,7 @@ keywords: snap, snapdrive, detection, host, automatic
 summary: UNIX용 SnapDrive는 일부 명령에 대한 호스트 엔터티의 구성을 자동으로 감지합니다. 일부 스냅 스토리지 명령은 호스트 요소의 이름만 있으면 됩니다. 이러한 경우에는 호스트 엔터티의 유형을 지정할 필요가 없습니다. 
 ---
 = 호스트 요소의 자동 감지
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, considerations, restore, snapshot, copy
 summary: 스냅샷 복사본을 복원하기 전에 파일 시스템을 사용하고 있지 않아야 하며 복원 프로세스를 중단하지 않아야 합니다. 
 ---
 = 스냅샷 복사본 복원을 위한 고려 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

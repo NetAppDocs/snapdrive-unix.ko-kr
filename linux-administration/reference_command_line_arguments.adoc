@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, argument, format, copy, snapshot
 summary: UNIX용 SnapDrive는 특정 형식의 인수를 사용합니다. 
 ---
 = 명령줄 인수입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

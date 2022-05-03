@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, install, red, enterprise, oracle
 summary: SnapDrive for UNIX error out if the /lib/libgcc_s. so.1 path is not installed on 64-bit Red Hat Enterprise Linux 4 and Oracle Enterprise Linux 4 hosts. 
 ---
 = libgcc_s. so.1이 설치되지 않은 경우 SnapDrive 오류가 발생합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

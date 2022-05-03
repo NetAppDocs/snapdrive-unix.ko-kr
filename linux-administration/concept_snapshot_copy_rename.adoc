@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rename, snapshot, name, command, storage
 summary: 스냅샷 스냅 이름 바꾸기 명령을 사용하여 스냅샷 복사본의 이름을 변경할 수 있습니다. 여러 스토리지 시스템 또는 스토리지 시스템 볼륨에 있는 스냅샷 복사본의 이름을 바꿀 수도 있습니다. 
 ---
 = 스냅샷 복사본의 이름 변경
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapshot, restore, connect, operation
 summary: 스냅샷 복사본은 스냅샷 복사본에 연결할 때 해당 정보를 복제합니다. 
 ---
 = 스냅샷 연결 및 스냅샷 복원 작업
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

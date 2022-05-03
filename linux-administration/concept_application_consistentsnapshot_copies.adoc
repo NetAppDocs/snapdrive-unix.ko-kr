@@ -5,6 +5,7 @@ keywords: snap, snapdrive, copy, application
 summary: 애플리케이션 정합성이 보장된 스냅샷 복사본을 만들려면 스냅샷 작업 전에 애플리케이션을 중지해야 합니다. 
 ---
 = 애플리케이션 정합성이 보장된 Snapshot 복사본
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

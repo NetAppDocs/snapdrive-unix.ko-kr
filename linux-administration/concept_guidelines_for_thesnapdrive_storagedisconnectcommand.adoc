@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, disconnect, command, guidelines
 summary: SnapDrive storage disconnect 명령을 사용할 때는 다음 지침을 따르십시오. 
 ---
 = SnapDrive 스토리지 연결 해제 명령에 대한 지침입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

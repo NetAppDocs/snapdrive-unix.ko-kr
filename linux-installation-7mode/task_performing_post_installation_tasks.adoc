@@ -5,6 +5,7 @@ keywords: snap, snapdrive, post, install, configure, task
 summary: 설치가 완료되면 추가 기능 및 기능을 구성해야 합니다. 스토리지 시스템 및 데몬 서비스와의 보안 연결을 사용하려면 서버 인증서를 설치하고 SnapDrive for UNIX를 구성해야 합니다. 
 ---
 = 설치 후 작업 수행
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

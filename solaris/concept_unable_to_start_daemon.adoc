@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restart, daemon, host, communivation, storage
 summary: 호스트가 구성된 스토리지 시스템과 통신할 수 없는 경우 데몬을 시작할 수 없습니다. 
 ---
 = 호스트가 스토리지 시스템과 통신할 수 없는 경우 데몬을 다시 시작할 수 없습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

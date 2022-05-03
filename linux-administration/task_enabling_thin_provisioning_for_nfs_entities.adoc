@@ -5,6 +5,7 @@ keywords: snap, snapdrive, enable, thin, provisioning, nfs, space, reservation
 summary: UNIX용 SnapDrive를 사용하여 스토리지 시스템의 NFS 엔터티에 대한 씬 프로비저닝을 수행할 수 있습니다. 씬 프로비저닝을 공간 예약이라고 합니다. 
 ---
 = NFS 엔터티에 대한 씬 프로비저닝 설정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

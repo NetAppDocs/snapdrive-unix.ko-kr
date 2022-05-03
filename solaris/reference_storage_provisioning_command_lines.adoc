@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, command, line, provisioning
 summary: 일부 UNIX용 SnapDrive 명령은 스토리지 용량 할당에 사용됩니다. 
 ---
 = 스토리지 프로비저닝 명령줄
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

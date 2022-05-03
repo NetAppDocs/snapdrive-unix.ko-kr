@@ -5,6 +5,7 @@ keywords: snap, snapdrive, generate, ca, certificate
 summary: SnapDrive for UNIX 데몬 서비스를 사용하려면 데몬 통신에 사용할 CA 서명 인증서를 생성해야 합니다. SnapDrive.conf 파일에 지정된 경로에서 CA 서명 인증서를 제공해야 합니다. 
 ---
 = CA 서명 인증서를 생성하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

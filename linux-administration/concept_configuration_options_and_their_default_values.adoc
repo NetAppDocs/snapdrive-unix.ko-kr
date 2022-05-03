@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, default, value, variable, command
 summary: SnapDrive config show 명령을 실행하여 현재 구성 가능한 변수와 설정을 확인할 수 있습니다. 
 ---
 = 구성 옵션 및 해당 기본값
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

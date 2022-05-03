@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mixed, san, nfs, environment
 summary: 혼합 SAN 및 NFS 환경에서는 관리 및 데이터 인터페이스를 매핑하여 첫 번째 데이터 인터페이스가 관리 인터페이스와 같아야 합니다. 
 ---
 = 혼합 SAN 및 NFS 환경
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, fails
 summary: UNIX용 SnapDrive 작업 중에 Linux 호스트가 재부팅될 때 UNIX용 SnapDrive가 스냅샷 복사본에 연결하지 못합니다. 
 ---
 = 스냅샷 복사본에 연결할 수 없습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

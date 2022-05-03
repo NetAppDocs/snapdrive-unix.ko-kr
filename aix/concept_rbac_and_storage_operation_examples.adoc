@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rbac, storage, operation, example
 summary: 역할 기반 액세스 제어를 통해 할당된 기능에 따라 스토리지를 운영할 수 있습니다. 스토리지 작업을 수행할 수 있는 권한이 없는 경우 오류 메시지가 표시됩니다. 
 ---
 = RBAC 및 스토리지 운영 예
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

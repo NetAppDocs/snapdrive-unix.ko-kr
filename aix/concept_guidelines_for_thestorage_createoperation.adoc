@@ -5,6 +5,7 @@ keywords: snap, snapdrive, guidelines, storage, create, operation
 summary: 스토리지 생성 작업에 SnapDrive storage create 명령을 사용할 때는 특정 지침을 따라야 합니다. 
 ---
 = 스토리지 생성 작업에 대한 지침입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

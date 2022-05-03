@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, lun, clone, stale
 summary: LUN 및 클론을 삭제하면 UNIX에 오래된 디바이스가 그대로 있을 수 있으며 이러한 오래된 디바이스를 삭제하는 작업은 SnapDrive for UNIX에서 수행하지 않습니다. 
 ---
 = LUN 및 클론을 삭제하면 UNIX에서 오래된 디바이스가 그대로 사용됩니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, operations, wizard
 summary: 여러 마법사를 사용하여 스토리지 엔터티를 생성하고 SnapDrive for UNIX를 효율적으로 조작할 수 있습니다. 
 ---
 = 마법사를 사용하여 수행한 작업입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

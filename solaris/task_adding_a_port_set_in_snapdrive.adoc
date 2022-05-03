@@ -5,6 +5,7 @@ keywords: port, set, add, snap, snapdrive
 summary: 스토리지 시스템에 포트 세트를 추가하여 SVM과 통신할 수 있습니다. 이는 일회성 작업으로, 스토리지 시스템을 사용하기 전에 수행해야 합니다. 
 ---
 = SnapDrive에서 포트 세트 추가
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

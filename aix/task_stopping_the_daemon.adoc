@@ -5,6 +5,7 @@ keywords: snap, snapdrive, daemon, stop
 summary: UNIX용 SnapDrive 구성 파일을 변경하는 경우 데몬을 중지한 후 다시 시작해야 합니다. 데몬을 강제로 또는 강제로 중지할 수 있습니다. 
 ---
 = 데몬을 중지하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

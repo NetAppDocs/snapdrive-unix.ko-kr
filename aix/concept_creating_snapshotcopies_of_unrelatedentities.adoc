@@ -5,6 +5,7 @@ keywords: snap, snapdrive, create, snapshot, copy, unrelated, entity
 summary: SnapDrive for UNIX는 개별 장애 발생 시 정합성이 보장되는 Snapshot 복제본을 유지하여 관련 없는 엔터티의 Snapshot 복제본을 생성합니다. 
 ---
 = 관련 없는 엔터티의 스냅샷 복사본 생성
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

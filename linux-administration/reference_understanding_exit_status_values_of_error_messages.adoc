@@ -5,6 +5,7 @@ keywords: snap, snapdrive, exit, error, status, warning, admin, command, fatal
 summary: 'UNIX용 각 SnapDrive 오류 메시지는 종료 상태 값과 연결됩니다. 종료 상태 값에는 오류의 원인과 해당 유형(경고, 명령, 관리 또는 치명적)이 포함됩니다.' 
 ---
 = 오류 메시지의 종료 상태 값 이해
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

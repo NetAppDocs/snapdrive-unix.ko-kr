@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, create, host, cluster
 summary: UNIX용 SnapDrive를 사용하여 스냅샷 복사본 생성이 일부 환경에서는 지원되지만 일부는 지원되지 않습니다. 자세한 내용은 지침을 참조하십시오. 
 ---
 = 호스트 클러스터 환경에서의 스냅샷 복사본 생성 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

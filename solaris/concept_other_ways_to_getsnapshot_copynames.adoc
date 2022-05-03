@@ -5,6 +5,7 @@ keywords: snap, snapdrive, copy, name, snapshot
 summary: SnapDrive snap list 명령을 사용하여 스냅샷 복사본 이름을 표시할 수 있습니다. 
 ---
 = 스냅샷 복사본 이름을 얻는 다른 방법
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

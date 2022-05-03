@@ -5,6 +5,7 @@ keywords: snap, snapdrive, ha, storage, entity, system, connect
 summary: 단일 스토리지 엔터티가 포함된 스냅샷 복사본을 연결할 수 있습니다. 
 ---
 = 스토리지 시스템 또는 스토리지 시스템 HA 쌍에서 단일 스토리지 엔터티를 연결합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

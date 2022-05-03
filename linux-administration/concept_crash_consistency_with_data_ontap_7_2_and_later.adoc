@@ -5,6 +5,7 @@ keywords: snap, snapdrive, crash, ontap, consistency, fences
 summary: UNIX용 SnapDrive는 Data ONTAP 7.2 이상 버전에서 제공하는 정합성 보장 그룹에 대한 지원을 사용하여 여러 볼륨에 걸쳐 있는 모든 스냅샷 복사본의 충돌 일관성을 유지합니다. 
 ---
 = Data ONTAP 7.2 이상과 일관성 충돌
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

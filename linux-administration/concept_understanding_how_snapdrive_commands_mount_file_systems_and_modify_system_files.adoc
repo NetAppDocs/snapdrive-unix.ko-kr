@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, mount, file, modify, unmount, name
 summary: UNIX용 특정 SnapDrive 명령을 사용하면 파일 시스템이 마운트되거나 마운트 해제될 수 있습니다. 명령이 파일 시스템을 마운트하는 작업을 수행하는 경우 SnapDrive for UNIX는 호스트 플랫폼의 표준 시스템 파일에 파일 시스템의 이름을 추가합니다. 작업이 파일 시스템을 마운트 해제할 경우 SnapDrive for UNIX는 시스템 파일에서 이름을 제거합니다. 이로 인해 문제가 발생하지는 않지만 시스템 파일이 언제 수정되는지 아는 것이 좋습니다. 
 ---
 = SnapDrive 명령을 사용하면 파일 시스템이 마운트 또는 마운트 해제되거나 시스템 파일이 수정되는 경우가 있습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

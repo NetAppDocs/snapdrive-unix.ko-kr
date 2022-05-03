@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, names, san, host
 summary: 모든 SAN 작업에서 LUN 이름의 형식은 IP 주소로 확인되었는지에 관계없이 항상 호스트 이름이어야 합니다. 순수 SAN 환경에서는 데이터 경로의 개념이 없습니다. 관리 인터페이스 매핑은 데이터 경로 인터페이스와 같아야 합니다. 
 ---
 = SAN 환경의 LUN 이름입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

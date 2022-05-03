@@ -5,6 +5,7 @@ keywords: snap, snapdrive, cluster, message, snaprestore, restore
 summary: 호스트 클러스터 모니터링을 사용하는 UNIX용 SnapDrive 호스트 운영 체제에 적용되는 일반 메시지가 있습니다. 이 메시지는 시스템에서 호스트 클러스터 모니터링을 제공하지 않거나 꺼져 있는 경우에도 나타납니다. 
 ---
 = SnapRestore 중에 클러스터링 메시지가 나타납니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

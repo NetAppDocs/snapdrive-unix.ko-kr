@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure, wizard, nfs, san, mixed
 summary: 구성 마법사를 사용하면 NFS, SAN 또는 혼합 환경에서 구성할 수 있습니다. 
 ---
 = SnapDrive 구성 마법사 사용
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

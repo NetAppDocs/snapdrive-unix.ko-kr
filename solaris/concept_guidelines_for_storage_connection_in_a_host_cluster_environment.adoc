@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, connect, host, cluster
 summary: 호스트 클러스터 환경에서 SnapDrive storage connect 명령을 사용하기 전에 몇 가지 지침을 따라야 합니다. 
 ---
 = 호스트 클러스터 환경의 스토리지 접속 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

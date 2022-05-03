@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rule, keyword
 summary: UNIX용 SnapDrive에서는 키워드를 사용하여 UNIX용 SnapDrive 작업의 대상을 지정합니다. 
 ---
 = 키워드에 대한 규칙입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

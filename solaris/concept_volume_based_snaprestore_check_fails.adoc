@@ -5,6 +5,7 @@ keywords: snap, snapdrive, colume, snaprestore, check, fail
 summary: '볼륨 기반 SnapRestore\(Vbsr\) 검사에 실패했습니다. \(NFS가 외부 호스트가 없는 목록을 내보내려고 할 때\) /etc/hosts 파일에 호스트 이름에 대해 서로 다른 두 IP가 있는 클라이언트 시스템 \(SLES 11\)에 있습니다.' 
 ---
 = 볼륨 기반 SnapRestore 검사에 실패했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

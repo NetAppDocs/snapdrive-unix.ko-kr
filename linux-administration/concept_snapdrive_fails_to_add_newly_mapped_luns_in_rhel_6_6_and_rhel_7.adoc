@@ -5,6 +5,7 @@ keywords: snap, snapdrive, fails, lun, rhel, rescan, red, hat, enterprise
 summary: sg3_utils 패키지와 함께 제공되는 rescan 스크립트 /usr/bin/rescan-scsi-bus.sh 가 Red Hat Enterprise Linux 6.6 이상에서 실행되는 UNIX용 SnapDrive에서 새로 매핑된 LUN을 추가하지 못합니다. 
 ---
 = SnapDrive가 RHEL 6.6 이상에서 새로 매핑된 LUN을 추가하지 못합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

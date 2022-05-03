@@ -5,6 +5,7 @@ keywords: snap, snapdrive, harware, software, ocnfiguration
 summary: '스토리지 시스템에 따라 Fibre Channel\(FC\), iSCSI\(Internet Small Computer System Interface\) 또는 NFS 디렉토리 트리를 사용하는 NFS\(Network File System\) 구성을 구성할 수 있습니다.' 
 ---
 = 하드웨어 및 소프트웨어 구성
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

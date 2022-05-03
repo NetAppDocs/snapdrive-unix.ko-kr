@@ -5,6 +5,7 @@ keywords: snap, snapdrive, upgrade, version
 summary: UNIX용 SnapDrive를 최신 버전으로 쉽게 업그레이드할 수 있습니다. 업그레이드 프로세스 중에 SnapDrive.conf 파일에서 변경된 변수는 거의 없습니다. SnapDrive for UNIX가 올바르게 작동하는지 확인하려면 SnapDrive.conf 파일에서 다양한 기본값을 확인하십시오. 
 ---
 = UNIX용 SnapDrive를 최신 버전으로 업그레이드합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

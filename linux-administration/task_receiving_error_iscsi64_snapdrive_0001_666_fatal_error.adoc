@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, connect, command, fatal, iscsi64
 summary: iscsi64 SnapDrive 0001-666 치명적 오류로 인해 SnapDrive snap connect 명령이 실패하는 경우 다음 해결 방법을 참조하십시오. 
 ---
 = iscsi64 SnapDrive: 0001-666 치명적 오류 수신 중
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

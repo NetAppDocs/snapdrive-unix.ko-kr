@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, snapshot, copy, storage, lun
 summary: SnapDrive snap connect 명령을 사용하여 LUN 이외의 스토리지 엔터티가 포함된 스냅샷 복사본에 연결할 수 있습니다. 지정한 대상 이름이 현재 사용 중이거나 마운트 지점으로 사용되는 파일 시스템 이름이 있는 경우에는 이 명령을 사용할 수 없습니다. 
 ---
 = LUN이 아닌 스토리지 엔터티의 스냅샷 복사본에 연결하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

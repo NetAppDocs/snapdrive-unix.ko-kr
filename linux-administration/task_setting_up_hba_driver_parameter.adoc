@@ -5,6 +5,7 @@ keywords: snap, snapdrive, hba, driver, parameter, mpio
 summary: Linux MPIO용 HBA 드라이버를 설정하려면 사용되는 운영 체제에 따라 필요한 단계의 정확한 순서가 달라집니다. 또한 사용되는 HBA 카드에 따라 설정이 달라집니다. 
 ---
 = HBA 드라이버 매개 변수 설정 중
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, fail, customized
 summary: 사용자 지정된 LD_LIBRARY_PATH가 있고 snapcreate-check-Nonpersistent-NFS가 off로 설정된 경우 UNIX용 SnapDrive 명령이 실패합니다. 
 ---
 = 사용자 지정 LD_LIBRARY_PATH에서 UNIX용 SnapDrive 명령이 실패했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, configuration, config
 summary: UNIX용 SnapDrive를 구성하는 데 도움이 되는 명령이 몇 가지 있습니다. 
 ---
 = 일부 구성 명령
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

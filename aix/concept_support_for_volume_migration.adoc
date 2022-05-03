@@ -5,6 +5,7 @@ keywords: snap, snapdrive, support, volume, migration
 summary: SnapDrive for UNIX는 볼륨 마이그레이션을 지원하므로, 동일한 컨트롤러 내에서 볼륨을 운영 중단 없이 다른 애그리게이트로 이동하여 용량 활용률을 높이고 성능을 향상하고 서비스 수준 계약을 충족할 수 있습니다. SAN 환경에서 FlexVol 볼륨과 볼륨의 LUN이 한 Aggregate에서 다른 aggregate로 중단 없이 이동합니다. 
 ---
 = 볼륨 마이그레이션 지원
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, dollar, sign
 summary: 'UNIX용 SnapDrive는 특수 문자가 구성 값의 일부로 지정된 경우 달러 기호 \($\)와 모든 특수 문자를 다르게 해석합니다.' 
 ---
 = UNIX용 SnapDrive에서 달러 기호를 잘못 해석합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

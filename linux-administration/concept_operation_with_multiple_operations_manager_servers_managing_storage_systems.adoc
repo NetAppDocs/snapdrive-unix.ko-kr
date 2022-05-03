@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, systems, operation, multiple, manager, conso
 summary: 다음 출력에서는 여러 Operations Manager 콘솔에서 스토리지 시스템을 관리할 때 표시되는 오류 메시지를 보여 줍니다. 
 ---
 = 스토리지 시스템을 관리하는 여러 Operations Manager 콘솔 서버와 함께 작동합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

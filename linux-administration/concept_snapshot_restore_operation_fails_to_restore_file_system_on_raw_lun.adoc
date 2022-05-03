@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, fail, lun, snapshot, host
 summary: 원래 호스트가 아닌 호스트에서 스냅샷 연결 작업을 수행한 후 원시 LUN에서 파일 시스템의 스냅샷 복구 작업이 실패합니다. 
 ---
 = 스냅샷 복구 작업이 원시 LUN에서 파일 시스템을 복원하지 못합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

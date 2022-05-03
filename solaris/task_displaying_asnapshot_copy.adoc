@@ -5,6 +5,7 @@ keywords: snap, snapdrive, display, snapshot, copy
 summary: SnapDrive snap show 또는 list 명령은 스냅샷 복사본이 생성되는 스토리지 시스템의 이름, 호스트 이름, 날짜 및 시간 등을 표시합니다. 
 ---
 = 스냅샷 복사본 표시
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

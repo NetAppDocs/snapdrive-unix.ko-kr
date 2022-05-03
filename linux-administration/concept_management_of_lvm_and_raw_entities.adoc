@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lvm, raw, entity, management, volume, logical
 summary: 'UNIX용 SnapDrive를 사용하면 LVM\(논리 볼륨 관리자\) 및 원시 엔터티를 관리할 수 있습니다. SnapDrive for UNIX에서는 스토리지 엔터티를 생성할 때 스토리지를 프로비저닝하고 관리하는 데 도움이 되는 명령도 제공합니다.' 
 ---
 = LVM 및 원시 요소의 관리
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

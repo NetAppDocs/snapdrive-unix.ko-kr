@@ -5,6 +5,7 @@ keywords: snap, snapdrive, uninstall, install
 summary: UNIX용 SnapDrive는 제거 파일을 사용하여 UNIX용 SnapDrive를 제거합니다. 
 ---
 = SnapDrive for UNIX에서 설치한 파일을 제거합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

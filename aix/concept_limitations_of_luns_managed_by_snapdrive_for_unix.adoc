@@ -5,6 +5,7 @@ keywords: snap, snapdrive, limitations, lun, managed
 summary: SnapDrive로 작업할 때는 LUN과 관련된 제한 사항을 숙지해야 합니다. 
 ---
 = SnapDrive에서 관리하는 LUN의 제한 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

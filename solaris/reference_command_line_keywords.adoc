@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, line, keywords
 summary: UNIX용 SnapDrive에서는 키워드를 사용하여 호스트 디스크 그룹, 대상 그룹, 볼륨 또는 FlexClone, NFS 파일, 스토리지 시스템 등이 있습니다. 
 ---
 = 명령줄 키워드입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

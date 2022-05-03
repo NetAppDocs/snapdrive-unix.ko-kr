@@ -5,6 +5,7 @@ keywords: snap, snapdrive, guidelines, snapshot, copy, creation, create
 summary: UNIX용 SnapDrive를 사용하여 스냅샷 복사본을 생성하는 동안 다음 사항을 고려하십시오. 볼륨당 최대 255개의 스냅샷 복사본을 유지할 수 있고, SnapDrive for UNIX는 생성하는 스냅샷 복사본만 지원하고, 루트 디스크 그룹의 스냅샷 복사본과 부팅 디바이스 또는 스왑 디바이스를 생성할 수 없으며, SnapDrive for UNIX에서는 충돌 일관성을 유지하기 위해 고정 작업이 필요합니다. 
 ---
 = 스냅샷 복사본 생성 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

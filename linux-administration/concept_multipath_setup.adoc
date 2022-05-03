@@ -5,6 +5,7 @@ keywords: snap, snapdrive, multipath, steup, host, hba, driver, lvm, multipath
 summary: Linux MPIO는 호스트 설정이 완료된 경우 작동합니다. 호스트 설정은 HBA 설정, HBA 드라이버 매개 변수 설정, 다중 경로 설정, LVM 설정 및 SnapDrive for UNIX 설정으로 광범위하게 분류됩니다. 
 ---
 = 다중 경로 설정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

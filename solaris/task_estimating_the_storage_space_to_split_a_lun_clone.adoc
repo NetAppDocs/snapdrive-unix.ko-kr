@@ -5,6 +5,7 @@ keywords: snap, snapdrive, estimate, storage, split, lun, clone
 summary: '클론 분할 추정치를 사용하면 LUN 클론을 분할하는 데 필요한 스토리지 공간(MB\)을 추정할 수 있습니다. SnapDrive for UNIX에서 제공하는 클론 분할 예측에 따라 LUN 클론을 분할할 공간 가용성을 결정할 수 있습니다.' 
 ---
 = LUN 클론을 분할할 스토리지 공간을 추정하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

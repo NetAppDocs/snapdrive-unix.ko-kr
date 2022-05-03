@@ -5,6 +5,7 @@ keywords: snap, snapdrive, certificate, self, signed, daemon, cli
 summary: SnapDrive for UNIX 데몬 서비스를 사용하려면 인증을 위해 자체 서명된 인증서를 생성해야 합니다. CLI와 통신하는 동안 이 인증이 필요합니다. 
 ---
 = 자체 서명된 인증서를 생성하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

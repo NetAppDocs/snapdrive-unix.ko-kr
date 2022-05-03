@@ -5,6 +5,7 @@ keywords: snap, snpadrive, log, file, rotation, setting
 summary: SnapDrive.conf 파일에서 변수에 지정한 값은 로그 파일 순환에 영향을 줍니다. 
 ---
 = 로그 파일 회전 설정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

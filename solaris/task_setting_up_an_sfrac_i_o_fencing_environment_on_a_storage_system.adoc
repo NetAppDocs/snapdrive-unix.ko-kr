@@ -5,6 +5,7 @@ keywords: snap, snapdrive, sfrac, fencing, environment, storage
 summary: UNIX용 SnapDrive는 스토리지 프로비저닝 및 스냅샷 관리 옵션을 제공하여 SFRAC 환경에서 호스트 클러스터 전체의 공유 및 노드 로컬 디스크 그룹과 파일 시스템을 관리합니다. 
 ---
 = 스토리지 시스템에서 SFRAC I/O 펜싱 환경 설정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

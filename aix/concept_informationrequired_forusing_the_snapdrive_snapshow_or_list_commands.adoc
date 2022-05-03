@@ -5,6 +5,7 @@ keywords: snap, snapdrive, show, list, command, information, required
 summary: SnapDrive snap show 또는 list 명령을 사용하여 스토리지 시스템, 스토리지 시스템 볼륨, 디스크 또는 볼륨 그룹, 파일 시스템, Snapshot 복사본 등. 
 ---
 = SnapDrive snap show 또는 list 명령을 사용하는 데 필요한 정보입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

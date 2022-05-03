@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, suse, upgrade, file, base, device
 summary: 'UNIX용 SnapDrive는 SUSE Linux Enterprise Server\(SLES\)를 버전 10에서 11로 업그레이드한 후 오류를 표시합니다. 기본 디바이스 이름을 생성하고 파일 시스템을 마운트해야 합니다.' 
 ---
 = SnapDrive for UNIX는 SUSE Linux Enterprise Server를 버전 10에서 11로 업그레이드한 후 오류 메시지를 표시합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

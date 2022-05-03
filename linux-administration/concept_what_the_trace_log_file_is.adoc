@@ -5,6 +5,7 @@ keywords: snap, snapdrive, trace, log, file, troubelshoot, problem, issue
 summary: 기술 지원 부서에서는 추적 로그 파일을 사용하여 문제를 해결합니다. 
 ---
 = 추적 로그 파일의 정의
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

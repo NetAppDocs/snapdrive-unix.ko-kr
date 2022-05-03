@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snaprestore, space, reservation, volume
 summary: 볼륨 기반 스냅 예약 공간을 사용하려면 SnapDrive.conf 파일에서 space-reservations-volume-enabled 옵션을 설정해야 합니다. 
 ---
 = 공간 예약을 위한 볼륨 기반 SnapRestore입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

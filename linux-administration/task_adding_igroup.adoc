@@ -5,6 +5,7 @@ keywords: snap, snapdrive, igroup, storage, host
 summary: SnapDrive for UNIX를 사용하면 스토리지 시스템에 대한 특정 igroup을 호스트에 추가하고 구성된 igroup을 사용하여 SnapDrive 작업을 수행할 수 있습니다. 스토리지 시스템에서 igroup을 사용할 수 있는지 확인해야 합니다. 
 ---
 = igroup 추가
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

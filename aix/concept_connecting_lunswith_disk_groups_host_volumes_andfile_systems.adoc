@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, lun, disk, host, file, groups, volumes, syst
 summary: SnapDrive storage connect 명령을 사용하여 디스크 그룹, 호스트 볼륨 및 파일 시스템이 있는 LUN을 접속하려면 다음 구문을 따라야 합니다. 
 ---
 = 디스크 그룹, 호스트 볼륨 및 파일 시스템에 LUN 연결
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

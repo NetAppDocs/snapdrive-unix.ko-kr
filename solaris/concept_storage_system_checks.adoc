@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, prepare
 summary: UNIX용 SnapDrive를 설치하기 전에 스토리지 시스템이 일부 요구 사항을 충족하는지 확인하여 스토리지 시스템을 준비해야 합니다. 
 ---
 = 스토리지 시스템 준비 중
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

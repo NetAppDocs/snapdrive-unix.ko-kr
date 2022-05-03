@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, command, unix
 summary: SnapDrive for UNIX 명령은 스냅샷 작업에 사용됩니다. 
 ---
 = 스냅샷 작업 명령줄
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

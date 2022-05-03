@@ -5,6 +5,7 @@ keywords: snap, snapdrive, host, file, resize, operation, storage, command, volu
 summary: SnapDrive 스토리지 크기 조정 명령은 스토리지 시스템 디스크 그룹 및 볼륨 그룹에만 적용됩니다. 호스트 볼륨 또는 파일 시스템의 크기를 늘리려면 LVM 명령을 사용해야 합니다. 
 ---
 = 호스트 볼륨 및 파일 시스템 크기 조정 작업
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

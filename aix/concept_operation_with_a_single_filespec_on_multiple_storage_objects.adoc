@@ -5,6 +5,7 @@ keywords: snap, snapdrive, single, filespec, multiple, storage, object, operatio
 summary: SnapDrive for UNIX는 관리자가 스토리지 작업을 수행하는 데 필요한 여러 스토리지 객체에 대한 권한이 없는 경우 오류 메시지를 표시합니다. 
 ---
 = 여러 스토리지 개체에 대한 단일 파일 사양을 사용하는 작업입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

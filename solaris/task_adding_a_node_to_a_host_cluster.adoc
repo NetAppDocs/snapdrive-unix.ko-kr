@@ -5,6 +5,7 @@ keywords: snap, snapdrive, node, host, cluster
 summary: '호스트 클러스터에 새 노드를 추가하려면 Solaris용 Veritas Cluster Server 설치 가이드 의 지침을 따릅니다. LLT\(Low Latency Transport) 및 Gab\(Global Atomic Broadcast\)를 구성한 후에는 몇 가지 추가 단계를 완료해야 합니다. 호스트 클러스터가 올바르게 설정되었는지 확인하려면 UNIX용 SnapDrive 명령을 사용하기 전에 SnapDrive 구성 검사 클러스터 옵션을 사용해야 합니다.' 
 ---
 = 호스트 클러스터에 노드 추가
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

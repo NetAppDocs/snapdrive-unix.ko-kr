@@ -5,6 +5,7 @@ keywords: snap, snapdrive, recovery, log, system, support
 summary: 복구 로그를 사용하면 일관되지 않은 시스템 상태에 대한 원인을 추적할 수 있습니다. UNIX용 SnapDrive는 일부 작업이 작동을 중지할 때 이 파일을 생성합니다. 
 ---
 = 복구 로그의 내용입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

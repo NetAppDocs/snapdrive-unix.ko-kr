@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, snapshot, copy
 summary: 이전 Snapshot 복사본을 삭제하여 스토리지 시스템 볼륨의 여유 공간을 확보하거나 더 적은 수의 스냅샷 복사본을 유지합니다. 
 ---
 = Snapshot 복사본을 삭제해야 하는 이유
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

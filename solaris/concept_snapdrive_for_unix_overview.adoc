@@ -5,6 +5,7 @@ keywords: snap, snapdrive, unix
 summary: SnapDrive for UNIX는 간소화된 스토리지 프로비저닝과 파일 시스템의 일관된 Snapshot 복사본을 통해 데이터 관리를 단순화하고 애플리케이션 데이터의 가용성과 안정성을 높여줍니다. 
 ---
 = UNIX용 SnapDrive 개요
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

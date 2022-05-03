@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, permission
 summary: 액세스 권한은 호스트가 특정 스냅샷 복사본 및 스토리지 작업을 수행할 수 있는지 여부를 나타냅니다. 액세스 권한은 SnapDrive 스토리지 표시 또는 스토리지 목록 작업에 영향을 주지 않습니다. SnapDrive를 사용하면 스토리지 시스템에 상주하는 파일의 각 호스트에 대한 액세스 권한을 지정할 수 있습니다. 
 ---
 = 스토리지 시스템의 액세스 권한
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

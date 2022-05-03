@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lvm, provisioning, environment
 summary: SnapDrive for UNIX 스토리지 명령은 LVM 객체를 생성하여 LVM 엔티티를 프로비저닝합니다. 
 ---
 = LVM 환경에서 UNIX용 SnapDrive 프로비저닝
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

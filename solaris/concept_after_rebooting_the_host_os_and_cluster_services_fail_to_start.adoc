@@ -5,6 +5,7 @@ keywords: reboot, host, os, cluster, fail, start
 summary: Solaris 10 호스트에서 재부팅 후 파일 시스템이 마운트되지 않으면 OS 및 클러스터가 시작되지 않습니다. 
 ---
 = 호스트를 재부팅한 후 OS 및 클러스터 서비스가 시작되지 않습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

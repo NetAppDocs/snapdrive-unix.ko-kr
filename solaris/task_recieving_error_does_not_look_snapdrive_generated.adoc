@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, disconnect, clone, volume
 summary: 경우에 따라 SnapDrive 스냅 연결 끊기 작업이 복제된 볼륨을 삭제하지 못하여 오류 메시지가 SnapDrive 생성 작업으로 보이지 않습니다. 
 ---
 = 스냅 분리 작업이 복제된 볼륨을 삭제하지 못했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, file, supported
 summary: UNIX용 SnapDrive는 스토리지 생성 작업에 대해 지원되는 파일 시스템 유형을 표시하지 않습니다. 
 ---
 = UNIX용 SnapDrive는 스토리지 생성 작업에 대해 지원되는 파일 시스템 유형을 표시하지 않습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

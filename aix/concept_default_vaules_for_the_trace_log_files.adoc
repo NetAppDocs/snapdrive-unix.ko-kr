@@ -5,6 +5,7 @@ keywords: snap, snapdrive, default, value, trace, log, file
 summary: 추적 로그 파일을 사용하여 다양한 매개 변수를 설정하고 변경할 수도 있습니다. 이러한 매개 변수는 SnapDrive.conf 파일에서 설정해야 합니다. 
 ---
 = 추적 로그 파일의 기본값입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, guest, lun, operating
 summary: RDM LUN을 프로비저닝하려면 게스트 운영 체제에서 스토리지 시스템과 가상 스토리지 콘솔을 구성해야 합니다. 
 ---
 = 게스트 운영 체제용 UNIX용 SnapDrive의 구성 정보
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

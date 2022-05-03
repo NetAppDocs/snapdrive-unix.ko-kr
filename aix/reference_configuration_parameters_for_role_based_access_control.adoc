@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuration, variable, rbac, access, control
 summary: SnapDrive.conf 파일에서 역할 기반 액세스 제어와 관련된 다양한 구성 변수를 설정해야 합니다. 
 ---
 = 역할 기반 액세스 제어를 위한 구성 변수
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

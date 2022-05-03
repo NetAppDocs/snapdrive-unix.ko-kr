@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, create, delete, fail, remove, lun
 summary: LUN이 사용 중이므로 스냅샷 생성 및 삭제 작업에서 스토리지 시스템의 스냅샷 복사본을 제거할 수 없습니다. 
 ---
 = 스냅샷 생성 및 삭제 작업이 실패했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

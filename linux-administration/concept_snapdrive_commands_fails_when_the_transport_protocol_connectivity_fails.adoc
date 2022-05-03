@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, fail, transport, fc, iscsi, storage
 summary: 호스트와 스토리지 시스템 간의 iSCSI 또는 FC 연결에 장애가 발생하거나 스토리지 시스템의 iSCSI 또는 FC에 장애가 발생하면 SnapDrive 명령이 실패합니다. 
 ---
 = 전송 프로토콜 연결에 실패하면 SnapDrive 명령이 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

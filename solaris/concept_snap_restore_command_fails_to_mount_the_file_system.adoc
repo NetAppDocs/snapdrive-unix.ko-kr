@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, command, fail, mount, file
 summary: Solaris의 SFRAC 5.0에서는 스냅 복구 및 스냅 연결 명령이 파일 시스템을 마운트하지 못합니다. 
 ---
 = 스냅 복구 명령이 파일 시스템을 마운트하지 못합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

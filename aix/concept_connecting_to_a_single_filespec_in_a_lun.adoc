@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, single, filespec, lun
 summary: LUN에 상주하는 단일 파일 사양에 연결할 수 있습니다. 다음 예제에서는 이 작업을 완료하는 방법을 설명합니다. 
 ---
 = LUN의 단일 파일 사양에 접속
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

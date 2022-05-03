@@ -5,6 +5,7 @@ keywords: snap, snapshot, storage, create, host cluster
 summary: 호스트 클러스터 환경에서 스토리지를 생성할 때는 특정 지침을 따라야 합니다. 
 ---
 = 호스트 클러스터 환경에서 스토리지 생성 작업에 대한 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

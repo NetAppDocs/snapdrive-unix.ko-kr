@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lun, discovery, fail, iscsi, daemon, limitation
 summary: UNIX용 SnapDrive 명령은 여러 번 반복한 후 LUN을 검색하지 못합니다. 
 ---
 = iSCSI 데몬 제한으로 인해 LUN 검색이 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

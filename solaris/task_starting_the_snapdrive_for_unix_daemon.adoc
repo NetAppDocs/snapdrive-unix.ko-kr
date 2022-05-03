@@ -5,6 +5,7 @@ keywords: snap, snapdrive, start, daemon
 summary: UNIX용 SnapDrive 명령을 사용하려면 먼저 UNIX용 SnapDrive 데몬을 시작하고 실행해야 합니다. 
 ---
 = UNIX용 SnapDrive 데몬을 시작합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

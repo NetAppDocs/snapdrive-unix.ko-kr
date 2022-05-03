@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, command, host, cluster
 summary: 다음은 호스트 클러스터 환경에서 SnapDrive storage disconnect 명령을 사용하기 위한 지침입니다. 
 ---
 = 호스트 클러스터 환경에서 disconnect 명령을 사용하기 위한 지침입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, general, commands, dg, vg, lvol, hostvol, unix
 summary: UNIX용 SnapDrive 명령에는 -dg, -vg, -lvol 및 -hostvol 같은 옵션이 있습니다. 
 ---
 = 명령에 대한 일반 참고 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mapped, rdm, lun, guest, esx, server, system
 summary: ESX Server뿐만 아니라 게스트 운영 체제에서 RDM LUN을 정리해야 합니다. 
 ---
 = 게스트 운영 체제 및 ESX Server에서 매핑된 RDM LUN을 정리하는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

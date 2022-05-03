@@ -5,6 +5,7 @@ keywords: snap, snapdrive, post, install, check
 summary: 설치가 완료되면 몇 가지 작업을 수행하여 UNIX용 SnapDrive가 성공적으로 설치되었는지 확인해야 합니다. 
 ---
 = 설치 후 검사 수행
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

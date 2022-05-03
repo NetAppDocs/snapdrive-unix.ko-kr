@@ -5,6 +5,7 @@ keywords: snap, snapdrive, mandatory, check, volume, snaprestore
 summary: 볼륨 기반 SnapRestore를 수행하기 전에 SnapDrive for UNIX는 시스템에서 몇 가지 필수 검사를 수행합니다. 볼륨 기반 SnapRestore를 안전하게 사용하려면 이러한 점검이 필요합니다. 필수 검사는 사용자가 오버라이드할 수 없습니다. 
 ---
 = 볼륨 기반 SnapRestore에 대한 필수 검사
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

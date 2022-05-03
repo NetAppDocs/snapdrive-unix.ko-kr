@@ -5,6 +5,7 @@ keywords: snap, snapdrive, ghost, device, aix, handle, iscsi, command, return
 summary: '유령 장치 처리 장치(장치가 정의 또는 실패 상태에서 처리)가 있는 iSCSI 또는 FC를 통해 AIX 디바이스를 쿼리하면 SCSI 명령이 약 30초의 AIX 기본 시간 초과를 대기하게 될 수 있습니다.' 
 ---
 = AIX에서 고스트 디바이스 핸들을 사용하면 iSCSI 명령에서 더 긴 반환 시간이 발생합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

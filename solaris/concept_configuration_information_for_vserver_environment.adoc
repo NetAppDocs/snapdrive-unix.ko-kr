@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configuraiton, vserver
 summary: SnapDrive for UNIX에서 SnapDrive 작업을 수행하려면 SVM을 구성해야 합니다. 
 ---
 = SVM에 대한 구성 정보
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

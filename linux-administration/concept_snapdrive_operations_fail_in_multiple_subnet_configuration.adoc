@@ -5,6 +5,7 @@ keywords: snap, snapdrive, operations, fail, subnet, configuration
 summary: 'ICMP\(인터넷 제어 메시지 프로토콜) 액세스가 비활성화되었거나 호스트와 스토리지 시스템 네트워크 간에 ICMP 패킷이 손실된 경우, 여러 서브넷 구성에서 SnapDrive 작업이 실패합니다.' 
 ---
 = 여러 서브넷 구성에서 SnapDrive 작업이 실패했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, collection, utility, executing
 summary: 데이터 수집 유틸리티를 실행하려면 몇 가지 단계를 완료해야 합니다. 
 ---
 = 데이터 수집 유틸리티 실행
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

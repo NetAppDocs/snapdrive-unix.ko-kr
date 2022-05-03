@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, file, snapshot, copy, fail, error
 summary: Red Hat Enterprise Linux 3 업데이트를 Red Hat Enterprise Linux 4 업데이트로 마이그레이션한 후, 즉 LVM1에서 LVM2로 마이그레이션하면 스냅샷 복사본에서 파일 시스템을 복원할 수 없습니다. 
 ---
 = 스냅샷 복사본에서 파일 시스템을 복원하지 못했습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

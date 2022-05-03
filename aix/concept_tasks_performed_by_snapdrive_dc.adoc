@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, collection, utility
 summary: 데이터 수집 유틸리티는 NetApp 진단 유틸리티를 실행하고, UNIX용 SnapDrive 로그 파일을 복사하고, 분석에 사용되는 압축 파일을 만듭니다. 
 ---
 = SnapDrive.DC에서 수행하는 작업
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, host, ready
 summary: 호스트가 준비되어 있는지 확인해야 합니다. 검증 작업을 시작하려면 먼저 ping filername 명령을 입력하여 호스트가 스토리지 시스템에 접속되어 있는지 테스트해야 합니다. 
 ---
 = 호스트가 준비되었는지 확인합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

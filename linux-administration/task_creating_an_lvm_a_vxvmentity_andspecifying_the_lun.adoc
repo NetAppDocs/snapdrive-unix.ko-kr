@@ -5,6 +5,7 @@ keywords: snap, snapdrive, lvm, lun, logical, disk, host
 summary: 파일 시스템, 논리 볼륨 또는 디스크 그룹과 같은 호스트 엔터티를 생성하고 이 엔터티의 일부로 생성되는 LUN을 지정할 수 있습니다. 
 ---
 = LVM 엔티티를 생성하고 LUN을 지정합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

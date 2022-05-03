@@ -5,6 +5,7 @@ keywords: snapdrive, unix, storage, commands, provision, provisioning, vxvm, ent
 summary: UNIX용 SnapDrive 스토리지 명령은 VxVM 객체를 만들어 VxVM 엔터티를 프로비저닝합니다. 
 ---
 = VxVM 환경에서 UNIX용 SnapDrive 프로비저닝
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, manager, native, lvm2
 summary: Linux에서는 볼륨 관리자가 Native LVM2입니다. 
 ---
 = UNIX용 SnapDrive의 볼륨 관리자
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

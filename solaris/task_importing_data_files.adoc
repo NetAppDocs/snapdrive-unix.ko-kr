@@ -5,6 +5,7 @@ keywords: snap, snapdrive, import, data, file
 summary: 도구를 실행하기 전에 최신 지원 매트릭스 데이터를 다운로드하고 구성 검사기 도구를 업데이트할 수 있으므로 UNIX용 SnapDrive에 대해 지원되는 최신 구성이 도구에 표시됩니다. 업데이트된 데이터 파일이 포함된 구성 검사기 도구는 SnapDrive for UNIX에서 지원되는 구성을 확인하고 시스템에서 지원되는 모든 구성 요소를 나열합니다. 
 ---
 = 데이터 파일을 가져오는 중입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, support, storage, partitioning, multipathing
 summary: UNIX용 SnapDrive 5.0 이상은 다중 경로 및 비 다중 경로 환경을 위해 Linux에서 스토리지 파티셔닝을 제공합니다. 
 ---
 = 지원되는 파티션 장치
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

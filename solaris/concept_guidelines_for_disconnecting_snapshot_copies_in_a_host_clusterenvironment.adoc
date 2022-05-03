@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, snapshot, copy, host, cluster
 summary: NFS 엔티티의 스냅샷 복사본을 분리하는 동안 SnapDrive for UNIX는 파일 시스템을 마운트 해제하고, 파일 시스템에서 마운트 항목을 제거하고, 마운트 지점을 제거하는 등의 기능을 수행합니다. 
 ---
 = 호스트 클러스터 환경에서 스냅샷 복사본의 연결을 끊는 방법을 설명합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

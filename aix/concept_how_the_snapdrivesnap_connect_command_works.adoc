@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, command
 summary: SnapDrive snap connect 명령을 사용하면 지정한 엔터티의 스토리지를 클론하고 해당 스토리지를 호스트로 가져옵니다. 
 ---
 = SnapDrive snap connect 명령의 작동 방식
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

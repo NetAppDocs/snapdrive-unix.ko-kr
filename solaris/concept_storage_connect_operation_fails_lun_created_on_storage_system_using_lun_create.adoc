@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, storage, fail, lun, create, command
 summary: SnapDrive storage connect 명령은 LUN create 명령을 사용하거나 System Manager를 사용하여 스토리지 시스템에서 LUN을 생성하는 경우 LUN에 연결하지 못합니다. 
 ---
 = 스토리지 접속 작업이 LUN create 명령을 사용하여 스토리지 시스템에 생성된 LUN에 접속하지 못합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

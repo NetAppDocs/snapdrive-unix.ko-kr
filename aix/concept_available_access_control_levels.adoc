@@ -5,6 +5,7 @@ keywords: snap, snapdrive, access, control, levels, available
 summary: SnapDrive for UNIX는 사용자에게 다양한 액세스 제어 수준을 제공합니다. 이러한 액세스 수준은 스냅샷 복사본 및 스토리지 시스템 작업과 관련이 있습니다. 
 ---
 = 사용 가능한 액세스 제어 수준
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

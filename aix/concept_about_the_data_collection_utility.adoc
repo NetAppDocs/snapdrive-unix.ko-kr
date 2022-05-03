@@ -5,6 +5,7 @@ keywords: snap, snapdrive, data, collection, utility
 summary: 'SnapDrive for UNIX는 UNIX용 SnapDrive, SnapDrive 구성 검사기 및 시스템 설정에 대한 진단 정보를 수집하는 데이터 수집 유틸리티 \(SnapDrive.DC\)를 제공합니다.' 
 ---
 = 데이터 수집 유틸리티에 대해 설명합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

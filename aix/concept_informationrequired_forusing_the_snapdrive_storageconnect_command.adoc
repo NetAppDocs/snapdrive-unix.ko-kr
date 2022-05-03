@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, connect, command, information, required
 summary: SnapDrive storage connect 명령을 사용할 때 제공해야 할 몇 가지 정보가 있습니다. 이 정보는 명령을 올바르게 사용하는 데 도움이 됩니다. 
 ---
 = SnapDrive storage connect 명령을 사용하는 데 필요한 정보입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

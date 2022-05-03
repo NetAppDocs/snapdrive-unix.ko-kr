@@ -5,6 +5,7 @@ keywords: snap, snapdrive, fail, rhel, oel, umount, nfs, command
 summary: umount 명령의 문제로 인해 RHEL/OEL 5.x에서 스냅 관리 작업이 실패합니다. 이 문제를 해결하려면 명령줄 인터페이스에서 -o vers=3을 사용하여 NFS 엔터티를 마운트해야 합니다. 
 ---
 = umount 명령의 문제로 인해 RHEL/OEL 5.x에서 스냅 관리 작업이 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

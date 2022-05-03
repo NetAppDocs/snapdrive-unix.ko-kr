@@ -5,6 +5,7 @@ keywords: snap, snapdrive, volume, snaprestore, command
 summary: 이 섹션에서는 명령 및 볼륨 기반 SnapRestore를 사용하는 옵션에 대해 설명합니다. 
 ---
 = volume-based SnapRestore 명령
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

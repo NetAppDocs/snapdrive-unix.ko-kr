@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, capability, storage, operations
 summary: '역할 기반 액세스 제어\(RBAC\)에서는 각 작업의 성공을 위해 특정 기능이 필요합니다. 사용자는 스토리지 작업을 수행하기 위해 올바른 기능 세트를 할당해야 합니다.' 
 ---
 = SnapDrive 명령 및 기능
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

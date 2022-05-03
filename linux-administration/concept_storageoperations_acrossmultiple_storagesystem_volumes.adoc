@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, volume, lvm, logical, manager
 summary: 'SnapDrive for UNIX를 사용하면 LVM\(Logical Volume Manager)을 조작하지 않는 한 여러 스토리지 시스템 볼륨에서 여러 스토리지 작업을 수행할 수 있습니다. 따라서 여러 스토리지 시스템 볼륨에 있는 LUN 목록을 사용할 수 있습니다.' 
 ---
 = 여러 스토리지 시스템 볼륨에서 스토리지 작업
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

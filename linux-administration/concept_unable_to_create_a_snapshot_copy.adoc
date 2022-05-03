@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snapshot, copy, create, command
 summary: SnapDrive 스냅 생성 명령의 스냅샷 복사본 생성 기능에 영향을 미치는 조건은 거의 없습니다. 
 ---
 = 스냅샷 복사본을 생성할 수 없습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

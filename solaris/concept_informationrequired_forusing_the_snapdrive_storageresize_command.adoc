@@ -5,6 +5,7 @@ keywords: storage, resize, command, snap, snapdrive
 summary: SnapDrive 스토리지 크기 조정 명령을 사용하려면 먼저 몇 가지 정보를 제공해야 합니다. 이 정보는 명령을 올바르게 사용하는 데 도움이 됩니다. 
 ---
 = SnapDrive 스토리지 크기 조정 명령을 사용하는 데 필요한 정보입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, configure, management, data, interface, storage
 summary: NFS 환경에서 단일 관리 인터페이스에 여러 데이터 인터페이스를 구성하여 스토리지 시스템의 데이터 트래픽과 관리 트래픽을 분리할 수 있습니다. 
 ---
 = 스토리지 시스템에 대한 관리 및 데이터 인터페이스 구성
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

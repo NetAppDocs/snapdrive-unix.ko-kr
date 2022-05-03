@@ -5,6 +5,7 @@ keywords: snap, snapdrive, connect, snapshot, copy, guidelines
 summary: 스냅샷 복사본에 연결할 때는 지침을 따릅니다. 
 ---
 = 스냅샷 복사본 연결 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

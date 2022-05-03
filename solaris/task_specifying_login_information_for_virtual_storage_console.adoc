@@ -5,6 +5,7 @@ keywords: snap, snapdrive, login, information, virtual, console, storage, specif
 summary: 게스트 운영 체제에서 RDM LUN을 프로비저닝하기 위해 SnapDrive for UNIX에서 가상 스토리지 콘솔을 구성해야 합니다. 그러나 UNIX용 SnapDrive가 가상 스토리지 콘솔을 액세스할 수 있도록 하는 사용자 이름과 암호가 있습니다. 가상 스토리지 콘솔은 이러한 로그인 자격 증명을 인증하지 않습니다. 
 ---
 = Virtual Storage Console에 대한 로그인 정보 지정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

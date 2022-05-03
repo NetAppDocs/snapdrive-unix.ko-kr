@@ -5,6 +5,7 @@ keywords: snap, snapdrive, admin, command, line, interface
 summary: 스토리지 시스템 관리자는 명령줄 인터페이스를 사용하여 SD-admin 사용자를 구성할 수 있습니다. 
 ---
 = 명령줄 인터페이스를 사용하여 SD-admin 구성
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, disconnect, snapshot, copy, lun, storage, nfs
 summary: 다음은 LUN, 스토리지 엔터티 또는 NFS 디렉터리의 스냅샷 복사본을 끊는 지침입니다. 
 ---
 = 스냅샷 복사본 연결 끊기 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

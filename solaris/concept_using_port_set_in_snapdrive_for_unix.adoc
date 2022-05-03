@@ -5,6 +5,7 @@ keywords: snap, snapdrive, port, set
 summary: 포트 세트는 SAN 데이터 포트 또는 인터페이스의 그룹이며, SAN 데이터 포트 또는 인터페이스 집합을 그룹화하여 호스트에서 사용할 수 있는 경로를 제어하는 데 사용됩니다. 
 ---
 = UNIX용 SnapDrive에서 설정된 포트 사용
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

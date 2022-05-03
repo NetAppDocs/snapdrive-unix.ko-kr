@@ -5,6 +5,7 @@ keywords: snap, snapdrive, considerations, snapshot, copy
 summary: 스냅샷 복사본을 사용할 때는 SnapDrive for UNIX가 생성한 스냅샷 복사본에서만 작동한다는 점, 또는 스냅샷 복사본이 스토리지 시스템에서 호스트로 자동으로 복제된다는 점 등과 같이 주의해야 할 몇 가지 사항이 있습니다. 
 ---
 = Snapshot 복사본으로 작업할 때의 고려 사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

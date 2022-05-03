@@ -5,6 +5,7 @@ keywords: snap, snapdrive, stop, start, command, hangs
 summary: 경우에 따라 스냅드라이브 중지 또는 스냅드라이브 시작 명령이 중단될 수 있습니다. 
 ---
 = 스냅드라이브 중지 또는 스냅드라이브 시작 명령이 중단됩니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

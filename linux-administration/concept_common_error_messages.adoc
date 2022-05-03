@@ -5,6 +5,7 @@ keywords: snap, snapdrive, error, message, common
 summary: UNIX용 SnapDrive에 몇 가지 일반적인 오류 메시지가 있습니다. 일반적인 오류 메시지 목록을 봅니다. 
 ---
 = 일반적인 오류 메시지입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot, command
 summary: SnapDrive snap restore 명령을 사용하여 스냅샷 복사본을 복구할 수 있습니다. 복원 작업은 복원 중인 데이터의 유형 및 양에 따라 몇 분 정도 걸릴 수 있습니다. 
 ---
 = 스냅샷 복사본 복원
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

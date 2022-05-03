@@ -5,6 +5,7 @@ keywords: snap, snapdrive, login, infromation, vserver, specify
 summary: SVM에 대한 사용자 로그인 정보를 지정해야 합니다. SVM을 설정할 때 지정한 내용에 따라 각 SVM은 구성된 SVM 사용자 이름을 사용해야 합니다. SVM 이름이 변경되면 새 Vserver 이름이 SnapDrive for UNIX에서 구성되어 있는지 확인해야 합니다. 
 ---
 = SVM에 대한 로그인 정보 지정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

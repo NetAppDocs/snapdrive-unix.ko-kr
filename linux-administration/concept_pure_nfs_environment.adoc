@@ -5,6 +5,7 @@ keywords: snap, snapdrive, subnet, nfs, volumes, interface, data, configure, sys
 summary: 여러 서브넷에 대해 시스템을 구성하고 관리 인터페이스를 통해 하나 이상의 NFS 볼륨을 마운트하는 경우 항상 첫 번째 데이터 인터페이스를 관리 인터페이스로 구성해야 합니다. 
 ---
 = Pure NFS 환경
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

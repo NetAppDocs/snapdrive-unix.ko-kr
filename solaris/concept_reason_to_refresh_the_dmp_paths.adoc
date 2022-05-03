@@ -5,6 +5,7 @@ keywords: snap, snapdrive, refresh, dmp, path
 summary: FC 및 DMP 구성이 있는 호스트에서 SnapDrive storage delete -lun 명령이 중단될 수 있습니다. 
 ---
 = DMP 경로를 새로 고치는 이유
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

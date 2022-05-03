@@ -5,6 +5,7 @@ keywords: snap, snapdrive, restore, snapshot copy
 summary: 단일 스토리지 엔터티 또는 여러 스토리지 엔터티의 스냅샷 복사본을 복원할 수 있습니다. 
 ---
 = 스냅샷 복사본 복원
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

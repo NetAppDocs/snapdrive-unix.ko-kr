@@ -5,6 +5,7 @@ keywords: snap, snapdrive, vserver, support
 summary: UNIX용 SnapDrive는 SVM을 지원합니다. SVM은 여러 프로토콜 및 유니파이드 스토리지를 지원하는 보안 가상 스토리지 서버입니다. SVM은 데이터 볼륨과 클라이언트에 데이터를 제공하는 데 사용되는 하나 이상의 LIF를 포함합니다. 
 ---
 = SVM 지원
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

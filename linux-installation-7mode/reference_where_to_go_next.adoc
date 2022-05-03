@@ -5,6 +5,7 @@ keywords: snap, snapdrive, after, configure, create, copy
 summary: 'UNIX용 SnapDrive를 구성하고 스냅샷 복사본을 생성한 후에는 복원 작업을 수행하고 스냅샷 복사본을 연결하고 클론을 생성할 수 있습니다. 역할 기반 액세스 제어\(RBAC\), 향상된 클론 분할 및 볼륨 기반 SnapRestore와 같은 다른 중요한 SnapDrive 기능을 탐색할 수도 있습니다.' 
 ---
 = 다음 단계로 넘어갑니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

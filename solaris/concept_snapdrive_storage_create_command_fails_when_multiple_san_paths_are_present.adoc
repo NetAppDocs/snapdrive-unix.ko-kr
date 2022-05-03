@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, create, command, fail, san, multipathing, di
 summary: 여러 SAN 경로가 있지만 다중 경로가 비활성화된 경우 SnapDrive storage create 명령이 실패합니다. 
 ---
 = 여러 SAN 경로가 있지만 다중 경로가 비활성화된 경우 SnapDrive 스토리지 생성 명령이 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

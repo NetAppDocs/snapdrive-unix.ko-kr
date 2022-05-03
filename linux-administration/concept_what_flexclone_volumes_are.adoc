@@ -5,6 +5,7 @@ keywords: snap, snapdrive, flexcone, volume, parent, clone
 summary: 유연한 볼륨 클론인 FlexClone은 유연한 상위 볼륨의 시점 복사본입니다. FlexClone 볼륨은 클론이 생성된 후 상위 Flex 볼륨의 변경 사항을 상속하지 않습니다. 
 ---
 = FlexClone 볼륨이란
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

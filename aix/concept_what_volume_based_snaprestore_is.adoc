@@ -5,6 +5,7 @@ keywords: snap, snapdrive, snaprestore, volume
 summary: 'VBSR(볼륨 기반 SnapRestore\)은 모든 스토리지 오브젝트를 사용하여 볼륨을 복원합니다. 볼륨 기반 복원은 개별적으로 복원되는 각 스토리지 개체보다 빠릅니다. VBSR은 FlexClone 볼륨 및 vFiler 구성에서도 작동합니다. vFiler용 VBSR은 Data ONTAP 7.3 이상에서 사용할 수 있습니다.' 
 ---
 = 볼륨 기반 SnapRestore란 무엇입니까
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

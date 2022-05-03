@@ -5,6 +5,7 @@ keywords: snap, snapdrive, delete, snapshot, copy, storage, command
 summary: 사용 중인 스냅샷 복사본이나 스냅샷 복사본이 여러 스토리지 시스템 볼륨에 포함되어 있는 경우에는 삭제할 수 없습니다. 
 ---
 = 스냅샷 복사본 삭제 지침
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

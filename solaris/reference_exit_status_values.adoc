@@ -5,6 +5,7 @@ keywords: snap, snapdrive, exit, status, value
 summary: 각 종료 상태 값에는 오류 이름과 연관된 유형이 있습니다. 종료 상태 값, 오류 이름, 유형 및 설명에 대한 자세한 내용은 표를 참조하십시오. 
 ---
 = 종료 상태 값
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

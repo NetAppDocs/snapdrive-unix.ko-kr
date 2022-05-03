@@ -5,6 +5,7 @@ keywords: snap, snapdrive, verify, guest
 summary: UNIX용 SnapDrive는 게스트가 스토리지 시스템과 통신할 준비가 되었는지 확인해야 합니다. 
 ---
 = 게스트가 준비되었는지 확인
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

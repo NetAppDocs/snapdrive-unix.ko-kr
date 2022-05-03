@@ -5,6 +5,7 @@ keywords: snap, snapdrive, storage, space, snapshot, copy, estimate
 summary: '클론 분할 추정치는 스토리지 시스템의 스냅샷 복사본에 사용할 수 있는 클론이 없을 때 스냅샷 복사본을 사용하여 필요한 스토리지 공간(MB\)을 추정하는 데 도움이 됩니다.' 
 ---
 = 스냅샷 복사본을 사용하여 스토리지 공간 추정
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: snap, snapdrive, stack, requirements
 summary: 'UNIX용 SnapDrive를 사용하려면 호스트 운영 체제, 호스트 파일 시스템, NFS, 볼륨 관리자, FC 또는 iSCSI 호스트 유틸리티, 스토리지 시스템 라이센스, ONTAP 소프트웨어, MultiStore 소프트웨어 및 인터넷 프로토콜\(IP\) 액세스가 필요합니다. UNIX용 SnapDrive에는 특정 스택 요구 사항도 충족해야 합니다.' 
 ---
 = 스택 요구사항
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

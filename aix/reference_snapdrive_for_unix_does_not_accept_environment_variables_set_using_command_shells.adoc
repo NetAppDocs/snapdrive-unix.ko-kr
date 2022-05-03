@@ -5,6 +5,7 @@ keywords: snap, snapdrive, command, fail, shell, variable, environment
 summary: 명령 셸을 통해 설정된 환경 변수가 UNIX용 SnapDrive에서 허용되지 않고 $LD_LIBRARY_PATH 및 snapcreate-check-unpersistent-nfs 매개 변수가 off로 설정된 경우 모두 UNIX용 SnapDrive 명령을 실행할 수 없습니다. 
 ---
 = 명령 셸을 사용하여 환경 변수를 설정하면 UNIX용 SnapDrive 명령이 실패합니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

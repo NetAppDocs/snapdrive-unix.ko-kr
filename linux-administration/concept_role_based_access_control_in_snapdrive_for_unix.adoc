@@ -5,6 +5,7 @@ keywords: snap, snapdrive, rbac, role, access, control, permission, login, user
 summary: '역할 기반 액세스 제어\(RBAC\)는 사용자 로그인 및 역할 권한에 사용됩니다. RBAC에서는 관리자가 역할을 정의하여 사용자 그룹을 관리할 수 있습니다. 데이터베이스에 대한 액세스를 특정 관리자로 제한해야 하는 경우 해당 관리자의 계정을 설정해야 합니다. 또한 정보를 제한하려는 경우 이러한 관리자가 볼 수 있는 작업과 수행할 수 있는 작업을 수행하려면 사용자가 만든 관리자 계정에 역할을 적용해야 합니다.' 
 ---
 = UNIX용 SnapDrive에서 역할 기반 액세스 제어
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

@@ -5,6 +5,7 @@ keywords: restore, multiple, storage, entities, snap, snapdrive
 summary: 여러 스토리지 엔터티가 포함된 스냅샷 복사본을 복원할 수 있습니다. 
 ---
 = 여러 스토리지 요소 복구
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

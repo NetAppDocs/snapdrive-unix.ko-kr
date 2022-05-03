@@ -5,6 +5,7 @@ keywords: snap, snapdrive, enable, disable, log, file, name
 summary: 로그 파일을 활성화하려면 활성화할 로그 파일의 이름-값 쌍의 값으로 파일 이름을 지정합니다. 파일을 비활성화하려면 로그 파일 이름 매개 변수의 값을 입력하지 마십시오. 
 ---
 = 로그 파일 활성화 및 비활성화
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

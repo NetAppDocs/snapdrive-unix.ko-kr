@@ -5,6 +5,7 @@ keywords: snap, snapdrive, user, name, access, check, operation, manager, consol
 summary: 'UNIX용 SnapDrive는 사용자 이름 형식을 사용하여 Operations Manager 콘솔을 사용하여 액세스 검사를 수행합니다. 이러한 형식은 사용자가 NIS(Network Information System)\ 또는 로컬 사용자인지에 따라 달라집니다.' 
 ---
 = Operations Manager 콘솔을 사용하여 액세스 검사를 수행하기 위한 사용자 이름 형식입니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 

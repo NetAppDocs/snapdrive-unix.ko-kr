@@ -5,6 +5,7 @@ keywords: snap, snapdrive, autodetection, lun, mpio
 summary: 자동 감지는 SnapDrive for UNIX가 있는 Linux MPIO 설정에서 원시 LUN의 파일 시스템에서 작동하지 않습니다. 
 ---
 = 자동 감지는 원시 LUN을 통해 생성된 FS에 대한 MPIO 설정과 함께 작동하지 않습니다
+:allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
