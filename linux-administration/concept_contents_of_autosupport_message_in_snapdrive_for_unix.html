@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/issues/new?body=Page%3A%20[AutoSupport 메시지의 내용입니다](https://docs.netapp.com/ko-kr/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/snapdrive-unix/images/discuss-sm.svg" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/blob/main/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/snapdrive-unix/images/edit-sm.svg" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/snapdrive-unix/images/article-sm.svg" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/issues/new?body=Page%3A%20[AutoSupport 메시지의 내용입니다](https://docs.netapp.com/ko-kr/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html)" class="page-nav-contribute-link" role="button"><img src="/ko-kr/snapdrive-unix/images/discuss-sm.svg" alt="" class="github-icon" />문서 변경 요청</a><a target="_blank" href="https://github.com/NetAppDocs/snapdrive-unix/blob/main/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.adoc" class="page-nav-contribute-link" role="button"><img src="/ko-kr/snapdrive-unix/images/edit-sm.svg" alt="" class="github-icon" />이 페이지 편집</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ko-kr/snapdrive-unix/images/article-sm.svg" alt="" class="github-icon" />기여하는 방법 자세히 알아보기</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">이 페이지의 내용</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/ko-kr/snapdrive-unix/search.html"
           data-type="widget" 
-          data-placeholder="설명서 검색" 
-          data-no-results-found="{query}에 대한 결과를 찾을 수 없음" 
-          data-did-you-mean="{suggestion}을(를) 검색해보십시오." 
-          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?" 
-          data-results-found="{hitCount}개의 결과를 찾음"  
+          data-placeholder="설명서 검색"
+          data-no-results-found="{query}에 대한 결과를 찾을 수 없음"
+          data-did-you-mean="{suggestion}을(를) 검색해보십시오."
+          data-no-results-found-did-you-mean="{query}에 대한 결과를 찾을 수 없습니다. {suggestion}을(를) 검색하려 하셨습니까?"
+          data-results-found="{hitCount}개의 결과를 찾음"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">한국어</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">한국어</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ko-kr/snapdrive-unix/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/ko-kr/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/snapdrive-unix/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>사용 가능한 PDF<span>
+    <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>사용 가능한 PDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/ko-kr/snapdrive-unix/pdfs/fullsite-sidebar/UNIX용_SnapDrive_5_3_2_설명서.pdf" >
-          <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>이 문서 사이트의 PDF</a>
+          <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>이 문서 사이트의 PDF</a>
 
 
 
@@ -376,7 +370,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Clustered_Data_ONTAP용_Linux를_위한_설치_및_설정.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Clustered Data ONTAP용 Linux를 위한 설치 및 설정
           </a>
           
@@ -396,7 +390,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/배포_준비_중.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             배포 준비 중
           </a>
           
@@ -406,8 +400,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -427,7 +419,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치
           </a>
           
@@ -435,8 +427,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -456,7 +446,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/구성_검사기_툴을_사용하여_Linux_호스트_구성_확인.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             구성 검사기 툴을 사용하여 Linux 호스트 구성 확인
           </a>
           
@@ -464,8 +454,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -485,7 +473,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 프로비저닝
           </a>
           
@@ -493,8 +481,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -516,7 +502,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_생성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 생성
           </a>
           
@@ -524,8 +510,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -535,8 +519,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -556,7 +538,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/7_Mode에서_운영되는_Data_ONTAP용_Linux_설치_및_설정.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             7-Mode에서 운영되는 Data ONTAP용 Linux 설치 및 설정
           </a>
           
@@ -576,7 +558,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/배포_준비_중.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             배포 준비 중
           </a>
           
@@ -586,8 +568,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -607,7 +587,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치
           </a>
           
@@ -615,8 +595,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -636,7 +614,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/구성_검사기_툴을_사용하여_Linux_호스트_구성_확인.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             구성 검사기 툴을 사용하여 Linux 호스트 구성 확인
           </a>
           
@@ -644,8 +622,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -665,7 +641,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 프로비저닝
           </a>
           
@@ -673,8 +649,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -696,7 +670,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_생성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 생성
           </a>
           
@@ -704,8 +678,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -715,8 +687,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -736,7 +706,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Linux에_대한_관리.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Linux에 대한 관리
           </a>
           
@@ -752,7 +722,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/제품_개요.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             제품 개요
           </a>
           
@@ -774,14 +744,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_마이그레이션_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 마이그레이션 지원
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -805,7 +773,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/LVM_및_원시_요소의_관리.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             LVM 및 원시 요소의 관리
           </a>
           
@@ -813,8 +781,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -846,8 +812,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -869,7 +833,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_데몬_이해.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 데몬 이해
           </a>
           
@@ -893,7 +857,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/데몬을_중지하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             데몬을 중지하는 중입니다
           </a>
           
@@ -901,8 +865,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -920,8 +882,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -941,7 +901,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템_이름_바꾸기_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템 이름 바꾸기 지원
           </a>
           
@@ -955,8 +915,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -976,7 +934,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 구성
           </a>
           
@@ -992,7 +950,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 구성
           </a>
           
@@ -1012,8 +970,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1033,7 +989,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/게스트_운영_체제용_UNIX용_SnapDrive의_구성_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             게스트 운영 체제용 UNIX용 SnapDrive의 구성 정보
           </a>
           
@@ -1045,8 +1001,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1066,7 +1020,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SVM에_대한_구성_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SVM에 대한 구성 정보
           </a>
           
@@ -1078,8 +1032,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1099,7 +1051,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/LUN_추가를_위한_호스트_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             LUN 추가를 위한 호스트 준비
           </a>
           
@@ -1109,8 +1061,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1130,7 +1080,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_감사__복구_및_추적_로깅.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 감사, 복구 및 추적 로깅
           </a>
           
@@ -1160,14 +1110,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/추적_로그_파일의_정의.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             추적 로그 파일의 정의
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1175,8 +1123,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1196,27 +1142,18 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/AutoSupport란.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             AutoSupport란
           </a>
           
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ko-kr/snapdrive-unix/pdfs/pages/linux-administration/concept_contents_of_autosupport_message_in_snapdrive_for_unix.pdf" >
-    <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1236,7 +1173,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_다중_경로_액세스_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 다중 경로 액세스 지원
           </a>
           
@@ -1254,7 +1191,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/다중_경로_설정.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             다중 경로 설정
           </a>
           
@@ -1266,8 +1203,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1275,8 +1210,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1296,7 +1229,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서의_씬_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서의 씬 프로비저닝
           </a>
           
@@ -1304,8 +1237,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1325,7 +1256,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/다중_서브넷_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             다중 서브넷 구성
           </a>
           
@@ -1341,8 +1272,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1364,7 +1293,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_마법사란_무엇입니까.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive 마법사란 무엇입니까
           </a>
           
@@ -1376,8 +1305,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1397,7 +1324,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_설정된_포트_사용.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 설정된 포트 사용
           </a>
           
@@ -1409,8 +1336,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1430,7 +1355,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Igroup_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Igroup 구성
           </a>
           
@@ -1440,8 +1365,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1463,7 +1386,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_FlexClone_볼륨.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 FlexClone 볼륨
           </a>
           
@@ -1485,7 +1408,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/FlexClone_볼륨에서_UNIX용_SnapDrive_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             FlexClone 볼륨에서 UNIX용 SnapDrive 작업
           </a>
           
@@ -1505,8 +1428,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1514,8 +1435,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1523,8 +1442,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1544,7 +1461,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_보안_기능.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 보안 기능
           </a>
           
@@ -1562,7 +1479,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_액세스_제어.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 액세스 제어
           </a>
           
@@ -1574,8 +1491,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1595,7 +1510,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템의_로그인_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템의 로그인 정보
           </a>
           
@@ -1605,8 +1520,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1616,8 +1529,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1637,7 +1548,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_역할_기반_액세스_제어.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 역할 기반 액세스 제어
           </a>
           
@@ -1657,7 +1568,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_역할_기반_액세스_제어_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 역할 기반 액세스 제어 구성
           </a>
           
@@ -1673,14 +1584,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Operations_Manager_콘솔에서_SD_admin_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Operations Manager 콘솔에서 SD-admin 구성
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1700,14 +1609,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템에_SD_호스트_이름을_추가하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템에 SD-호스트 이름을 추가하는 중입니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1721,8 +1628,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1752,7 +1657,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/RBAC_및_스토리지_운영_예.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RBAC 및 스토리지 운영 예
           </a>
           
@@ -1766,8 +1671,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1775,8 +1678,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1796,7 +1697,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_스토리지_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 스토리지 프로비저닝
           </a>
           
@@ -1812,7 +1713,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서의_스토리지_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서의 스토리지 작업
           </a>
           
@@ -1824,8 +1725,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1845,7 +1744,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive를_사용하여_스토리지_생성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive를 사용하여 스토리지 생성
           </a>
           
@@ -1871,14 +1770,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/RHEL_Red_Hat_Enterprise_Linux__및_SLES_SUSE_Linux_Enterprise_Server_의_스토리지_파티셔닝_체계.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RHEL(Red Hat Enterprise Linux) 및 SLES(SUSE Linux Enterprise Server)의 스토리지 파티셔닝 체계
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1896,8 +1793,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1917,14 +1812,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령을_사용하여_사용_가능한_스토리지를_표시합니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령을 사용하여 사용 가능한 스토리지를 표시합니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -1944,7 +1837,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive를_사용하여_스토리지_크기를_늘립니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive를 사용하여 스토리지 크기를 늘립니다
           </a>
           
@@ -1956,8 +1849,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1977,7 +1868,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/storage_connect_명령.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage connect 명령
           </a>
           
@@ -1989,8 +1880,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2010,7 +1899,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_연결_해제_명령.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 연결 해제 명령
           </a>
           
@@ -2028,8 +1917,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2049,7 +1936,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_삭제_명령입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 삭제 명령입니다
           </a>
           
@@ -2057,8 +1944,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2066,8 +1951,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2087,7 +1970,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_스냅샷_복사본_생성_및_사용.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 스냅샷 복사본 생성 및 사용
           </a>
           
@@ -2103,14 +1986,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_스냅샷_작업은_무엇입니까.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 스냅샷 작업은 무엇입니까
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2130,7 +2011,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 작업
           </a>
           
@@ -2146,7 +2027,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/충돌_시에도_정합성_보장_스냅샷_복사본.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             충돌 시에도 정합성 보장 스냅샷 복사본
           </a>
           
@@ -2158,8 +2039,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2179,8 +2058,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2200,7 +2077,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Snapshot_복사본_정보_표시가_나타납니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot 복사본 정보 표시가 나타납니다
           </a>
           
@@ -2218,8 +2095,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2239,7 +2114,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본의_이름_변경.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본의 이름 변경
           </a>
           
@@ -2251,8 +2126,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2272,7 +2145,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_복원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 복원
           </a>
           
@@ -2290,14 +2163,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/타겟_스토리지_시스템의_스냅샷_복사본_복원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             타겟 스토리지 시스템의 스냅샷 복사본 복원
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2325,7 +2196,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_기반_SnapRestore.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 기반 SnapRestore
           </a>
           
@@ -2345,8 +2216,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2354,8 +2223,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2375,7 +2242,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본에_연결하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본에 연결하는 중입니다
           </a>
           
@@ -2393,14 +2260,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/미러링된_스토리지_시스템에서_스냅샷_복사본_연결.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             미러링된 스토리지 시스템에서 스냅샷 복사본 연결
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2420,8 +2285,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2441,7 +2304,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_클론_또는_LUN_클론_분할.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 클론 또는 LUN 클론 분할
           </a>
           
@@ -2459,8 +2322,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2480,7 +2341,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_삭제.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 삭제
           </a>
           
@@ -2494,8 +2355,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2515,7 +2374,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본의_연결을_끊는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본의 연결을 끊는 중입니다
           </a>
           
@@ -2533,14 +2392,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_연결_끊기_지침.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 연결 끊기 지침
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2556,8 +2413,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2565,8 +2420,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2586,7 +2439,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/데이터_수집_유틸리티.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             데이터 수집 유틸리티
           </a>
           
@@ -2598,8 +2451,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2619,7 +2470,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/문제_해결.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             문제 해결
           </a>
           
@@ -2635,7 +2486,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/오류_메시지_이해.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             오류 메시지 이해
           </a>
           
@@ -2653,14 +2504,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/오류_메시지_형식.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             오류 메시지 형식
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -2668,8 +2517,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2689,7 +2536,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/일반적인_오류_메시지입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             일반적인 오류 메시지입니다
           </a>
           
@@ -2699,8 +2546,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2762,7 +2607,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/표준_종료_상태_값.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             표준 종료 상태 값
           </a>
           
@@ -2774,8 +2619,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2829,8 +2672,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2850,7 +2691,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령_참조.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령 참조
           </a>
           
@@ -2866,7 +2707,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_명령에_필요한_정보_수집.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive for UNIX 명령에 필요한 정보 수집
           </a>
           
@@ -2874,8 +2715,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2895,7 +2734,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_명령_요약.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 명령 요약
           </a>
           
@@ -2911,7 +2750,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령_요약.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령 요약
           </a>
           
@@ -2923,8 +2762,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2944,7 +2781,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_옵션__키워드_및_인수.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 옵션, 키워드 및 인수
           </a>
           
@@ -2956,8 +2793,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -2965,8 +2800,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2974,8 +2807,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -2983,8 +2814,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3004,7 +2833,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Solaris용_설치_및_관리.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Solaris용 설치 및 관리
           </a>
           
@@ -3020,7 +2849,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_개요.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 개요
           </a>
           
@@ -3054,7 +2883,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/VxVM_및_원시_엔터티의_관리.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             VxVM 및 원시 엔터티의 관리
           </a>
           
@@ -3062,8 +2891,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3103,14 +2930,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_마이그레이션_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 마이그레이션 지원
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -3128,8 +2953,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3149,7 +2972,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치 준비
           </a>
           
@@ -3165,7 +2988,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/하드웨어_및_소프트웨어_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             하드웨어 및 소프트웨어 구성
           </a>
           
@@ -3173,8 +2996,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3194,7 +3015,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템_준비_중.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템 준비 중
           </a>
           
@@ -3220,7 +3041,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅_예약_옵션을_재설정하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅 예약 옵션을 재설정하는 중입니다
           </a>
           
@@ -3228,8 +3049,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3237,8 +3056,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3258,7 +3075,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치를_위한_호스트_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치를 위한 호스트 준비
           </a>
           
@@ -3266,8 +3083,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3287,7 +3102,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치를_위한_게스트_OS_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치를 위한 게스트 OS 준비
           </a>
           
@@ -3295,8 +3110,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3304,8 +3117,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3325,7 +3136,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치_또는_업그레이드.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치 또는 업그레이드
           </a>
           
@@ -3357,7 +3168,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_설치한_파일.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 설치한 파일
           </a>
           
@@ -3371,8 +3182,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3382,8 +3191,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3403,7 +3210,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_데몬_이해.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 데몬 이해
           </a>
           
@@ -3427,7 +3234,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/데몬을_중지하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             데몬을 중지하는 중입니다
           </a>
           
@@ -3435,8 +3242,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3454,8 +3259,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3475,7 +3278,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/지원되는_구성을_확인하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             지원되는 구성을 확인하는 중입니다
           </a>
           
@@ -3485,8 +3288,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3506,7 +3307,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템_이름_바꾸기_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템 이름 바꾸기 지원
           </a>
           
@@ -3520,8 +3321,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3541,7 +3340,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_설정된_포트_사용.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 설정된 포트 사용
           </a>
           
@@ -3553,8 +3352,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3574,7 +3371,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Igroup_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Igroup 구성
           </a>
           
@@ -3584,8 +3381,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3607,7 +3402,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 구성
           </a>
           
@@ -3623,7 +3418,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 구성
           </a>
           
@@ -3643,8 +3438,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3664,7 +3457,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/게스트_운영_체제용_UNIX용_SnapDrive의_구성_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             게스트 운영 체제용 UNIX용 SnapDrive의 구성 정보
           </a>
           
@@ -3676,8 +3469,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3697,7 +3488,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SVM에_대한_구성_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SVM에 대한 구성 정보
           </a>
           
@@ -3709,8 +3500,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3730,7 +3519,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/LUN_추가를_위한_호스트_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             LUN 추가를 위한 호스트 준비
           </a>
           
@@ -3738,8 +3527,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3759,7 +3546,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_감사__복구_및_추적_로깅.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 감사, 복구 및 추적 로깅
           </a>
           
@@ -3789,14 +3576,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/추적_로그_파일의_정의.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             추적 로그 파일의 정의
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -3804,8 +3589,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3825,7 +3608,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/AutoSupport란.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             AutoSupport란
           </a>
           
@@ -3835,8 +3618,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3856,7 +3637,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_다중_경로_액세스_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 다중 경로 액세스 지원
           </a>
           
@@ -3864,8 +3645,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3885,7 +3664,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서의_씬_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서의 씬 프로비저닝
           </a>
           
@@ -3893,8 +3672,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3914,7 +3691,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/다중_서브넷_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             다중 서브넷 구성
           </a>
           
@@ -3930,8 +3707,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3953,7 +3728,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_마법사란_무엇입니까.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive 마법사란 무엇입니까
           </a>
           
@@ -3965,8 +3740,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -3974,8 +3747,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -3995,7 +3766,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_보안_기능.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 보안 기능
           </a>
           
@@ -4013,7 +3784,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_액세스_제어.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 액세스 제어
           </a>
           
@@ -4025,8 +3796,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4046,7 +3815,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템의_로그인_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템의 로그인 정보
           </a>
           
@@ -4056,8 +3825,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4067,8 +3834,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4088,7 +3853,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_역할_기반_액세스_제어.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 역할 기반 액세스 제어
           </a>
           
@@ -4108,7 +3873,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_역할_기반_액세스_제어_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 역할 기반 액세스 제어 구성
           </a>
           
@@ -4124,14 +3889,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Operations_Manager_콘솔에서_SD_admin_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Operations Manager 콘솔에서 SD-admin 구성
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4151,14 +3914,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템에_SD_호스트_이름을_추가하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템에 SD-호스트 이름을 추가하는 중입니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4172,8 +3933,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4203,7 +3962,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/RBAC_및_스토리지_운영_예.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RBAC 및 스토리지 운영 예
           </a>
           
@@ -4217,8 +3976,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4226,8 +3983,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4247,7 +4002,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_FlexClone_볼륨.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 FlexClone 볼륨
           </a>
           
@@ -4269,7 +4024,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/FlexClone_볼륨에서_UNIX용_SnapDrive_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             FlexClone 볼륨에서 UNIX용 SnapDrive 작업
           </a>
           
@@ -4289,8 +4044,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4298,8 +4051,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4319,7 +4070,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_스토리지_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 스토리지 프로비저닝
           </a>
           
@@ -4335,7 +4086,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서의_스토리지_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서의 스토리지 작업
           </a>
           
@@ -4347,8 +4098,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4368,7 +4117,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive를_사용하여_스토리지_생성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive를 사용하여 스토리지 생성
           </a>
           
@@ -4386,14 +4135,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_생성_작업에_대한_지침입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 생성 작업에 대한 지침입니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4417,8 +4164,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4438,14 +4183,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령을_사용하여_사용_가능한_스토리지를_표시합니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령을 사용하여 사용 가능한 스토리지를 표시합니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4465,7 +4208,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive를_사용하여_스토리지_크기를_늘립니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive를 사용하여 스토리지 크기를 늘립니다
           </a>
           
@@ -4477,8 +4220,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4498,7 +4239,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/storage_connect_명령.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage connect 명령
           </a>
           
@@ -4512,8 +4253,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4533,7 +4272,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_연결_해제_명령.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 연결 해제 명령
           </a>
           
@@ -4551,14 +4290,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_스토리지_연결_해제_명령에_대한_지침입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive 스토리지 연결 해제 명령에 대한 지침입니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4578,8 +4315,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4599,7 +4334,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_삭제_명령입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 삭제 명령입니다
           </a>
           
@@ -4615,14 +4350,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/storage_delete_명령을_사용하기_위한_지침입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage delete 명령을 사용하기 위한 지침입니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4632,8 +4365,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4641,8 +4372,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4662,7 +4391,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_스냅샷_복사본_생성_및_사용.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 스냅샷 복사본 생성 및 사용
           </a>
           
@@ -4678,14 +4407,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_스냅샷_작업은_무엇입니까.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 스냅샷 작업은 무엇입니까
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4705,7 +4432,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 작업
           </a>
           
@@ -4721,7 +4448,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/충돌_시에도_정합성_보장_스냅샷_복사본.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             충돌 시에도 정합성 보장 스냅샷 복사본
           </a>
           
@@ -4733,8 +4460,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4760,14 +4485,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_생성_지침.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 생성 지침
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -4779,8 +4502,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4800,7 +4521,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Snapshot_복사본_정보_표시가_나타납니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot 복사본 정보 표시가 나타납니다
           </a>
           
@@ -4818,8 +4539,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4839,7 +4558,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본의_이름_변경.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본의 이름 변경
           </a>
           
@@ -4851,8 +4570,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4872,7 +4589,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_복원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 복원
           </a>
           
@@ -4890,7 +4607,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/타겟_스토리지_시스템의_스냅샷_복사본_복원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             타겟 스토리지 시스템의 스냅샷 복사본 복원
           </a>
           
@@ -4900,8 +4617,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4929,7 +4644,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_기반_SnapRestore.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 기반 SnapRestore
           </a>
           
@@ -4949,8 +4664,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -4958,8 +4671,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -4979,7 +4690,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본에_연결하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본에 연결하는 중입니다
           </a>
           
@@ -4997,7 +4708,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/미러링된_스토리지_시스템에서_스냅샷_복사본_연결.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             미러링된 스토리지 시스템에서 스냅샷 복사본 연결
           </a>
           
@@ -5005,8 +4716,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5028,14 +4737,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_연결_지침.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 연결 지침
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -5051,8 +4758,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5072,7 +4777,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_클론_또는_LUN_클론_분할.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 클론 또는 LUN 클론 분할
           </a>
           
@@ -5090,8 +4795,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5111,7 +4814,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_삭제.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 삭제
           </a>
           
@@ -5125,8 +4828,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5146,7 +4847,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본의_연결을_끊는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본의 연결을 끊는 중입니다
           </a>
           
@@ -5164,7 +4865,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_연결_끊기_지침.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 연결 끊기 지침
           </a>
           
@@ -5172,8 +4873,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5189,8 +4888,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5198,8 +4895,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5219,7 +4914,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/데이터_수집_유틸리티.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             데이터 수집 유틸리티
           </a>
           
@@ -5231,8 +4926,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5252,7 +4945,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/문제_해결.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             문제 해결
           </a>
           
@@ -5268,7 +4961,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/오류_메시지_이해.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             오류 메시지 이해
           </a>
           
@@ -5286,14 +4979,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/오류_메시지_형식.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             오류 메시지 형식
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -5301,8 +4992,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5322,7 +5011,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/일반적인_오류_메시지입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             일반적인 오류 메시지입니다
           </a>
           
@@ -5332,8 +5021,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5377,7 +5064,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/표준_종료_상태_값.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             표준 종료 상태 값
           </a>
           
@@ -5389,8 +5076,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5442,8 +5127,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5463,7 +5146,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령_참조.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령 참조
           </a>
           
@@ -5479,7 +5162,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_명령에_필요한_정보_수집.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive for UNIX 명령에 필요한 정보 수집
           </a>
           
@@ -5487,8 +5170,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5508,7 +5189,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_명령_요약.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 명령 요약
           </a>
           
@@ -5524,7 +5205,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령_요약.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령 요약
           </a>
           
@@ -5536,8 +5217,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5557,7 +5236,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_옵션__키워드_및_인수.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 옵션, 키워드 및 인수
           </a>
           
@@ -5569,8 +5248,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5578,8 +5255,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5587,8 +5262,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5596,8 +5269,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5617,7 +5288,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/IBM_AIX용_설치_및_관리.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             IBM AIX용 설치 및 관리
           </a>
           
@@ -5633,7 +5304,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_개요.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 개요
           </a>
           
@@ -5661,7 +5332,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/LVM_및_원시_요소의_관리.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             LVM 및 원시 요소의 관리
           </a>
           
@@ -5669,8 +5340,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5708,14 +5377,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_마이그레이션_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 마이그레이션 지원
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -5733,8 +5400,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5754,7 +5419,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치 준비
           </a>
           
@@ -5770,7 +5435,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/하드웨어_및_소프트웨어_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             하드웨어 및 소프트웨어 구성
           </a>
           
@@ -5778,8 +5443,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5799,7 +5462,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템_준비_중.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템 준비 중
           </a>
           
@@ -5825,7 +5488,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅_예약_옵션을_재설정하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅 예약 옵션을 재설정하는 중입니다
           </a>
           
@@ -5833,8 +5496,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5842,8 +5503,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5863,7 +5522,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치를_위한_호스트_준비.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치를 위한 호스트 준비
           </a>
           
@@ -5871,8 +5530,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5880,8 +5537,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -5901,7 +5556,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_설치_또는_업그레이드.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 설치 또는 업그레이드
           </a>
           
@@ -5925,7 +5580,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_설치한_파일.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 설치한 파일
           </a>
           
@@ -5937,8 +5592,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5948,8 +5601,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -5969,7 +5620,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_데몬_이해.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 데몬 이해
           </a>
           
@@ -5993,7 +5644,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/데몬을_중지하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             데몬을 중지하는 중입니다
           </a>
           
@@ -6001,8 +5652,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6020,8 +5669,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6041,7 +5688,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/지원되는_구성을_확인하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             지원되는 구성을 확인하는 중입니다
           </a>
           
@@ -6051,8 +5698,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6072,7 +5717,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템_이름_바꾸기_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템 이름 바꾸기 지원
           </a>
           
@@ -6086,8 +5731,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6107,7 +5750,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_설정된_포트_사용.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 설정된 포트 사용
           </a>
           
@@ -6119,8 +5762,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6140,7 +5781,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Igroup_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Igroup 구성
           </a>
           
@@ -6150,8 +5791,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6173,7 +5812,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 구성
           </a>
           
@@ -6189,7 +5828,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 구성
           </a>
           
@@ -6209,8 +5848,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6230,7 +5867,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SVM에_대한_구성_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SVM에 대한 구성 정보
           </a>
           
@@ -6242,8 +5879,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6263,7 +5898,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_감사__복구_및_추적_로깅.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 감사, 복구 및 추적 로깅
           </a>
           
@@ -6293,14 +5928,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/추적_로그_파일의_정의.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             추적 로그 파일의 정의
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6308,8 +5941,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6329,7 +5960,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/AutoSupport란.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             AutoSupport란
           </a>
           
@@ -6339,8 +5970,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6360,7 +5989,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_다중_경로_액세스_지원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 다중 경로 액세스 지원
           </a>
           
@@ -6368,8 +5997,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6389,7 +6016,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서의_씬_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서의 씬 프로비저닝
           </a>
           
@@ -6397,8 +6024,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6418,7 +6043,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/다중_서브넷_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             다중 서브넷 구성
           </a>
           
@@ -6434,8 +6059,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6457,7 +6080,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_마법사란_무엇입니까.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive 마법사란 무엇입니까
           </a>
           
@@ -6469,8 +6092,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6478,8 +6099,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6499,7 +6118,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_보안_기능.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 보안 기능
           </a>
           
@@ -6517,7 +6136,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_액세스_제어.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 액세스 제어
           </a>
           
@@ -6529,8 +6148,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6550,7 +6167,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템의_로그인_정보.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템의 로그인 정보
           </a>
           
@@ -6560,8 +6177,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6571,8 +6186,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6592,7 +6205,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_역할_기반_액세스_제어.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 역할 기반 액세스 제어
           </a>
           
@@ -6612,7 +6225,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_역할_기반_액세스_제어_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 역할 기반 액세스 제어 구성
           </a>
           
@@ -6628,14 +6241,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Operations_Manager_콘솔에서_SD_admin_구성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Operations Manager 콘솔에서 SD-admin 구성
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6655,14 +6266,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_시스템에_SD_호스트_이름을_추가하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 시스템에 SD-호스트 이름을 추가하는 중입니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6676,8 +6285,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6707,7 +6314,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/RBAC_및_스토리지_운영_예.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             RBAC 및 스토리지 운영 예
           </a>
           
@@ -6721,8 +6328,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6730,8 +6335,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6751,7 +6354,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_FlexClone_볼륨.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 FlexClone 볼륨
           </a>
           
@@ -6773,7 +6376,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/FlexClone_볼륨에서_UNIX용_SnapDrive_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             FlexClone 볼륨에서 UNIX용 SnapDrive 작업
           </a>
           
@@ -6793,8 +6396,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6802,8 +6403,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -6823,7 +6422,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_스토리지_프로비저닝.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 스토리지 프로비저닝
           </a>
           
@@ -6839,7 +6438,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서의_스토리지_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서의 스토리지 작업
           </a>
           
@@ -6847,8 +6446,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6868,7 +6465,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive를_사용하여_스토리지_생성.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive를 사용하여 스토리지 생성
           </a>
           
@@ -6892,8 +6489,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6913,14 +6508,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령을_사용하여_사용_가능한_스토리지를_표시합니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령을 사용하여 사용 가능한 스토리지를 표시합니다
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -6940,7 +6533,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive를_사용하여_스토리지_크기를_늘립니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive를 사용하여 스토리지 크기를 늘립니다
           </a>
           
@@ -6952,8 +6545,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -6973,7 +6564,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/storage_connect_명령.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             storage connect 명령
           </a>
           
@@ -6985,8 +6576,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7006,7 +6595,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_연결_해제_명령.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 연결 해제 명령
           </a>
           
@@ -7024,8 +6613,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7045,7 +6632,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스토리지_삭제_명령입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스토리지 삭제 명령입니다
           </a>
           
@@ -7053,8 +6640,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7062,8 +6647,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7083,7 +6666,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive에서_스냅샷_복사본_생성_및_사용.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive에서 스냅샷 복사본 생성 및 사용
           </a>
           
@@ -7099,14 +6682,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive의_스냅샷_작업은_무엇입니까.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive의 스냅샷 작업은 무엇입니까
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7126,7 +6707,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_작업.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 작업
           </a>
           
@@ -7142,7 +6723,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/충돌_시에도_정합성_보장_스냅샷_복사본.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             충돌 시에도 정합성 보장 스냅샷 복사본
           </a>
           
@@ -7154,8 +6735,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7175,8 +6754,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7196,7 +6773,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/Snapshot_복사본_정보_표시가_나타납니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             Snapshot 복사본 정보 표시가 나타납니다
           </a>
           
@@ -7214,8 +6791,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7235,7 +6810,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본의_이름_변경.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본의 이름 변경
           </a>
           
@@ -7247,8 +6822,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7268,7 +6841,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_복원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 복원
           </a>
           
@@ -7286,14 +6859,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/타겟_스토리지_시스템의_스냅샷_복사본_복원.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             타겟 스토리지 시스템의 스냅샷 복사본 복원
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7321,7 +6892,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_기반_SnapRestore.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 기반 SnapRestore
           </a>
           
@@ -7341,8 +6912,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7350,8 +6919,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7371,7 +6938,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본에_연결하는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본에 연결하는 중입니다
           </a>
           
@@ -7389,14 +6956,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/미러링된_스토리지_시스템에서_스냅샷_복사본_연결.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             미러링된 스토리지 시스템에서 스냅샷 복사본 연결
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7416,8 +6981,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7437,7 +7000,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/볼륨_클론_또는_LUN_클론_분할.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             볼륨 클론 또는 LUN 클론 분할
           </a>
           
@@ -7455,8 +7018,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7476,7 +7037,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_삭제.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 삭제
           </a>
           
@@ -7490,8 +7051,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7511,7 +7070,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본의_연결을_끊는_중입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본의 연결을 끊는 중입니다
           </a>
           
@@ -7529,14 +7088,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/스냅샷_복사본_연결_끊기_지침.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             스냅샷 복사본 연결 끊기 지침
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7552,8 +7109,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7561,8 +7116,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7582,7 +7135,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/데이터_수집_유틸리티.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             데이터 수집 유틸리티
           </a>
           
@@ -7594,8 +7147,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7615,7 +7166,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/문제_해결.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             문제 해결
           </a>
           
@@ -7631,7 +7182,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/오류_메시지_이해.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             오류 메시지 이해
           </a>
           
@@ -7649,14 +7200,12 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/오류_메시지_형식.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             오류 메시지 형식
           </a>
           
 
 
-
-          
         </li>
       </ul>
     
@@ -7664,8 +7213,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7685,7 +7232,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/일반적인_오류_메시지입니다.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             일반적인 오류 메시지입니다
           </a>
           
@@ -7695,8 +7242,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7732,7 +7277,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/표준_종료_상태_값.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             표준 종료 상태 값
           </a>
           
@@ -7744,8 +7289,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7795,8 +7338,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7816,7 +7357,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령_참조.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령 참조
           </a>
           
@@ -7832,7 +7373,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/SnapDrive_for_UNIX_명령에_필요한_정보_수집.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             SnapDrive for UNIX 명령에 필요한 정보 수집
           </a>
           
@@ -7840,8 +7381,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7861,7 +7400,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_명령_요약.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 명령 요약
           </a>
           
@@ -7877,7 +7416,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/명령_요약.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             명령 요약
           </a>
           
@@ -7889,8 +7428,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7910,7 +7447,7 @@
               href="/ko-kr/snapdrive-unix/pdfs/sidebar/UNIX용_SnapDrive_옵션__키워드_및_인수.pdf" 
             
           >
-            <img src="/ko-kr/snapdrive-unix/images/pdf.png" width="16" height="16"/>
+            <img src="/ko-kr/snapdrive-unix/images/pdf.png" alt="" width="16" height="16"/>
             UNIX용 SnapDrive 옵션, 키워드 및 인수
           </a>
           
@@ -7922,8 +7459,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -7931,8 +7466,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7940,8 +7473,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -7949,21 +7480,18 @@
   
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/ko-kr/snapdrive-unix/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/ko-kr/snapdrive-unix/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>별도의 PDF 문서 모음<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -7996,7 +7524,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ko-kr/snapdrive-unix/index.html">
         홈
       </a></li><li class=" "><a class="na-navbar-padding" href="/ko-kr/snapdrive-unix/releasenotes.html">
@@ -10615,6 +10143,9 @@
     
   
 
+<span>기여자
+</span>
+
 
 </p>
 
@@ -10862,4 +10393,5 @@ UNIX용 SnapDrive에서 AutoSupport를 사용하도록 설정한 경우 작업 �
     </script>
     <script src='/ko-kr/snapdrive-unix/js/www-ntap.js'></script>
     <script src='/ko-kr/snapdrive-unix/js/tabbed-blocks.js'></script>
+    <script src='/ko-kr/snapdrive-unix/js/sidebar.js'></script>
   </body></html>
