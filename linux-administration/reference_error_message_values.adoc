@@ -1069,6 +1069,7 @@ UNIX용 SnapDrive는 유사 액세스 제어 메커니즘을 위해 루트 스�
 * 참고: *
 
 +
+[]
 ====
 *** 'd-hostname.prbac' 파일이 없으면 스토리지 시스템에서 'dgeneric.prbac' 파일을 수정합니다.
 *** 'd-hostname.prbac'과 'dgeneric.prbac' 파일이 모두 있는 경우 스토리지 시스템의 'dhostname.prbac' 파일에서만 설정을 수정합니다.
