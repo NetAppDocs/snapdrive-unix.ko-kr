@@ -11,7 +11,7 @@ summary: 'UNIX용 SnapDrive 작업을 성공적으로 수행하려면 스토리�
 
 
 [role="lead"]
-UNIX용 SnapDrive가 성공적으로 운영되려면 SVM(이전의 SVM)을 SVM(스토리지 가상 머신)으로 설정해야 합니다.
+UNIX용 SnapDrive 작업이 성공적으로 수행되려면 SVM(이전의 SVM)을 SVM(스토리지 가상 머신)으로 설정해야 합니다.
 
 * UNIX용 SnapDrive 작업을 실행하려면 SVM 애그리게이트 목록에 볼륨이 포함된 애그리게이트를 할당해야 합니다.
 * 클러스터에서 데이터를 제공하려면 하나 이상의 SVM이 생성되어야 합니다.
@@ -30,10 +30,11 @@ ONTAP 8.2.3 이상을 실행 중인 경우 이 단계를 건너뛰십시오.
 
 . 데이터 SVM에서 사용자 생성:
 +
-'* SnapDrive 구성 세트 * '
+`*snapdrive config set vsadmin_name _Vserver_name_*`
 
 +
-'_vsadmin_name Vserver_NAME_'
+
+NOTE: `_Vserver_name_` SVM의 이름이며 관리 LIF IP 주소에 매핑되어야 합니다.
 
 . SVM이 SnapDrive for UNIX에서 구성되었는지 확인합니다.
 +
